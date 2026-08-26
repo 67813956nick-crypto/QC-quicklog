@@ -1,0 +1,2298 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        250,
+                        67,
+                        381,
+                        89
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                250,
+                                67,
+                                381,
+                                89
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        250,
+                                        67,
+                                        381,
+                                        89
+                                    ],
+                                    "type": "text",
+                                    "content": "产品质量证明书"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        32,
+                        93,
+                        253,
+                        110
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                32,
+                                93,
+                                253,
+                                110
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        32,
+                                        93,
+                                        253,
+                                        110
+                                    ],
+                                    "type": "text",
+                                    "content": "收货单位：中石化宁波镇海炼化有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        370,
+                        95,
+                        481,
+                        111
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                370,
+                                95,
+                                481,
+                                111
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        370,
+                                        95,
+                                        481,
+                                        111
+                                    ],
+                                    "type": "text",
+                                    "content": "合同号：2302545399"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        673,
+                        48,
+                        756,
+                        62
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                673,
+                                48,
+                                756,
+                                62
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        673,
+                                        48,
+                                        756,
+                                        62
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2713327-2028"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        645,
+                        70,
+                        775,
+                        92
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                645,
+                                70,
+                                775,
+                                92
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        645,
+                                        70,
+                                        775,
+                                        92
+                                    ],
+                                    "type": "text",
+                                    "content": "产品质量合格证"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        651,
+                        98,
+                        788,
+                        113
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                651,
+                                98,
+                                788,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        651,
+                                        98,
+                                        788,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "证书编号：FQ260513-573-34"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        29,
+                        113,
+                        817,
+                        527
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                29,
+                                113,
+                                817,
+                                527
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        113,
+                                        817,
+                                        527
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                113,
+                                                817,
+                                                527
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">物料描述</td><td colspan=\"5\">无缝弯头\\90° DN400 STD R=1.5D ASME B16.9 WPB ASTM A234</td><td colspan=\"2\">物料编码</td><td colspan=\"5\">4709020084314204</td><td>跟踪号</td><td>8302630236</td></tr><tr><td colspan=\"2\">炉号</td><td colspan=\"5\">22E211488</td><td colspan=\"2\">数量</td><td colspan=\"5\">3</td><td rowspan=\"15\" colspan=\"2\">产品经检验符合ASME B16.9标准规定及图样和合同要求,准予出厂。(无损检测按NB/T47013 标准检验合格)检验员盖章:沈春兴检验日期:2026.05.25质量保证工程师:陈玉飞出厂日期:2026.05.27质检专用<img src=\"966ca9c5397336cb3dd973c9b458272669919df2f49ab7da6b5824d6f3d19db5.jpg\"/>司检验电话:0317-6897358邮编:061400</td></tr><tr><td colspan=\"2\">材料生产商</td><td colspan=\"5\">江苏新长江无缝钢管制造有限公司</td><td colspan=\"2\">材料流通商</td><td colspan=\"5\">山东海天物联股份有限公司</td></tr><tr><td colspan=\"14\">化学成分(%)</td></tr><tr><td>项目类别</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Ni</td><td>Cr</td><td>Cu</td><td>Mo</td><td>V</td><td>Nb</td><td>Ti</td><td>Al</td></tr><tr><td>标准值</td><td>≤0.30</td><td>≥0.10</td><td>0.29-1.06</td><td>≤0.050</td><td>≤0.058</td><td>≤0.40</td><td>≤0.40</td><td>≤0.40</td><td>≤0.15</td><td>≤0.08</td><td>/</td><td>/</td><td>/</td></tr><tr><td>厂复检值</td><td>0.20</td><td>0.25</td><td>0.48</td><td>0.011</td><td>0.002</td><td>0.007</td><td>0.02</td><td>0.01</td><td>0.003</td><td>&lt;0.001</td><td>/</td><td>/</td><td>/</td></tr><tr><td colspan=\"14\">力学性能</td></tr><tr><td>项目类别</td><td colspan=\"2\">抗拉强度Rm(Mpa)</td><td colspan=\"2\">屈服点Rel(Mpa)</td><td colspan=\"2\">延伸率A(%)</td><td colspan=\"4\">冲击功 Akv(J)</td><td colspan=\"3\">硬度HB</td></tr><tr><td>标准值</td><td colspan=\"2\">≥415</td><td colspan=\"2\">≥240</td><td colspan=\"2\">≥30</td><td colspan=\"4\">/</td><td colspan=\"3\">≤187</td></tr><tr><td>实测值</td><td colspan=\"2\">460</td><td colspan=\"2\">301</td><td colspan=\"2\">31.0</td><td colspan=\"4\">/</td><td>126</td><td>134</td><td>128</td></tr><tr><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"4\">/</td><td>/</td><td>/</td><td>/</td></tr><tr><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"4\">/</td><td>/</td><td>/</td><td>/</td></tr><tr><td colspan=\"14\">管件质量</td></tr><tr><td colspan=\"2\">力学性能</td><td colspan=\"2\">交货状态</td><td colspan=\"2\">外观尺寸</td><td colspan=\"2\">RT</td><td colspan=\"2\">UT</td><td colspan=\"2\">MT</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">合格</td><td colspan=\"2\">正火</td><td colspan=\"2\">合格</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"2\">合格</td><td colspan=\"2\"></td></tr></table>",
+                                            "image_path": "e42b413e0db89ff7b2566ee87cb03bb5384607836c3f7e06f3785454a5bf513a.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        43,
+                        31,
+                        120,
+                        51
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                43,
+                                31,
+                                120,
+                                51
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        43,
+                                        31,
+                                        120,
+                                        51
+                                    ],
+                                    "type": "text",
+                                    "content": "FQGD"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        189,
+                        32,
+                        456,
+                        60
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                189,
+                                32,
+                                456,
+                                60
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        189,
+                                        32,
+                                        456,
+                                        60
+                                    ],
+                                    "type": "text",
+                                    "content": "河北方泉管道装备有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        535,
+                        12,
+                        650,
+                        60
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                535,
+                                12,
+                                650,
+                                60
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        535,
+                                        12,
+                                        650,
+                                        60
+                                    ],
+                                    "type": "text",
+                                    "content": "A7-78-3\n(TS)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        668,
+                        33,
+                        765,
+                        48
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                668,
+                                33,
+                                765,
+                                48
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        668,
+                                        33,
+                                        765,
+                                        48
+                                    ],
+                                    "type": "text",
+                                    "content": "特种设备制造编号："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6
+                }
+            ],
+            "page_size": [
+                842,
+                595
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        250,
+                        67,
+                        381,
+                        89
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                250,
+                                67,
+                                381,
+                                89
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        250,
+                                        67,
+                                        381,
+                                        89
+                                    ],
+                                    "type": "text",
+                                    "content": "产品质量证明书"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        32,
+                        93,
+                        253,
+                        110
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                32,
+                                93,
+                                253,
+                                110
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        32,
+                                        93,
+                                        253,
+                                        110
+                                    ],
+                                    "type": "text",
+                                    "content": "收货单位：中石化宁波镇海炼化有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        370,
+                        95,
+                        481,
+                        111
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                370,
+                                95,
+                                481,
+                                111
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        370,
+                                        95,
+                                        481,
+                                        111
+                                    ],
+                                    "type": "text",
+                                    "content": "合同号：2302545399"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        673,
+                        48,
+                        756,
+                        62
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                673,
+                                48,
+                                756,
+                                62
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        673,
+                                        48,
+                                        756,
+                                        62
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2713327-2028"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        645,
+                        70,
+                        775,
+                        92
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                645,
+                                70,
+                                775,
+                                92
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        645,
+                                        70,
+                                        775,
+                                        92
+                                    ],
+                                    "type": "text",
+                                    "content": "产品质量合格证"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        651,
+                        98,
+                        788,
+                        113
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                651,
+                                98,
+                                788,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        651,
+                                        98,
+                                        788,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "证书编号：FQ260513-573-34"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        29,
+                        113,
+                        817,
+                        527
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                29,
+                                113,
+                                817,
+                                527
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        113,
+                                        817,
+                                        527
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                113,
+                                                817,
+                                                527
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">物料描述</td><td colspan=\"5\">无缝弯头\\90° DN400 STD R=1.5D ASME B16.9 WPB ASTM A234</td><td colspan=\"2\">物料编码</td><td colspan=\"5\">4709020084314204</td><td>跟踪号</td><td>8302630236</td></tr><tr><td colspan=\"2\">炉号</td><td colspan=\"5\">22E211488</td><td colspan=\"2\">数量</td><td colspan=\"5\">3</td><td rowspan=\"15\" colspan=\"2\">产品经检验符合ASME B16.9标准规定及图样和合同要求,准予出厂。(无损检测按NB/T47013 标准检验合格)检验员盖章:沈春兴检验日期:2026.05.25质量保证工程师:陈玉飞出厂日期:2026.05.27质检专用<img src=\"966ca9c5397336cb3dd973c9b458272669919df2f49ab7da6b5824d6f3d19db5.jpg\"/>司检验电话:0317-6897358邮编:061400</td></tr><tr><td colspan=\"2\">材料生产商</td><td colspan=\"5\">江苏新长江无缝钢管制造有限公司</td><td colspan=\"2\">材料流通商</td><td colspan=\"5\">山东海天物联股份有限公司</td></tr><tr><td colspan=\"14\">化学成分(%)</td></tr><tr><td>项目类别</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Ni</td><td>Cr</td><td>Cu</td><td>Mo</td><td>V</td><td>Nb</td><td>Ti</td><td>Al</td></tr><tr><td>标准值</td><td>≤0.30</td><td>≥0.10</td><td>0.29-1.06</td><td>≤0.050</td><td>≤0.058</td><td>≤0.40</td><td>≤0.40</td><td>≤0.40</td><td>≤0.15</td><td>≤0.08</td><td>/</td><td>/</td><td>/</td></tr><tr><td>厂复检值</td><td>0.20</td><td>0.25</td><td>0.48</td><td>0.011</td><td>0.002</td><td>0.007</td><td>0.02</td><td>0.01</td><td>0.003</td><td>&lt;0.001</td><td>/</td><td>/</td><td>/</td></tr><tr><td colspan=\"14\">力学性能</td></tr><tr><td>项目类别</td><td colspan=\"2\">抗拉强度Rm(Mpa)</td><td colspan=\"2\">屈服点Rel(Mpa)</td><td colspan=\"2\">延伸率A(%)</td><td colspan=\"4\">冲击功 Akv(J)</td><td colspan=\"3\">硬度HB</td></tr><tr><td>标准值</td><td colspan=\"2\">≥415</td><td colspan=\"2\">≥240</td><td colspan=\"2\">≥30</td><td colspan=\"4\">/</td><td colspan=\"3\">≤187</td></tr><tr><td>实测值</td><td colspan=\"2\">460</td><td colspan=\"2\">301</td><td colspan=\"2\">31.0</td><td colspan=\"4\">/</td><td>126</td><td>134</td><td>128</td></tr><tr><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"4\">/</td><td>/</td><td>/</td><td>/</td></tr><tr><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"4\">/</td><td>/</td><td>/</td><td>/</td></tr><tr><td colspan=\"14\">管件质量</td></tr><tr><td colspan=\"2\">力学性能</td><td colspan=\"2\">交货状态</td><td colspan=\"2\">外观尺寸</td><td colspan=\"2\">RT</td><td colspan=\"2\">UT</td><td colspan=\"2\">MT</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">合格</td><td colspan=\"2\">正火</td><td colspan=\"2\">合格</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td colspan=\"2\">合格</td><td colspan=\"2\"></td></tr></table>",
+                                            "image_path": "e42b413e0db89ff7b2566ee87cb03bb5384607836c3f7e06f3785454a5bf513a.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        378,
+                        119,
+                        440,
+                        130
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                378,
+                                119,
+                                440,
+                                130
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        378,
+                                        119,
+                                        440,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "EN 10204 3.1"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        622,
+                        73,
+                        724,
+                        86
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                622,
+                                73,
+                                724,
+                                86
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        622,
+                                        73,
+                                        724,
+                                        86
+                                    ],
+                                    "type": "text",
+                                    "content": "真诚 优质 规范 高效"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        727,
+                        43,
+                        770,
+                        86
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                727,
+                                43,
+                                770,
+                                86
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        727,
+                                        43,
+                                        770,
+                                        86
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                727,
+                                                43,
+                                                770,
+                                                86
+                                            ],
+                                            "type": "image",
+                                            "image_path": "acbca9f330284cdab3354ed41496353ffe425837ce90f9f24cf4dc5a84b29cbc.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        585,
+                        102,
+                        727,
+                        118
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                585,
+                                102,
+                                727,
+                                118
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        585,
+                                        102,
+                                        727,
+                                        118
+                                    ],
+                                    "type": "text",
+                                    "content": "许可证编号：TS2734059-2028"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        64,
+                        127,
+                        772,
+                        487
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                64,
+                                127,
+                                772,
+                                487
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        127,
+                                        772,
+                                        487
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                64,
+                                                127,
+                                                772,
+                                                487
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>用户名称Purchaser</td><td colspan=\"4\">中石化宁波镇海炼化有限公司</td><td colspan=\"4\">合同号Contract number</td><td colspan=\"5\">SH26-1101</td><td colspan=\"5\">计划单号Plan number</td><td colspan=\"6\">JH26-05-106</td><td colspan=\"3\">质量证明书编号Certification No</td><td colspan=\"2\">2605-106-5</td></tr><tr><td>序号No.</td><td colspan=\"4\">产品名称Product Name</td><td colspan=\"4\">规格型号Specifications Model</td><td colspan=\"5\">材料牌号Material grade</td><td colspan=\"5\">生产批号Batch number</td><td colspan=\"6\">制造标准Manufacturing standard</td><td colspan=\"3\">数量Amount</td><td colspan=\"2\">物资编码Material code</td></tr><tr><td>5</td><td colspan=\"4\">无缝同心大小头</td><td colspan=\"4\">DN80×DN50SCH40/SCH40</td><td colspan=\"5\">15CrMo GB/T9948</td><td colspan=\"5\">GY2605-106-5</td><td colspan=\"6\">SH/T3408-2022</td><td colspan=\"3\">5</td><td colspan=\"2\">4707160086581201</td></tr><tr><td></td><td colspan=\"4\"></td><td colspan=\"4\"></td><td colspan=\"5\"></td><td colspan=\"5\"></td><td colspan=\"6\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td></tr><tr><td rowspan=\"2\">序号No.</td><td rowspan=\"2\" colspan=\"2\">原材厂商Raw material manufacturers</td><td rowspan=\"2\" colspan=\"2\">原材标准Material Standard</td><td rowspan=\"2\">原材规格Material Model</td><td rowspan=\"2\">原材炉号Heat No</td><td rowspan=\"2\" colspan=\"2\">质保书号Certification No</td><td colspan=\"16\">化学成分 %Chemical Content( %)</td><td colspan=\"5\">力学性能Mechanics Requirements</td></tr><tr><td>C</td><td>Si</td><td>Mn</td><td>S</td><td>P</td><td>Cr</td><td>Ni</td><td>Mo</td><td>Cu</td><td>V</td><td>N</td><td>Ti</td><td>Al</td><td>Nb</td><td>Zr</td><td>抗拉T.S(Mpa)</td><td>屈服Y.S(Mpa)</td><td>伸长E.L(%)</td><td>温度(°C)</td><td>冲击功Aky(J)</td><td></td></tr><tr><td>熔炼值Smelting value</td><td colspan=\"2\">江苏诚德</td><td colspan=\"2\">GB/T9948</td><td>89*6</td><td>25519908</td><td colspan=\"2\">151341</td><td>0.13</td><td>0.26</td><td>0.47</td><td>0.004</td><td>0.009</td><td>0.90</td><td>0.09</td><td>0.49</td><td>0.05</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>504</td><td>423</td><td>31.5</td><td>/</td><td>/</td><td></td></tr><tr><td>复验值Re test value</td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td></td><td colspan=\"2\"></td><td>0.15</td><td>0.25</td><td>0.49</td><td>0.003</td><td>0.010</td><td>0.92</td><td>0.08</td><td>0.47</td><td>0.05</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>509</td><td>416</td><td>32.5</td><td>/</td><td>/</td><td></td></tr><tr><td colspan=\"29\">产品检测结果Inspection Results</td><td></td></tr><tr><td colspan=\"2\">检验项目Inspection items</td><td colspan=\"2\">表面质量Surface Quality</td><td colspan=\"2\">几何尺寸Size</td><td colspan=\"2\">硬度(HB)Hardness</td><td colspan=\"2\">射线RT(100%)</td><td colspan=\"3\">超声UT(100%)</td><td colspan=\"3\">磁粉MT(100%)</td><td colspan=\"3\">渗透PT(100%)</td><td colspan=\"3\">水压试验(100%)</td><td colspan=\"3\">晶间腐蚀Intergranular corrosion</td><td colspan=\"2\">光谱PMI(100%)</td><td colspan=\"2\">交货状态Condition of delivery</td><td></td></tr><tr><td colspan=\"2\">验收标准Acceptance criteria</td><td colspan=\"4\">SH/T3408-2022</td><td colspan=\"2\">≤180</td><td colspan=\"2\">NB/T47013.2-2015</td><td colspan=\"3\">NB/T47013.3-2023</td><td colspan=\"3\">NB/T47013.4-2015</td><td colspan=\"3\">NB/T47013.5-2015</td><td colspan=\"3\">/</td><td colspan=\"3\">ASTM A262E</td><td colspan=\"2\">/</td><td rowspan=\"2\" colspan=\"2\">正火+回火Normalizing+Tempering</td><td></td></tr><tr><td colspan=\"2\">结论Conclusion</td><td colspan=\"2\">合格Qualified</td><td colspan=\"2\">合格Qualified</td><td colspan=\"2\">合格Qualified</td><td colspan=\"2\">/</td><td colspan=\"3\">/</td><td colspan=\"3\">合格Qualified</td><td colspan=\"3\">/</td><td colspan=\"3\">/</td><td colspan=\"3\">/</td><td colspan=\"2\">合格Qualified</td><td></td></tr><tr><td colspan=\"29\">兹证明上述产品的制造、检验和试验,符合上述标准规定及合同要求。We hereby certify that the products described above have manufactured, inspected and tested in accordance with the specified standards and the contract requirements.质保工程师: 质保工程师: 成品检验员: 贾俊永 资料员: 杨琰 日期: 2026.06.10Quality assurance engineer: QC Inspector: Data member:Date:</td><td></td></tr></table>",
+                                            "image_path": "beddc0d8d555778460848071256eba20977f52fb1d83f1f67a85e319a1669e53.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        94,
+                        497,
+                        266,
+                        510
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                94,
+                                497,
+                                266,
+                                510
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        94,
+                                        497,
+                                        266,
+                                        510
+                                    ],
+                                    "type": "text",
+                                    "content": "地址：合肥经济技术开发区玉屏路219号"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        93,
+                        510,
+                        369,
+                        526
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                93,
+                                510,
+                                369,
+                                526
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        510,
+                                        369,
+                                        526
+                                    ],
+                                    "type": "text",
+                                    "content": "ADD:219.Yuping Road, Economic Technology Development Zone, Hefei"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        298,
+                        499,
+                        357,
+                        512
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                298,
+                                499,
+                                357,
+                                512
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        298,
+                                        499,
+                                        357,
+                                        512
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编：230601"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        391,
+                        500,
+                        479,
+                        514
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                391,
+                                500,
+                                479,
+                                514
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        391,
+                                        500,
+                                        479,
+                                        514
+                                    ],
+                                    "type": "text",
+                                    "content": "电话：0551-63617091"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        391,
+                        514,
+                        442,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                391,
+                                514,
+                                442,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        391,
+                                        514,
+                                        442,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "PC: 230601"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        508,
+                        502,
+                        598,
+                        515
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                508,
+                                502,
+                                598,
+                                515
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        508,
+                                        502,
+                                        598,
+                                        515
+                                    ],
+                                    "type": "text",
+                                    "content": "传真：0551-63617098"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        511,
+                        516,
+                        589,
+                        528
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                511,
+                                516,
+                                589,
+                                528
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        511,
+                                        516,
+                                        589,
+                                        528
+                                    ],
+                                    "type": "text",
+                                    "content": "EL:0551-63617091"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        621,
+                        417,
+                        756,
+                        558
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                621,
+                                417,
+                                756,
+                                558
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        621,
+                                        417,
+                                        756,
+                                        558
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                621,
+                                                417,
+                                                756,
+                                                558
+                                            ],
+                                            "type": "image",
+                                            "image_path": "b332db208cb2d0585319a075d7650b5c7d263735af8390ad8985cc93caa2d3b7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "seal"
+                },
+                {
+                    "bbox": [
+                        598,
+                        514,
+                        728,
+                        532
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                598,
+                                514,
+                                728,
+                                532
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        598,
+                                        514,
+                                        728,
+                                        532
+                                    ],
+                                    "type": "text",
+                                    "content": "镇海源化学购"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        596,
+                        533,
+                        727,
+                        556
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                596,
+                                533,
+                                727,
+                                556
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        596,
+                                        533,
+                                        727,
+                                        556
+                                    ],
+                                    "type": "text",
+                                    "content": "材料专用章（二）"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        66,
+                        51,
+                        281,
+                        83
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                66,
+                                51,
+                                281,
+                                83
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        51,
+                                        281,
+                                        83
+                                    ],
+                                    "type": "text",
+                                    "content": "8® 合肥实华管件有限责任公司\n安徽省著名商标 Hefei Shihua Pipe Fitting Co., Ltd."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                }
+            ],
+            "page_size": [
+                842,
+                595
+            ],
+            "page_idx": 1,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        378,
+                        119,
+                        440,
+                        130
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                378,
+                                119,
+                                440,
+                                130
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        378,
+                                        119,
+                                        440,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "EN 10204 3.1"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        622,
+                        73,
+                        724,
+                        86
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                622,
+                                73,
+                                724,
+                                86
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        622,
+                                        73,
+                                        724,
+                                        86
+                                    ],
+                                    "type": "text",
+                                    "content": "真诚 优质 规范 高效"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        727,
+                        43,
+                        770,
+                        86
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                727,
+                                43,
+                                770,
+                                86
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        727,
+                                        43,
+                                        770,
+                                        86
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                727,
+                                                43,
+                                                770,
+                                                86
+                                            ],
+                                            "type": "image",
+                                            "image_path": "acbca9f330284cdab3354ed41496353ffe425837ce90f9f24cf4dc5a84b29cbc.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        585,
+                        102,
+                        727,
+                        118
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                585,
+                                102,
+                                727,
+                                118
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        585,
+                                        102,
+                                        727,
+                                        118
+                                    ],
+                                    "type": "text",
+                                    "content": "许可证编号：TS2734059-2028"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        64,
+                        127,
+                        772,
+                        487
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                64,
+                                127,
+                                772,
+                                487
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        127,
+                                        772,
+                                        487
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                64,
+                                                127,
+                                                772,
+                                                487
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>用户名称Purchaser</td><td colspan=\"4\">中石化宁波镇海炼化有限公司</td><td colspan=\"4\">合同号Contract number</td><td colspan=\"5\">SH26-1101</td><td colspan=\"5\">计划单号Plan number</td><td colspan=\"6\">JH26-05-106</td><td colspan=\"3\">质量证明书编号Certification No</td><td colspan=\"2\">2605-106-5</td></tr><tr><td>序号No.</td><td colspan=\"4\">产品名称Product Name</td><td colspan=\"4\">规格型号Specifications Model</td><td colspan=\"5\">材料牌号Material grade</td><td colspan=\"5\">生产批号Batch number</td><td colspan=\"6\">制造标准Manufacturing standard</td><td colspan=\"3\">数量Amount</td><td colspan=\"2\">物资编码Material code</td></tr><tr><td>5</td><td colspan=\"4\">无缝同心大小头</td><td colspan=\"4\">DN80×DN50SCH40/SCH40</td><td colspan=\"5\">15CrMo GB/T9948</td><td colspan=\"5\">GY2605-106-5</td><td colspan=\"6\">SH/T3408-2022</td><td colspan=\"3\">5</td><td colspan=\"2\">4707160086581201</td></tr><tr><td></td><td colspan=\"4\"></td><td colspan=\"4\"></td><td colspan=\"5\"></td><td colspan=\"5\"></td><td colspan=\"6\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td></tr><tr><td rowspan=\"2\">序号No.</td><td rowspan=\"2\" colspan=\"2\">原材厂商Raw material manufacturers</td><td rowspan=\"2\" colspan=\"2\">原材标准Material Standard</td><td rowspan=\"2\">原材规格Material Model</td><td rowspan=\"2\">原材炉号Heat No</td><td rowspan=\"2\" colspan=\"2\">质保书号Certification No</td><td colspan=\"16\">化学成分 %Chemical Content( %)</td><td colspan=\"5\">力学性能Mechanics Requirements</td></tr><tr><td>C</td><td>Si</td><td>Mn</td><td>S</td><td>P</td><td>Cr</td><td>Ni</td><td>Mo</td><td>Cu</td><td>V</td><td>N</td><td>Ti</td><td>Al</td><td>Nb</td><td>Zr</td><td>抗拉T.S(Mpa)</td><td>屈服Y.S(Mpa)</td><td>伸长E.L(%)</td><td>温度(°C)</td><td>冲击功Aky(J)</td><td></td></tr><tr><td>熔炼值Smelting value</td><td colspan=\"2\">江苏诚德</td><td colspan=\"2\">GB/T9948</td><td>89*6</td><td>25519908</td><td colspan=\"2\">151341</td><td>0.13</td><td>0.26</td><td>0.47</td><td>0.004</td><td>0.009</td><td>0.90</td><td>0.09</td><td>0.49</td><td>0.05</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>504</td><td>423</td><td>31.5</td><td>/</td><td>/</td><td></td></tr><tr><td>复验值Re test value</td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td></td><td colspan=\"2\"></td><td>0.15</td><td>0.25</td><td>0.49</td><td>0.003</td><td>0.010</td><td>0.92</td><td>0.08</td><td>0.47</td><td>0.05</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>509</td><td>416</td><td>32.5</td><td>/</td><td>/</td><td></td></tr><tr><td colspan=\"29\">产品检测结果Inspection Results</td><td></td></tr><tr><td colspan=\"2\">检验项目Inspection items</td><td colspan=\"2\">表面质量Surface Quality</td><td colspan=\"2\">几何尺寸Size</td><td colspan=\"2\">硬度(HB)Hardness</td><td colspan=\"2\">射线RT(100%)</td><td colspan=\"3\">超声UT(100%)</td><td colspan=\"3\">磁粉MT(100%)</td><td colspan=\"3\">渗透PT(100%)</td><td colspan=\"3\">水压试验(100%)</td><td colspan=\"3\">晶间腐蚀Intergranular corrosion</td><td colspan=\"2\">光谱PMI(100%)</td><td colspan=\"2\">交货状态Condition of delivery</td><td></td></tr><tr><td colspan=\"2\">验收标准Acceptance criteria</td><td colspan=\"4\">SH/T3408-2022</td><td colspan=\"2\">≤180</td><td colspan=\"2\">NB/T47013.2-2015</td><td colspan=\"3\">NB/T47013.3-2023</td><td colspan=\"3\">NB/T47013.4-2015</td><td colspan=\"3\">NB/T47013.5-2015</td><td colspan=\"3\">/</td><td colspan=\"3\">ASTM A262E</td><td colspan=\"2\">/</td><td rowspan=\"2\" colspan=\"2\">正火+回火Normalizing+Tempering</td><td></td></tr><tr><td colspan=\"2\">结论Conclusion</td><td colspan=\"2\">合格Qualified</td><td colspan=\"2\">合格Qualified</td><td colspan=\"2\">合格Qualified</td><td colspan=\"2\">/</td><td colspan=\"3\">/</td><td colspan=\"3\">合格Qualified</td><td colspan=\"3\">/</td><td colspan=\"3\">/</td><td colspan=\"3\">/</td><td colspan=\"2\">合格Qualified</td><td></td></tr><tr><td colspan=\"29\">兹证明上述产品的制造、检验和试验,符合上述标准规定及合同要求。We hereby certify that the products described above have manufactured, inspected and tested in accordance with the specified standards and the contract requirements.质保工程师: 质保工程师: 成品检验员: 贾俊永 资料员: 杨琰 日期: 2026.06.10Quality assurance engineer: QC Inspector: Data member:Date:</td><td></td></tr></table>",
+                                            "image_path": "beddc0d8d555778460848071256eba20977f52fb1d83f1f67a85e319a1669e53.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        94,
+                        497,
+                        266,
+                        510
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                94,
+                                497,
+                                266,
+                                510
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        94,
+                                        497,
+                                        266,
+                                        510
+                                    ],
+                                    "type": "text",
+                                    "content": "地址：合肥经济技术开发区玉屏路219号"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        93,
+                        510,
+                        369,
+                        526
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                93,
+                                510,
+                                369,
+                                526
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        510,
+                                        369,
+                                        526
+                                    ],
+                                    "type": "text",
+                                    "content": "ADD:219.Yuping Road, Economic Technology Development Zone, Hefei"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        298,
+                        499,
+                        357,
+                        512
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                298,
+                                499,
+                                357,
+                                512
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        298,
+                                        499,
+                                        357,
+                                        512
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编：230601"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        391,
+                        500,
+                        479,
+                        514
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                391,
+                                500,
+                                479,
+                                514
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        391,
+                                        500,
+                                        479,
+                                        514
+                                    ],
+                                    "type": "text",
+                                    "content": "电话：0551-63617091"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        391,
+                        514,
+                        442,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                391,
+                                514,
+                                442,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        391,
+                                        514,
+                                        442,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "PC: 230601"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        508,
+                        502,
+                        598,
+                        515
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                508,
+                                502,
+                                598,
+                                515
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        508,
+                                        502,
+                                        598,
+                                        515
+                                    ],
+                                    "type": "text",
+                                    "content": "传真：0551-63617098"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        511,
+                        516,
+                        589,
+                        528
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                511,
+                                516,
+                                589,
+                                528
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        511,
+                                        516,
+                                        589,
+                                        528
+                                    ],
+                                    "type": "text",
+                                    "content": "EL:0551-63617091"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        621,
+                        417,
+                        756,
+                        558
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                621,
+                                417,
+                                756,
+                                558
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        621,
+                                        417,
+                                        756,
+                                        558
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                621,
+                                                417,
+                                                756,
+                                                558
+                                            ],
+                                            "type": "image",
+                                            "image_path": "b332db208cb2d0585319a075d7650b5c7d263735af8390ad8985cc93caa2d3b7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "seal"
+                },
+                {
+                    "bbox": [
+                        598,
+                        514,
+                        728,
+                        532
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                598,
+                                514,
+                                728,
+                                532
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        598,
+                                        514,
+                                        728,
+                                        532
+                                    ],
+                                    "type": "text",
+                                    "content": "镇海源化学购"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        596,
+                        533,
+                        727,
+                        556
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                596,
+                                533,
+                                727,
+                                556
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        596,
+                                        533,
+                                        727,
+                                        556
+                                    ],
+                                    "type": "text",
+                                    "content": "材料专用章（二）"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15,
+                    "merge_prev": false
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        421,
+                        68,
+                        515,
+                        80
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                421,
+                                68,
+                                515,
+                                80
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        421,
+                                        68,
+                                        515,
+                                        80
+                                    ],
+                                    "type": "text",
+                                    "content": "编号:20250905D-006"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        36,
+                        85,
+                        559,
+                        719
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                36,
+                                85,
+                                559,
+                                719
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        36,
+                                        85,
+                                        559,
+                                        719
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                36,
+                                                85,
+                                                559,
+                                                719
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"4\">物料编码</td><td colspan=\"15\">物料描述(规格型号)</td><td>数量</td><td></td></tr><tr><td colspan=\"4\">4601020086065445</td><td colspan=\"15\">闸阀\\BB,OS&amp;Y CL600 RF A216 WCB STL,F6a DN50低泄漏</td><td>27</td><td></td></tr><tr><td colspan=\"20\"></td><td></td></tr><tr><td colspan=\"5\">出厂编码 251066-24-001~027</td><td colspan=\"5\">适用温度 ≤425°C</td><td colspan=\"4\">制造标准 API600</td><td colspan=\"6\">检验标准 API598</td><td></td></tr><tr><td colspan=\"20\">1、试压试验:</td><td></td></tr><tr><td colspan=\"4\">强度试验(水)</td><td colspan=\"4\">密封试验(水)</td><td colspan=\"5\">上密封试验(水)</td><td colspan=\"5\">气密封试验(气)</td><td colspan=\"2\">结果</td><td></td></tr><tr><td colspan=\"2\">15.4 MPa</td><td colspan=\"2\">15 s</td><td colspan=\"2\">11.3 MPa</td><td colspan=\"2\">15 s</td><td colspan=\"2\">11.3 MPa</td><td colspan=\"3\">15 s</td><td colspan=\"2\">0.6 MPa</td><td colspan=\"3\">15 s</td><td colspan=\"2\">合格</td><td></td></tr><tr><td colspan=\"20\">2、主要零件材料:</td><td></td></tr><tr><td colspan=\"2\">阀体</td><td>阀盖</td><td>阀杆</td><td colspan=\"2\">密封面</td><td colspan=\"2\">中头螺栓</td><td colspan=\"3\">填料螺栓</td><td colspan=\"4\">垫片</td><td colspan=\"3\">填料</td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"2\">WCB</td><td>WCB</td><td>F6a.2</td><td colspan=\"2\">STL</td><td colspan=\"2\">B7/2H</td><td colspan=\"3\">B7/2H</td><td colspan=\"4\">304+柔性石墨</td><td colspan=\"3\">柔性石墨组合环</td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"20\">3、炉批号和编号明细:</td><td></td></tr><tr><td>序号</td><td colspan=\"2\">序列号</td><td>体炉号</td><td>盖炉号</td><td>序号</td><td colspan=\"2\">序列号</td><td colspan=\"2\">体炉号</td><td>盖炉号</td><td>序号</td><td colspan=\"4\">序列号</td><td colspan=\"2\">体炉号</td><td colspan=\"2\">盖炉号</td><td></td></tr><tr><td>1</td><td colspan=\"2\">251066-24-001</td><td>E9989</td><td>E9989</td><td>11</td><td colspan=\"2\">251066-24-011</td><td colspan=\"2\">E9989</td><td>E9989</td><td>21</td><td colspan=\"4\">251066-24-021</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>2</td><td colspan=\"2\">251066-24-002</td><td>E9989</td><td>E9989</td><td>12</td><td colspan=\"2\">251066-24-012</td><td colspan=\"2\">E9989</td><td>E9989</td><td>22</td><td colspan=\"4\">251066-24-022</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>3</td><td colspan=\"2\">251066-24-003</td><td>E9989</td><td>E9989</td><td>13</td><td colspan=\"2\">251066-24-013</td><td colspan=\"2\">E9989</td><td>E9989</td><td>23</td><td colspan=\"4\">251066-24-023</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>4</td><td colspan=\"2\">251066-24-004</td><td>E9989</td><td>E9989</td><td>14</td><td colspan=\"2\">251066-24-014</td><td colspan=\"2\">E9989</td><td>E9989</td><td>24</td><td colspan=\"4\">251066-24-024</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>5</td><td colspan=\"2\">251066-24-005</td><td>E9989</td><td>E9989</td><td>15</td><td colspan=\"2\">251066-24-015</td><td colspan=\"2\">E9989</td><td>E9989</td><td>25</td><td colspan=\"4\">251066-24-025</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>6</td><td colspan=\"2\">251066-24-006</td><td>E9989</td><td>E9989</td><td>16</td><td colspan=\"2\">251066-24-016</td><td colspan=\"2\">E9989</td><td>E9989</td><td>26</td><td colspan=\"4\">251066-24-026</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>7</td><td colspan=\"2\">251066-24-007</td><td>E9989</td><td>E9989</td><td>17</td><td colspan=\"2\">251066-24-017</td><td colspan=\"2\">E9989</td><td>E9989</td><td>27</td><td colspan=\"4\">251066-24-027</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>8</td><td colspan=\"2\">251066-24-008</td><td>E9989</td><td>E9989</td><td>18</td><td colspan=\"2\">251066-24-018</td><td colspan=\"2\">E9989</td><td>E9989</td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td>9</td><td colspan=\"2\">251066-24-009</td><td>E9989</td><td>E9989</td><td>19</td><td colspan=\"2\">251066-24-019</td><td colspan=\"2\">E9989</td><td>E9989</td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td>10</td><td colspan=\"2\">251066-24-010</td><td>E9989</td><td>E9989</td><td>20</td><td colspan=\"2\">251066-24-020</td><td colspan=\"2\">E9989</td><td>E9989</td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"20\">4、化学成份及力学性能:</td><td></td></tr><tr><td>材质</td><td colspan=\"2\">炉号</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Mo</td><td>Ni</td><td>Cu</td><td>V</td><td>RmMPa</td><td>Rp0.2MPa</td><td>A%</td><td>Z%</td><td>HBW</td><td colspan=\"2\">Kv-46J</td><td></td></tr><tr><td>WCB</td><td colspan=\"2\">E9989</td><td>0.19</td><td>0.47</td><td>0.89</td><td>0.020</td><td>0.012</td><td>0.024</td><td>0.005</td><td>0.020</td><td>0.018</td><td>0.005</td><td>510</td><td>299</td><td>32</td><td>47</td><td>152</td><td colspan=\"2\"></td><td></td></tr><tr><td>阀杆 F6a.2</td><td colspan=\"2\">E19096415</td><td>0.13</td><td>0.46</td><td>0.43</td><td>0.025</td><td>0.002</td><td>12.42</td><td></td><td>0.24</td><td></td><td></td><td>700</td><td>565</td><td>25</td><td>72</td><td>213</td><td colspan=\"2\"></td><td></td></tr><tr><td>螺栓 B7</td><td colspan=\"2\">9072380Z</td><td>0.40</td><td>0.23</td><td>0.78</td><td>0.013</td><td>0.005</td><td>1.02</td><td>0.21</td><td></td><td></td><td></td><td>1006</td><td>948</td><td>20.5</td><td>63</td><td>HRC:29.30.28</td><td colspan=\"2\"></td><td></td></tr><tr><td>螺母 2H</td><td colspan=\"2\">19609745</td><td>0.46</td><td>0.23</td><td>0.60</td><td>0.014</td><td>0.010</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>HRC:30.31.29</td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td rowspan=\"11\"></td><td rowspan=\"11\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"16\" colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+                                            "image_path": "e32dc009e9af3881c75d1761651e1a3ec69a622e78c19e6d9f698978513d2bbd.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        67,
+                        722,
+                        267,
+                        751
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                722,
+                                267,
+                                751
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        722,
+                                        267,
+                                        751
+                                    ],
+                                    "type": "text",
+                                    "content": "QC: 陈石轩 QA: 贝锐刚"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        361,
+                        731,
+                        509,
+                        747
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                361,
+                                731,
+                                509,
+                                747
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        361,
+                                        731,
+                                        509,
+                                        747
+                                    ],
+                                    "type": "text",
+                                    "content": "凯喜姆阀门有限公司 质管部"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        409,
+                        750,
+                        473,
+                        765
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                409,
+                                750,
+                                473,
+                                765
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        409,
+                                        750,
+                                        473,
+                                        765
+                                    ],
+                                    "type": "text",
+                                    "content": "2025.09.05"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        54,
+                        34,
+                        164,
+                        71
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                34,
+                                164,
+                                71
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        34,
+                                        164,
+                                        71
+                                    ],
+                                    "type": "text",
+                                    "content": "KEM\nTS\nTS2733R78"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        243,
+                        33,
+                        377,
+                        69
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                243,
+                                33,
+                                377,
+                                69
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        243,
+                                        33,
+                                        377,
+                                        69
+                                    ],
+                                    "type": "text",
+                                    "content": "凯喜姆阀门有限公司\n质量证明书"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        20,
+                        767,
+                        28,
+                        776
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                20,
+                                767,
+                                28,
+                                776
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        20,
+                                        767,
+                                        28,
+                                        776
+                                    ],
+                                    "type": "text",
+                                    "content": "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        557,
+                        54,
+                        580,
+                        209
+                    ],
+                    "type": "aside_text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                557,
+                                54,
+                                580,
+                                209
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        557,
+                                        54,
+                                        580,
+                                        209
+                                    ],
+                                    "type": "text",
+                                    "content": "质保书自编号 260508-1170"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 2,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        421,
+                        68,
+                        515,
+                        80
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                421,
+                                68,
+                                515,
+                                80
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        421,
+                                        68,
+                                        515,
+                                        80
+                                    ],
+                                    "type": "text",
+                                    "content": "编号:20250905D-006"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        36,
+                        85,
+                        559,
+                        719
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                36,
+                                85,
+                                559,
+                                719
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        36,
+                                        85,
+                                        559,
+                                        719
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                36,
+                                                85,
+                                                559,
+                                                719
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"4\">物料编码</td><td colspan=\"15\">物料描述(规格型号)</td><td>数量</td><td></td></tr><tr><td colspan=\"4\">4601020086065445</td><td colspan=\"15\">闸阀\\BB,OS&amp;Y CL600 RF A216 WCB STL,F6a DN50低泄漏</td><td>27</td><td></td></tr><tr><td colspan=\"20\"></td><td></td></tr><tr><td colspan=\"5\">出厂编码 251066-24-001~027</td><td colspan=\"5\">适用温度 ≤425°C</td><td colspan=\"4\">制造标准 API600</td><td colspan=\"6\">检验标准 API598</td><td></td></tr><tr><td colspan=\"20\">1、试压试验:</td><td></td></tr><tr><td colspan=\"4\">强度试验(水)</td><td colspan=\"4\">密封试验(水)</td><td colspan=\"5\">上密封试验(水)</td><td colspan=\"5\">气密封试验(气)</td><td colspan=\"2\">结果</td><td></td></tr><tr><td colspan=\"2\">15.4 MPa</td><td colspan=\"2\">15 s</td><td colspan=\"2\">11.3 MPa</td><td colspan=\"2\">15 s</td><td colspan=\"2\">11.3 MPa</td><td colspan=\"3\">15 s</td><td colspan=\"2\">0.6 MPa</td><td colspan=\"3\">15 s</td><td colspan=\"2\">合格</td><td></td></tr><tr><td colspan=\"20\">2、主要零件材料:</td><td></td></tr><tr><td colspan=\"2\">阀体</td><td>阀盖</td><td>阀杆</td><td colspan=\"2\">密封面</td><td colspan=\"2\">中头螺栓</td><td colspan=\"3\">填料螺栓</td><td colspan=\"4\">垫片</td><td colspan=\"3\">填料</td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"2\">WCB</td><td>WCB</td><td>F6a.2</td><td colspan=\"2\">STL</td><td colspan=\"2\">B7/2H</td><td colspan=\"3\">B7/2H</td><td colspan=\"4\">304+柔性石墨</td><td colspan=\"3\">柔性石墨组合环</td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"20\">3、炉批号和编号明细:</td><td></td></tr><tr><td>序号</td><td colspan=\"2\">序列号</td><td>体炉号</td><td>盖炉号</td><td>序号</td><td colspan=\"2\">序列号</td><td colspan=\"2\">体炉号</td><td>盖炉号</td><td>序号</td><td colspan=\"4\">序列号</td><td colspan=\"2\">体炉号</td><td colspan=\"2\">盖炉号</td><td></td></tr><tr><td>1</td><td colspan=\"2\">251066-24-001</td><td>E9989</td><td>E9989</td><td>11</td><td colspan=\"2\">251066-24-011</td><td colspan=\"2\">E9989</td><td>E9989</td><td>21</td><td colspan=\"4\">251066-24-021</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>2</td><td colspan=\"2\">251066-24-002</td><td>E9989</td><td>E9989</td><td>12</td><td colspan=\"2\">251066-24-012</td><td colspan=\"2\">E9989</td><td>E9989</td><td>22</td><td colspan=\"4\">251066-24-022</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>3</td><td colspan=\"2\">251066-24-003</td><td>E9989</td><td>E9989</td><td>13</td><td colspan=\"2\">251066-24-013</td><td colspan=\"2\">E9989</td><td>E9989</td><td>23</td><td colspan=\"4\">251066-24-023</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>4</td><td colspan=\"2\">251066-24-004</td><td>E9989</td><td>E9989</td><td>14</td><td colspan=\"2\">251066-24-014</td><td colspan=\"2\">E9989</td><td>E9989</td><td>24</td><td colspan=\"4\">251066-24-024</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>5</td><td colspan=\"2\">251066-24-005</td><td>E9989</td><td>E9989</td><td>15</td><td colspan=\"2\">251066-24-015</td><td colspan=\"2\">E9989</td><td>E9989</td><td>25</td><td colspan=\"4\">251066-24-025</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>6</td><td colspan=\"2\">251066-24-006</td><td>E9989</td><td>E9989</td><td>16</td><td colspan=\"2\">251066-24-016</td><td colspan=\"2\">E9989</td><td>E9989</td><td>26</td><td colspan=\"4\">251066-24-026</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>7</td><td colspan=\"2\">251066-24-007</td><td>E9989</td><td>E9989</td><td>17</td><td colspan=\"2\">251066-24-017</td><td colspan=\"2\">E9989</td><td>E9989</td><td>27</td><td colspan=\"4\">251066-24-027</td><td colspan=\"2\">E9989</td><td colspan=\"2\">E9989</td><td></td></tr><tr><td>8</td><td colspan=\"2\">251066-24-008</td><td>E9989</td><td>E9989</td><td>18</td><td colspan=\"2\">251066-24-018</td><td colspan=\"2\">E9989</td><td>E9989</td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td>9</td><td colspan=\"2\">251066-24-009</td><td>E9989</td><td>E9989</td><td>19</td><td colspan=\"2\">251066-24-019</td><td colspan=\"2\">E9989</td><td>E9989</td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td>10</td><td colspan=\"2\">251066-24-010</td><td>E9989</td><td>E9989</td><td>20</td><td colspan=\"2\">251066-24-020</td><td colspan=\"2\">E9989</td><td>E9989</td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"20\">4、化学成份及力学性能:</td><td></td></tr><tr><td>材质</td><td colspan=\"2\">炉号</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Mo</td><td>Ni</td><td>Cu</td><td>V</td><td>RmMPa</td><td>Rp0.2MPa</td><td>A%</td><td>Z%</td><td>HBW</td><td colspan=\"2\">Kv-46J</td><td></td></tr><tr><td>WCB</td><td colspan=\"2\">E9989</td><td>0.19</td><td>0.47</td><td>0.89</td><td>0.020</td><td>0.012</td><td>0.024</td><td>0.005</td><td>0.020</td><td>0.018</td><td>0.005</td><td>510</td><td>299</td><td>32</td><td>47</td><td>152</td><td colspan=\"2\"></td><td></td></tr><tr><td>阀杆 F6a.2</td><td colspan=\"2\">E19096415</td><td>0.13</td><td>0.46</td><td>0.43</td><td>0.025</td><td>0.002</td><td>12.42</td><td></td><td>0.24</td><td></td><td></td><td>700</td><td>565</td><td>25</td><td>72</td><td>213</td><td colspan=\"2\"></td><td></td></tr><tr><td>螺栓 B7</td><td colspan=\"2\">9072380Z</td><td>0.40</td><td>0.23</td><td>0.78</td><td>0.013</td><td>0.005</td><td>1.02</td><td>0.21</td><td></td><td></td><td></td><td>1006</td><td>948</td><td>20.5</td><td>63</td><td>HRC:29.30.28</td><td colspan=\"2\"></td><td></td></tr><tr><td>螺母 2H</td><td colspan=\"2\">19609745</td><td>0.46</td><td>0.23</td><td>0.60</td><td>0.014</td><td>0.010</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>HRC:30.31.29</td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td rowspan=\"11\"></td><td rowspan=\"11\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"6\"></td><td rowspan=\"16\" colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td rowspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+                                            "image_path": "e32dc009e9af3881c75d1761651e1a3ec69a622e78c19e6d9f698978513d2bbd.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        67,
+                        722,
+                        267,
+                        751
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                722,
+                                267,
+                                751
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        722,
+                                        267,
+                                        751
+                                    ],
+                                    "type": "text",
+                                    "content": "QC: 陈石轩 QA: 贝锐刚"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        361,
+                        731,
+                        509,
+                        747
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                361,
+                                731,
+                                509,
+                                747
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        361,
+                                        731,
+                                        509,
+                                        747
+                                    ],
+                                    "type": "text",
+                                    "content": "凯喜姆阀门有限公司 质管部"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        409,
+                        750,
+                        473,
+                        765
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                409,
+                                750,
+                                473,
+                                765
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        409,
+                                        750,
+                                        473,
+                                        765
+                                    ],
+                                    "type": "text",
+                                    "content": "2025.09.05"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.0"
+}

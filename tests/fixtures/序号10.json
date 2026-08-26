@@ -1,0 +1,1458 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        695,
+                        45,
+                        762,
+                        155
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                695,
+                                45,
+                                762,
+                                155
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        695,
+                                        45,
+                                        762,
+                                        155
+                                    ],
+                                    "type": "text",
+                                    "content": "N3B\nAITUO"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        699,
+                        163,
+                        757,
+                        483
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                699,
+                                163,
+                                757,
+                                483
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        699,
+                                        163,
+                                        757,
+                                        483
+                                    ],
+                                    "type": "text",
+                                    "content": "宁波艾拓密封技术有限公司\nAUTO SEALING TECHNOLOGY CO.,LTD.NINGBO"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        610,
+                        40,
+                        685,
+                        407
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                610,
+                                40,
+                                685,
+                                407
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        610,
+                                        40,
+                                        685,
+                                        407
+                                    ],
+                                    "type": "text",
+                                    "content": "产品合格证 CERTIFICATE OF QUALITY"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        586,
+                        43,
+                        613,
+                        130
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                586,
+                                43,
+                                613,
+                                130
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        586,
+                                        43,
+                                        613,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "通用机械产品认证\nGeneral mechanical product certification"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        548,
+                        48,
+                        575,
+                        130
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                548,
+                                48,
+                                575,
+                                130
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        548,
+                                        48,
+                                        575,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "订单号："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        535,
+                        285,
+                        564,
+                        374
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                535,
+                                285,
+                                564,
+                                374
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        535,
+                                        285,
+                                        564,
+                                        374
+                                    ],
+                                    "type": "text",
+                                    "content": "26-1732"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        479,
+                        239,
+                        513,
+                        424
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                479,
+                                239,
+                                513,
+                                424
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        479,
+                                        239,
+                                        513,
+                                        424
+                                    ],
+                                    "type": "text",
+                                    "content": "带内外环缠绕垫"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        367,
+                        47,
+                        403,
+                        449
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                367,
+                                47,
+                                403,
+                                449
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        367,
+                                        47,
+                                        403,
+                                        449
+                                    ],
+                                    "type": "text",
+                                    "content": "材质：316L316LFG316L"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        293,
+                        47,
+                        351,
+                        506
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                293,
+                                47,
+                                351,
+                                506
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        293,
+                                        47,
+                                        351,
+                                        506
+                                    ],
+                                    "type": "text",
+                                    "content": "产品规格：AT D DN500 300LB\nSIZE:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        256,
+                        399,
+                        287,
+                        511
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                256,
+                                399,
+                                287,
+                                511
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        256,
+                                        399,
+                                        287,
+                                        511
+                                    ],
+                                    "type": "text",
+                                    "content": "第（89）项"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        73,
+                        51,
+                        111,
+                        258
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                73,
+                                51,
+                                111,
+                                258
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        73,
+                                        51,
+                                        111,
+                                        258
+                                    ],
+                                    "type": "text",
+                                    "content": "电话TEL: 0574-63976202\n传真FAX: 0574-63976200"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        90,
+                        327,
+                        114,
+                        461
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                90,
+                                327,
+                                114,
+                                461
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        327,
+                                        114,
+                                        461
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编P.C: 315300"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        692,
+                        555,
+                        720,
+                        584
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                692,
+                                555,
+                                720,
+                                584
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        692,
+                                        555,
+                                        720,
+                                        584
+                                    ],
+                                    "type": "text",
+                                    "content": "[QR Code]"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "bbox": [
+                        723,
+                        561,
+                        824,
+                        578
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                723,
+                                561,
+                                824,
+                                578
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        723,
+                                        561,
+                                        824,
+                                        578
+                                    ],
+                                    "type": "text",
+                                    "content": "扫描全能王 创建"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13
+                }
+            ],
+            "page_size": [
+                842,
+                595
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        695,
+                        45,
+                        762,
+                        155
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                695,
+                                45,
+                                762,
+                                155
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        695,
+                                        45,
+                                        762,
+                                        155
+                                    ],
+                                    "type": "text",
+                                    "content": "N3B\nAITUO"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        699,
+                        163,
+                        757,
+                        483
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                699,
+                                163,
+                                757,
+                                483
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        699,
+                                        163,
+                                        757,
+                                        483
+                                    ],
+                                    "type": "text",
+                                    "content": "宁波艾拓密封技术有限公司\nAUTO SEALING TECHNOLOGY CO.,LTD.NINGBO"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        610,
+                        40,
+                        685,
+                        407
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                610,
+                                40,
+                                685,
+                                407
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        610,
+                                        40,
+                                        685,
+                                        407
+                                    ],
+                                    "type": "text",
+                                    "content": "产品合格证 CERTIFICATE OF QUALITY"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        586,
+                        43,
+                        613,
+                        130
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                586,
+                                43,
+                                613,
+                                130
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        586,
+                                        43,
+                                        613,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "通用机械产品认证\nGeneral mechanical product certification"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        548,
+                        48,
+                        575,
+                        130
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                548,
+                                48,
+                                575,
+                                130
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        548,
+                                        48,
+                                        575,
+                                        130
+                                    ],
+                                    "type": "text",
+                                    "content": "订单号："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        535,
+                        285,
+                        564,
+                        374
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                535,
+                                285,
+                                564,
+                                374
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        535,
+                                        285,
+                                        564,
+                                        374
+                                    ],
+                                    "type": "text",
+                                    "content": "26-1732"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        479,
+                        239,
+                        513,
+                        424
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                479,
+                                239,
+                                513,
+                                424
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        479,
+                                        239,
+                                        513,
+                                        424
+                                    ],
+                                    "type": "text",
+                                    "content": "带内外环缠绕垫"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        367,
+                        47,
+                        403,
+                        449
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                367,
+                                47,
+                                403,
+                                449
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        367,
+                                        47,
+                                        403,
+                                        449
+                                    ],
+                                    "type": "text",
+                                    "content": "材质：316L316LFG316L"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                293,
+                                47,
+                                351,
+                                506
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        293,
+                                        47,
+                                        351,
+                                        506
+                                    ],
+                                    "type": "text",
+                                    "content": "产品规格：AT D DN500 300LB\nSIZE:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        293,
+                        47,
+                        351,
+                        506
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [],
+                    "index": 8,
+                    "merge_prev": false,
+                    "lines_deleted": true
+                },
+                {
+                    "bbox": [
+                        256,
+                        399,
+                        287,
+                        511
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                256,
+                                399,
+                                287,
+                                511
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        256,
+                                        399,
+                                        287,
+                                        511
+                                    ],
+                                    "type": "text",
+                                    "content": "第（89）项"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        73,
+                        51,
+                        111,
+                        258
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                73,
+                                51,
+                                111,
+                                258
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        73,
+                                        51,
+                                        111,
+                                        258
+                                    ],
+                                    "type": "text",
+                                    "content": "电话TEL: 0574-63976202\n传真FAX: 0574-63976200"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                327,
+                                114,
+                                461
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        327,
+                                        114,
+                                        461
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编P.C: 315300"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        90,
+                        327,
+                        114,
+                        461
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [],
+                    "index": 11,
+                    "merge_prev": false,
+                    "lines_deleted": true
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        692,
+                        31,
+                        767,
+                        476
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                692,
+                                31,
+                                767,
+                                476
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        692,
+                                        31,
+                                        767,
+                                        476
+                                    ],
+                                    "type": "text",
+                                    "content": "NB.\nAITUO\n宁波艾拓密封技术有限公司\nAUTO SEALING TECHNOLOGY CO.,LTD.NINGBO"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        579,
+                        30,
+                        606,
+                        117
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                579,
+                                30,
+                                606,
+                                117
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        579,
+                                        30,
+                                        606,
+                                        117
+                                    ],
+                                    "type": "text",
+                                    "content": "通用机械产品认证\nGeneral mechanical product certification"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        525,
+                        270,
+                        555,
+                        361
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                525,
+                                270,
+                                555,
+                                361
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        525,
+                                        270,
+                                        555,
+                                        361
+                                    ],
+                                    "type": "text",
+                                    "content": "24-3685"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        285,
+                        33,
+                        345,
+                        500
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                285,
+                                33,
+                                345,
+                                500
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        285,
+                                        33,
+                                        345,
+                                        500
+                                    ],
+                                    "type": "text",
+                                    "content": "产品规格：AT D DN100 150LB\nSIZE:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        251,
+                        385,
+                        282,
+                        502
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                251,
+                                385,
+                                282,
+                                502
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        251,
+                                        385,
+                                        282,
+                                        502
+                                    ],
+                                    "type": "text",
+                                    "content": "第（25）项"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        59,
+                        38,
+                        100,
+                        248
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                59,
+                                38,
+                                100,
+                                248
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        59,
+                                        38,
+                                        100,
+                                        248
+                                    ],
+                                    "type": "text",
+                                    "content": "电话TEL: 0574-63976202\n传真FAX: 0574-63976200"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        78,
+                        318,
+                        103,
+                        455
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                78,
+                                318,
+                                103,
+                                455
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        78,
+                                        318,
+                                        103,
+                                        455
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编P.C: 315300"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        692,
+                        555,
+                        720,
+                        584
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                692,
+                                555,
+                                720,
+                                584
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        692,
+                                        555,
+                                        720,
+                                        584
+                                    ],
+                                    "type": "text",
+                                    "content": "[QR Code]"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        723,
+                        561,
+                        824,
+                        579
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                723,
+                                561,
+                                824,
+                                579
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        723,
+                                        561,
+                                        824,
+                                        579
+                                    ],
+                                    "type": "text",
+                                    "content": "扫描全能王 创建"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8
+                }
+            ],
+            "page_size": [
+                842,
+                595
+            ],
+            "page_idx": 1,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        692,
+                        31,
+                        767,
+                        476
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                692,
+                                31,
+                                767,
+                                476
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        692,
+                                        31,
+                                        767,
+                                        476
+                                    ],
+                                    "type": "text",
+                                    "content": "NB.\nAITUO\n宁波艾拓密封技术有限公司\nAUTO SEALING TECHNOLOGY CO.,LTD.NINGBO"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        579,
+                        30,
+                        606,
+                        117
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                579,
+                                30,
+                                606,
+                                117
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        579,
+                                        30,
+                                        606,
+                                        117
+                                    ],
+                                    "type": "text",
+                                    "content": "通用机械产品认证\nGeneral mechanical product certification"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        525,
+                        270,
+                        555,
+                        361
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                525,
+                                270,
+                                555,
+                                361
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        525,
+                                        270,
+                                        555,
+                                        361
+                                    ],
+                                    "type": "text",
+                                    "content": "24-3685"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        285,
+                        33,
+                        345,
+                        500
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                285,
+                                33,
+                                345,
+                                500
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        285,
+                                        33,
+                                        345,
+                                        500
+                                    ],
+                                    "type": "text",
+                                    "content": "产品规格：AT D DN100 150LB\nSIZE:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        251,
+                        385,
+                        282,
+                        502
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                251,
+                                385,
+                                282,
+                                502
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        251,
+                                        385,
+                                        282,
+                                        502
+                                    ],
+                                    "type": "text",
+                                    "content": "第（25）项"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        59,
+                        38,
+                        100,
+                        248
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                59,
+                                38,
+                                100,
+                                248
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        59,
+                                        38,
+                                        100,
+                                        248
+                                    ],
+                                    "type": "text",
+                                    "content": "电话TEL: 0574-63976202\n传真FAX: 0574-63976200"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                78,
+                                318,
+                                103,
+                                455
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        78,
+                                        318,
+                                        103,
+                                        455
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编P.C: 315300"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        78,
+                        318,
+                        103,
+                        455
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [],
+                    "index": 6,
+                    "merge_prev": false,
+                    "lines_deleted": true
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}

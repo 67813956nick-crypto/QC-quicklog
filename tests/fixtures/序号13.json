@@ -1,0 +1,612 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        38,
+                        35,
+                        803,
+                        518
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                38,
+                                35,
+                                803,
+                                518
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        38,
+                                        35,
+                                        803,
+                                        518
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                38,
+                                                35,
+                                                803,
+                                                518
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td rowspan=\"3\" colspan=\"20\">产品质量证明书Product Quality Certificate(EN 10204 3.1)</td><td colspan=\"2\">证书编号Report No</td><td colspan=\"3\">WZXS26011160002</td></tr><tr><td colspan=\"2\">制造日期Manufacture Date</td><td colspan=\"3\">2026.05.20</td></tr><tr><td colspan=\"2\">文件编号Form No</td><td colspan=\"3\">WZ/QR-QC-035</td></tr><tr><td>合同号PO No.</td><td colspan=\"3\">202518691957</td><td>用户Customer</td><td colspan=\"7\">中海石油宁波大榭石化有限公司</td><td>项目名称Project Name</td><td colspan=\"6\"></td><td colspan=\"3\">位号/地点Tag No./Place</td><td colspan=\"3\">84973045/舟山运行五部2026年大修第二批材料(一)</td></tr><tr><td>生产令号Production No.</td><td colspan=\"3\">WZXS2601116</td><td>序列号Serial No</td><td colspan=\"4\">26011160005-0024</td><td>数量Qty</td><td colspan=\"3\">20</td><td colspan=\"3\">设计标准Design Standard</td><td colspan=\"3\">GB/T 12234-2019</td><td colspan=\"3\">质量等级QSL</td><td colspan=\"3\">/</td></tr><tr><td>产品名称Product Name</td><td colspan=\"3\">闸阀</td><td>规格尺寸Size</td><td colspan=\"4\">DN25</td><td>适用温度Applicable Temp.</td><td colspan=\"3\">-29~425°C</td><td colspan=\"3\">检验标准Test Standard</td><td colspan=\"3\">GB/T26480-2011</td><td colspan=\"3\">端部连接End Connector</td><td colspan=\"3\">HG/T 20592-2009/RF</td></tr><tr><td>型号规格Product Type</td><td colspan=\"3\">Z41Y-100 DN25</td><td>压力等级Pressure Class</td><td colspan=\"4\">100</td><td>适用介质Medium</td><td colspan=\"3\">水,油,气</td><td colspan=\"3\">压力-温度值Pressure-Temp</td><td colspan=\"3\">GB/T12224-2015</td><td colspan=\"3\">TS证书编号Certificate No.</td><td colspan=\"3\">TS2733S50-2029</td></tr><tr><td>项目Items</td><td colspan=\"3\">倒密封试验Backseat Test</td><td colspan=\"3\">壳体强度试验Shell Test</td><td colspan=\"3\">高压水密封试验High-P.W.Seal</td><td colspan=\"4\">低压气密封试验Low-P.G.Seal</td><td colspan=\"5\">附加试验Other Test</td><td colspan=\"3\">项目Items</td><td colspan=\"3\">结论Result</td></tr><tr><td>试验介质Test Medium</td><td colspan=\"3\">水</td><td colspan=\"3\">水</td><td colspan=\"3\">水</td><td colspan=\"4\">气</td><td colspan=\"5\"></td><td colspan=\"3\">产品外观Appearance</td><td colspan=\"3\">合格</td></tr><tr><td>试验压力Test Pressures</td><td colspan=\"3\">11.0</td><td colspan=\"3\">15.0</td><td colspan=\"3\">11.0</td><td colspan=\"4\">0.6</td><td colspan=\"5\"></td><td colspan=\"3\">连接尺寸Connection Size</td><td colspan=\"3\">合格</td></tr><tr><td>试验时间Test Duration</td><td colspan=\"3\">15s</td><td colspan=\"3\">15s</td><td colspan=\"3\">15s</td><td colspan=\"4\">15s</td><td colspan=\"5\">/</td><td colspan=\"3\">开关动作Switch Action</td><td colspan=\"3\">合格</td></tr><tr><td>结论Result</td><td colspan=\"3\">合格</td><td colspan=\"3\">合格</td><td colspan=\"3\">合格</td><td colspan=\"4\">合格</td><td colspan=\"5\">/</td><td colspan=\"3\">产品标识Identification</td><td colspan=\"3\">合格</td></tr><tr><td colspan=\"19\">注:Note:如有规定,进行附加试验要求的DBB、DIB-1、DIB-2、高压气密封试验、腔体泄放试验、扭矩/推力试验、带袖管试验。If specified, additional tests such as DBB, DIB-1, DIB-2, high-pressure gas seal test, chamber discharge test, torque/thrust test, and sleeve test are required.</td><td colspan=\"3\">无损检测NDT</td><td colspan=\"3\">合格</td></tr><tr><td rowspan=\"6\">部件名称Part Name</td><td rowspan=\"3\">材料标准Material standard</td><td rowspan=\"3\">炉号Heat No.</td><td rowspan=\"3\">热处理HT</td><td colspan=\"13\">化学成分Chemical Composition (wt.%)</td><td colspan=\"8\">机械性能Mechanical Property</td></tr><tr><td rowspan=\"2\">C</td><td rowspan=\"2\">Si</td><td rowspan=\"2\">Mn</td><td rowspan=\"2\">P</td><td rowspan=\"2\">S</td><td rowspan=\"2\">Cu</td><td rowspan=\"2\">Cr</td><td rowspan=\"2\">Mo</td><td rowspan=\"2\">Ni</td><td rowspan=\"2\">V</td><td rowspan=\"2\">AI</td><td rowspan=\"2\">N</td><td rowspan=\"2\">CE</td><td rowspan=\"2\">Rm(MPa)</td><td rowspan=\"2\">Rp0.2(MPa)</td><td rowspan=\"2\">A(%)</td><td rowspan=\"2\">Z(%)</td><td rowspan=\"2\">硬度(HB)</td><td colspan=\"3\">KV2</td></tr><tr><td>≥J</td><td colspan=\"2\">°C</td></tr><tr><td colspan=\"3\">ASTM A182-F11</td><td>0.10~0.2</td><td>0.5~10</td><td>0.3~0.8</td><td>≤0.040</td><td>≤0.040</td><td></td><td>1.0~1.5</td><td>0.44~0.65</td><td></td><td></td><td></td><td></td><td></td><td>≥485</td><td>≥275</td><td>≥20</td><td>≥30</td><td>:43-207</td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"3\">GB/T 3077-38CrMoAl</td><td>0.35~0.42</td><td>0.2~0.45</td><td>0.3~0.60</td><td>≤0.020</td><td>≤0.020</td><td>≤0.20</td><td>1.35~1.65</td><td>0.15~0.25</td><td>≤0.30</td><td></td><td>0.7~1.1</td><td></td><td></td><td>≥980</td><td>≥835</td><td>≥14</td><td>≥50</td><td>≤229</td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"3\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td></tr><tr><td>阀体</td><td>ASTM A182-F11</td><td>N51</td><td>N-T</td><td>0.135</td><td>0.655</td><td>0.416</td><td>0.021</td><td>0.007</td><td></td><td>1.455</td><td>0.511</td><td>-</td><td></td><td></td><td></td><td></td><td>566</td><td>296</td><td>31</td><td>50</td><td>186</td><td></td><td colspan=\"2\"></td></tr><tr><td>阀盖</td><td>ASTM A182-F11</td><td>N51</td><td>N-T</td><td>0.135</td><td>0.655</td><td>0.416</td><td>0.021</td><td>0.007</td><td></td><td>1.455</td><td>0.511</td><td></td><td></td><td></td><td></td><td></td><td>566</td><td>296</td><td>31</td><td>50</td><td>186</td><td></td><td colspan=\"2\"></td></tr><tr><td>闸板</td><td>ASTM A182-F11</td><td>T11</td><td>N-T</td><td>0.190</td><td>0.907</td><td>0.750</td><td>0.008</td><td>0.004</td><td></td><td>1.325</td><td>0.512</td><td></td><td></td><td></td><td></td><td></td><td>615</td><td>385</td><td>30</td><td>45</td><td>196</td><td></td><td colspan=\"2\"></td></tr><tr><td>阀座</td><td>ASTM A182-F11</td><td>Z11</td><td>N+T</td><td>0.120</td><td>0.580</td><td>0.433</td><td>0.016</td><td>0.007</td><td>-</td><td>1.25</td><td>0.460</td><td></td><td></td><td></td><td></td><td></td><td>541</td><td>295</td><td>25</td><td>40</td><td>172</td><td></td><td colspan=\"2\"></td></tr><tr><td>阀杆</td><td>GB/T 3077-38CrMoAl</td><td>8260111434</td><td>Q+T</td><td>0.391</td><td>0.251</td><td>0.471</td><td>0.003</td><td>0.002</td><td>0.001</td><td>1.514</td><td>0.179</td><td>0.005</td><td>-</td><td>0.859</td><td></td><td></td><td>1125</td><td>898</td><td>22</td><td>54</td><td>208</td><td></td><td colspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"10\">声明Declaration:兹证明上述产品经过检查和试验,在制造日期内产品质量符合合同及相关技术文件的规定,合格准予出厂。This is to certify that the above products have been inspected and tested, and their quality meets the requirements of the contract and relevant technical documents within the manufacturing date. They are qualified and allowed to leave the factory.</td><td colspan=\"15\">第三方检验Third party test编制Prepared by审核Reviewed by批准d by盖章Stamped</td></tr></table>",
+                                            "image_path": "6d5a04f4ab66a8ed4b9c0cfc9d27d56c1a4425b1394e246b0fc99b24bbdb4566.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        43,
+                        518,
+                        133,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                43,
+                                518,
+                                133,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        43,
+                                        518,
+                                        133,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "造商：五洲阀门股份有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        37,
+                        528,
+                        122,
+                        537
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                37,
+                                528,
+                                122,
+                                537
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        37,
+                                        528,
+                                        122,
+                                        537
+                                    ],
+                                    "type": "text",
+                                    "content": "http: www.wuzhou-valve.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        163,
+                        518,
+                        293,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                163,
+                                518,
+                                293,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        163,
+                                        518,
+                                        293,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "地址：浙江温州市龙湾区永强高科技产业园区"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        162,
+                        527,
+                        249,
+                        536
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                162,
+                                527,
+                                249,
+                                536
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        162,
+                                        527,
+                                        249,
+                                        536
+                                    ],
+                                    "type": "text",
+                                    "content": "E-mail: wz@wuzhou-valve.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        338,
+                        518,
+                        380,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                338,
+                                518,
+                                380,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        338,
+                                        518,
+                                        380,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编：325024"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        463,
+                        517,
+                        570,
+                        526
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                463,
+                                517,
+                                570,
+                                526
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        463,
+                                        517,
+                                        570,
+                                        526
+                                    ],
+                                    "type": "text",
+                                    "content": "电话：+86 0577-86915555 / 86916818"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        661,
+                        446,
+                        783,
+                        532
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                661,
+                                446,
+                                783,
+                                532
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        661,
+                                        446,
+                                        783,
+                                        532
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                661,
+                                                446,
+                                                783,
+                                                532
+                                            ],
+                                            "type": "image",
+                                            "image_path": "524da78989755a1eaec99009189b7b0f3aec8076805e64b9f333b2645109a797.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "index": 7,
+                    "sub_type": "seal"
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                842,
+                595
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        38,
+                        35,
+                        803,
+                        518
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                38,
+                                35,
+                                803,
+                                518
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        38,
+                                        35,
+                                        803,
+                                        518
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                38,
+                                                35,
+                                                803,
+                                                518
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td rowspan=\"3\" colspan=\"20\">产品质量证明书Product Quality Certificate(EN 10204 3.1)</td><td colspan=\"2\">证书编号Report No</td><td colspan=\"3\">WZXS26011160002</td></tr><tr><td colspan=\"2\">制造日期Manufacture Date</td><td colspan=\"3\">2026.05.20</td></tr><tr><td colspan=\"2\">文件编号Form No</td><td colspan=\"3\">WZ/QR-QC-035</td></tr><tr><td>合同号PO No.</td><td colspan=\"3\">202518691957</td><td>用户Customer</td><td colspan=\"7\">中海石油宁波大榭石化有限公司</td><td>项目名称Project Name</td><td colspan=\"6\"></td><td colspan=\"3\">位号/地点Tag No./Place</td><td colspan=\"3\">84973045/舟山运行五部2026年大修第二批材料(一)</td></tr><tr><td>生产令号Production No.</td><td colspan=\"3\">WZXS2601116</td><td>序列号Serial No</td><td colspan=\"4\">26011160005-0024</td><td>数量Qty</td><td colspan=\"3\">20</td><td colspan=\"3\">设计标准Design Standard</td><td colspan=\"3\">GB/T 12234-2019</td><td colspan=\"3\">质量等级QSL</td><td colspan=\"3\">/</td></tr><tr><td>产品名称Product Name</td><td colspan=\"3\">闸阀</td><td>规格尺寸Size</td><td colspan=\"4\">DN25</td><td>适用温度Applicable Temp.</td><td colspan=\"3\">-29~425°C</td><td colspan=\"3\">检验标准Test Standard</td><td colspan=\"3\">GB/T26480-2011</td><td colspan=\"3\">端部连接End Connector</td><td colspan=\"3\">HG/T 20592-2009/RF</td></tr><tr><td>型号规格Product Type</td><td colspan=\"3\">Z41Y-100 DN25</td><td>压力等级Pressure Class</td><td colspan=\"4\">100</td><td>适用介质Medium</td><td colspan=\"3\">水,油,气</td><td colspan=\"3\">压力-温度值Pressure-Temp</td><td colspan=\"3\">GB/T12224-2015</td><td colspan=\"3\">TS证书编号Certificate No.</td><td colspan=\"3\">TS2733S50-2029</td></tr><tr><td>项目Items</td><td colspan=\"3\">倒密封试验Backseat Test</td><td colspan=\"3\">壳体强度试验Shell Test</td><td colspan=\"3\">高压水密封试验High-P.W.Seal</td><td colspan=\"4\">低压气密封试验Low-P.G.Seal</td><td colspan=\"5\">附加试验Other Test</td><td colspan=\"3\">项目Items</td><td colspan=\"3\">结论Result</td></tr><tr><td>试验介质Test Medium</td><td colspan=\"3\">水</td><td colspan=\"3\">水</td><td colspan=\"3\">水</td><td colspan=\"4\">气</td><td colspan=\"5\"></td><td colspan=\"3\">产品外观Appearance</td><td colspan=\"3\">合格</td></tr><tr><td>试验压力Test Pressures</td><td colspan=\"3\">11.0</td><td colspan=\"3\">15.0</td><td colspan=\"3\">11.0</td><td colspan=\"4\">0.6</td><td colspan=\"5\"></td><td colspan=\"3\">连接尺寸Connection Size</td><td colspan=\"3\">合格</td></tr><tr><td>试验时间Test Duration</td><td colspan=\"3\">15s</td><td colspan=\"3\">15s</td><td colspan=\"3\">15s</td><td colspan=\"4\">15s</td><td colspan=\"5\">/</td><td colspan=\"3\">开关动作Switch Action</td><td colspan=\"3\">合格</td></tr><tr><td>结论Result</td><td colspan=\"3\">合格</td><td colspan=\"3\">合格</td><td colspan=\"3\">合格</td><td colspan=\"4\">合格</td><td colspan=\"5\">/</td><td colspan=\"3\">产品标识Identification</td><td colspan=\"3\">合格</td></tr><tr><td colspan=\"19\">注:Note:如有规定,进行附加试验要求的DBB、DIB-1、DIB-2、高压气密封试验、腔体泄放试验、扭矩/推力试验、带袖管试验。If specified, additional tests such as DBB, DIB-1, DIB-2, high-pressure gas seal test, chamber discharge test, torque/thrust test, and sleeve test are required.</td><td colspan=\"3\">无损检测NDT</td><td colspan=\"3\">合格</td></tr><tr><td rowspan=\"6\">部件名称Part Name</td><td rowspan=\"3\">材料标准Material standard</td><td rowspan=\"3\">炉号Heat No.</td><td rowspan=\"3\">热处理HT</td><td colspan=\"13\">化学成分Chemical Composition (wt.%)</td><td colspan=\"8\">机械性能Mechanical Property</td></tr><tr><td rowspan=\"2\">C</td><td rowspan=\"2\">Si</td><td rowspan=\"2\">Mn</td><td rowspan=\"2\">P</td><td rowspan=\"2\">S</td><td rowspan=\"2\">Cu</td><td rowspan=\"2\">Cr</td><td rowspan=\"2\">Mo</td><td rowspan=\"2\">Ni</td><td rowspan=\"2\">V</td><td rowspan=\"2\">AI</td><td rowspan=\"2\">N</td><td rowspan=\"2\">CE</td><td rowspan=\"2\">Rm(MPa)</td><td rowspan=\"2\">Rp0.2(MPa)</td><td rowspan=\"2\">A(%)</td><td rowspan=\"2\">Z(%)</td><td rowspan=\"2\">硬度(HB)</td><td colspan=\"3\">KV2</td></tr><tr><td>≥J</td><td colspan=\"2\">°C</td></tr><tr><td colspan=\"3\">ASTM A182-F11</td><td>0.10~0.2</td><td>0.5~10</td><td>0.3~0.8</td><td>≤0.040</td><td>≤0.040</td><td></td><td>1.0~1.5</td><td>0.44~0.65</td><td></td><td></td><td></td><td></td><td></td><td>≥485</td><td>≥275</td><td>≥20</td><td>≥30</td><td>:43-207</td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"3\">GB/T 3077-38CrMoAl</td><td>0.35~0.42</td><td>0.2~0.45</td><td>0.3~0.60</td><td>≤0.020</td><td>≤0.020</td><td>≤0.20</td><td>1.35~1.65</td><td>0.15~0.25</td><td>≤0.30</td><td></td><td>0.7~1.1</td><td></td><td></td><td>≥980</td><td>≥835</td><td>≥14</td><td>≥50</td><td>≤229</td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"3\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td></tr><tr><td>阀体</td><td>ASTM A182-F11</td><td>N51</td><td>N-T</td><td>0.135</td><td>0.655</td><td>0.416</td><td>0.021</td><td>0.007</td><td></td><td>1.455</td><td>0.511</td><td>-</td><td></td><td></td><td></td><td></td><td>566</td><td>296</td><td>31</td><td>50</td><td>186</td><td></td><td colspan=\"2\"></td></tr><tr><td>阀盖</td><td>ASTM A182-F11</td><td>N51</td><td>N-T</td><td>0.135</td><td>0.655</td><td>0.416</td><td>0.021</td><td>0.007</td><td></td><td>1.455</td><td>0.511</td><td></td><td></td><td></td><td></td><td></td><td>566</td><td>296</td><td>31</td><td>50</td><td>186</td><td></td><td colspan=\"2\"></td></tr><tr><td>闸板</td><td>ASTM A182-F11</td><td>T11</td><td>N-T</td><td>0.190</td><td>0.907</td><td>0.750</td><td>0.008</td><td>0.004</td><td></td><td>1.325</td><td>0.512</td><td></td><td></td><td></td><td></td><td></td><td>615</td><td>385</td><td>30</td><td>45</td><td>196</td><td></td><td colspan=\"2\"></td></tr><tr><td>阀座</td><td>ASTM A182-F11</td><td>Z11</td><td>N+T</td><td>0.120</td><td>0.580</td><td>0.433</td><td>0.016</td><td>0.007</td><td>-</td><td>1.25</td><td>0.460</td><td></td><td></td><td></td><td></td><td></td><td>541</td><td>295</td><td>25</td><td>40</td><td>172</td><td></td><td colspan=\"2\"></td></tr><tr><td>阀杆</td><td>GB/T 3077-38CrMoAl</td><td>8260111434</td><td>Q+T</td><td>0.391</td><td>0.251</td><td>0.471</td><td>0.003</td><td>0.002</td><td>0.001</td><td>1.514</td><td>0.179</td><td>0.005</td><td>-</td><td>0.859</td><td></td><td></td><td>1125</td><td>898</td><td>22</td><td>54</td><td>208</td><td></td><td colspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"10\">声明Declaration:兹证明上述产品经过检查和试验,在制造日期内产品质量符合合同及相关技术文件的规定,合格准予出厂。This is to certify that the above products have been inspected and tested, and their quality meets the requirements of the contract and relevant technical documents within the manufacturing date. They are qualified and allowed to leave the factory.</td><td colspan=\"15\">第三方检验Third party test编制Prepared by审核Reviewed by批准d by盖章Stamped</td></tr></table>",
+                                            "image_path": "6d5a04f4ab66a8ed4b9c0cfc9d27d56c1a4425b1394e246b0fc99b24bbdb4566.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        43,
+                        518,
+                        133,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                43,
+                                518,
+                                133,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        43,
+                                        518,
+                                        133,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "造商：五洲阀门股份有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        37,
+                        528,
+                        122,
+                        537
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                37,
+                                528,
+                                122,
+                                537
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        37,
+                                        528,
+                                        122,
+                                        537
+                                    ],
+                                    "type": "text",
+                                    "content": "http: www.wuzhou-valve.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        163,
+                        518,
+                        293,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                163,
+                                518,
+                                293,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        163,
+                                        518,
+                                        293,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "地址：浙江温州市龙湾区永强高科技产业园区"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        162,
+                        527,
+                        249,
+                        536
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                162,
+                                527,
+                                249,
+                                536
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        162,
+                                        527,
+                                        249,
+                                        536
+                                    ],
+                                    "type": "text",
+                                    "content": "E-mail: wz@wuzhou-valve.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        338,
+                        518,
+                        380,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                338,
+                                518,
+                                380,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        338,
+                                        518,
+                                        380,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "邮编：325024"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        463,
+                        517,
+                        570,
+                        526
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                463,
+                                517,
+                                570,
+                                526
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        463,
+                                        517,
+                                        570,
+                                        526
+                                    ],
+                                    "type": "text",
+                                    "content": "电话：+86 0577-86915555 / 86916818"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        661,
+                        446,
+                        783,
+                        532
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                661,
+                                446,
+                                783,
+                                532
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        661,
+                                        446,
+                                        783,
+                                        532
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                661,
+                                                446,
+                                                783,
+                                                532
+                                            ],
+                                            "type": "image",
+                                            "image_path": "524da78989755a1eaec99009189b7b0f3aec8076805e64b9f333b2645109a797.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "index": 7,
+                    "sub_type": "seal"
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}

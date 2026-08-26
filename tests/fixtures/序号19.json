@@ -1,0 +1,474 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        59,
+                        24,
+                        166,
+                        36
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                59,
+                                24,
+                                166,
+                                36
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        59,
+                                        24,
+                                        166,
+                                        36
+                                    ],
+                                    "type": "text",
+                                    "content": "产品质量证明书（合格证）"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "level": 2
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        24,
+                        39,
+                        37,
+                        51
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                24,
+                                39,
+                                37,
+                                51
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        39,
+                                        37,
+                                        51
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                24,
+                                                39,
+                                                37,
+                                                51
+                                            ],
+                                            "type": "image",
+                                            "image_path": "215b7fa5175fe809d537be0ff27c2777bbd6fb0728770d0efa82820052b72104.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        36,
+                        47,
+                        83,
+                        53
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                36,
+                                47,
+                                83,
+                                53
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        36,
+                                        47,
+                                        83,
+                                        53
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2710167-2028 TSX"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        102,
+                        47,
+                        142,
+                        54
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                102,
+                                47,
+                                142,
+                                54
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        102,
+                                        47,
+                                        142,
+                                        54
+                                    ],
+                                    "type": "text",
+                                    "content": "物料编码：85117289"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        179,
+                        48,
+                        204,
+                        55
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                179,
+                                48,
+                                204,
+                                55
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        179,
+                                        48,
+                                        204,
+                                        55
+                                    ],
+                                    "type": "text",
+                                    "content": "LSJ质—29J"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        18,
+                        54,
+                        204,
+                        275
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                18,
+                                54,
+                                204,
+                                275
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        18,
+                                        54,
+                                        204,
+                                        275
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                18,
+                                                54,
+                                                204,
+                                                275
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>订货单位</td><td colspan=\"3\">中海石油舟山石化有限公司</td><td>产品编号</td><td colspan=\"3\">25278-2</td><td>数量</td><td colspan=\"2\">1</td></tr><tr><td>产品名称</td><td colspan=\"2\">等径三通</td><td>规格</td><td colspan=\"4\">DN200 SCH120</td><td>材质</td><td colspan=\"2\">06Cr18Ni11Ti</td></tr><tr><td colspan=\"11\">材料</td></tr><tr><td>炉号</td><td colspan=\"3\">B18247</td><td>批号</td><td colspan=\"6\">L31807418</td></tr><tr><td>材料编号</td><td colspan=\"3\">18-349</td><td>标准</td><td colspan=\"6\">GB/T14976-2012</td></tr><tr><td colspan=\"11\">化学成份%</td></tr><tr><td></td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td colspan=\"2\">S</td><td>Cr</td><td colspan=\"2\">Ni</td><td>Ti</td></tr><tr><td>供应值</td><td>0.051</td><td>0.41</td><td>1.58</td><td>0.028</td><td colspan=\"2\">0.001</td><td>17.40</td><td colspan=\"2\">10.30</td><td>0.41</td></tr><tr><td>复验值</td><td>0.052</td><td>0.43</td><td>1.62</td><td>0.025</td><td colspan=\"2\">0.003</td><td>17.37</td><td colspan=\"2\">10.32</td><td>0.42</td></tr><tr><td colspan=\"11\">机械性能</td></tr><tr><td></td><td colspan=\"2\">RmMPa</td><td>Rp0.2MPa</td><td>A%</td><td colspan=\"2\">Z%</td><td colspan=\"4\">AKVJ</td></tr><tr><td>供应值</td><td colspan=\"2\">569/574</td><td>267/276</td><td>54/56</td><td colspan=\"2\">—</td><td colspan=\"4\">----</td></tr><tr><td>复验值</td><td colspan=\"2\">562/568</td><td>271/279</td><td>51/55</td><td colspan=\"2\">—</td><td colspan=\"4\">----</td></tr><tr><td>热处理状态</td><td colspan=\"4\">固溶+稳定化</td><td colspan=\"2\">HB(平均值)</td><td colspan=\"4\">143</td></tr><tr><td rowspan=\"2\">无损检测</td><td>RT</td><td></td><td>MT</td><td></td><td rowspan=\"2\">表面质量</td><td rowspan=\"2\">几何尺寸</td><td rowspan=\"2\">形位偏差</td><td rowspan=\"2\" colspan=\"2\">酸洗钝化</td><td rowspan=\"2\">PMI检测</td></tr><tr><td>UT</td><td>✓I</td><td>PT</td><td>✓I</td></tr><tr><td colspan=\"5\">UT按NB/T47013.3-2023标准检测合格PT按NB/T47013.5-2015标准检测合格</td><td>合格</td><td>合格</td><td>合格</td><td colspan=\"2\">合格</td><td>合格</td></tr><tr><td colspan=\"11\">本产品质量经检验,符合SH/T3408-2022标准和合同的要求,质量合格,准予出厂。检查员签章检验责任师完成日期:2025年12月19日辽宁省辽阳石化机械设计制造有限公司质量检验专用地址:辽阳市南环街二段邮编:111050电话:0419-3666888传真:0419-366</td></tr></table>",
+                                            "image_path": "8a9e08eb18e71ec53bda16a13c04e7e2198415e75c8c0e4e8bc577e59f4f0773.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                212,
+                288
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        59,
+                        24,
+                        166,
+                        36
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                59,
+                                24,
+                                166,
+                                36
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        59,
+                                        24,
+                                        166,
+                                        36
+                                    ],
+                                    "type": "text",
+                                    "content": "产品质量证明书（合格证）"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "level": 2
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        24,
+                        39,
+                        37,
+                        51
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                24,
+                                39,
+                                37,
+                                51
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        39,
+                                        37,
+                                        51
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                24,
+                                                39,
+                                                37,
+                                                51
+                                            ],
+                                            "type": "image",
+                                            "image_path": "215b7fa5175fe809d537be0ff27c2777bbd6fb0728770d0efa82820052b72104.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        36,
+                        47,
+                        83,
+                        53
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                36,
+                                47,
+                                83,
+                                53
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        36,
+                                        47,
+                                        83,
+                                        53
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2710167-2028 TSX"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        102,
+                        47,
+                        142,
+                        54
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                102,
+                                47,
+                                142,
+                                54
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        102,
+                                        47,
+                                        142,
+                                        54
+                                    ],
+                                    "type": "text",
+                                    "content": "物料编码：85117289"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        179,
+                        48,
+                        204,
+                        55
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                179,
+                                48,
+                                204,
+                                55
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        179,
+                                        48,
+                                        204,
+                                        55
+                                    ],
+                                    "type": "text",
+                                    "content": "LSJ质—29J"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        18,
+                        54,
+                        204,
+                        275
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                18,
+                                54,
+                                204,
+                                275
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        18,
+                                        54,
+                                        204,
+                                        275
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                18,
+                                                54,
+                                                204,
+                                                275
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>订货单位</td><td colspan=\"3\">中海石油舟山石化有限公司</td><td>产品编号</td><td colspan=\"3\">25278-2</td><td>数量</td><td colspan=\"2\">1</td></tr><tr><td>产品名称</td><td colspan=\"2\">等径三通</td><td>规格</td><td colspan=\"4\">DN200 SCH120</td><td>材质</td><td colspan=\"2\">06Cr18Ni11Ti</td></tr><tr><td colspan=\"11\">材料</td></tr><tr><td>炉号</td><td colspan=\"3\">B18247</td><td>批号</td><td colspan=\"6\">L31807418</td></tr><tr><td>材料编号</td><td colspan=\"3\">18-349</td><td>标准</td><td colspan=\"6\">GB/T14976-2012</td></tr><tr><td colspan=\"11\">化学成份%</td></tr><tr><td></td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td colspan=\"2\">S</td><td>Cr</td><td colspan=\"2\">Ni</td><td>Ti</td></tr><tr><td>供应值</td><td>0.051</td><td>0.41</td><td>1.58</td><td>0.028</td><td colspan=\"2\">0.001</td><td>17.40</td><td colspan=\"2\">10.30</td><td>0.41</td></tr><tr><td>复验值</td><td>0.052</td><td>0.43</td><td>1.62</td><td>0.025</td><td colspan=\"2\">0.003</td><td>17.37</td><td colspan=\"2\">10.32</td><td>0.42</td></tr><tr><td colspan=\"11\">机械性能</td></tr><tr><td></td><td colspan=\"2\">RmMPa</td><td>Rp0.2MPa</td><td>A%</td><td colspan=\"2\">Z%</td><td colspan=\"4\">AKVJ</td></tr><tr><td>供应值</td><td colspan=\"2\">569/574</td><td>267/276</td><td>54/56</td><td colspan=\"2\">—</td><td colspan=\"4\">----</td></tr><tr><td>复验值</td><td colspan=\"2\">562/568</td><td>271/279</td><td>51/55</td><td colspan=\"2\">—</td><td colspan=\"4\">----</td></tr><tr><td>热处理状态</td><td colspan=\"4\">固溶+稳定化</td><td colspan=\"2\">HB(平均值)</td><td colspan=\"4\">143</td></tr><tr><td rowspan=\"2\">无损检测</td><td>RT</td><td></td><td>MT</td><td></td><td rowspan=\"2\">表面质量</td><td rowspan=\"2\">几何尺寸</td><td rowspan=\"2\">形位偏差</td><td rowspan=\"2\" colspan=\"2\">酸洗钝化</td><td rowspan=\"2\">PMI检测</td></tr><tr><td>UT</td><td>✓I</td><td>PT</td><td>✓I</td></tr><tr><td colspan=\"5\">UT按NB/T47013.3-2023标准检测合格PT按NB/T47013.5-2015标准检测合格</td><td>合格</td><td>合格</td><td>合格</td><td colspan=\"2\">合格</td><td>合格</td></tr><tr><td colspan=\"11\">本产品质量经检验,符合SH/T3408-2022标准和合同的要求,质量合格,准予出厂。检查员签章检验责任师完成日期:2025年12月19日辽宁省辽阳石化机械设计制造有限公司质量检验专用地址:辽阳市南环街二段邮编:111050电话:0419-3666888传真:0419-366</td></tr></table>",
+                                            "image_path": "8a9e08eb18e71ec53bda16a13c04e7e2198415e75c8c0e4e8bc577e59f4f0773.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.0"
+}

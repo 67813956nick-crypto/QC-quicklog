@@ -1,0 +1,878 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        17,
+                        32,
+                        68,
+                        66
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                17,
+                                32,
+                                68,
+                                66
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        17,
+                                        32,
+                                        68,
+                                        66
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                17,
+                                                32,
+                                                68,
+                                                66
+                                            ],
+                                            "type": "image",
+                                            "image_path": "6cecb613f1060f431efc085110b82266c57bcb4afa5835be97b0d2971dfe07d7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        79,
+                        55,
+                        143,
+                        67
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                81,
+                                57,
+                                142,
+                                66
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        81,
+                                        57,
+                                        142,
+                                        66
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2734068-2028",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        253,
+                        27,
+                        645,
+                        48
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                257,
+                                30,
+                                640,
+                                45
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        257,
+                                        30,
+                                        640,
+                                        45
+                                    ],
+                                    "type": "text",
+                                    "content": "安徽省屯溪高压阀门股份有限公司产品质量合格证明书",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        280,
+                        54,
+                        591,
+                        67
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                282,
+                                55,
+                                588,
+                                67
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        282,
+                                        55,
+                                        588,
+                                        67
+                                    ],
+                                    "type": "text",
+                                    "content": "ANHUI TUNXI HIGH PRESSURE VALVE Co.,LTD. Product Quality Certificate",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        651,
+                        54,
+                        779,
+                        66
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                653,
+                                55,
+                                777,
+                                66
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        653,
+                                        55,
+                                        777,
+                                        66
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明文件编号No.： 602075008",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        15,
+                        70,
+                        825,
+                        521
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                15,
+                                70,
+                                825,
+                                521
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        15,
+                                        70,
+                                        825,
+                                        521
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                15,
+                                                70,
+                                                825,
+                                                521
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>客户Customers:</td><td colspan=\"4\">中国石油化工股份有限公司镇海分公司</td><td colspan=\"2\">合同号:</td><td colspan=\"4\">2302548789</td><td colspan=\"3\">物料编号:</td><td colspan=\"4\">4601020084702790</td><td colspan=\"2\">适用温度:</td><td colspan=\"2\">≤425°C</td></tr><tr><td colspan=\"2\">中法兰螺栓:</td><td colspan=\"2\">B7</td><td>填料:</td><td colspan=\"2\">低泄漏填料</td><td colspan=\"2\">中法兰垫片:</td><td colspan=\"2\">304+柔性石墨</td><td colspan=\"2\">适用介质</td><td colspan=\"3\">水、蒸汽、油品等</td><td colspan=\"2\">出厂编号/批号:</td><td colspan=\"4\">202605280318/6020750080001~0008</td></tr><tr><td rowspan=\"3\" colspan=\"2\">产品名称/规格/型号ProductType</td><td rowspan=\"3\">数量Qty台</td><td rowspan=\"3\">零件名称PartsName</td><td colspan=\"12\">化学成份(%)Chemical Composition</td><td colspan=\"5\">机械性能Mechanical Performance</td><td></td></tr><tr><td rowspan=\"2\">材料牌号MaterialSign</td><td>碳</td><td>硅</td><td>锰</td><td>磷</td><td>硫</td><td>铬</td><td>镍</td><td>钼</td><td>铜</td><td>钒</td><td>钛</td><td>屈服</td><td>抗拉</td><td>延伸</td><td>收缩</td><td>冲击</td><td>硬度</td></tr><tr><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Ni</td><td>Mo</td><td>Cu</td><td>V</td><td>Ti</td><td>Rp0.2(MPa)</td><td>Rm(MPa)</td><td>A(%)</td><td>Z(%)</td><td>Ak(Ak)</td><td>HB</td></tr><tr><td rowspan=\"6\" colspan=\"2\">闸阀\\BB, OS&amp;YCL600RFA105STL, F6aDN20</td><td rowspan=\"6\">8</td><td>阀体/炉号Body</td><td>A105/ADG</td><td>0.18</td><td>0.15</td><td>0.71</td><td>0.013</td><td>0.012</td><td>0.11</td><td>0.09</td><td>0.08</td><td>0.05</td><td>0.01</td><td></td><td>305</td><td>520</td><td>37</td><td>55</td><td></td><td>148</td></tr><tr><td>阀盖/炉号Bonnet</td><td>A105/FDG</td><td>0.19</td><td>0.24</td><td>0.75</td><td>0.014</td><td>0.012</td><td>0.14</td><td>0.11</td><td>0.09</td><td>0.04</td><td>0.01</td><td></td><td>303</td><td>517</td><td>37</td><td>54</td><td></td><td>144</td></tr><tr><td>阀杆Stem</td><td>F6a</td><td>0.12</td><td>0.34</td><td>0.61</td><td>0.014</td><td>0.011</td><td>11.92</td><td>0.21</td><td></td><td></td><td></td><td></td><td>421</td><td>635</td><td>24</td><td>44</td><td></td><td>206</td></tr><tr><td>阀座Seat</td><td>13Cr+STL</td><td>0.11</td><td>0.37</td><td>0.35</td><td>0.014</td><td>0.011</td><td>12.35</td><td></td><td></td><td></td><td></td><td></td><td>413</td><td>573</td><td>35</td><td>65</td><td></td><td></td></tr><tr><td>闸板/阀瓣Wedge/Disc</td><td>13Cr+STL</td><td>0.11</td><td>0.36</td><td>0.37</td><td>0.014</td><td>0.014</td><td>12.33</td><td></td><td></td><td></td><td></td><td></td><td>413</td><td>573</td><td>35</td><td>65</td><td></td><td></td></tr><tr><td>中法兰螺栓</td><td>B7</td><td>0.44</td><td>0.21</td><td>0.81</td><td>0.23</td><td>0.005</td><td>0.99</td><td></td><td>0.19</td><td></td><td></td><td></td><td>811</td><td>919</td><td>36</td><td>69</td><td></td><td>296</td></tr><tr><td colspan=\"18\">压力试验Low-pressure closure</td><td rowspan=\"2\" colspan=\"2\">外观检验</td><td rowspan=\"2\" colspan=\"2\">尺寸检验</td></tr><tr><td colspan=\"3\">壳体试验(水)</td><td colspan=\"2\">高压密封试验(水)</td><td colspan=\"3\">上密封试验(水)</td><td colspan=\"3\">低压气密封试验(空气)</td><td colspan=\"4\">低泄漏试验(氦气)</td><td colspan=\"3\">试验结果</td></tr><tr><td colspan=\"3\">Shell Test(Water)</td><td colspan=\"2\">High-pressureclosure(Water)</td><td colspan=\"3\">BackseatTest(Water)</td><td colspan=\"3\">Low-pressureclosure(Air)</td><td colspan=\"4\">Low leakage test(Helium)</td><td colspan=\"3\">Results</td><td colspan=\"2\">Visual</td><td colspan=\"2\">Dimensionalinspection</td></tr><tr><td>压力MPa</td><td colspan=\"2\">保压时间(S)</td><td>压力MPa</td><td>保压时间(S)</td><td colspan=\"2\">压力MPa</td><td>保压时间(S)</td><td colspan=\"2\">压力MPa</td><td>保压时间(S)</td><td colspan=\"2\">压力MPa</td><td colspan=\"2\">保压时间(S)</td><td rowspan=\"2\" colspan=\"3\">合格/ACCEPT</td><td rowspan=\"2\" colspan=\"2\">合格/ACCEPT</td><td rowspan=\"2\" colspan=\"2\">合格/ACCEPT</td></tr><tr><td>15.4</td><td colspan=\"2\">30</td><td>11.3</td><td>30</td><td colspan=\"2\">11.3</td><td>30</td><td colspan=\"2\">0.6</td><td>30</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td></tr><tr><td colspan=\"22\">本产品零部件化学成分、机械性能符合 0 标准的规定。 阀门性能试验符合 API598 标准的规定。本产品各项检验和试验符合 API602 设计标准及协议要求,准予出厂。 结论: 合格 检验员: 吴军军</td></tr></table>",
+                                            "image_path": "9ae50e016ed608daf6361c10f7fdbb960b4afbaabf93536ee6a0af7e34de0025.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        20,
+                        539,
+                        89,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                21,
+                                540,
+                                86,
+                                551
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        21,
+                                        540,
+                                        86,
+                                        551
+                                    ],
+                                    "type": "text",
+                                    "content": "Prepared编制:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        150,
+                        524,
+                        195,
+                        555
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        296,
+                        522,
+                        465,
+                        553
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                297,
+                                539,
+                                364,
+                                552
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        297,
+                                        539,
+                                        364,
+                                        552
+                                    ],
+                                    "type": "text",
+                                    "content": "Approved审核:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        515,
+                        539,
+                        645,
+                        553
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                518,
+                                540,
+                                642,
+                                551
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        518,
+                                        540,
+                                        642,
+                                        551
+                                    ],
+                                    "type": "text",
+                                    "content": "Signature/Date 签章/日期：",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        690,
+                        539,
+                        811,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                691,
+                                539,
+                                809,
+                                553
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        691,
+                                        539,
+                                        809,
+                                        553
+                                    ],
+                                    "type": "text",
+                                    "content": "检验日期：2026年07月01日",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        690,
+                        455,
+                        799,
+                        563
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                690,
+                                455,
+                                799,
+                                563
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        690,
+                                        455,
+                                        799,
+                                        563
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                690,
+                                                455,
+                                                799,
+                                                563
+                                            ],
+                                            "type": "image",
+                                            "image_path": "dabd46ccc0c6ae27b9d68ff26f2e6aec2d42045eb53889d4505907a4a98164fe.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 11,
+                    "sub_type": "seal"
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                841,
+                595
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        17,
+                        32,
+                        68,
+                        66
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                17,
+                                32,
+                                68,
+                                66
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        17,
+                                        32,
+                                        68,
+                                        66
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                17,
+                                                32,
+                                                68,
+                                                66
+                                            ],
+                                            "type": "image",
+                                            "image_path": "6cecb613f1060f431efc085110b82266c57bcb4afa5835be97b0d2971dfe07d7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        79,
+                        55,
+                        143,
+                        67
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                81,
+                                57,
+                                142,
+                                66
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        81,
+                                        57,
+                                        142,
+                                        66
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2734068-2028",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        253,
+                        27,
+                        645,
+                        48
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                257,
+                                30,
+                                640,
+                                45
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        257,
+                                        30,
+                                        640,
+                                        45
+                                    ],
+                                    "type": "text",
+                                    "content": "安徽省屯溪高压阀门股份有限公司产品质量合格证明书",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        280,
+                        54,
+                        591,
+                        67
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                282,
+                                55,
+                                588,
+                                67
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        282,
+                                        55,
+                                        588,
+                                        67
+                                    ],
+                                    "type": "text",
+                                    "content": "ANHUI TUNXI HIGH PRESSURE VALVE Co.,LTD. Product Quality Certificate",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        651,
+                        54,
+                        779,
+                        66
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                653,
+                                55,
+                                777,
+                                66
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        653,
+                                        55,
+                                        777,
+                                        66
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明文件编号No.： 602075008",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        15,
+                        70,
+                        825,
+                        521
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                15,
+                                70,
+                                825,
+                                521
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        15,
+                                        70,
+                                        825,
+                                        521
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                15,
+                                                70,
+                                                825,
+                                                521
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>客户Customers:</td><td colspan=\"4\">中国石油化工股份有限公司镇海分公司</td><td colspan=\"2\">合同号:</td><td colspan=\"4\">2302548789</td><td colspan=\"3\">物料编号:</td><td colspan=\"4\">4601020084702790</td><td colspan=\"2\">适用温度:</td><td colspan=\"2\">≤425°C</td></tr><tr><td colspan=\"2\">中法兰螺栓:</td><td colspan=\"2\">B7</td><td>填料:</td><td colspan=\"2\">低泄漏填料</td><td colspan=\"2\">中法兰垫片:</td><td colspan=\"2\">304+柔性石墨</td><td colspan=\"2\">适用介质</td><td colspan=\"3\">水、蒸汽、油品等</td><td colspan=\"2\">出厂编号/批号:</td><td colspan=\"4\">202605280318/6020750080001~0008</td></tr><tr><td rowspan=\"3\" colspan=\"2\">产品名称/规格/型号ProductType</td><td rowspan=\"3\">数量Qty台</td><td rowspan=\"3\">零件名称PartsName</td><td colspan=\"12\">化学成份(%)Chemical Composition</td><td colspan=\"5\">机械性能Mechanical Performance</td><td></td></tr><tr><td rowspan=\"2\">材料牌号MaterialSign</td><td>碳</td><td>硅</td><td>锰</td><td>磷</td><td>硫</td><td>铬</td><td>镍</td><td>钼</td><td>铜</td><td>钒</td><td>钛</td><td>屈服</td><td>抗拉</td><td>延伸</td><td>收缩</td><td>冲击</td><td>硬度</td></tr><tr><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Ni</td><td>Mo</td><td>Cu</td><td>V</td><td>Ti</td><td>Rp0.2(MPa)</td><td>Rm(MPa)</td><td>A(%)</td><td>Z(%)</td><td>Ak(Ak)</td><td>HB</td></tr><tr><td rowspan=\"6\" colspan=\"2\">闸阀\\BB, OS&amp;YCL600RFA105STL, F6aDN20</td><td rowspan=\"6\">8</td><td>阀体/炉号Body</td><td>A105/ADG</td><td>0.18</td><td>0.15</td><td>0.71</td><td>0.013</td><td>0.012</td><td>0.11</td><td>0.09</td><td>0.08</td><td>0.05</td><td>0.01</td><td></td><td>305</td><td>520</td><td>37</td><td>55</td><td></td><td>148</td></tr><tr><td>阀盖/炉号Bonnet</td><td>A105/FDG</td><td>0.19</td><td>0.24</td><td>0.75</td><td>0.014</td><td>0.012</td><td>0.14</td><td>0.11</td><td>0.09</td><td>0.04</td><td>0.01</td><td></td><td>303</td><td>517</td><td>37</td><td>54</td><td></td><td>144</td></tr><tr><td>阀杆Stem</td><td>F6a</td><td>0.12</td><td>0.34</td><td>0.61</td><td>0.014</td><td>0.011</td><td>11.92</td><td>0.21</td><td></td><td></td><td></td><td></td><td>421</td><td>635</td><td>24</td><td>44</td><td></td><td>206</td></tr><tr><td>阀座Seat</td><td>13Cr+STL</td><td>0.11</td><td>0.37</td><td>0.35</td><td>0.014</td><td>0.011</td><td>12.35</td><td></td><td></td><td></td><td></td><td></td><td>413</td><td>573</td><td>35</td><td>65</td><td></td><td></td></tr><tr><td>闸板/阀瓣Wedge/Disc</td><td>13Cr+STL</td><td>0.11</td><td>0.36</td><td>0.37</td><td>0.014</td><td>0.014</td><td>12.33</td><td></td><td></td><td></td><td></td><td></td><td>413</td><td>573</td><td>35</td><td>65</td><td></td><td></td></tr><tr><td>中法兰螺栓</td><td>B7</td><td>0.44</td><td>0.21</td><td>0.81</td><td>0.23</td><td>0.005</td><td>0.99</td><td></td><td>0.19</td><td></td><td></td><td></td><td>811</td><td>919</td><td>36</td><td>69</td><td></td><td>296</td></tr><tr><td colspan=\"18\">压力试验Low-pressure closure</td><td rowspan=\"2\" colspan=\"2\">外观检验</td><td rowspan=\"2\" colspan=\"2\">尺寸检验</td></tr><tr><td colspan=\"3\">壳体试验(水)</td><td colspan=\"2\">高压密封试验(水)</td><td colspan=\"3\">上密封试验(水)</td><td colspan=\"3\">低压气密封试验(空气)</td><td colspan=\"4\">低泄漏试验(氦气)</td><td colspan=\"3\">试验结果</td></tr><tr><td colspan=\"3\">Shell Test(Water)</td><td colspan=\"2\">High-pressureclosure(Water)</td><td colspan=\"3\">BackseatTest(Water)</td><td colspan=\"3\">Low-pressureclosure(Air)</td><td colspan=\"4\">Low leakage test(Helium)</td><td colspan=\"3\">Results</td><td colspan=\"2\">Visual</td><td colspan=\"2\">Dimensionalinspection</td></tr><tr><td>压力MPa</td><td colspan=\"2\">保压时间(S)</td><td>压力MPa</td><td>保压时间(S)</td><td colspan=\"2\">压力MPa</td><td>保压时间(S)</td><td colspan=\"2\">压力MPa</td><td>保压时间(S)</td><td colspan=\"2\">压力MPa</td><td colspan=\"2\">保压时间(S)</td><td rowspan=\"2\" colspan=\"3\">合格/ACCEPT</td><td rowspan=\"2\" colspan=\"2\">合格/ACCEPT</td><td rowspan=\"2\" colspan=\"2\">合格/ACCEPT</td></tr><tr><td>15.4</td><td colspan=\"2\">30</td><td>11.3</td><td>30</td><td colspan=\"2\">11.3</td><td>30</td><td colspan=\"2\">0.6</td><td>30</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td></tr><tr><td colspan=\"22\">本产品零部件化学成分、机械性能符合 0 标准的规定。 阀门性能试验符合 API598 标准的规定。本产品各项检验和试验符合 API602 设计标准及协议要求,准予出厂。 结论: 合格 检验员: 吴军军</td></tr></table>",
+                                            "image_path": "9ae50e016ed608daf6361c10f7fdbb960b4afbaabf93536ee6a0af7e34de0025.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        20,
+                        539,
+                        89,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                21,
+                                540,
+                                86,
+                                551
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        21,
+                                        540,
+                                        86,
+                                        551
+                                    ],
+                                    "type": "text",
+                                    "content": "Prepared编制:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        150,
+                        524,
+                        195,
+                        555
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        296,
+                        522,
+                        465,
+                        553
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                297,
+                                539,
+                                364,
+                                552
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        297,
+                                        539,
+                                        364,
+                                        552
+                                    ],
+                                    "type": "text",
+                                    "content": "Approved审核:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        515,
+                        539,
+                        645,
+                        553
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                518,
+                                540,
+                                642,
+                                551
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        518,
+                                        540,
+                                        642,
+                                        551
+                                    ],
+                                    "type": "text",
+                                    "content": "Signature/Date 签章/日期：",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        690,
+                        539,
+                        811,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                691,
+                                539,
+                                809,
+                                553
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        691,
+                                        539,
+                                        809,
+                                        553
+                                    ],
+                                    "type": "text",
+                                    "content": "检验日期：2026年07月01日",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        690,
+                        455,
+                        799,
+                        563
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                690,
+                                455,
+                                799,
+                                563
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        690,
+                                        455,
+                                        799,
+                                        563
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                690,
+                                                455,
+                                                799,
+                                                563
+                                            ],
+                                            "type": "image",
+                                            "image_path": "dabd46ccc0c6ae27b9d68ff26f2e6aec2d42045eb53889d4505907a4a98164fe.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 11,
+                    "sub_type": "seal"
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": false,
+    "_version_name": "3.4.4"
+}

@@ -1,0 +1,550 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        4,
+                        98,
+                        826,
+                        549
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                4,
+                                98,
+                                826,
+                                549
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        4,
+                                        98,
+                                        826,
+                                        549
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                4,
+                                                98,
+                                                826,
+                                                549
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">客户名称</td><td colspan=\"3\">中国石油化工股份有限公司镇海炼化分公司</td><td colspan=\"2\">合同号</td><td colspan=\"3\">2302176064</td><td colspan=\"2\">项目/装置</td><td colspan=\"5\"></td><td colspan=\"3\">请购单号</td><td colspan=\"5\">5316754808</td></tr><tr><td rowspan=\"2\" colspan=\"2\">阀门描述</td><td rowspan=\"2\" colspan=\"14\">闸阀\\BB, OS&amp;YCL150RFA216WCBSTL, F6aDN50</td><td colspan=\"3\">阀门编码</td><td colspan=\"6\"></td></tr><tr><td colspan=\"3\">适用温度</td><td colspan=\"2\">-29°C~425°C</td><td>适用介质</td><td colspan=\"3\">水、蒸汽、油品等</td></tr><tr><td colspan=\"2\">物料编码</td><td colspan=\"3\">4603020086038677</td><td colspan=\"2\">阀门名称</td><td colspan=\"3\">闸阀</td><td colspan=\"2\">阀门规格</td><td colspan=\"5\">2&quot;</td><td colspan=\"2\">压力等级</td><td colspan=\"2\">CL150</td><td>数量</td><td colspan=\"3\">1</td></tr><tr><td colspan=\"25\">主要零部件材质</td></tr><tr><td colspan=\"5\">体/盖</td><td colspan=\"2\">阀芯</td><td colspan=\"3\">阀杆</td><td colspan=\"2\">螺栓螺母</td><td colspan=\"5\">垫片</td><td colspan=\"3\">填料</td><td colspan=\"5\">密封面</td></tr><tr><td colspan=\"5\">A216 WCB</td><td colspan=\"2\">A216 WCB</td><td colspan=\"3\">A182 F6a CL2</td><td colspan=\"2\">A193 B7/A194 2H</td><td colspan=\"5\">304+柔性石墨复合波纹垫</td><td colspan=\"3\">304柔性石墨低泄漏填料组</td><td colspan=\"5\">STL/STL</td></tr><tr><td colspan=\"25\">压力试验(MPa)</td></tr><tr><td colspan=\"5\">壳体实验</td><td colspan=\"10\">密封试验</td><td colspan=\"4\">上密封试验</td><td rowspan=\"2\" colspan=\"2\">制造标准</td><td rowspan=\"2\" colspan=\"2\">检验标准</td><td rowspan=\"2\" colspan=\"2\">结论</td></tr><tr><td colspan=\"5\">(水)</td><td colspan=\"5\">(水)</td><td colspan=\"5\">(气)</td><td colspan=\"4\">(水)</td></tr><tr><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"3\">持续时间(s)</td><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"3\">持续时间(s)</td><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"3\">持续时间(s)</td><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"2\">持续时间(s)</td><td rowspan=\"2\" colspan=\"2\">API 600</td><td rowspan=\"2\" colspan=\"2\">API 598</td><td rowspan=\"2\" colspan=\"2\">合格</td></tr><tr><td colspan=\"2\">3.0</td><td colspan=\"3\">15</td><td colspan=\"2\">2.2</td><td colspan=\"3\">15</td><td colspan=\"2\">0.6</td><td colspan=\"3\">15</td><td colspan=\"2\">2.2</td><td colspan=\"2\">15</td></tr><tr><td colspan=\"25\">产品系列号及炉号</td></tr><tr><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td></tr><tr><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td></tr><tr><td>1</td><td>2503591351</td><td>F212</td><td>F213</td><td></td><td>6</td><td></td><td></td><td></td><td></td><td>11</td><td></td><td></td><td></td><td></td><td>16</td><td></td><td></td><td></td><td></td><td>21</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>7</td><td></td><td></td><td></td><td></td><td>12</td><td></td><td></td><td></td><td></td><td>17</td><td></td><td></td><td></td><td></td><td>22</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td><td>8</td><td></td><td></td><td></td><td></td><td>13</td><td></td><td></td><td></td><td></td><td>18</td><td></td><td></td><td></td><td></td><td>23</td><td></td><td></td><td></td><td></td></tr><tr><td>4</td><td></td><td></td><td></td><td></td><td>9</td><td></td><td></td><td></td><td></td><td>14</td><td></td><td></td><td></td><td></td><td>19</td><td></td><td></td><td></td><td></td><td>24</td><td></td><td></td><td></td><td></td></tr><tr><td>5</td><td></td><td></td><td></td><td></td><td>10</td><td></td><td></td><td></td><td></td><td>15</td><td></td><td></td><td></td><td></td><td>20</td><td></td><td></td><td></td><td></td><td>25</td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"25\">理化检验</td></tr><tr><td rowspan=\"2\">序号</td><td rowspan=\"2\">炉号</td><td rowspan=\"2\">材质</td><td colspan=\"14\">化学成份(%)</td><td colspan=\"8\">机械性能(MPa)</td></tr><tr><td>碳C</td><td>硅Si</td><td>锰Mn</td><td>硫S</td><td>磷P</td><td>铜Cu</td><td>钼Mo</td><td>钒V</td><td>铬Cr</td><td>镍Ni</td><td>钛Ti</td><td>铌Nb</td><td>氮N</td><td>抗拉T.S.</td><td>屈服Y.S.</td><td>延伸E.I.</td><td colspan=\"2\">收缩R.A.</td><td colspan=\"2\">硬度HB</td><td colspan=\"2\">冲击值(J)</td></tr><tr><td>1</td><td>F212</td><td>A216 WCB</td><td>0.21</td><td>0.42</td><td>0.88</td><td>0.011</td><td>0.016</td><td>-</td><td>0.009</td><td>-</td><td>0.073</td><td>0.03</td><td>-</td><td>-</td><td>-</td><td>524</td><td>301</td><td>24</td><td colspan=\"2\">51</td><td colspan=\"2\">173</td><td colspan=\"2\">-</td></tr><tr><td>2</td><td>F213</td><td>A216 WCB</td><td>0.20</td><td>0.49</td><td>0.88</td><td>0.011</td><td>0.021</td><td>-</td><td>0.018</td><td>-</td><td>0.119</td><td>0.03</td><td>-</td><td>-</td><td>-</td><td>512</td><td>308</td><td>32</td><td colspan=\"4\"></td><td colspan=\"2\">-</td></tr><tr><td>3</td><td>阀杆</td><td>A182 F6a</td><td>0.10</td><td>0.61</td><td>0.87</td><td>0.014</td><td>0.015</td><td>-</td><td>-</td><td>-</td><td>11.61</td><td>0.34</td><td>-</td><td>-</td><td>-</td><td>666</td><td>432</td><td>22</td><td colspan=\"4\"></td><td colspan=\"2\">-</td></tr><tr><td>4</td><td>螺栓</td><td>A193 B7</td><td>0.454</td><td>0.18</td><td>0.89</td><td>0.021</td><td>0.017</td><td>-</td><td>0.193</td><td>-</td><td>0.85</td><td>-</td><td>-</td><td>-</td><td>-</td><td>926</td><td>792</td><td>26</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>5</td><td>螺母</td><td>A194 2H</td><td>0.456</td><td>0.19</td><td>0.75</td><td>0.043</td><td>0.034</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td>13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr></table>",
+                                            "image_path": "0760c55981ab83e4f4c78e6e8713a8da5c7a2a19c9553774106d666b0bf6166b.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        730,
+                        86,
+                        798,
+                        98
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                730,
+                                86,
+                                798,
+                                98
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        730,
+                                        86,
+                                        798,
+                                        98
+                                    ],
+                                    "type": "text",
+                                    "content": "第 1 页, 共 1 页"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        111,
+                        549,
+                        207,
+                        574
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                111,
+                                549,
+                                207,
+                                574
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        549,
+                                        207,
+                                        574
+                                    ],
+                                    "type": "text",
+                                    "content": "检验员： 张生天"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        368,
+                        548,
+                        446,
+                        574
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                368,
+                                548,
+                                446,
+                                574
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        368,
+                                        548,
+                                        446,
+                                        574
+                                    ],
+                                    "type": "text",
+                                    "content": "审核："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        573,
+                        546,
+                        683,
+                        574
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                573,
+                                546,
+                                683,
+                                574
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        573,
+                                        546,
+                                        683,
+                                        574
+                                    ],
+                                    "type": "text",
+                                    "content": "质量保证工程师："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        716,
+                        22,
+                        784,
+                        32
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                716,
+                                22,
+                                784,
+                                32
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        716,
+                                        22,
+                                        784,
+                                        32
+                                    ],
+                                    "type": "text",
+                                    "content": "ZH-QC-250327-15"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        15,
+                        30,
+                        63,
+                        78
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                15,
+                                30,
+                                63,
+                                78
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        15,
+                                        30,
+                                        63,
+                                        78
+                                    ],
+                                    "type": "text",
+                                    "content": "[QR Code]"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        90,
+                        37,
+                        130,
+                        78
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                90,
+                                37,
+                                130,
+                                78
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        37,
+                                        130,
+                                        78
+                                    ],
+                                    "type": "text",
+                                    "content": "TS\nTS2710501-2026"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        292,
+                        55,
+                        543,
+                        73
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                292,
+                                55,
+                                543,
+                                73
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        292,
+                                        55,
+                                        543,
+                                        73
+                                    ],
+                                    "type": "text",
+                                    "content": "江苏亿阀股份有限公司产品质量证明文件"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "bbox": [
+                        731,
+                        548,
+                        799,
+                        558
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                731,
+                                548,
+                                799,
+                                558
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        731,
+                                        548,
+                                        799,
+                                        558
+                                    ],
+                                    "type": "text",
+                                    "content": "日期：2025.03.27"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9
+                }
+            ],
+            "page_size": [
+                842,
+                595
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        4,
+                        98,
+                        826,
+                        549
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                4,
+                                98,
+                                826,
+                                549
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        4,
+                                        98,
+                                        826,
+                                        549
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                4,
+                                                98,
+                                                826,
+                                                549
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">客户名称</td><td colspan=\"3\">中国石油化工股份有限公司镇海炼化分公司</td><td colspan=\"2\">合同号</td><td colspan=\"3\">2302176064</td><td colspan=\"2\">项目/装置</td><td colspan=\"5\"></td><td colspan=\"3\">请购单号</td><td colspan=\"5\">5316754808</td></tr><tr><td rowspan=\"2\" colspan=\"2\">阀门描述</td><td rowspan=\"2\" colspan=\"14\">闸阀\\BB, OS&amp;YCL150RFA216WCBSTL, F6aDN50</td><td colspan=\"3\">阀门编码</td><td colspan=\"6\"></td></tr><tr><td colspan=\"3\">适用温度</td><td colspan=\"2\">-29°C~425°C</td><td>适用介质</td><td colspan=\"3\">水、蒸汽、油品等</td></tr><tr><td colspan=\"2\">物料编码</td><td colspan=\"3\">4603020086038677</td><td colspan=\"2\">阀门名称</td><td colspan=\"3\">闸阀</td><td colspan=\"2\">阀门规格</td><td colspan=\"5\">2&quot;</td><td colspan=\"2\">压力等级</td><td colspan=\"2\">CL150</td><td>数量</td><td colspan=\"3\">1</td></tr><tr><td colspan=\"25\">主要零部件材质</td></tr><tr><td colspan=\"5\">体/盖</td><td colspan=\"2\">阀芯</td><td colspan=\"3\">阀杆</td><td colspan=\"2\">螺栓螺母</td><td colspan=\"5\">垫片</td><td colspan=\"3\">填料</td><td colspan=\"5\">密封面</td></tr><tr><td colspan=\"5\">A216 WCB</td><td colspan=\"2\">A216 WCB</td><td colspan=\"3\">A182 F6a CL2</td><td colspan=\"2\">A193 B7/A194 2H</td><td colspan=\"5\">304+柔性石墨复合波纹垫</td><td colspan=\"3\">304柔性石墨低泄漏填料组</td><td colspan=\"5\">STL/STL</td></tr><tr><td colspan=\"25\">压力试验(MPa)</td></tr><tr><td colspan=\"5\">壳体实验</td><td colspan=\"10\">密封试验</td><td colspan=\"4\">上密封试验</td><td rowspan=\"2\" colspan=\"2\">制造标准</td><td rowspan=\"2\" colspan=\"2\">检验标准</td><td rowspan=\"2\" colspan=\"2\">结论</td></tr><tr><td colspan=\"5\">(水)</td><td colspan=\"5\">(水)</td><td colspan=\"5\">(气)</td><td colspan=\"4\">(水)</td></tr><tr><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"3\">持续时间(s)</td><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"3\">持续时间(s)</td><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"3\">持续时间(s)</td><td colspan=\"2\">试验压力(MPa)</td><td colspan=\"2\">持续时间(s)</td><td rowspan=\"2\" colspan=\"2\">API 600</td><td rowspan=\"2\" colspan=\"2\">API 598</td><td rowspan=\"2\" colspan=\"2\">合格</td></tr><tr><td colspan=\"2\">3.0</td><td colspan=\"3\">15</td><td colspan=\"2\">2.2</td><td colspan=\"3\">15</td><td colspan=\"2\">0.6</td><td colspan=\"3\">15</td><td colspan=\"2\">2.2</td><td colspan=\"2\">15</td></tr><tr><td colspan=\"25\">产品系列号及炉号</td></tr><tr><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td><td rowspan=\"2\">序号</td><td rowspan=\"2\">序列号</td><td colspan=\"3\">炉号</td></tr><tr><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td><td>阀体</td><td>阀盖</td><td></td></tr><tr><td>1</td><td>2503591351</td><td>F212</td><td>F213</td><td></td><td>6</td><td></td><td></td><td></td><td></td><td>11</td><td></td><td></td><td></td><td></td><td>16</td><td></td><td></td><td></td><td></td><td>21</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>7</td><td></td><td></td><td></td><td></td><td>12</td><td></td><td></td><td></td><td></td><td>17</td><td></td><td></td><td></td><td></td><td>22</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td><td>8</td><td></td><td></td><td></td><td></td><td>13</td><td></td><td></td><td></td><td></td><td>18</td><td></td><td></td><td></td><td></td><td>23</td><td></td><td></td><td></td><td></td></tr><tr><td>4</td><td></td><td></td><td></td><td></td><td>9</td><td></td><td></td><td></td><td></td><td>14</td><td></td><td></td><td></td><td></td><td>19</td><td></td><td></td><td></td><td></td><td>24</td><td></td><td></td><td></td><td></td></tr><tr><td>5</td><td></td><td></td><td></td><td></td><td>10</td><td></td><td></td><td></td><td></td><td>15</td><td></td><td></td><td></td><td></td><td>20</td><td></td><td></td><td></td><td></td><td>25</td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"25\">理化检验</td></tr><tr><td rowspan=\"2\">序号</td><td rowspan=\"2\">炉号</td><td rowspan=\"2\">材质</td><td colspan=\"14\">化学成份(%)</td><td colspan=\"8\">机械性能(MPa)</td></tr><tr><td>碳C</td><td>硅Si</td><td>锰Mn</td><td>硫S</td><td>磷P</td><td>铜Cu</td><td>钼Mo</td><td>钒V</td><td>铬Cr</td><td>镍Ni</td><td>钛Ti</td><td>铌Nb</td><td>氮N</td><td>抗拉T.S.</td><td>屈服Y.S.</td><td>延伸E.I.</td><td colspan=\"2\">收缩R.A.</td><td colspan=\"2\">硬度HB</td><td colspan=\"2\">冲击值(J)</td></tr><tr><td>1</td><td>F212</td><td>A216 WCB</td><td>0.21</td><td>0.42</td><td>0.88</td><td>0.011</td><td>0.016</td><td>-</td><td>0.009</td><td>-</td><td>0.073</td><td>0.03</td><td>-</td><td>-</td><td>-</td><td>524</td><td>301</td><td>24</td><td colspan=\"2\">51</td><td colspan=\"2\">173</td><td colspan=\"2\">-</td></tr><tr><td>2</td><td>F213</td><td>A216 WCB</td><td>0.20</td><td>0.49</td><td>0.88</td><td>0.011</td><td>0.021</td><td>-</td><td>0.018</td><td>-</td><td>0.119</td><td>0.03</td><td>-</td><td>-</td><td>-</td><td>512</td><td>308</td><td>32</td><td colspan=\"4\"></td><td colspan=\"2\">-</td></tr><tr><td>3</td><td>阀杆</td><td>A182 F6a</td><td>0.10</td><td>0.61</td><td>0.87</td><td>0.014</td><td>0.015</td><td>-</td><td>-</td><td>-</td><td>11.61</td><td>0.34</td><td>-</td><td>-</td><td>-</td><td>666</td><td>432</td><td>22</td><td colspan=\"4\"></td><td colspan=\"2\">-</td></tr><tr><td>4</td><td>螺栓</td><td>A193 B7</td><td>0.454</td><td>0.18</td><td>0.89</td><td>0.021</td><td>0.017</td><td>-</td><td>0.193</td><td>-</td><td>0.85</td><td>-</td><td>-</td><td>-</td><td>-</td><td>926</td><td>792</td><td>26</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>5</td><td>螺母</td><td>A194 2H</td><td>0.456</td><td>0.19</td><td>0.75</td><td>0.043</td><td>0.034</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td>13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr></table>",
+                                            "image_path": "0760c55981ab83e4f4c78e6e8713a8da5c7a2a19c9553774106d666b0bf6166b.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        730,
+                        86,
+                        798,
+                        98
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                730,
+                                86,
+                                798,
+                                98
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        730,
+                                        86,
+                                        798,
+                                        98
+                                    ],
+                                    "type": "text",
+                                    "content": "第 1 页, 共 1 页"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        111,
+                        549,
+                        207,
+                        574
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                111,
+                                549,
+                                207,
+                                574
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        549,
+                                        207,
+                                        574
+                                    ],
+                                    "type": "text",
+                                    "content": "检验员： 张生天"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        368,
+                        548,
+                        446,
+                        574
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                368,
+                                548,
+                                446,
+                                574
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        368,
+                                        548,
+                                        446,
+                                        574
+                                    ],
+                                    "type": "text",
+                                    "content": "审核："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        573,
+                        546,
+                        683,
+                        574
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                573,
+                                546,
+                                683,
+                                574
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        573,
+                                        546,
+                                        683,
+                                        574
+                                    ],
+                                    "type": "text",
+                                    "content": "质量保证工程师："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}
