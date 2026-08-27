@@ -1,0 +1,484 @@
+[
+    [
+        {
+            "type": "text",
+            "bbox": [
+                0.224,
+                0.045,
+                0.244,
+                0.072
+            ],
+            "angle": 0,
+            "content": "®",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.151,
+                0.115,
+                0.257,
+                0.144
+            ],
+            "angle": 0,
+            "content": "TSINGSHAN",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.03,
+                0.16,
+                0.267,
+                0.183
+            ],
+            "angle": 0,
+            "content": "Production License of Special Equipment",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.033,
+                0.185,
+                0.247,
+                0.209
+            ],
+            "angle": 0,
+            "content": "特种设备生产许可证号:TS2733U01-2029",
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.351,
+                0.08,
+                0.575,
+                0.126
+            ],
+            "angle": 0,
+            "content": "青山钢管有限公司"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.031,
+                0.212,
+                0.289,
+                0.236
+            ],
+            "angle": 0,
+            "content": "CUSTOMER 用户：中国石化物资装备华东有限公司",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.349,
+                0.132,
+                0.574,
+                0.157
+            ],
+            "angle": 0,
+            "content": "TSINGSHAN STEEL PIPE CO., LTD",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.394,
+                0.156,
+                0.534,
+                0.185
+            ],
+            "angle": 0,
+            "content": "质量证明书",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.381,
+                0.185,
+                0.545,
+                0.21
+            ],
+            "angle": 0,
+            "content": "MILL TEST CERTIFICATE",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.409,
+                0.212,
+                0.504,
+                0.237
+            ],
+            "angle": 0,
+            "content": "EN 10204/3.1",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.675,
+                0.082,
+                0.934,
+                0.125
+            ],
+            "angle": 0,
+            "content": "Has passed ISO 9001:2015 QMS Certification 已通过ISO 9001:2015质量管理体系认证",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.675,
+                0.132,
+                0.923,
+                0.156
+            ],
+            "angle": 0,
+            "content": "CERTIFICATE NO. 证书编号：01 100 1733602",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.675,
+                0.158,
+                0.923,
+                0.182
+            ],
+            "angle": 0,
+            "content": "质量保证书查询编号：ZBS-2026-07-22-0260",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.675,
+                0.185,
+                0.827,
+                0.209
+            ],
+            "angle": 0,
+            "content": "产品名称： 无缝管",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.675,
+                0.213,
+                0.856,
+                0.235
+            ],
+            "angle": 0,
+            "content": "NAME OF PRODUCT:SEAMLESS PIPE",
+            "merge_prev": false
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.031,
+                0.234,
+                0.969,
+                0.869
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"3\">CONTRACT NO.合同号</td><td colspan=\"3\">Q26KJV0604-01</td><td colspan=\"4\">PRODUCT STANDARD 产品标准</td><td colspan=\"4\">GB/T14976-2025</td><td colspan=\"4\">DELIVERY STATUS交货状态</td><td colspan=\"2\">固溶</td><td></td></tr><tr><td colspan=\"3\">PRODUCTION LOT NO.生产批号</td><td colspan=\"3\">GRADE钢种</td><td colspan=\"2\">HEAT NO.炉号</td><td colspan=\"3\">SIZE规格(mm)</td><td>PIECES支数</td><td colspan=\"2\">WEIGHT重量(kg)</td><td colspan=\"2\">METERS米数(m)</td><td colspan=\"2\">DIMENSION尺寸</td><td colspan=\"2\">SURFACE QUALITY表面质量</td><td></td></tr><tr><td colspan=\"3\">4T260606-18</td><td colspan=\"3\">06Cr19Ni10</td><td colspan=\"2\">YX2505-2263</td><td colspan=\"3\">26.7*2.87*5000-6800</td><td>30</td><td colspan=\"2\">303</td><td colspan=\"2\">173.4</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td></td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"20\">CHEMICAL COMPOSITION 化学成分(%)</td><td></td></tr><tr><td>C</td><td colspan=\"2\">Si</td><td colspan=\"2\">Mn</td><td colspan=\"2\">P</td><td colspan=\"2\">S</td><td>Cr</td><td colspan=\"2\">Ni</td><td colspan=\"2\">Mo</td><td colspan=\"2\">Ti</td><td>N</td><td colspan=\"2\">Cu</td><td>Nb</td><td>Other其他</td></tr><tr><td>0.025</td><td colspan=\"2\">0.37</td><td colspan=\"2\">0.72</td><td colspan=\"2\">0.033</td><td colspan=\"2\">0.007</td><td>18.45</td><td colspan=\"2\">8.21</td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"11\">MECHANICAL PROPERTY机械性能</td><td colspan=\"5\">PROCESS PROPERTY工艺性能</td><td colspan=\"3\">MICROSCOPIC STRUCTURE高倍组织</td><td>CORROSIONPROPETY腐蚀性能</td><td></td></tr><tr><td colspan=\"2\">TENSILESTRENGTH</td><td colspan=\"2\">YIELD STRENGTH屈服强度Mpa</td><td colspan=\"2\">ELONGATION断后伸长率</td><td colspan=\"3\">HARDNESS硬度</td><td colspan=\"2\">IMPACT ENERGY冲击能量</td><td>FLARINGTEST</td><td colspan=\"2\">FLATTENINGTEST</td><td colspan=\"2\">BENDTEST</td><td>CRYSTALGRAINSIZE</td><td colspan=\"2\">α-PHASES</td><td>INTERGRANULARCORROSION</td><td></td></tr><tr><td colspan=\"2\">抗拉强度Mpa(Rm)</td><td>Rp0.2</td><td>Rp1.0</td><td colspan=\"2\">A(%)</td><td>HRB</td><td colspan=\"2\">HRC</td><td colspan=\"2\">J</td><td>扩口</td><td colspan=\"2\">压扁</td><td colspan=\"2\">弯曲</td><td>晶粒度</td><td colspan=\"2\">α-相</td><td>晶间腐蚀</td><td></td></tr><tr><td colspan=\"2\">622/619</td><td>268/256</td><td>/</td><td colspan=\"2\">60.5/67.0</td><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td>/</td><td colspan=\"2\">/</td><td>合格</td><td></td></tr><tr><td colspan=\"2\"></td><td></td><td></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"4\">NON-DESTRUCTIVE 无损检测</td><td rowspan=\"2\" colspan=\"3\">HYDROSTATICTEST水压测试</td><td colspan=\"4\">Inspector检验员林友杰</td><td rowspan=\"4\" colspan=\"5\">说明:1.兹质保书所列产品经检验均符合合同要求和产品标准。2.如有质量异议,请来电函说明情况。3.二维码扫一扫查询质保书。</td><td rowspan=\"2\"></td><td rowspan=\"4\" colspan=\"2\">SPECIAL STAMP盖章专用山 COPIES ARE INVALID 复印无效ISSUE DATE 专用章2026年7月22日签发日期</td><td rowspan=\"4\"></td><td></td></tr><tr><td colspan=\"2\">ULTRASONICTEST超声波检测</td><td colspan=\"2\">EDDY CURRENTTEST涡流检测</td><td rowspan=\"3\" colspan=\"4\">QA Engineer质量保证工程师谭小祥</td><td></td></tr><tr><td colspan=\"2\">/</td><td colspan=\"2\">合格</td><td colspan=\"3\">/</td><td rowspan=\"2\">扫一扫</td><td></td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"20\">Remarks 备注:宁波镇海B0326</td><td></td></tr></table>"
+        },
+        {
+            "type": "image_footnote",
+            "bbox": [
+                0.031,
+                0.876,
+                0.701,
+                0.903
+            ],
+            "angle": 0,
+            "content": "ADDRESS(地址):XIAOZHI INDUSTRY PARK, WENXI, QINGTIAN, LISHUI, ZHEJIANG, CHINA(中国浙江省丽水市青田县温溪镇小峙工业区)"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.03,
+                0.913,
+                0.167,
+                0.937
+            ],
+            "angle": 0,
+            "content": "POST CODE(邮编):323903",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.226,
+                0.912,
+                0.362,
+                0.938
+            ],
+            "angle": 0,
+            "content": "TEL(电话):0578-6099926",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.421,
+                0.912,
+                0.557,
+                0.938
+            ],
+            "angle": 0,
+            "content": "FAX(传真):0578-6079199",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.76,
+                0.927,
+                0.926,
+                0.97
+            ],
+            "angle": 0,
+            "content": "280814-1039 21/8.26",
+            "merge_prev": false
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.225,
+                0.048,
+                0.243,
+                0.074
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.152,
+                0.118,
+                0.255,
+                0.15
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.032,
+                0.164,
+                0.265,
+                0.18
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.036,
+                0.189,
+                0.243,
+                0.207
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.353,
+                0.081,
+                0.574,
+                0.129
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.033,
+                0.217,
+                0.287,
+                0.234
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.351,
+                0.136,
+                0.571,
+                0.156
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.394,
+                0.155,
+                0.532,
+                0.189
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.384,
+                0.19,
+                0.542,
+                0.208
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.41,
+                0.215,
+                0.504,
+                0.237
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.677,
+                0.085,
+                0.932,
+                0.102
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.679,
+                0.104,
+                0.887,
+                0.121
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.678,
+                0.136,
+                0.92,
+                0.153
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.678,
+                0.162,
+                0.92,
+                0.179
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.676,
+                0.188,
+                0.733,
+                0.209
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.786,
+                0.187,
+                0.825,
+                0.209
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.678,
+                0.219,
+                0.852,
+                0.232
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.032,
+                0.916,
+                0.164,
+                0.934
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.229,
+                0.917,
+                0.359,
+                0.934
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.423,
+                0.915,
+                0.554,
+                0.935
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.756,
+                0.923,
+                0.928,
+                0.973
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]

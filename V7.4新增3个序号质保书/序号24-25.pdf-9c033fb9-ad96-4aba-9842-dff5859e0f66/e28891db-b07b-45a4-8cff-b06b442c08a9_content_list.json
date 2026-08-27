@@ -1,0 +1,201 @@
+[
+    {
+        "type": "text",
+        "text": "浙江方顿仪表阀门有限公司质量证明书CERTIFICATE OFQUALITY",
+        "text_level": 1,
+        "bbox": [
+            288,
+            108,
+            657,
+            185
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "No.20260110203",
+        "bbox": [
+            739,
+            194,
+            850,
+            207
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "客户名称 Customer：中石化宁波镇海炼化有限公司",
+        "bbox": [
+            55,
+            226,
+            382,
+            239
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "合同号: 2302460206",
+        "bbox": [
+            501,
+            226,
+            634,
+            241
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "施工号 Construction No.: 25992-168",
+        "bbox": [
+            55,
+            247,
+            281,
+            261
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "产品名称 Product name: 仪表卡套无缝管",
+        "bbox": [
+            500,
+            247,
+            761,
+            262
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "交货状态 Condition",
+        "bbox": [
+            58,
+            290,
+            184,
+            304
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "执行标准 Standards",
+        "bbox": [
+            273,
+            290,
+            397,
+            304
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "光 亮 固 溶 Bright annealed ASTM A269-2025",
+        "bbox": [
+            55,
+            312,
+            387,
+            325
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/5cfdc8d45340527482eec22d0e9221f5e0daf1151f099c65ba92c84abc266494.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>序号 Item No.</td><td>钢管批号 Lot No.</td><td>材质 Material</td><td>规格 Size(mm)</td><td>长度length(m)</td><td>重量Weight(kg)</td><td>物料编码 Code</td></tr><tr><td>1</td><td>YX2505-1554</td><td>304</td><td>∅12×1.0×6000</td><td>300</td><td>/</td><td>3823220088614020</td></tr></table>",
+        "bbox": [
+            46,
+            347,
+            899,
+            385
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/4922d4bc8260782b14cfbf365d6f88489d660408948c32d788415955624bcb47.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"12\">化学成分 Chemical Composition (%)</td></tr><tr><td>元素Element</td><td rowspan=\"2\">原材料炉号Heat No.</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Ni</td><td>Ti</td><td>Mo</td><td>N</td></tr><tr><td>标准值Standard value</td><td> $\\leqslant 0.08$ </td><td> $\\leqslant 1.00$ </td><td> $\\leqslant 2.00$ </td><td>0.045</td><td>&lt;0.030</td><td>18.00~20.00</td><td>8,00~11.00</td><td>1</td><td>3 1</td><td>/</td></tr><tr><td>1</td><td>YX2505-1554</td><td>0.033</td><td>0.42</td><td>0.63</td><td>0.027</td><td>0.002</td><td>16.55</td><td>8.11</td><td>1</td><td>/</td><td>/</td></tr></table>",
+        "bbox": [
+            48,
+            404,
+            899,
+            517
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/b84c5fbf3476d835a546c625814abe4d647db82c8cd2dce84ffb70bcc95ab5b1.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>试验项目 Test items</td><td>执行标准 Standards</td><td>试验结果 Result</td></tr><tr><td>扩口试验Flaring test</td><td>ASME SA-1016M-2023</td><td>合格 OK</td></tr><tr><td>压扁试验Flattening test</td><td>ASME SA-1016M-2023</td><td></td></tr><tr><td>涡流检测Eddy current test</td><td>ASTM E426-2021</td><td></td></tr><tr><td>水压试验Hydrostatic test</td><td>ASTMA269-2025</td><td></td></tr><tr><td>晶间腐蚀试验Intergranular corrosion test</td><td>ASTM A262-2021 方法 E</td><td></td></tr><tr><td>尺寸Size</td><td>ASTMA269-2025</td><td></td></tr><tr><td>表面质量Surface quality</td><td>ASTM A269-2025</td><td></td></tr></table>",
+        "bbox": [
+            46,
+            536,
+            897,
+            745
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/ee422ce7bfc222825fe8dc525c2342e03fccc0edf0521b0cf08f58b79f58e6f2.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "sub_type": "seal",
+        "bbox": [
+            511,
+            798,
+            796,
+            923
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "ZJ-LOK R",
+        "bbox": [
+            65,
+            66,
+            268,
+            114
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/70f4aa8efed72c931efe1cbd332cf187cad676fa0648cb20d4833c3fcb7bba95.jpg",
+        "table_caption": [
+            "扬州市泰克管道机械有限公司 装箱清单"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"8\">货地址:浙江省宁波市镇海区镇海炼化物资采购中心仓库南岗(临海路299号对面)</td></tr><tr><td colspan=\"8\">收货人:张霞,15658358193</td></tr><tr><td colspan=\"8\">发货日期:2026年7月16日</td></tr><tr><td>序号</td><td>ERP订单号</td><td>物料编码</td><td>规格型号</td><td>数量</td><td>单位</td><td>备注</td><td>装箱</td></tr><tr><td>1</td><td>2302581827</td><td>4717020094537640</td><td>可变碟簧吊架\\BDC20E 1568N 1815N 15↑ GB/T 28707 组合件</td><td>1</td><td>套</td><td>25YX065</td><td>1#</td></tr><tr><td>2</td><td>2302581828</td><td>4717020094537640</td><td>配套件</td><td>1</td><td></td><td>25YX065</td><td>2#</td></tr><tr><td colspan=\"3\">合计:</td><td></td><td>2</td><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            27,
+            112,
+            974,
+            429
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/ea9804350c4eb585d644e5ec8e491c8feef847350b5b20620ec533712665b5d6.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "sub_type": "seal",
+        "bbox": [
+            177,
+            358,
+            323,
+            559
+        ],
+        "page_idx": 1
+    }
+]

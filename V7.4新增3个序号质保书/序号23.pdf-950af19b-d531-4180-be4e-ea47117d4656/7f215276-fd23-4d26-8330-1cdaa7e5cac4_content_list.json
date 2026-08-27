@@ -1,0 +1,228 @@
+[
+    {
+        "type": "text",
+        "text": "®",
+        "bbox": [
+            223,
+            42,
+            243,
+            71
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "TSINGSHAN",
+        "bbox": [
+            149,
+            114,
+            255,
+            142
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Production License of Special Equipment",
+        "bbox": [
+            28,
+            159,
+            265,
+            182
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "特种设备生产许可证号:TS2733U01-2029",
+        "bbox": [
+            31,
+            182,
+            245,
+            206
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "青山钢管有限公司",
+        "text_level": 2,
+        "bbox": [
+            349,
+            78,
+            574,
+            125
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "CUSTOMER 用户：中国石化物资装备华东有限公司",
+        "bbox": [
+            30,
+            211,
+            287,
+            235
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "TSINGSHAN STEEL PIPE CO., LTD",
+        "bbox": [
+            347,
+            130,
+            573,
+            156
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "质量证明书",
+        "bbox": [
+            393,
+            154,
+            532,
+            182
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "MILL TEST CERTIFICATE",
+        "bbox": [
+            379,
+            182,
+            544,
+            209
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "EN 10204/3.1",
+        "bbox": [
+            408,
+            211,
+            502,
+            235
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Has passed ISO 9001:2015 QMS Certification 已通过ISO 9001:2015质量管理体系认证",
+        "bbox": [
+            673,
+            80,
+            932,
+            123
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "CERTIFICATE NO. 证书编号：01 100 1733602",
+        "bbox": [
+            673,
+            130,
+            922,
+            154
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "质量保证书查询编号：ZBS-2026-07-22-0260",
+        "bbox": [
+            673,
+            156,
+            922,
+            180
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "产品名称： 无缝管",
+        "bbox": [
+            673,
+            182,
+            826,
+            206
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "NAME OF PRODUCT:SEAMLESS PIPE",
+        "bbox": [
+            673,
+            211,
+            855,
+            232
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/c816018e22ba8bd105878d994acf01db6c4268164c0e8e48151dc1d772d346c4.jpg",
+        "table_caption": [],
+        "table_footnote": [
+            "ADDRESS(地址):XIAOZHI INDUSTRY PARK, WENXI, QINGTIAN, LISHUI, ZHEJIANG, CHINA(中国浙江省丽水市青田县温溪镇小峙工业区)"
+        ],
+        "table_body": "<table><tr><td colspan=\"3\">CONTRACT NO.合同号</td><td colspan=\"3\">Q26KJV0604-01</td><td colspan=\"4\">PRODUCT STANDARD 产品标准</td><td colspan=\"4\">GB/T14976-2025</td><td colspan=\"4\">DELIVERY STATUS交货状态</td><td colspan=\"2\">固溶</td><td></td></tr><tr><td colspan=\"3\">PRODUCTION LOT NO.生产批号</td><td colspan=\"3\">GRADE钢种</td><td colspan=\"2\">HEAT NO.炉号</td><td colspan=\"3\">SIZE规格(mm)</td><td>PIECES支数</td><td colspan=\"2\">WEIGHT重量(kg)</td><td colspan=\"2\">METERS米数(m)</td><td colspan=\"2\">DIMENSION尺寸</td><td colspan=\"2\">SURFACE QUALITY表面质量</td><td></td></tr><tr><td colspan=\"3\">4T260606-18</td><td colspan=\"3\">06Cr19Ni10</td><td colspan=\"2\">YX2505-2263</td><td colspan=\"3\">26.7*2.87*5000-6800</td><td>30</td><td colspan=\"2\">303</td><td colspan=\"2\">173.4</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td></td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"20\">CHEMICAL COMPOSITION 化学成分(%)</td><td></td></tr><tr><td>C</td><td colspan=\"2\">Si</td><td colspan=\"2\">Mn</td><td colspan=\"2\">P</td><td colspan=\"2\">S</td><td>Cr</td><td colspan=\"2\">Ni</td><td colspan=\"2\">Mo</td><td colspan=\"2\">Ti</td><td>N</td><td colspan=\"2\">Cu</td><td>Nb</td><td>Other其他</td></tr><tr><td>0.025</td><td colspan=\"2\">0.37</td><td colspan=\"2\">0.72</td><td colspan=\"2\">0.033</td><td colspan=\"2\">0.007</td><td>18.45</td><td colspan=\"2\">8.21</td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"11\">MECHANICAL PROPERTY机械性能</td><td colspan=\"5\">PROCESS PROPERTY工艺性能</td><td colspan=\"3\">MICROSCOPIC STRUCTURE高倍组织</td><td>CORROSIONPROPETY腐蚀性能</td><td></td></tr><tr><td colspan=\"2\">TENSILESTRENGTH</td><td colspan=\"2\">YIELD STRENGTH屈服强度Mpa</td><td colspan=\"2\">ELONGATION断后伸长率</td><td colspan=\"3\">HARDNESS硬度</td><td colspan=\"2\">IMPACT ENERGY冲击能量</td><td>FLARINGTEST</td><td colspan=\"2\">FLATTENINGTEST</td><td colspan=\"2\">BENDTEST</td><td>CRYSTALGRAINSIZE</td><td colspan=\"2\">α-PHASES</td><td>INTERGRANULARCORROSION</td><td></td></tr><tr><td colspan=\"2\">抗拉强度Mpa(Rm)</td><td>Rp0.2</td><td>Rp1.0</td><td colspan=\"2\">A(%)</td><td>HRB</td><td colspan=\"2\">HRC</td><td colspan=\"2\">J</td><td>扩口</td><td colspan=\"2\">压扁</td><td colspan=\"2\">弯曲</td><td>晶粒度</td><td colspan=\"2\">α-相</td><td>晶间腐蚀</td><td></td></tr><tr><td colspan=\"2\">622/619</td><td>268/256</td><td>/</td><td colspan=\"2\">60.5/67.0</td><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td>/</td><td colspan=\"2\">/</td><td colspan=\"2\">/</td><td>/</td><td colspan=\"2\">/</td><td>合格</td><td></td></tr><tr><td colspan=\"2\"></td><td></td><td></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"4\">NON-DESTRUCTIVE 无损检测</td><td rowspan=\"2\" colspan=\"3\">HYDROSTATICTEST水压测试</td><td colspan=\"4\">Inspector检验员林友杰</td><td rowspan=\"4\" colspan=\"5\">说明:1.兹质保书所列产品经检验均符合合同要求和产品标准。2.如有质量异议,请来电函说明情况。3.二维码扫一扫查询质保书。</td><td rowspan=\"2\"></td><td rowspan=\"4\" colspan=\"2\">SPECIAL STAMP盖章专用山 COPIES ARE INVALID 复印无效ISSUE DATE 专用章2026年7月22日签发日期</td><td rowspan=\"4\"></td><td></td></tr><tr><td colspan=\"2\">ULTRASONICTEST超声波检测</td><td colspan=\"2\">EDDY CURRENTTEST涡流检测</td><td rowspan=\"3\" colspan=\"4\">QA Engineer质量保证工程师谭小祥</td><td></td></tr><tr><td colspan=\"2\">/</td><td colspan=\"2\">合格</td><td colspan=\"3\">/</td><td rowspan=\"2\">扫一扫</td><td></td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"20\">Remarks 备注:宁波镇海B0326</td><td></td></tr></table>",
+        "bbox": [
+            30,
+            232,
+            968,
+            866
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "POST CODE(邮编):323903",
+        "bbox": [
+            28,
+            912,
+            166,
+            935
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "TEL(电话):0578-6099926",
+        "bbox": [
+            225,
+            909,
+            361,
+            935
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "FAX(传真):0578-6079199",
+        "bbox": [
+            420,
+            909,
+            556,
+            935
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "280814-1039 21/8.26",
+        "bbox": [
+            759,
+            926,
+            924,
+            969
+        ],
+        "page_idx": 0
+    }
+]

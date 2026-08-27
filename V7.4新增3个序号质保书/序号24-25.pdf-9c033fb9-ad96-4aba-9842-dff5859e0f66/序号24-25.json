@@ -1,0 +1,1456 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        172,
+                        91,
+                        392,
+                        156
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                177,
+                                94,
+                                386,
+                                111
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        177,
+                                        94,
+                                        386,
+                                        111
+                                    ],
+                                    "type": "text",
+                                    "content": "浙江方顿仪表阀门有限公司",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                239,
+                                119,
+                                326,
+                                136
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        239,
+                                        119,
+                                        326,
+                                        136
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明书",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                172,
+                                139,
+                                392,
+                                157
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        172,
+                                        139,
+                                        392,
+                                        157
+                                    ],
+                                    "type": "text",
+                                    "content": "CERTIFICATE OFQUALITY",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        441,
+                        164,
+                        507,
+                        175
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                442,
+                                166,
+                                505,
+                                174
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        442,
+                                        166,
+                                        505,
+                                        174
+                                    ],
+                                    "type": "text",
+                                    "content": "No.20260110203",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        33,
+                        191,
+                        228,
+                        202
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                192,
+                                227,
+                                201
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        192,
+                                        227,
+                                        201
+                                    ],
+                                    "type": "text",
+                                    "content": "客户名称 Customer：中石化宁波镇海炼化有限公司",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        299,
+                        191,
+                        378,
+                        203
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                300,
+                                192,
+                                376,
+                                202
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        300,
+                                        192,
+                                        376,
+                                        202
+                                    ],
+                                    "type": "text",
+                                    "content": "合同号: 2302460206",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        33,
+                        208,
+                        168,
+                        220
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                210,
+                                166,
+                                218
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        210,
+                                        166,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": "施工号 Construction No.: 25992-168",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        298,
+                        208,
+                        454,
+                        221
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                299,
+                                210,
+                                452,
+                                219
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        299,
+                                        210,
+                                        452,
+                                        219
+                                    ],
+                                    "type": "text",
+                                    "content": "产品名称 Product name: 仪表卡套无缝管",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        35,
+                        245,
+                        110,
+                        256
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                246,
+                                109,
+                                256
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        246,
+                                        109,
+                                        256
+                                    ],
+                                    "type": "text",
+                                    "content": "交货状态 Condition",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        163,
+                        245,
+                        237,
+                        256
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                163,
+                                245,
+                                236,
+                                256
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        163,
+                                        245,
+                                        236,
+                                        256
+                                    ],
+                                    "type": "text",
+                                    "content": "执行标准 Standards",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        33,
+                        263,
+                        231,
+                        274
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                264,
+                                229,
+                                273
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        264,
+                                        128,
+                                        273
+                                    ],
+                                    "type": "text",
+                                    "content": "光 亮 固 溶 Bright annealed",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        163,
+                                        265,
+                                        229,
+                                        272
+                                    ],
+                                    "type": "text",
+                                    "content": "ASTM A269-2025",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        28,
+                        293,
+                        536,
+                        325
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                28,
+                                293,
+                                536,
+                                325
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        28,
+                                        293,
+                                        536,
+                                        325
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                28,
+                                                293,
+                                                536,
+                                                325
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>序号 Item No.</td><td>钢管批号 Lot No.</td><td>材质 Material</td><td>规格 Size(mm)</td><td>长度length(m)</td><td>重量Weight(kg)</td><td>物料编码 Code</td></tr><tr><td>1</td><td>YX2505-1554</td><td>304</td><td>∅12×1.0×6000</td><td>300</td><td>/</td><td>3823220088614020</td></tr></table>",
+                                            "image_path": "5cfdc8d45340527482eec22d0e9221f5e0daf1151f099c65ba92c84abc266494.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        29,
+                        341,
+                        536,
+                        436
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                29,
+                                341,
+                                536,
+                                436
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        341,
+                                        536,
+                                        436
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                341,
+                                                536,
+                                                436
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"12\">化学成分 Chemical Composition (%)</td></tr><tr><td>元素Element</td><td rowspan=\"2\">原材料炉号Heat No.</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Ni</td><td>Ti</td><td>Mo</td><td>N</td></tr><tr><td>标准值Standard value</td><td><eq>\\leqslant 0.08</eq></td><td><eq>\\leqslant 1.00</eq></td><td><eq>\\leqslant 2.00</eq></td><td>0.045</td><td>&lt;0.030</td><td>18.00~20.00</td><td>8,00~11.00</td><td>1</td><td>3 1</td><td>/</td></tr><tr><td>1</td><td>YX2505-1554</td><td>0.033</td><td>0.42</td><td>0.63</td><td>0.027</td><td>0.002</td><td>16.55</td><td>8.11</td><td>1</td><td>/</td><td>/</td></tr></table>",
+                                            "image_path": "4922d4bc8260782b14cfbf365d6f88489d660408948c32d788415955624bcb47.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        28,
+                        452,
+                        535,
+                        628
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                28,
+                                452,
+                                535,
+                                628
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        28,
+                                        452,
+                                        535,
+                                        628
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                28,
+                                                452,
+                                                535,
+                                                628
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>试验项目 Test items</td><td>执行标准 Standards</td><td>试验结果 Result</td></tr><tr><td>扩口试验Flaring test</td><td>ASME SA-1016M-2023</td><td>合格 OK</td></tr><tr><td>压扁试验Flattening test</td><td>ASME SA-1016M-2023</td><td></td></tr><tr><td>涡流检测Eddy current test</td><td>ASTM E426-2021</td><td></td></tr><tr><td>水压试验Hydrostatic test</td><td>ASTMA269-2025</td><td></td></tr><tr><td>晶间腐蚀试验Intergranular corrosion test</td><td>ASTM A262-2021 方法 E</td><td></td></tr><tr><td>尺寸Size</td><td>ASTMA269-2025</td><td></td></tr><tr><td>表面质量Surface quality</td><td>ASTM A269-2025</td><td></td></tr></table>",
+                                            "image_path": "b84c5fbf3476d835a546c625814abe4d647db82c8cd2dce84ffb70bcc95ab5b1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        305,
+                        672,
+                        475,
+                        778
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                305,
+                                672,
+                                475,
+                                778
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        305,
+                                        672,
+                                        475,
+                                        778
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                305,
+                                                672,
+                                                475,
+                                                778
+                                            ],
+                                            "type": "image",
+                                            "image_path": "ee422ce7bfc222825fe8dc525c2342e03fccc0edf0521b0cf08f58b79f58e6f2.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "seal"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        39,
+                        56,
+                        160,
+                        96
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                36,
+                                58,
+                                159,
+                                101
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        36,
+                                        62,
+                                        157,
+                                        101
+                                    ],
+                                    "type": "text",
+                                    "content": "ZJ-LOK",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        148,
+                                        58,
+                                        159,
+                                        69
+                                    ],
+                                    "type": "text",
+                                    "content": "R",
+                                    "score": 0.969
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                596,
+                842
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        172,
+                        91,
+                        392,
+                        156
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                177,
+                                94,
+                                386,
+                                111
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        177,
+                                        94,
+                                        386,
+                                        111
+                                    ],
+                                    "type": "text",
+                                    "content": "浙江方顿仪表阀门有限公司",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                239,
+                                119,
+                                326,
+                                136
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        239,
+                                        119,
+                                        326,
+                                        136
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明书",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                172,
+                                139,
+                                392,
+                                157
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        172,
+                                        139,
+                                        392,
+                                        157
+                                    ],
+                                    "type": "text",
+                                    "content": "CERTIFICATE OFQUALITY",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        441,
+                        164,
+                        507,
+                        175
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                442,
+                                166,
+                                505,
+                                174
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        442,
+                                        166,
+                                        505,
+                                        174
+                                    ],
+                                    "type": "text",
+                                    "content": "No.20260110203",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        33,
+                        191,
+                        228,
+                        202
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                192,
+                                227,
+                                201
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        192,
+                                        227,
+                                        201
+                                    ],
+                                    "type": "text",
+                                    "content": "客户名称 Customer：中石化宁波镇海炼化有限公司",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        299,
+                        191,
+                        378,
+                        203
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                300,
+                                192,
+                                376,
+                                202
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        300,
+                                        192,
+                                        376,
+                                        202
+                                    ],
+                                    "type": "text",
+                                    "content": "合同号: 2302460206",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        33,
+                        208,
+                        168,
+                        220
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                210,
+                                166,
+                                218
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        210,
+                                        166,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": "施工号 Construction No.: 25992-168",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        298,
+                        208,
+                        454,
+                        221
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                299,
+                                210,
+                                452,
+                                219
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        299,
+                                        210,
+                                        452,
+                                        219
+                                    ],
+                                    "type": "text",
+                                    "content": "产品名称 Product name: 仪表卡套无缝管",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        35,
+                        245,
+                        110,
+                        256
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                246,
+                                109,
+                                256
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        246,
+                                        109,
+                                        256
+                                    ],
+                                    "type": "text",
+                                    "content": "交货状态 Condition",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        163,
+                        245,
+                        237,
+                        256
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                163,
+                                245,
+                                236,
+                                256
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        163,
+                                        245,
+                                        236,
+                                        256
+                                    ],
+                                    "type": "text",
+                                    "content": "执行标准 Standards",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        33,
+                        263,
+                        231,
+                        274
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                35,
+                                264,
+                                229,
+                                273
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        264,
+                                        128,
+                                        273
+                                    ],
+                                    "type": "text",
+                                    "content": "光 亮 固 溶 Bright annealed",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        163,
+                                        265,
+                                        229,
+                                        272
+                                    ],
+                                    "type": "text",
+                                    "content": "ASTM A269-2025",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        28,
+                        293,
+                        536,
+                        325
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                28,
+                                293,
+                                536,
+                                325
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        28,
+                                        293,
+                                        536,
+                                        325
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                28,
+                                                293,
+                                                536,
+                                                325
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>序号 Item No.</td><td>钢管批号 Lot No.</td><td>材质 Material</td><td>规格 Size(mm)</td><td>长度length(m)</td><td>重量Weight(kg)</td><td>物料编码 Code</td></tr><tr><td>1</td><td>YX2505-1554</td><td>304</td><td>∅12×1.0×6000</td><td>300</td><td>/</td><td>3823220088614020</td></tr></table>",
+                                            "image_path": "5cfdc8d45340527482eec22d0e9221f5e0daf1151f099c65ba92c84abc266494.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        29,
+                        341,
+                        536,
+                        436
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                29,
+                                341,
+                                536,
+                                436
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        341,
+                                        536,
+                                        436
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                341,
+                                                536,
+                                                436
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"12\">化学成分 Chemical Composition (%)</td></tr><tr><td>元素Element</td><td rowspan=\"2\">原材料炉号Heat No.</td><td>C</td><td>Si</td><td>Mn</td><td>P</td><td>S</td><td>Cr</td><td>Ni</td><td>Ti</td><td>Mo</td><td>N</td></tr><tr><td>标准值Standard value</td><td><eq>\\leqslant 0.08</eq></td><td><eq>\\leqslant 1.00</eq></td><td><eq>\\leqslant 2.00</eq></td><td>0.045</td><td>&lt;0.030</td><td>18.00~20.00</td><td>8,00~11.00</td><td>1</td><td>3 1</td><td>/</td></tr><tr><td>1</td><td>YX2505-1554</td><td>0.033</td><td>0.42</td><td>0.63</td><td>0.027</td><td>0.002</td><td>16.55</td><td>8.11</td><td>1</td><td>/</td><td>/</td></tr></table>",
+                                            "image_path": "4922d4bc8260782b14cfbf365d6f88489d660408948c32d788415955624bcb47.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        28,
+                        452,
+                        535,
+                        628
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                28,
+                                452,
+                                535,
+                                628
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        28,
+                                        452,
+                                        535,
+                                        628
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                28,
+                                                452,
+                                                535,
+                                                628
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>试验项目 Test items</td><td>执行标准 Standards</td><td>试验结果 Result</td></tr><tr><td>扩口试验Flaring test</td><td>ASME SA-1016M-2023</td><td>合格 OK</td></tr><tr><td>压扁试验Flattening test</td><td>ASME SA-1016M-2023</td><td></td></tr><tr><td>涡流检测Eddy current test</td><td>ASTM E426-2021</td><td></td></tr><tr><td>水压试验Hydrostatic test</td><td>ASTMA269-2025</td><td></td></tr><tr><td>晶间腐蚀试验Intergranular corrosion test</td><td>ASTM A262-2021 方法 E</td><td></td></tr><tr><td>尺寸Size</td><td>ASTMA269-2025</td><td></td></tr><tr><td>表面质量Surface quality</td><td>ASTM A269-2025</td><td></td></tr></table>",
+                                            "image_path": "b84c5fbf3476d835a546c625814abe4d647db82c8cd2dce84ffb70bcc95ab5b1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        305,
+                        672,
+                        475,
+                        778
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                305,
+                                672,
+                                475,
+                                778
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        305,
+                                        672,
+                                        475,
+                                        778
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                305,
+                                                672,
+                                                475,
+                                                778
+                                            ],
+                                            "type": "image",
+                                            "image_path": "ee422ce7bfc222825fe8dc525c2342e03fccc0edf0521b0cf08f58b79f58e6f2.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "seal"
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        33,
+                        95,
+                        1161,
+                        362
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                312,
+                                56,
+                                888,
+                                91
+                            ],
+                            "type": "table_caption",
+                            "angle": 0,
+                            "index": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        316,
+                                        54,
+                                        884,
+                                        93
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                316,
+                                                56,
+                                                701,
+                                                91
+                                            ],
+                                            "type": "text",
+                                            "content": "扬州市泰克管道机械有限公司",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                765,
+                                                54,
+                                                884,
+                                                93
+                                            ],
+                                            "type": "text",
+                                            "content": "装箱清单",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                33,
+                                95,
+                                1161,
+                                362
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        95,
+                                        1161,
+                                        362
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                95,
+                                                1161,
+                                                362
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"8\">货地址:浙江省宁波市镇海区镇海炼化物资采购中心仓库南岗(临海路299号对面)</td></tr><tr><td colspan=\"8\">收货人:张霞,15658358193</td></tr><tr><td colspan=\"8\">发货日期:2026年7月16日</td></tr><tr><td>序号</td><td>ERP订单号</td><td>物料编码</td><td>规格型号</td><td>数量</td><td>单位</td><td>备注</td><td>装箱</td></tr><tr><td>1</td><td>2302581827</td><td>4717020094537640</td><td>可变碟簧吊架\\BDC20E 1568N 1815N 15↑ GB/T 28707 组合件</td><td>1</td><td>套</td><td>25YX065</td><td>1#</td></tr><tr><td>2</td><td>2302581828</td><td>4717020094537640</td><td>配套件</td><td>1</td><td></td><td>25YX065</td><td>2#</td></tr><tr><td colspan=\"3\">合计:</td><td></td><td>2</td><td></td><td></td><td></td></tr></table>",
+                                            "image_path": "70f4aa8efed72c931efe1cbd332cf187cad676fa0648cb20d4833c3fcb7bba95.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        211,
+                        302,
+                        385,
+                        471
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                211,
+                                302,
+                                385,
+                                471
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        211,
+                                        302,
+                                        385,
+                                        471
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                211,
+                                                302,
+                                                385,
+                                                471
+                                            ],
+                                            "type": "image",
+                                            "image_path": "ea9804350c4eb585d644e5ec8e491c8feef847350b5b20620ec533712665b5d6.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2,
+                    "sub_type": "seal"
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                1191,
+                842
+            ],
+            "page_idx": 1,
+            "para_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        33,
+                        95,
+                        1161,
+                        362
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                312,
+                                56,
+                                888,
+                                91
+                            ],
+                            "type": "table_caption",
+                            "angle": 0,
+                            "index": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        316,
+                                        54,
+                                        884,
+                                        93
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                316,
+                                                56,
+                                                701,
+                                                91
+                                            ],
+                                            "type": "text",
+                                            "content": "扬州市泰克管道机械有限公司",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                765,
+                                                54,
+                                                884,
+                                                93
+                                            ],
+                                            "type": "text",
+                                            "content": "装箱清单",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                33,
+                                95,
+                                1161,
+                                362
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        95,
+                                        1161,
+                                        362
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                95,
+                                                1161,
+                                                362
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"8\">货地址:浙江省宁波市镇海区镇海炼化物资采购中心仓库南岗(临海路299号对面)</td></tr><tr><td colspan=\"8\">收货人:张霞,15658358193</td></tr><tr><td colspan=\"8\">发货日期:2026年7月16日</td></tr><tr><td>序号</td><td>ERP订单号</td><td>物料编码</td><td>规格型号</td><td>数量</td><td>单位</td><td>备注</td><td>装箱</td></tr><tr><td>1</td><td>2302581827</td><td>4717020094537640</td><td>可变碟簧吊架\\BDC20E 1568N 1815N 15↑ GB/T 28707 组合件</td><td>1</td><td>套</td><td>25YX065</td><td>1#</td></tr><tr><td>2</td><td>2302581828</td><td>4717020094537640</td><td>配套件</td><td>1</td><td></td><td>25YX065</td><td>2#</td></tr><tr><td colspan=\"3\">合计:</td><td></td><td>2</td><td></td><td></td><td></td></tr></table>",
+                                            "image_path": "70f4aa8efed72c931efe1cbd332cf187cad676fa0648cb20d4833c3fcb7bba95.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        211,
+                        302,
+                        385,
+                        471
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                211,
+                                302,
+                                385,
+                                471
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        211,
+                                        302,
+                                        385,
+                                        471
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                211,
+                                                302,
+                                                385,
+                                                471
+                                            ],
+                                            "type": "image",
+                                            "image_path": "ea9804350c4eb585d644e5ec8e491c8feef847350b5b20620ec533712665b5d6.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2,
+                    "sub_type": "seal"
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": false,
+    "_version_name": "3.4.4"
+}
