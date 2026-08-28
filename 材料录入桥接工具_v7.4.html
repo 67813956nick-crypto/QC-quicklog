@@ -77,6 +77,7 @@ input[readonly] { background: #f1f3f4; color: var(--muted); }
 .cat-紧固件 { background: #e6f4ea; color: #1e8e3e; }
 .cat-垫片 { background: #f3e8fd; color: #8430ce; }
 .cat-阀门 { background: #e0f7fa; color: #00838f; }
+.cat-支吊架 { background: #fce4ec; color: #c2185b; }
 .cat-型材 { background: #fff3e0; color: #e65100; }
 .cat-防腐保温 { background: #efebe9; color: #4e342e; }
 
@@ -1124,6 +1125,8 @@ function parseBoxListTaike(table, certNo) {
     var bs = spec.split('\\');
     name = bs[0].trim();
     if (bs.length > 1) sspec = bs.slice(1).join(' ').trim();
+    // V7.4: 排除配套件/附件等非独立物资行（如吊架的"配套件"，与主物资同物料编码）
+    if (/^(配套件|附件|配件|备件|零件|散件|紧固件包|安装件|随机件)$/.test(name)) continue;
     var qty = cQty >= 0 && cQty < dr.length ? (dr[cQty] || '') : '';
     var unit = cUnit >= 0 && cUnit < dr.length ? (dr[cUnit] || '') : '';
     var note = cNote >= 0 && cNote < dr.length ? (dr[cNote] || '') : '';
@@ -2795,7 +2798,7 @@ function renderImportStats() {
   const container = document.getElementById('importStats');
   container.innerHTML = '';
 
-  const catOrder = ['管件','管材','法兰','紧固件','垫片','阀门','型材','防腐保温','其他'];
+  const catOrder = ['管件','管材','法兰','紧固件','垫片','阀门','支吊架','型材','防腐保温','其他'];
   catOrder.forEach(cat => {
     if (!stats[cat]) return;
     const card = document.createElement('div');
