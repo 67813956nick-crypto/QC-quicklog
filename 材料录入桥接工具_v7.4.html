@@ -348,11 +348,13 @@ function classifyProduct(name, company) {
   if (/螺栓|螺柱|螺母|紧固件/.test(name)) return '紧固件';
   if (/钢管|无缝|焊管|流体输送/.test(name) || /钢管/.test(company)) return '管材';
   if (/缠绕垫|垫片/.test(name)) return '垫片';
+  // V7.4: 支吊架独立分类（吊架/支吊架/碟簧吊架），不属于管件
+  if (/吊架|支吊架|碟簧|弹簧支架|管道支架/.test(name) || /吊架/.test(company)) return '支吊架';
   return '管件';
 }
 
 function inferUnit(cat) {
-  var map = {'管件': '件', '管材': '吨', '法兰': '片', '阀门': '台', '紧固件': '套', '垫片': '件'};
+  var map = {'管件': '件', '管材': '吨', '法兰': '片', '阀门': '台', '紧固件': '套', '垫片': '件', '支吊架': '套'};
   return map[cat] || '件';
 }
 
@@ -1136,7 +1138,8 @@ function parseBoxListTaike(table, certNo) {
     return {
       '产品名称': r0.name, '证书出厂编号': cert,
       '材质': r0.mat, '规格型号': r0.spec, '数量': r0.qty,
-      '单位': r0.unit || '件', '制造厂家': '', '物资分类': '管件',
+      '单位': r0.unit || '件', '制造厂家': '',
+      '物资分类': classifyProduct(r0.name, ''),
       '_source': '质保书-装箱清单'
     };
   }
@@ -2183,7 +2186,8 @@ function parseMinerUJson(jsonData) {
             allRecords.push({
               '产品名称': trr.name, '证书出厂编号': tkCert,
               '材质': trr.mat, '规格型号': trr.spec, '数量': trr.qty,
-              '制造厂家': tkCo, '单位': trr.unit || '件', '物资分类': '管件',
+              '制造厂家': tkCo, '单位': trr.unit || '件',
+              '物资分类': classifyProduct(trr.name, tkCo),
               '炉号': trr.heat || '', '批号': trr.lot || '',
               '_source': '质保书-装箱清单'
             });
@@ -3112,6 +3116,14 @@ function closeRules() {
       <li><b>规格型号</b>：读取"规格/规格尺寸/规格型号"（如DN600 SCH10S）</li>
       <li><b>数量</b>：读取"数量/Quantity"字段</li>
       <li><b>单位</b>：件</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">七、支吊架（V7.4新增，独立分类）</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"规格型号"（可变碟簧吊架/支吊架/弹簧支架，\\ 分隔取前段）</li>
+      <li><b>证书出厂编号</b>：装箱清单类无证书编号，可手工补ERP订单号/物料编码</li>
+      <li><b>规格型号</b>：读取"规格型号"\\ 分隔后段（如BDC20E 1568N 1815N 15↑ GB/T 28707 组合件）</li>
+      <li><b>数量/单位</b>：读取"数量"+"单位"（套）</li>
     </ul>
 
     <h4 style="margin:12px 0 6px;color:var(--primary);">通用规则</h4>
