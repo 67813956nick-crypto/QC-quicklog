@@ -1,0 +1,3163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>材料质量证明文件快速录入 V7.5</title>
+<style>
+:root { --primary: #1a73e8; --success: #34a853; --warning: #fbbc04; --danger: #ea4335; --bg: #f8f9fa; --card: #fff; --border: #dee2e6; --text: #202124; --muted: #5f6368; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+.header { background: linear-gradient(135deg, #1a73e8, #0d47a1); color: #fff; padding: 16px 24px; display:flex; align-items:center; justify-content:space-between; }
+.header h1 { font-size: 20px; font-weight: 600; }
+.header .version { background: rgba(255,255,255,0.2); padding: 2px 10px; border-radius: 12px; font-size: 12px; }
+
+.upload-panel { background: var(--card); border-bottom: 2px solid var(--border); padding: 16px 24px; }
+.upload-panel h2 { font-size: 15px; margin-bottom: 8px; color: var(--primary); }
+.upload-zone { border: 2px dashed var(--border); border-radius: 10px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s; background: #fafafa; }
+.upload-zone:hover, .upload-zone.dragover { border-color: var(--primary); background: #e8f0fe; }
+.upload-zone input { display: none; }
+.upload-zone .icon { font-size: 32px; margin-bottom: 8px; }
+.upload-zone .hint { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.upload-info { margin-top: 10px; font-size: 12px; color: var(--muted); }
+.upload-info .file-name { font-weight: 600; color: var(--primary); }
+.parse-log { margin-top: 8px; padding: 8px 12px; background: #f1f8e9; border-radius: 6px; font-size: 12px; color: #33691e; max-height: 200px; overflow-y: auto; display: none; white-space: pre-wrap; font-family: monospace; }
+.parse-log.show { display: block; }
+.parse-log.warn { background: #fff3e0; color: #e65100; }
+.parse-log.error { background: #fce8e6; color: #c62828; }
+
+.import-panel { background: var(--card); border-bottom: 2px solid var(--border); padding: 16px 24px; }
+.import-panel h2 { font-size: 15px; margin-bottom: 12px; color: var(--primary); }
+.import-stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.stat-card { background: #e8f0fe; border-radius: 8px; padding: 10px 16px; min-width: 100px; cursor: pointer; transition: all 0.2s; border: 2px solid transparent; }
+.stat-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.stat-card.active { border-color: var(--primary); background: #d2e3fc; }
+.stat-card .count { font-size: 24px; font-weight: 700; color: var(--primary); }
+.stat-card .label { font-size: 12px; color: var(--muted); }
+
+.cert-hint { background: #fff3e0; border: 1px solid #ffcc02; border-radius: 6px; padding: 8px 14px; margin: 10px 24px; font-size: 12px; color: #e65100; line-height: 1.6; }
+.cert-hint strong { color: #bf360c; }
+.cert-hint table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 11px; }
+.cert-hint th, .cert-hint td { border: 1px solid #ffcc02; padding: 3px 6px; }
+.cert-hint th { background: #fff8e1; }
+
+.toolbar { background: var(--card); padding: 12px 24px; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.toolbar input, .toolbar select, .toolbar button { padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); font-size: 13px; }
+.toolbar input { flex: 1; min-width: 150px; }
+.toolbar button { cursor: pointer; background: var(--primary); color: #fff; border: none; font-weight: 500; white-space: nowrap; }
+.toolbar button:hover { opacity: 0.9; }
+.toolbar button.secondary { background: #5f6368; }
+.toolbar button.success { background: var(--success); }
+.toolbar button.warn { background: #f9a825; color: #202124; }
+.toolbar .progress-bar { flex: 1; min-width: 120px; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; }
+.toolbar .progress-bar .fill { height: 100%; background: var(--success); transition: width 0.3s; border-radius: 4px; }
+.toolbar .progress-text { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+.view-toggle { display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.view-toggle button { background: var(--card); color: var(--text); border: none; border-radius: 0; padding: 6px 14px; font-size: 13px; }
+.view-toggle button.active { background: var(--primary); color: #fff; }
+
+.table-container { padding: 16px 24px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+th { background: #e8f0fe; color: var(--primary); font-weight: 600; padding: 10px 8px; text-align: center; font-size: 12px; border: 1px solid var(--border); white-space: nowrap; }
+td { padding: 8px; border: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
+td.center { text-align: center; }
+tr:nth-child(even) { background: #f8f9fa; }
+tr:hover { background: #e8f0fe; }
+input.editable { width: 100%; border: 1px solid transparent; padding: 4px 6px; border-radius: 4px; background: transparent; font-size: 13px; }
+input.editable:focus { border-color: var(--primary); outline: none; background: #fff; }
+input.editable.filled { background: #e6f4ea; }
+.del-btn { background: none; border: none; cursor: pointer; font-size: 14px; padding: 2px 4px; border-radius: 4px; color: #d93025; }
+.del-btn:hover { background: #fce8e6; }
+input[readonly] { background: #f1f3f4; color: var(--muted); }
+
+.cat-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+.cat-管件 { background: #e8f0fe; color: #1a73e8; }
+.cat-管材 { background: #fce8e6; color: #d93025; }
+.cat-法兰 { background: #fef7e0; color: #f9a825; }
+.cat-紧固件 { background: #e6f4ea; color: #1e8e3e; }
+.cat-垫片 { background: #f3e8fd; color: #8430ce; }
+.cat-阀门 { background: #e0f7fa; color: #00838f; }
+.cat-支吊架 { background: #fce4ec; color: #c2185b; }
+.cat-型材 { background: #fff3e0; color: #e65100; }
+.cat-防腐保温 { background: #efebe9; color: #4e342e; }
+
+.modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; }
+.modal { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; border-radius:12px; padding:24px; min-width:400px; z-index:1001; }
+.modal h3 { margin-bottom:16px; }
+.modal label { display:block; margin:8px 0 4px; font-size:13px; color:var(--muted); }
+.modal input, .modal select { width:100%; padding:8px 12px; border:1px solid var(--border); border-radius:6px; margin-bottom:12px; }
+.modal .btn-row { display:flex; gap:8px; justify-content:flex-end; margin-top:16px; }
+
+.no-data { text-align:center; padding:60px 20px; color:var(--muted); }
+.no-data .big-icon { font-size:48px; margin-bottom:12px; }
+
+.footer { padding: 12px 24px; background: var(--card); border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📋 材料质量证明文件快速录入 <span class="version">V7.5</span></h1>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button onclick="showRules()" style="font-size:12px;padding:4px 12px;cursor:pointer;border:1px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;">📋 V7.5使用规则</button>
+  </div>
+</div>
+
+<!-- ====== 导入质保书文件 (MD + JSON) ====== -->
+<div class="upload-panel">
+  <h2>📤 导入质保书文件</h2>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <!-- MD入口 -->
+    <div class="upload-zone" id="uploadZoneMD" onclick="document.getElementById('fileInputMD').click()" style="flex:1;min-width:200px;">
+      <div class="icon">📄</div>
+      <div>点击选择或拖拽 <strong>MD 文件</strong></div>
+      <div class="hint">MinerU 导出的 .md 文件（含 HTML 表格）</div>
+      <input type="file" id="fileInputMD" accept=".md,.txt" onchange="handleFile(event, 'md')">
+    </div>
+    <!-- JSON入口 -->
+    <div class="upload-zone" id="uploadZoneJSON" onclick="document.getElementById('fileInputJSON').click()" style="flex:1;min-width:200px;">
+      <div class="icon">📋</div>
+      <div>点击选择或拖拽 <strong>JSON 文件</strong></div>
+      <div class="hint">MinerU 导出的 .json 文件（含页眉页脚，精度更高）</div>
+      <input type="file" id="fileInputJSON" accept=".json" onchange="handleFile(event, 'json')">
+    </div>
+  </div>
+  <div class="upload-info" id="uploadInfo" style="display:none">
+    已加载：<span class="file-name" id="fileName"></span>
+    <span id="fileType" style="margin-left:8px;font-size:11px;padding:2px 6px;background:#e8f0fe;border-radius:4px;"></span>
+    <button onclick="clearData()" style="margin-left:12px;font-size:12px;padding:2px 8px;cursor:pointer;border:1px solid #ea4335;border-radius:4px;background:#fff;color:#ea4335;">🗑 清空数据</button>
+  </div>
+  <div class="parse-log" id="parseLog"></div>
+</div>
+
+<div class="import-panel">
+  <h2>📥 导入明细</h2>
+  <div class="import-stats" id="importStats"></div>
+</div>
+
+
+<div class="toolbar">
+  <select id="catFilter" onchange="filterData()">
+    <option value="">全部分类</option>
+  </select>
+  <input id="searchBox" placeholder="搜索 产品名称/规格/炉号/批号/证书编号..." oninput="filterData()">
+  <div class="view-toggle">
+    <button class="active" onclick="switchView('base')" id="btnBase">底表视图</button>
+    <button onclick="switchView('yilan')" id="btnYilan">一览表视图</button>
+    <button onclick="switchView('data')" id="btnData">底表数据</button>
+  </div>
+  <button onclick="batchGenCertId()">批量生成自编号</button>
+  <button class="success" onclick="exportCSV('base')">导出底表CSV</button>
+  <button class="success" onclick="exportCSV('yilan')">导出一览表CSV</button>
+  <button class="warn" onclick="exportJSON()">导出JSON</button>
+  <div class="progress-bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+  <span class="progress-text" id="progressText">自编号进度: 0/0</span>
+</div>
+
+<div class="table-container">
+  <div id="baseView"></div>
+  <div id="yilanView" style="display:none"></div>
+  <div id="dataView" style="display:none">
+    <div style="padding:12px;font-size:13px;color:var(--muted);">底表数据视图 — 显示当前所有录入数据的JSON格式，可直接复制使用。</div>
+    <pre id="dataViewContent" style="padding:12px;background:#f8f9fa;border:1px solid var(--border);border-radius:8px;font-size:12px;max-height:600px;overflow:auto;white-space:pre-wrap;"></pre>
+  </div>
+</div>
+
+<div class="footer">
+  材料质量证明文件快速录入 V7.5 | SH/T 3503—J132 | 自动解析 → 手动补填 → 导出CSV
+</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+<div class="modal" id="modal" style="display:none">
+  <h3>批量生成证件自编号</h3>
+  <label>前缀（如：ZM-）</label>
+  <input id="certPrefix" value="ZM-" placeholder="ZM-">
+  <label>起始序号</label>
+  <input id="certStart" type="number" value="1">
+  <label>序号位数（补零）</label>
+  <input id="certDigits" type="number" value="3">
+  <label>适用分类</label>
+  <select id="certCatFilter" style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:6px;margin-bottom:12px;">
+    <option value="">全部分类</option>
+  </select>
+  <div class="btn-row">
+    <button class="secondary" onclick="closeModal()">取消</button>
+    <button onclick="doBatchGen()">生成</button>
+  </div>
+</div>
+
+<script>
+// ===== DATA STORE =====
+let data = [];
+const STORAGE_KEY = 'cert-quick-entry-v5-data';
+let currentFileName = '';
+
+// ===== DEFAULT DATA (fallback) =====
+const DEFAULT_DATA = [{"序号":"1","物料长描述":"等径三通/DN150/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"2","实到数量":"2","炉号":"253174","批号":"10001","产品名称":"等径三通","规格型号":"DN150/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511014","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"2","物料长描述":"弯头/DN150/90°/LR/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"2","实到数量":"2","炉号":"430151","批号":"10001","产品名称":"弯头","规格型号":"DN150/90°/LR/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511015","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"3","物料长描述":"弯头/DN150/45°/LR/BW/SCH40/GB/T 816320#/涂漆/SH/T 3408","数量":"3","实到数量":"3","炉号":"430151","批号":"10001","产品名称":"弯头","规格型号":"DN150/45°/LR/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511016","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"4","物料长描述":"弯头/DN250/90°/LR/BW/SCH20/GB/T 816320#/裸件/SH/T 3408","数量":"40","实到数量":"40","炉号":"845089","批号":"09001","产品名称":"弯头","规格型号":"DN250/90°/LR/BW/SCH20","材质":"20#","证书出厂编号":"B04-260511017","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"5","物料长描述":"弯头/DN200/90°/LR/BW/SCH20/GB/T 816320#/裸件/SH/T 3408","数量":"10","实到数量":"10","炉号":"253174","批号":"10001","产品名称":"弯头","规格型号":"DN200/90°/LR/BW/SCH20","材质":"20#","证书出厂编号":"B04-260511018","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"6","物料长描述":"弯头/DN150/90°/LR/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"12","实到数量":"12","炉号":"430151","批号":"10001","产品名称":"弯头","规格型号":"DN150/90°/LR/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511019","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"7","物料长描述":"弯头/DN100/90°/LR/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"3","实到数量":"3","炉号":"430151","批号":"10001","产品名称":"弯头","规格型号":"DN100/90°/LR/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511020","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"8","物料长描述":"弯头/DN100/90°/LR/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"1","实到数量":"1","炉号":"430151","批号":"10001","产品名称":"弯头","规格型号":"DN100/90°/LR/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511021","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"9","物料长描述":"等径三通/DN250/BW/SCH20/GB/T 816320#/裸件/SH/T 3408","数量":"12","实到数量":"12","炉号":"245860","批号":"08001","产品名称":"等径三通","规格型号":"DN250/BW/SCH20","材质":"20#","证书出厂编号":"B04-260511022","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"10","物料长描述":"等径三通/DN200/BW/SCH20/GB/T 816320#/裸件/SH/T 3408","数量":"6","实到数量":"6","炉号":"253174","批号":"10001","产品名称":"等径三通","规格型号":"DN200/BW/SCH20","材质":"20#","证书出厂编号":"B04-260511023","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"11","物料长描述":"等径三通/DN100/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"1","实到数量":"1","炉号":"430151","批号":"10001","产品名称":"等径三通","规格型号":"DN100/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511024","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"12","物料长描述":"等径三通/DN50/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"3","实到数量":"3","炉号":"430151","批号":"10001","产品名称":"等径三通","规格型号":"DN50/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511025","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""},{"序号":"13","物料长描述":"等径三通/DN50/BW/SCH40/GB/T 816320#/裸件/SH/T 3408","数量":"1","实到数量":"1","炉号":"430151","批号":"10001","产品名称":"等径三通","规格型号":"DN50/BW/SCH40","材质":"20#","证书出厂编号":"B04-260511026","制造厂家":"河北恒通管件集团有限公司","物资分类":"管件","单位":"件","项目名称":"运行三部连续重整装置四合一加热炉余热回收技术改造","证件自编号":"","复验报告编号":"/","领用单位":"","领用量":""}];
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  updateProgress();
+}
+
+function loadData() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try { data = JSON.parse(saved); } catch(e) { data = JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+  } else {
+    data = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  }
+}
+
+// ===== V5.5: MinerU MD Parser (一览表跳过 / 二级标题解析 / 多厂家 / 列级规则+参考表回填 / 阀门法兰管件专项) =====
+var _LOG = [];
+
+function _add(msg) { _LOG.push(msg); }
+
+function extractTables(htmlText) {
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(htmlText, 'text/html');
+  var tables = [];
+  doc.querySelectorAll('table').forEach(function(table) {
+    var rows = [];
+    table.querySelectorAll('tr').forEach(function(tr) {
+      var cells = [];
+      tr.querySelectorAll('td, th').forEach(function(cell) {
+        var t = cell.textContent.trim();
+        if (t) cells.push(t);
+      });
+      if (cells.length > 0) rows.push(cells);
+    });
+    if (rows.length > 0) tables.push(rows);
+  });
+  return tables;
+}
+
+function findCol(table, patterns, maxRow) {
+  maxRow = maxRow || 3;
+  for (var ri = 0; ri < Math.min(maxRow, table.length); ri++) {
+    for (var i = 0; i < table[ri].length; i++) {
+      for (var pi = 0; pi < patterns.length; pi++) {
+        if (new RegExp(patterns[pi]).test(table[ri][i])) return i;
+      }
+    }
+  }
+  return -1;
+}
+
+function stripHtml(t) { return t.replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/gi, ' ').replace(/\s+/g, ' ').trim(); }
+
+function splitSections(md) { return md.split(/\n#{1,3}\s/).filter(function(s) { return s.trim(); }); }
+
+function detectCompany(text) {
+  text = stripHtml(text);
+  var pats = [
+    [/恒通/, '河北恒通管件集团有限公司'],
+    [/天津钢管|TIANJIN PIPE|TPCO/, '天津钢管制造有限公司'],
+    [/衡阳华菱|HENG YANG.*VALIN/, '衡阳华菱钢管有限公司'],
+    [/合肥实华/, '合肥实华管件有限责任公司'],
+    [/金龙自控/, '浙江金龙自控设备有限公司'],
+    [/屯溪/, '安徽省屯溪高压阀门股份有限公司'],
+    [/星达/, '无锡市星达石化配件有限公司'],
+    [/亿阀|YIFA|JIANGSU YI/, '江苏亿阀股份有限公司'],
+    [/新长江/, '江苏新长江无缝钢管制造有限公司'],
+    [/鲁宝/, '烟台鲁宝钢管有限责任公司'],
+    [/恒隆|启隆/, '张家港保税区恒隆钢管有限公司'],
+    [/武进/, '常州市武进第二法兰锻造有限公司'],
+    // V6.0新增厂家映射
+    [/五洲阀门/, '五洲阀门股份有限公司'],
+    [/凯喜姆/, '凯喜姆阀门有限公司'],
+    [/常武欣摄/, '常州市常武欣摄石化配件有限公司'],
+    [/武进第二/, '常州市武进第二法兰锻造有限公司'],
+    [/新长江无缝/, '江苏新长江无缝钢管制造有限公司'],
+    [/恒隆钢管/, '张家港保税区恒隆钢管有限公司'],
+    [/鲁宝钢管/, '烟台鲁宝钢管有限责任公司'],
+    [/衡阳华菱/, '衡阳华菱钢管有限公司'],
+    [/九龙紧固件/, '宁波九龙紧固件制造有限公司'],
+    [/艾拓密封/, '宁波艾拓密封技术有限公司'],
+    [/远洋不锈钢/, '东台市远洋不锈钢制造有限公司'],
+    [/金童石化/, '江阴金童石化装备有限公司'],
+    [/隆泰迪/, '沧州隆泰迪管道科技有限公司'],
+    [/方泉管道/, '河北方泉管道装备有限公司'],
+    [/实华管件/, '合肥实华管件有限责任公司'],
+    [/辽阳石化/, '辽阳石化机械设计制造有限公司'],
+    [/海达管件/, '江苏海达管件集团有限公司'],
+    [/兴洋管业/, '江苏兴洋管业股份有限公司'],
+    // V7.4新增厂家映射
+    [/青山钢管|TSINGSHAN/, '青山钢管有限公司'],
+    [/方顿|ZJ-LOK|FANGDUN/, '浙江方顿仪表阀门有限公司'],
+    [/泰克管道/, '扬州市泰克管道机械有限公司']
+  ];
+  for (var i = 0; i < pats.length; i++) {
+    if (pats[i][0].test(text)) return pats[i][1];
+  }
+  // 过滤客户/甲方/业主名称（不是制造厂家）
+  if (/中国石油化工|镇海炼化|中海石油|宁波大榭|客户名称|收货单位|Purchaser|Customer|Sold\s*To/i.test(text)) {
+    return '';
+  }
+  // 优先匹配"造商："后面的公司名
+  var mfgM = text.match(/造商[：:\s]*([^\n]{2,40}(?:有限公司|有限责任公司|股份公司))/);
+  if (mfgM) return mfgM[1].trim();
+  var m = text.match(/(.{0,40})(?:有限公司|有限责任公司|股份公司|制造厂)(?![A-Za-z])/);
+  if (m) {
+    var result = m[0].trim();
+    // 过滤噪音：如果匹配结果包含"合格"/"Qualified"/"ed"等，返回空
+    if (/合格|Qualified|检验|Inspection|ed\s/.test(result)) return '';
+    return result;
+  }
+  return '';
+}
+
+function extractCertNo(text) {
+  text = stripHtml(text);
+  // 噪音词：匹配到这些词开头的结果应被过滤
+  var noiseRe = /^(CERTIFICATE|REPORT|ISSUED|QUALITY|STANDARD|SPECIFICATION|REMARK|ADDRESS|INSPECTION|检验|合格|质量证明书|兹确认|如有质量|产品编号$)/i;
+  var patterns = [
+    // V7.4: 青山钢管格式 "CERTIFICATE NO. 证书编号：01 100 1733602"（去空格）
+    /CERTIFICATE\s*NO\.?\s*证书编号[：:\s]*([\d][\d\s]{5,30})/i,
+    /证书编号[（\(]?[^）\)]*[）\)]?[:：\s]*([A-Za-z0-9\-/]{6,25})/,
+    /质量证明文件编号\s*No[.:：\s]+([A-Za-z0-9\-]{6,25})/,
+    /Certificate\s*No[.：:\s]*([A-Za-z0-9\-/]{6,25})/i,
+    /跟踪号\s*([A-Za-z0-9\-/]{6,25})/,
+    /生产单编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /质保书编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /证书号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /质证书编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /订单号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /证明书编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /质量证明书编号[Certification\s]*No[:：\s]*([A-Za-z0-9\-]{6,25})/i,
+    /编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /产品编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    /([A-Z]{2,4}-[A-Z]{2}-\d{6,8}-\d{2,})/
+  ];
+  for (var i = 0; i < patterns.length; i++) {
+    var m = text.match(patterns[i]);
+    if (m && m[1] && m[1].length >= 6 && m[1].length <= 25) {
+      var val = m[1].trim();
+      // V7.4: 编号内嵌空格/换行（如 "01 100 1733602"）统一去除
+      val = val.replace(/\s+/g, '');
+      if (!noiseRe.test(val)) return val;
+    }
+  }
+  return '';
+}
+
+function classifyProduct(name, company) {
+  if (!name) return '管件';
+  if (/阀门|球阀|闸阀|蝶阀|截止阀|止回阀/.test(name)) return '阀门';
+  if (/法兰|FLANGE/.test(name) || /法兰/.test(company)) return '法兰';
+  if (/螺栓|螺柱|螺母|紧固件/.test(name)) return '紧固件';
+  if (/钢管|无缝|焊管|流体输送/.test(name) || /钢管/.test(company)) return '管材';
+  if (/缠绕垫|垫片/.test(name)) return '垫片';
+  // V7.4: 支吊架独立分类（吊架/支吊架/碟簧吊架），不属于管件
+  if (/吊架|支吊架|碟簧|弹簧支架|管道支架/.test(name) || /吊架/.test(company)) return '支吊架';
+  return '管件';
+}
+
+function inferUnit(cat) {
+  var map = {'管件': '件', '管材': '吨', '法兰': '片', '阀门': '台', '紧固件': '套', '垫片': '件', '支吊架': '套'};
+  return map[cat] || '件';
+}
+
+// ===== V6.0: 通用KV字段提取函数 =====
+function extractFieldValue(table, fieldNames) {
+  for (var ri = 0; ri < table.length; ri++) {
+    for (var ci = 0; ci < table[ri].length - 1; ci++) {
+      var cell = table[ri][ci] || '';
+      for (var fi = 0; fi < fieldNames.length; fi++) {
+        if (cell.indexOf(fieldNames[fi]) >= 0) {
+          return table[ri][ci + 1] || '';
+        }
+      }
+    }
+  }
+  return '';
+}
+
+// ===== V6.0: 阀门解析器 =====
+function parseValve(table, certNo) {
+  // 检测条件：包含阀门名称/阀门描述/物料描述(闸阀/球阀等)
+  var hasValveName = false;
+  var valveName = '', valveSpec = '', valvePressure = '', valveBodyMat = '', valveQty = '';
+  
+  // 找到"阀体/炉号"或"体/盖"字段所在的行和列位置
+  var bodyMatRow = -1, bodyMatCol = -1;
+  for (var ri = 0; ri < table.length; ri++) {
+    for (var ci = 0; ci < table[ri].length; ci++) {
+      var cellText = table[ri][ci] || '';
+      // 匹配"阀体/炉号Body"、"体/盖"、"阀体/阀盖"等
+      if (/阀体\/炉号|体\/盖|阀体\/阀盖/.test(cellText)) {
+        bodyMatRow = ri;
+        bodyMatCol = ci;
+        break;
+      }
+    }
+    if (bodyMatRow >= 0) break;
+  }
+  
+  // 如果找到材质字段，提取数据
+  // 序号1格式: 行5=["体/盖","阀芯",...] 行6=["A216 WCB","A216 WCB",...] → 数据在下一行同一列
+  // 序号2格式: 行6=[...,"阀体/炉号Body","A105/ADG",...] → 数据在同一行下一列
+  if (bodyMatRow >= 0) {
+    // 优先: 下一行同一列（"体/盖"作为字段名单独占一行的情况）
+    if (bodyMatRow + 1 < table.length && bodyMatCol < table[bodyMatRow + 1].length) {
+      var nextRowVal = table[bodyMatRow + 1][bodyMatCol] || '';
+      if (nextRowVal && /^[A-Z]/.test(nextRowVal)) {
+        valveBodyMat = nextRowVal.split('/')[0].trim();
+      }
+    }
+    // 备选: 同一行下一列（"阀体/炉号"和值在同一行的情况）
+    if (!valveBodyMat && bodyMatCol + 1 < table[bodyMatRow].length) {
+      var matValue = table[bodyMatRow][bodyMatCol + 1] || '';
+      if (matValue) {
+        valveBodyMat = matValue.split('/')[0].trim();
+      }
+    }
+  }
+  
+  // 提取其他字段
+  for (var ri = 0; ri < table.length; ri++) {
+    for (var ci = 0; ci < table[ri].length - 1; ci++) {
+      var cell = table[ri][ci] || '';
+      var nextCell = table[ri][ci + 1] || '';
+      
+      // 阀门名称 - 支持多种格式
+      // 格式1: "产品名称/规格/型号ProductType" → "闸阀\BB..."
+      // 格式2: "产品名称Product Name" → "闸阀"
+      // 格式3: "阀门名称" / "阀门描述" / "物料描述"
+      if ((/产品名称.*规格.*型号/.test(cell) || /产品名称.*Name/.test(cell) || /阀门名称|阀门描述|物料描述/.test(cell)) && /闸阀|球阀|蝶阀|截止阀|止回阀/.test(nextCell)) {
+        hasValveName = true;
+        valveName = nextCell.split('\\')[0].trim();
+      }
+      // 格式4: "物料描述(规格型号)" 在表头行，数据在下一行同列
+      if (/物料描述/.test(cell) && ri + 1 < table.length) {
+        var nextRowCell = table[ri + 1] ? (table[ri + 1][ci] || '') : '';
+        if (/闸阀|球阀|蝶阀|截止阀|止回阀/.test(nextRowCell)) {
+          hasValveName = true;
+          valveName = nextRowCell.split('\\')[0].trim();
+        }
+      }
+      
+      // 从阀门描述行（如"闸阀\BB, OS&YCL600RFA105STL, F6aDN20"）提取CL和DN
+      if (/闸阀|球阀|蝶阀|截止阀|止回阀/.test(cell) && cell.length > 10) {
+        // 这是阀门描述行，从字段名本身提取
+        var clMatch = cell.match(/CL(\d+)/i);
+        if (clMatch) {
+          valvePressure = 'CL' + clMatch[1];
+        }
+        var dnMatch = cell.match(/DN(\d+)/i);
+        if (dnMatch) {
+          valveSpec = 'DN' + dnMatch[1];
+        }
+      }
+      
+      // 阀门规格/型号规格/规格尺寸（单独字段）
+      if (/阀门规格|型号规格|规格尺寸.*Size/.test(cell) && nextCell) {
+        valveSpec = nextCell.trim();
+      }
+      
+      // 压力等级（单独字段）
+      if (/压力等级/.test(cell) && nextCell) {
+        valvePressure = nextCell.trim();
+      }
+      
+      // 数量 - 提取"数量"字段对应的值（支持"数量Qty"格式）
+      if (/数量|Qty/i.test(cell) && nextCell && /^\d+/.test(nextCell)) {
+        valveQty = nextCell.trim();
+      }
+      // 数量 - 从出厂编码范围推断（如"出厂编码 251066-24-001~027" → 27）
+      if (!valveQty) {
+        var rangeM = cell.match(/出厂编码.*?(\d{3,})[~～\-](\d{3,})/);
+        if (rangeM) {
+          var start = parseInt(rangeM[1]), end = parseInt(rangeM[2]);
+          if (end > start) valveQty = String(end - start + 1);
+        }
+      }
+      
+      // 阀体材质（独立cell格式，如"阀体" → "ASTM A182-F11"）
+      if (/^阀体$/.test(cell)) {
+        // 同一行下一列
+        if (nextCell && /[A-Z]/.test(nextCell) && !/阀体|阀盖|阀芯|阀杆/.test(nextCell)) {
+          if (!valveBodyMat) valveBodyMat = nextCell.trim();
+        }
+        // 下一行同一列（colspan导致重复的情况）
+        if (!valveBodyMat && ri + 1 < table.length && ci < table[ri + 1].length) {
+          var belowCell = table[ri + 1][ci] || '';
+          if (belowCell && /[A-Z]/.test(belowCell) && !/阀体|阀盖|阀芯|阀杆/.test(belowCell)) {
+            valveBodyMat = belowCell.trim();
+          }
+        }
+      }
+    }
+  }
+  
+  if (!hasValveName) return null;
+  
+  // 从表格中提取证书编号
+  var valveCert = certNo;
+  var tableText = table.map(function(r) { return r.join(' '); }).join(' ');
+  // 优先匹配Report No（序号13格式）
+  var certM = tableText.match(/Report\s*No[\s:]*([A-Z][\w\-]+)/i);
+  if (!certM) certM = tableText.match(/证书编号[\s:]*([A-Z][\w\-]+)/i);
+  if (!certM) certM = tableText.match(/Certificate\s*No[.：:\s]*([A-Z0-9][\w\-\/]+)/i);
+  if (certM) valveCert = certM[1];
+  
+  // 组合规格型号：如果型号规格已包含压力等级，不重复拼接
+  var finalSpec = '';
+  if (valvePressure && valveSpec) {
+    if (valveSpec.indexOf(valvePressure) >= 0 || valveSpec.indexOf('CL') >= 0) {
+      finalSpec = valveSpec;
+    } else {
+      finalSpec = valvePressure + ' ' + valveSpec;
+    }
+  } else if (valveSpec) {
+    finalSpec = valveSpec;
+  } else if (valvePressure) {
+    finalSpec = valvePressure;
+  }
+  
+  return {
+    '产品名称': valveName,
+    '证书出厂编号': valveCert,
+    '材质': valveBodyMat,
+    '规格型号': finalSpec,
+    '数量': valveQty,
+    '单位': '台',
+    '物资分类': '阀门',
+    '_source': '质保书-阀门'
+  };
+}
+
+// ===== V6.0: 对焊法兰解析器 =====
+function parseWeldFlange(table, certNo) {
+  // 检测条件：名称/描述包含"对焊法兰"
+  var hasFlangeName = false;
+  var flangeName = '', flangeMat = '', flangeSpec = '', flangeQty = '';
+  
+  for (var ri = 0; ri < table.length; ri++) {
+    for (var ci = 0; ci < table[ri].length - 1; ci++) {
+      var cell = table[ri][ci] || '';
+      var nextCell = table[ri][ci + 1] || '';
+      
+      // 名称/描述
+      if (/名称|描述/.test(cell) && /对焊法兰/.test(nextCell)) {
+        hasFlangeName = true;
+        flangeName = nextCell.trim();
+      }
+      
+      // 材料名称
+      if (/材料名称/.test(cell) && nextCell) {
+        flangeMat = nextCell.trim();
+      }
+      
+      // 规格
+      if (/^规格$/.test(cell) && nextCell) {
+        flangeSpec = nextCell.trim();
+      }
+      
+      // 数量
+      if (/^数量$/.test(cell) && nextCell && /^\d+/.test(nextCell)) {
+        flangeQty = nextCell.trim();
+      }
+    }
+  }
+  
+  if (!hasFlangeName) return null;
+  
+  return {
+    '产品名称': flangeName,
+    '证书出厂编号': certNo,
+    '材质': flangeMat,
+    '规格型号': flangeSpec,
+    '数量': flangeQty,
+    '单位': '片',
+    '物资分类': '法兰',
+    '_source': '质保书-法兰'
+  };
+}
+
+// ===== V6.0: 管材解析器 =====
+function parsePipe(table, certNo) {
+  var hasPipeName = false;
+  var pipeName = '', pipeMat = '', pipeSpec = '', pipeWeight = '', pipeUnit = '吨';
+  
+  for (var ri = 0; ri < table.length; ri++) {
+    var row = table[ri];
+    var rowStr = row.join('|');
+    
+    // === 产品名称 ===
+    for (var ci = 0; ci < row.length - 1; ci++) {
+      if (/产品名称/.test(row[ci]) && /输送流体用无缝钢管|输送管|流体输送管/.test(row[ci+1])) {
+        hasPipeName = true;
+        pipeName = row[ci+1].replace(/Conveying\s*Tube.*/i, '').trim();
+      }
+    }
+    // 恒隆特殊：表头含"牌号Steel Grade"→标记为管材
+    if (/牌号.*Steel.*Grade/.test(rowStr)) hasPipeName = true;
+    
+    // === 材质 ===
+    // 格式1（新长江）: "钢级 Grade: 20"
+    var gradeM = rowStr.match(/钢级\s*Grade[:\s]*(\d+[A-Za-z]?#?)/i);
+    if (gradeM) pipeMat = gradeM[1];
+    // 格式2（恒隆）: 数据行["1","20","Φ26.7*3.91",...]
+    if (!pipeMat && ri >= 3 && row.length > 7) {
+      if (/^\d+[A-Za-z]?#?$/.test(row[1] || '') && /^[Φφ]\d/.test(row[2] || '')) {
+        pipeMat = row[1];
+      }
+    }
+    // 格式3（鲁宝/衡阳）: "标准SPECIFICATION" → "GB/T 8163-20182012.752..."
+    for (var ci2 = 0; ci2 < row.length - 1; ci2++) {
+      if (/标准.*SPECIFICATION|^标准及技术协议$/.test(row[ci2] || '')) {
+        var stdVal = row[ci2+1] || '';
+        // 提取"GB/T 8163-2018"中年份后的材质数字
+        // 鲁宝值: "GB/T 8163-20182012.752**0.250°" → 取"20"
+        // 匹配GB/T后面的数字对，如"8163"，然后跳过年份"2018"，取材质"20"
+        var stdM = stdVal.match(/GB\/T\s*(\d+)-(\d{4})\s*(\d{2})/);
+        if (stdM && !pipeMat) {
+          pipeMat = stdM[3]; // "20"
+        }
+        // 衡阳: "GB/T 8163-2018" → 单独匹配
+        if (!pipeMat) {
+          var stdM2 = stdVal.match(/GB\/T\s*[\d-]+/);
+          if (stdM2) {
+            // 标准号后面如果有空格+数字，取材质
+            var after = stdVal.substring(stdM2[0].length);
+            var matNum = after.match(/^\s*(\d{2})/);
+            if (matNum) pipeMat = matNum[1];
+          }
+        }
+      }
+    }
+    // 格式4（衡阳华菱）: 行2列5="20"
+    if (!pipeMat && ri === 2 && row.length > 5) {
+      if (/流体输送管|输送管/.test(row[1] || '') && /^\d+$/.test(row[5] || '')) {
+        pipeMat = row[5];
+      }
+    }
+    
+    // === 规格型号 ===
+    // 格式1: 表头行"规格Size0.D×W.T×L(mm)" → 数据行同列"114.3*6.02"
+    for (var ci3 = 0; ci3 < row.length; ci3++) {
+      if (/规格.*Size.*[Ww]\.?[Tt]|规格Size0/.test(row[ci3] || '')) {
+        // 标记此列为规格列，在下面的数据行中提取
+        // 直接在下一个数据行中找
+        for (var ri2 = ri + 1; ri2 < Math.min(ri + 5, table.length); ri2++) {
+          var dataRow = table[ri2];
+          if (ci3 < dataRow.length && /\d+\.\d+[×x*]\d+\.\d+/.test(dataRow[ci3] || '')) {
+            pipeSpec = dataRow[ci3].trim();
+            break;
+          }
+        }
+      }
+    }
+    // 格式2（恒隆）: 数据行列2="Φ26.7*3.91"
+    if (!pipeSpec && ri >= 3 && row.length > 2) {
+      if (/^[Φφ]\d+.*[×x*]\d+/.test(row[2] || '')) {
+        pipeSpec = row[2].trim();
+      }
+    }
+    // 格式3（鲁宝）: ["规格Dimension","Φ323.90□×6.35□"]
+    for (var ci5 = 0; ci5 < row.length - 1; ci5++) {
+      if (/规格.*Dimension/.test(row[ci5] || '') && /\d/.test(row[ci5+1] || '')) {
+        pipeSpec = (row[ci5+1] || '').replace(/[□\s]/g, '').trim();
+      }
+    }
+    // 格式4（衡阳华菱）: 遍历所有列找"273.1X6.35mm*12m"格式
+    if (!pipeSpec) {
+      for (var ci7 = 0; ci7 < row.length; ci7++) {
+        var specM2 = (row[ci7] || '').match(/(\d+\.?\d*[×xX*]\d+\.?\d*)(?:mm)?/);
+        if (specM2 && parseFloat(specM2[1]) > 10) {
+          pipeSpec = specM2[1];
+          break;
+        }
+      }
+    }
+    
+    // === 数量/重量 ===
+    // 格式1: "总重量(t) Total Weight" → "9.339"
+    var wtM = rowStr.match(/总重量.*?(\d+\.?\d*)/);
+    if (wtM && !pipeWeight && !/冲击|Impact/.test(rowStr)) {
+      pipeWeight = wtM[1];
+      if (/kg|KG/i.test(rowStr)) pipeUnit = 'KG';
+      else pipeUnit = '吨';
+    }
+    // 格式2（恒隆）: 数据行列7="5944"
+    if (!pipeWeight && ri >= 3 && row.length > 7) {
+      if (/^\d+$/.test(row[7] || '') && /^[Φφ]\d/.test(row[2] || '')) {
+        pipeWeight = row[7];
+        pipeUnit = 'KG';
+      }
+    }
+    // 格式3: ["总重量Tol.Weight","37.197吨MT"]
+    for (var ci4 = 0; ci4 < row.length - 1; ci4++) {
+      if (/总重量.*Tol.*Weight/.test(row[ci4] || '')) {
+        var wtVal = row[ci4+1] || '';
+        var wtNum = wtVal.match(/([\d.]+)/);
+        if (wtNum && !pipeWeight) {
+          pipeWeight = wtNum[1];
+          if (/吨|mt|MT/i.test(wtVal)) pipeUnit = '吨';
+          else if (/kg|KG/i.test(wtVal)) pipeUnit = 'KG';
+        }
+      }
+    }
+    // 格式4: ["总重量:","21.622 mt"]
+    for (var ci6 = 0; ci6 < row.length - 1; ci6++) {
+      if (/^总重量[:：]?$/.test(row[ci6] || '')) {
+        var wtVal2 = row[ci6+1] || '';
+        var wtNum2 = wtVal2.match(/([\d.]+)/);
+        if (wtNum2 && !pipeWeight) {
+          pipeWeight = wtNum2[1];
+          if (/mt/i.test(wtVal2)) pipeUnit = '吨';
+        }
+      }
+    }
+  }
+  
+  if (!hasPipeName) return null;
+  if (!pipeName) pipeName = '输送流体用无缝钢管';
+  
+  // 从表格中直接提取证书编号（JSON格式中编号在表格HTML内）
+  var pipeCert = certNo;
+  var tableText = table.map(function(r) { return r.join(' '); }).join(' ');
+  var certNoiseRe = /^(CERTIFICATE|REPORT|ISSUED|QUALITY|STANDARD|SPECIFICATION|REMARK|INSPECTION|检验|合格|质量)/i;
+  // 质保书编号 Sheet No: GC00394948
+  var certM1 = tableText.match(/质保书编号\s*Sheet\s*No[:\s]*([\w\d]+)/i);
+  if (certM1 && !certNoiseRe.test(certM1[1])) pipeCert = certM1[1];
+  // 证书号 CERTIFICATE NO. BGSQG2508111069900
+  if (!pipeCert || pipeCert.length < 5) {
+    var certM2 = tableText.match(/(?:证书号|CERTIFICATE)\s*NO\.?\s*[:\s]*([\w\d]{6,})/i);
+    if (certM2 && !certNoiseRe.test(certM2[1])) pipeCert = certM2[1];
+  }
+  // 质证书编号 23800050
+  if (!pipeCert || pipeCert.length < 5) {
+    var certM3 = tableText.match(/质证书编号\s*[:\s]*([\w\d]{6,})/);
+    if (certM3) pipeCert = certM3[1];
+  }
+  // 证书编号 2509-222
+  if (!pipeCert || pipeCert.length < 5) {
+    var certM4 = tableText.match(/证书编号\s*[:\s]*([\w\d\-]{6,})/);
+    if (certM4) pipeCert = certM4[1];
+  }
+  
+  // 从表格文本中搜索厂家名
+  var pipeCo = '';
+  var coPatterns = [
+    [/新长江/, '江苏新长江无缝钢管制造有限公司'],
+    [/恒隆|启隆/, '张家港保税区恒隆钢管有限公司'],
+    [/鲁宝/, '烟台鲁宝钢管有限责任公司'],
+    [/衡阳华菱/, '衡阳华菱钢管有限公司'],
+  ];
+  for (var cpi = 0; cpi < coPatterns.length; cpi++) {
+    if (coPatterns[cpi][0].test(tableText)) { pipeCo = coPatterns[cpi][1]; break; }
+  }
+  
+  return {
+    '产品名称': pipeName,
+    '证书出厂编号': pipeCert,
+    '材质': pipeMat,
+    '规格型号': pipeSpec,
+    '数量': pipeWeight,
+    '单位': pipeUnit,
+    '制造厂家': pipeCo,
+    '物资分类': '管材',
+    '_source': '质保书-管材'
+  };
+}
+
+// ===== V6.0: 紧固件解析器 =====
+function parseFastener(table, certNo) {
+  // 检测条件：产品名称包含"全螺纹螺栓"/"螺母"，优先匹配"螺栓"
+  var hasFastenerName = false;
+  var fastenerName = '', fastenerMat = '', fastenerSpec = '', fastenerQty = '';
+  
+  for (var ri = 0; ri < table.length; ri++) {
+    for (var ci = 0; ci < table[ri].length - 1; ci++) {
+      var cell = table[ri][ci] || '';
+      var nextCell = table[ri][ci + 1] || '';
+      
+      // 产品名称 - 优先匹配"全螺纹螺栓"，跳过纯"六角螺母"行
+      if (/产品名称/.test(cell) && /全螺纹螺栓/.test(nextCell)) {
+        hasFastenerName = true;
+        fastenerName = nextCell.trim();
+      }
+      // 仅在没有匹配到螺栓时，才匹配螺母
+      if (!hasFastenerName && /产品名称/.test(cell) && /^螺母$|^六角螺母/.test(nextCell)) {
+        hasFastenerName = true;
+        fastenerName = nextCell.trim();
+      }
+      
+      // 材质
+      if (/材质/.test(cell) && nextCell) {
+        fastenerMat = nextCell.trim();
+      }
+      
+      // 规格
+      if (/规格/.test(cell) && nextCell && /M\d/.test(nextCell)) {
+        fastenerSpec = nextCell.trim();
+      }
+      
+      // 数量
+      if (/数量/.test(cell) && nextCell && /\d+套/.test(nextCell)) {
+        fastenerQty = nextCell.replace('套', '').trim();
+      }
+    }
+  }
+  
+  if (!hasFastenerName) return null;
+  
+  return {
+    '产品名称': fastenerName,
+    '证书出厂编号': certNo,
+    '材质': fastenerMat,
+    '规格型号': fastenerSpec,
+    '数量': fastenerQty,
+    '单位': '套',
+    '物资分类': '紧固件',
+    '_source': '质保书-紧固件'
+  };
+}
+
+// ===== V6.0: 垫片解析器 =====
+function parseGasket(table, certNo) {
+  // 检测条件：产品名称包含"缠绕垫"/"垫片"
+  var hasGasketName = false;
+  var gasketName = '', gasketMat = '', gasketSpec = '', gasketQty = '';
+  
+  for (var ri = 0; ri < table.length; ri++) {
+    for (var ci = 0; ci < table[ri].length - 1; ci++) {
+      var cell = table[ri][ci] || '';
+      var nextCell = table[ri][ci + 1] || '';
+      
+      // 产品名称
+      if (/产品名称/.test(cell) && /缠绕垫|垫片/.test(nextCell)) {
+        hasGasketName = true;
+        gasketName = nextCell.trim();
+      }
+      
+      // 材质
+      if (/材质/.test(cell) && nextCell) {
+        gasketMat = nextCell.trim();
+      }
+      
+      // 产品规格
+      if (/产品规格/.test(cell) && nextCell) {
+        gasketSpec = nextCell.trim();
+      }
+      
+      // 产品数量
+      if (/产品数量/.test(cell) && nextCell && /^\d+/.test(nextCell)) {
+        gasketQty = nextCell.trim();
+      }
+    }
+  }
+  
+  if (!hasGasketName) return null;
+  
+  return {
+    '产品名称': gasketName,
+    '证书出厂编号': certNo,
+    '材质': gasketMat,
+    '规格型号': gasketSpec,
+    '数量': gasketQty,
+    '单位': '件',
+    '物资分类': '垫片',
+    '_source': '质保书-垫片'
+  };
+}
+
+// ===== V6.0: 管件解析器 =====
+function parseFitting(table, certNo) {
+  // 先找表头行，确定各列索引
+  var nameCol = -1, matCol = -1, specCol = -1, qtyCol = -1, hdrRow = -1;
+  for (var ri = 0; ri < Math.min(6, table.length); ri++) {
+    var row = table[ri];
+    for (var ci = 0; ci < row.length; ci++) {
+      var c = row[ci] || '';
+      if (/^(产品名称|名称|物料描述).*(Name|Description)?$/i.test(c.replace(/\s+/g, '')) && nameCol < 0) nameCol = ci;
+      if (/^(材质|材料牌号).*(Material)?$/i.test(c.replace(/\s+/g, '')) && matCol < 0) matCol = ci;
+      if (/^(规格|规格尺寸|规格型号).*(Specification|Dimension|Size)?$/i.test(c.replace(/\s+/g, '')) && specCol < 0) specCol = ci;
+      if (/^(数量).*(Quantity)?$/i.test(c.replace(/\s+/g, '')) && qtyCol < 0) qtyCol = ci;
+    }
+    if (nameCol >= 0) { hdrRow = ri; break; }
+  }
+  if (nameCol < 0) return null;
+  
+  // 从表头行下面的数据行读取（也检查表头行本身的数据值）
+  // 支持多行数据（序号21格式：多个管件在同一表格中）
+  var fittingRecords = [];
+  var startRow = hdrRow;
+  for (var ri2 = startRow; ri2 < table.length; ri2++) {
+    var dataRow = table[ri2];
+    if (!dataRow || dataRow.length < 2) continue;
+    var nameVal = nameCol < dataRow.length ? (dataRow[nameCol] || '').trim() : '';
+    if (!nameVal || /^序号|^No|^$/.test(nameVal)) continue;
+    if (/弯头|三通|大小头|异径管|管帽|管箍|封头|支管座/.test(nameVal)) {
+      var fn = '', fs = '', fm = '', fq = '';
+      var nameParts = nameVal.match(/^(弯头|三通|大小头|异径管|管帽|管箍|封头|支管座)[\s\\\/]*(.*)/i);
+      if (nameParts && nameParts[2] && /[A-Z]/.test(nameParts[2])) {
+        fn = nameParts[1].trim();
+        fs = nameParts[2].trim();
+      } else {
+        fn = nameVal;
+      }
+      fm = matCol >= 0 && matCol < dataRow.length ? (dataRow[matCol] || '').trim() : '';
+      if (specCol >= 0 && specCol < dataRow.length) fs = (dataRow[specCol] || '').trim();
+      var qtyVal = qtyCol >= 0 && qtyCol < dataRow.length ? (dataRow[qtyCol] || '').trim() : '';
+      fq = qtyVal.replace(/[^\d]/g, '');
+      fittingRecords.push({ name: fn, spec: fs, mat: fm, qty: fq });
+    }
+  }
+  var fittingName = '', fittingMat = '', fittingSpec = '', fittingQty = '';
+  if (fittingRecords.length === 1) {
+    fittingName = fittingRecords[0].name;
+    fittingSpec = fittingRecords[0].spec;
+    fittingMat = fittingRecords[0].mat;
+    fittingQty = fittingRecords[0].qty;
+  } else if (fittingRecords.length > 1) {
+    // 多条记录：返回第一条，但后续在parseMinerUJson中处理
+    fittingName = fittingRecords[0].name;
+    fittingSpec = fittingRecords[0].spec;
+    fittingMat = fittingRecords[0].mat;
+    fittingQty = fittingRecords[0].qty;
+  }
+  
+  if (!fittingName) {
+    // KV格式回退：字段名和值在同一行（序号19/20格式）
+    for (var ri4 = 0; ri4 < Math.min(3, table.length); ri4++) {
+      var kvRow = table[ri4];
+      for (var ci4 = 0; ci4 < kvRow.length - 1; ci4++) {
+        var k = (kvRow[ci4] || '').trim();
+        var v = (kvRow[ci4 + 1] || '').trim();
+        if (/产品名称|名称/.test(k) && /弯头|三通|大小头|异径管|管帽|管箍|封头|支管座/.test(v)) {
+          fittingName = v;
+          // 在前几行中搜索规格、材质、数量
+          for (var ri5 = 0; ri5 < Math.min(3, table.length); ri5++) {
+            var searchRow = table[ri5];
+            for (var ci5 = 0; ci5 < searchRow.length - 1; ci5++) {
+              var k2 = (searchRow[ci5] || '').trim();
+              var v2 = (searchRow[ci5 + 1] || '').trim();
+              if (/^规格$|规格型号|规格尺寸/.test(k2) && !fittingSpec) fittingSpec = v2;
+              if (/^材质$|材料牌号/.test(k2) && !fittingMat && !/^材质$/.test(v2)) fittingMat = v2;
+              if (/^数量$/.test(k2) && /^\d+$/.test(v2) && !fittingQty) fittingQty = v2;
+            }
+          }
+          break;
+        }
+      }
+      if (fittingName) break;
+    }
+  }
+  if (!fittingName) return null;
+  
+  // 从表格中提取证明书编号
+  var fittingCert = certNo;
+  // 先搜索整个表格文本中的Report No / Certificate No
+  var tableAllText = table.map(function(r) { return r.join(' '); }).join(' ');
+  var reportM = tableAllText.match(/Report\s*No[:\s]*([\w\-]+)/i);
+  if (reportM) fittingCert = reportM[1];
+  if (fittingCert === certNo) {
+    var certM = tableAllText.match(/Certificate\s*No[.：:\s]*([\w\-\/]+)/i);
+    if (certM) fittingCert = certM[1];
+  }
+  // 产品编号（序号19格式）
+  if (fittingCert === certNo) {
+    var prodM = tableAllText.match(/产品编号[：:\s]*([\w\-]+)/);
+    if (prodM) fittingCert = prodM[1];
+  }
+  // 证书编号（序号20格式）
+  if (fittingCert === certNo) {
+    var certM2 = tableAllText.match(/证书编号[：:\s]*([\w\-]+)/);
+    if (certM2) fittingCert = certM2[1];
+  }
+  // 也搜索KV格式的证明书编号
+  if (fittingCert === certNo) {
+    for (var ri3 = 0; ri3 < table.length; ri3++) {
+      for (var ci3 = 0; ci3 < table[ri3].length - 1; ci3++) {
+        var certCell = table[ri3][ci3] || '';
+        if (/证明书编号|质量证明书编号|证书编号|Certificate\s*No|Report\s*No/i.test(certCell)) {
+          var certVal = table[ri3][ci3 + 1] || '';
+          var certNum = certVal.match(/([A-Z][\w\-\/]+-\d+[\w\-]*)/i) || certVal.match(/([\d]{6,})/);
+          if (certNum && certNum[1].length <= 25 && !/编号|Certificate|Certification|Report/i.test(certNum[1])) { fittingCert = certNum[1]; break; }
+          if (certVal.trim().length >= 6 && certVal.trim().length <= 25 && !/编号|Certificate|Certification|Report/i.test(certVal)) { fittingCert = certVal.trim(); break; }
+        }
+      }
+      if (fittingCert !== certNo) break;
+    }
+  }
+  
+  // 如果规格未从表格提取，尝试从名称中提取DN部分
+  if (!fittingSpec) {
+    var dnMatch = fittingName.match(/DN\d+[^\s]*/i);
+    if (dnMatch) fittingSpec = dnMatch[0];
+  }
+  
+  var result = {
+    '产品名称': fittingName,
+    '证书出厂编号': fittingCert,
+    '材质': fittingMat,
+    '规格型号': fittingSpec,
+    '数量': fittingQty,
+    '单位': '件',
+    '物资分类': '管件',
+    '_source': '质保书-管件'
+  };
+  // 附带所有记录（供parseMinerUJson处理多行数据）
+  if (fittingRecords.length > 1) {
+    result._allRecords = fittingRecords;
+    result._fittingCert = fittingCert;
+  }
+  return result;
+}
+
+// ===== V7.4: 青山钢管无缝管解析器（序号23格式：英文表头 CONTRACT NO/PRODUCTION LOT NO/HEAT NO/SIZE/WEIGHT） =====
+function parsePipeQingshan(table, certNo) {
+  var hdrRow = -1;
+  for (var ri = 0; ri < Math.min(4, table.length); ri++) {
+    var rowStr = table[ri].join('|');
+    if (/PRODUCTION\s*LOT\s*NO/.test(rowStr) && /HEAT\s*NO/.test(rowStr) && /SIZE规格/.test(rowStr)) {
+      hdrRow = ri; break;
+    }
+  }
+  if (hdrRow < 0) return null;
+  var cLot = findCol(table, ['PRODUCTION.*LOT', '生产批号'], hdrRow + 1);
+  var cGrade = findCol(table, ['GRADE钢种', '^GRADE$', '钢种'], hdrRow + 1);
+  var cHeat = findCol(table, ['HEAT.*NO', '炉号'], hdrRow + 1);
+  var cSize = findCol(table, ['SIZE规格', '^SIZE', '规格'], hdrRow + 1);
+  var cPieces = findCol(table, ['PIECES支数', '支数'], hdrRow + 1);
+  var cWeight = findCol(table, ['WEIGHT重量', '重量'], hdrRow + 1);
+  var cMeters = findCol(table, ['METERS米数', '米数'], hdrRow + 1);
+  var dataRow = table[hdrRow + 1] || [];
+  // 表头下一行可能为空行，继续往下找数据行
+  var guard = 0;
+  while ((!dataRow[cLot] && !dataRow[cHeat] && !dataRow[cSize]) && (hdrRow + 1 + guard) < table.length && guard < 3) {
+    guard++;
+    dataRow = table[hdrRow + 1 + guard] || [];
+  }
+  var grade = cGrade >= 0 && cGrade < dataRow.length ? dataRow[cGrade] : '';
+  var spec = cSize >= 0 && cSize < dataRow.length ? dataRow[cSize] : '';
+  var heat = cHeat >= 0 && cHeat < dataRow.length ? dataRow[cHeat] : '';
+  var lot = cLot >= 0 && cLot < dataRow.length ? dataRow[cLot] : '';
+  var weight = cWeight >= 0 && cWeight < dataRow.length ? dataRow[cWeight] : '';
+  var pieces = cPieces >= 0 && cPieces < dataRow.length ? dataRow[cPieces] : '';
+  var meters = cMeters >= 0 && cMeters < dataRow.length ? dataRow[cMeters] : '';
+  if (!grade && !spec && !heat && !lot) return null;
+  // 证书编号：CERTIFICATE NO. 证书编号：01 100 1733602（去空格）
+  var cert = certNo || '';
+  var tableText = table.map(function(r) { return r.join(' '); }).join(' ');
+  var certM = tableText.match(/CERTIFICATE\s*NO\.?\s*证书编号[：:\s]*([\d\s]{6,25})/i);
+  if (certM) cert = certM[1].replace(/\s+/g, '');
+  // certNo 也可能带空格（来自 extractCertNo 的 V7.4 模式），统一去空格
+  if (cert && /\d \d/.test(cert)) cert = cert.replace(/\s+/g, '');
+  return {
+    '产品名称': '无缝管',
+    '证书出厂编号': cert,
+    '材质': grade,
+    '规格型号': spec,
+    '炉号': heat,
+    '批号': lot,
+    '数量': weight || pieces || meters,
+    '单位': weight ? 'KG' : (pieces ? '支' : 'm'),
+    '制造厂家': '',
+    '物资分类': '管材',
+    '_source': '质保书-青山钢管'
+  };
+}
+
+// ===== V7.4: 方顿仪表卡套无缝管解析器（序号24格式：钢管批号 Lot No./材质 Material/规格 Size(mm)/长度length） =====
+function parsePipeFangdun(table, certNo) {
+  var hdrRow = -1;
+  for (var ri = 0; ri < Math.min(4, table.length); ri++) {
+    var rowStr = table[ri].join('|');
+    if (/钢管批号/.test(rowStr) && /材质\s*Material/.test(rowStr) && /规格\s*Size/.test(rowStr)) {
+      hdrRow = ri; break;
+    }
+  }
+  if (hdrRow < 0) return null;
+  var cLot = findCol(table, ['钢管批号', 'Lot\s*No'], hdrRow + 1);
+  var cMat = findCol(table, ['材质', 'Material'], hdrRow + 1);
+  var cSize = findCol(table, ['规格\s*Size', '规格'], hdrRow + 1);
+  var cLen = findCol(table, ['长度', 'length'], hdrRow + 1);
+  var cCode = findCol(table, ['物料编码', 'Code'], hdrRow + 1);
+  var dataRow = table[hdrRow + 1] || [];
+  var lot = cLot >= 0 && cLot < dataRow.length ? dataRow[cLot] : '';
+  var mat = cMat >= 0 && cMat < dataRow.length ? dataRow[cMat] : '';
+  var spec = cSize >= 0 && cSize < dataRow.length ? dataRow[cSize] : '';
+  var len = cLen >= 0 && cLen < dataRow.length ? dataRow[cLen] : '';
+  var code = cCode >= 0 && cCode < dataRow.length ? dataRow[cCode] : '';
+  if (!lot && !mat && !spec) return null;
+  var cert = certNo || '';
+  return {
+    '产品名称': '仪表卡套无缝管',
+    '证书出厂编号': cert,
+    '材质': mat,
+    '规格型号': spec,
+    '炉号': '',
+    '批号': lot,
+    '数量': len,
+    '单位': 'm',
+    '制造厂家': '',
+    '物资分类': '管材',
+    '_source': '质保书-方顿'
+  };
+}
+
+// ===== V7.4: 泰克装箱清单解析器（序号25格式：序号/ERP订单号/物料编码/规格型号/数量/单位/备注/装箱） =====
+function parseBoxListTaike(table, certNo) {
+  var hdrRow = -1;
+  for (var ri = 0; ri < Math.min(4, table.length); ri++) {
+    var rowStr = table[ri].join('|');
+    if (/规格型号/.test(rowStr) && /物料编码/.test(rowStr) && /装箱/.test(rowStr)) {
+      hdrRow = ri; break;
+    }
+  }
+  if (hdrRow < 0) return null;
+  var cSpec = findCol(table, ['规格型号'], hdrRow + 1);
+  var cQty = findCol(table, ['^数量$'], hdrRow + 1);
+  var cUnit = findCol(table, ['^单位$'], hdrRow + 1);
+  var cNote = findCol(table, ['备注'], hdrRow + 1);
+  var recs = [];
+  for (var ri2 = hdrRow + 1; ri2 < table.length; ri2++) {
+    var dr = table[ri2];
+    if (!dr || dr.length < 2) continue;
+    var spec = cSpec >= 0 && cSpec < dr.length ? (dr[cSpec] || '') : '';
+    if (!spec || /合计|合计:/.test(spec)) continue;
+    var name = spec, sspec = '';
+    var bs = spec.split('\\');
+    name = bs[0].trim();
+    if (bs.length > 1) sspec = bs.slice(1).join(' ').trim();
+    // V7.4: 排除配套件/附件等非独立物资行（如吊架的"配套件"，与主物资同物料编码）
+    if (/^(配套件|附件|配件|备件|零件|散件|紧固件包|安装件|随机件)$/.test(name)) continue;
+    var qty = cQty >= 0 && cQty < dr.length ? (dr[cQty] || '') : '';
+    var unit = cUnit >= 0 && cUnit < dr.length ? (dr[cUnit] || '') : '';
+    var note = cNote >= 0 && cNote < dr.length ? (dr[cNote] || '') : '';
+    recs.push({ name: name, spec: sspec, mat: '', qty: qty, unit: unit, note: note });
+  }
+  if (recs.length === 0) return null;
+  var cert = certNo || '';
+  var tableText = table.map(function(r) { return r.join(' '); }).join(' ');
+  var certM = tableText.match(/Certificate\s*No[.：:\s]*([\w\-\/]{6,25})/i);
+  if (certM) cert = certM[1];
+  function mk(r0) {
+    return {
+      '产品名称': r0.name, '证书出厂编号': cert,
+      '材质': r0.mat, '规格型号': r0.spec, '数量': r0.qty,
+      '单位': r0.unit || '件', '制造厂家': '',
+      '物资分类': classifyProduct(r0.name, ''),
+      '_source': '质保书-装箱清单'
+    };
+  }
+  if (recs.length === 1) return mk(recs[0]);
+  var res = mk(recs[0]);
+  res._allRecords = recs;
+  return res;
+}
+
+function parseMinerUmd(mdContent) {
+  _LOG = [];
+  var allTables = extractTables(mdContent);
+  _add('表格总数: ' + allTables.length);
+
+  var allRecords = [];
+
+  // ===== Phase A: 一览表（已禁用：优先从质保书提取） =====
+  /*
+  for (var ti = 0; ti < allTables.length; ti++) {
+    var table = allTables[ti];
+    if (table.length < 3) continue;
+    var hdrRow = -1;
+    for (var ri = 0; ri < Math.min(3, table.length); ri++) {
+      if (table[ri].some(function(h) { return /材料名称/.test(h); }) &&
+          table[ri].some(function(h) { return /证书出厂编号/.test(h); }) &&
+          table[ri].some(function(h) { return /制造厂家/.test(h); }))
+      { hdrRow = ri; break; }
+    }
+    if (hdrRow < 0) continue;
+    var hdr = table[hdrRow];
+    var cm = {};
+    hdr.forEach(function(h, i) {
+      if (/材料名称/.test(h)) cm['产品名称'] = i;
+      if (/证书出厂编号/.test(h)) cm['证书出厂编号'] = i;
+      if (/证件自编号/.test(h)) cm['证件自编号'] = i;
+      if (/制造厂家/.test(h)) cm['制造厂家'] = i;
+      if (/材质/.test(h)) cm['材质'] = i;
+      if (/规格型号/.test(h)) cm['规格型号'] = i;
+      if (/复验报告编号/.test(h)) cm['复验报告编号'] = i;
+      if (/领用单位/.test(h)) cm['领用单位'] = i;
+      if (/数量/.test(h) && !/总量/.test(h)) cm['领用量'] = i;
+      if (/总量/.test(h)) cm['总量'] = i;
+      if (/单位/.test(h) && cm['单位'] === undefined) cm['单位'] = i;
+    });
+
+    for (var ri = hdrRow + 1; ri < table.length; ri++) {
+      var row = table[ri];
+      var name = cm['产品名称'] < row.length ? row[cm['产品名称']] : '';
+      if (!name || /采购单位|文档工程师|材料工程师|领用单位|工程名称/.test(name) || name === '规格型号' || name === '材质') continue;
+      var r = {
+        '产品名称': name,
+        '制造厂家': cm['制造厂家'] < row.length ? row[cm['制造厂家']] : '',
+        '证书出厂编号': cm['证书出厂编号'] < row.length ? row[cm['证书出厂编号']] : '',
+        '证件自编号': cm['证件自编号'] < row.length ? row[cm['证件自编号']] : '',
+        '材质': cm['材质'] < row.length ? row[cm['材质']] : '',
+        '规格型号': cm['规格型号'] < row.length ? row[cm['规格型号']] : '',
+        '复验报告编号': cm['复验报告编号'] < row.length ? row[cm['复验报告编号']] : '/',
+        '领用单位': cm['领用单位'] < row.length ? row[cm['领用单位']] : '',
+        '领用量': cm['领用量'] < row.length ? row[cm['领用量']] : '',
+        '总量': cm['总量'] < row.length ? row[cm['总量']] : '',
+        '单位': cm['单位'] < row.length ? row[cm['单位']] : '',
+        '_source': '一览表'
+      };
+      r['物资分类'] = classifyProduct(r['产品名称'], r['制造厂家']);
+      allRecords.push(r);
+    }
+  }
+  */
+  _add('[A] 一览表: 跳过（优先质保书提取）');
+
+  // Detect company
+  var company = detectCompany(mdContent.substring(0, 3000));
+  if (company && /中国石油化工|镇海炼化|客户名称/.test(company)) {
+    company = '';  // customer name, not manufacturer
+  }
+  if (!company) company = detectCompany(splitSections(mdContent)[0] || '');
+  _add('厂家: ' + (company || '(未识别)'));
+
+  // ===== Phase B: 送货清单 =====
+  for (var ti2 = 0; ti2 < allTables.length; ti2++) {
+    var tbl2 = allTables[ti2];
+    if (tbl2.length < 3) continue;
+    var hasDesc = false, hasHeat = false;
+    for (var ri2 = 0; ri2 < Math.min(3, tbl2.length); ri2++) {
+      if (tbl2[ri2].some(function(h) { return /物料长描述/.test(h); })) hasDesc = true;
+      if (tbl2[ri2].some(function(h) { return /炉号/.test(h) && !/原材/.test(h); })) hasHeat = true;
+    }
+    if (!hasDesc || !hasHeat) continue;
+    var cd = findCol(tbl2, ['物料长描述']);
+    var ch = findCol(tbl2, ['炉号']);
+    var cb = findCol(tbl2, ['批号']);
+    var cq = findCol(tbl2, ['实到数量', '^数量$']);
+    var cu = findCol(tbl2, ['^单位$']);
+    if (cd < 0 || ch < 0) continue;
+    for (var ri3 = 1; ri3 < tbl2.length; ri3++) {
+      var rw2 = tbl2[ri3];
+      if (rw2.length <= Math.max(cd, ch)) continue;
+      var desc = rw2[cd] || '';
+      var heat = ch < rw2.length ? rw2[ch] : '';
+      if (!desc || !heat) continue;
+      var parts = desc.split('/');
+      var pn = parts[0] || desc;
+      var sp = parts.slice(1).map(function(p) { return p.replace(/裸件|涂漆|镀锌/g, ''); }).join('/').trim();
+      var rr2 = {
+        '产品名称': pn, '规格型号': sp,
+        '数量': cq >= 0 && cq < rw2.length ? rw2[cq] : '',
+        '单位': cu >= 0 && cu < rw2.length ? rw2[cu] : '件',
+        '炉号': heat,
+        '批号': cb >= 0 && cb < rw2.length ? rw2[cb] : '',
+        '制造厂家': company, '_source': '送货清单'
+      };
+      rr2['物资分类'] = classifyProduct(rr2['产品名称'], company);
+      allRecords.push(rr2);
+    }
+  }
+  _add('[B] 送货清单: ' + allRecords.filter(function(x) { return x._source === '送货清单'; }).length + ' 条');
+
+  // ===== Phase C: 质保书段落 =====
+  var sections = splitSections(mdContent);
+  var curCo = company;
+  // 收集所有Certificate No，按出现顺序分配给DetailList记录
+  var allCertNos = [];
+  var certRe = /Certificate\s*No[:\s.]*([A-Z0-9][\w\-]+)/gi;
+  var certM;
+  while ((certM = certRe.exec(mdContent)) !== null) {
+    allCertNos.push(certM[1].trim());
+  }
+  var detailIdx = 0;
+  for (var si = 0; si < sections.length; si++) {
+    var sec = sections[si];
+    var co = detectCompany(sec.split('\n')[0]);
+    if (co) curCo = co;
+    var text = sec;
+    var certNo = extractCertNo(text);
+    var secTables = extractTables(text);
+
+    // 弯头 (合肥实华)
+    for (var sti = 0; sti < secTables.length; sti++) {
+      var tbl3 = secTables[sti];
+      if (tbl3.length < 3) continue;
+      var r0 = (tbl3[0] || []).join('|');
+      if (!/用户名称.*Purchaser/.test(r0) || !/合同号/.test(r0)) continue;
+      var cp2 = findCol(tbl3, ['产品名称'], 5);
+      var cs2 = findCol(tbl3, ['规格型号'], 5);
+      var cmt2 = findCol(tbl3, ['材料牌号'], 5);
+      var cbat2 = findCol(tbl3, ['生产批号'], 5);
+      var cq3 = findCol(tbl3, ['数量.*Amount', '^数量$'], 5);
+      var dr = (tbl3[1] && tbl3[1].some(function(c) { return /产品名称/.test(c); })) ? tbl3[2] : tbl3[1];
+      if (!dr) continue;
+      var pn2 = cp2 >= 0 && cp2 < dr.length ? dr[cp2] : '';
+      var sp2 = cs2 >= 0 && cs2 < dr.length ? dr[cs2] : '';
+      var mat2 = cmt2 >= 0 && cmt2 < dr.length ? dr[cmt2] : '';
+      if (!pn2) continue;
+      var hn = '';
+      for (var ri4 = 4; ri4 < tbl3.length; ri4++) {
+        for (var j = 0; j < tbl3[ri4].length; j++) {
+          if (/熔炼值|Smelting/.test(tbl3[ri4][j])) {
+            var ohc = -1;
+            if (ri4 - 1 >= 0) ohc = findCol([tbl3[ri4 - 1]], ['原材炉号', 'Heat No'], 1);
+            if (ohc >= 0 && ohc < tbl3[ri4].length) {
+              hn = tbl3[ri4][ohc];
+            } else {
+              for (var k = 3; k < tbl3[ri4].length; k++) {
+                if (/^\d+[A-Za-z]/.test(tbl3[ri4][k]) && tbl3[ri4][k].length >= 6 && tbl3[ri4][k].length < 20)
+                { hn = tbl3[ri4][k]; break; }
+              }
+            }
+          }
+        }
+        if (hn) break;
+      }
+      var rr3 = {
+        '制造厂家': curCo, '产品名称': pn2, '规格型号': sp2 || '',
+        '材质': mat2, '炉号': hn,
+        '批号': cbat2 >= 0 && cbat2 < dr.length ? dr[cbat2] : '',
+        '数量': cq3 >= 0 && cq3 < dr.length ? dr[cq3] : '',
+        '证书出厂编号': sectionCertNo, '_source': '质保书-弯头'
+      };
+      rr3['物资分类'] = classifyProduct(pn2, curCo);
+      rr3['单位'] = '件';
+      allRecords.push(rr3);
+    }
+
+    // ===== V6.0: 按优先级尝试新解析器 =====
+    var v6Parsed = false;
+    // 从section文本中提取"证明书编号"作为备选certNo
+    var sectionCertNo = certNo;
+    var proveCertM = text.match(/证明书编号[：:\s\n]*Certificate\s*No[.：:\s]*([\d]{6,})/i);
+    if (proveCertM) sectionCertNo = proveCertM[1];
+    for (var sti6 = 0; sti6 < secTables.length; sti6++) {
+      var tbl8 = secTables[sti6];
+      if (tbl8.length < 2) continue;
+      // 跳过一览表表格
+      var tbl8Str = tbl8.slice(0, 3).map(function(r) { return r.join('|'); }).join('|');
+      if (/材料质量证明文件一览表|证件自编号/.test(tbl8Str)) continue;
+
+      // 0. 产品内容 Detailed List 格式（序号3/4/15等对焊法兰质保书）
+      var detailListHdrRow = -1;
+      for (var dri = 0; dri < tbl8.length; dri++) {
+        var rowStr = tbl8[dri].join('|');
+        if (/产品内容.*(?:Detailed|Derailed).*List|(?:Detailed|Derailed).*List|^产品内容$/.test(rowStr)) {
+          detailListHdrRow = dri;
+          break;
+        }
+      }
+      if (detailListHdrRow >= 0 && detailListHdrRow + 1 < tbl8.length) {
+        var hdrRow = tbl8[detailListHdrRow + 1];
+        if (hdrRow) {
+          var nameCol = -1, specCol = -1, qtyCol = -1, descCol = -1;
+          for (var hi = 0; hi < hdrRow.length; hi++) {
+            var h = hdrRow[hi] || '';
+            // V7.3: 支持"产品名称"（序号22格式），排除"物料编码"/"材料"等
+            if (/名称/.test(h) && !/编码|材料|批号/.test(h)) nameCol = hi;
+            if (/^规格$|规格/.test(h)) specCol = hi;
+            if (/数量/.test(h)) qtyCol = hi;
+            if (/描述.*Description|Description/.test(h)) descCol = hi;
+          }
+          if (nameCol < 0 && descCol >= 0) nameCol = descCol;
+
+          for (var dataRi = detailListHdrRow + 2; dataRi < tbl8.length; dataRi++) {
+            var dataRow = tbl8[dataRi];
+            if (!dataRow || dataRow.length < 2) continue;
+            var firstCell = (dataRow[0] || '').trim();
+            if (!firstCell || /^说明|^备注|^检验|^试验/.test(firstCell)) continue;
+
+            if (nameCol >= 0 && nameCol < dataRow.length) {
+              var detailName = dataRow[nameCol] || '';
+              var detailSpec = specCol >= 0 && specCol < dataRow.length ? dataRow[specCol] : '';
+              var detailQty = qtyCol >= 0 && qtyCol < dataRow.length ? dataRow[qtyCol] : '';
+              // 过滤噪音行：产品名是许可证号/TS开头，或数量是长文本
+              if (/^TS\d|^$/.test(detailName)) continue;
+              if (detailQty && detailQty.length > 10) continue;
+              if (detailName && detailName.indexOf('\\') >= 0) {
+                var parts = detailName.split('\\');
+                detailName = parts[0].trim();
+                if (!detailSpec) detailSpec = parts.slice(1).join(' ').trim();
+              }
+              // V7.3: 规格已含>=2个关键标记(CL/DN/SCH/RF)时保持原样（如WN350-150LB/RF SCH30）
+              if (detailSpec) {
+                var keyMarkCount = (detailSpec.match(/CL\d+|DN\d+|SCH\d+|\b(RF|FF|RTJ|RJ|BW|SW|SCRD)\b/ig) || []).length;
+                if (keyMarkCount >= 2) {
+                  // 保持原样
+                } else {
+                  var specParts = [];
+                  var clM = detailSpec.match(/CL\d+/i);
+                  var dnM = detailSpec.match(/DN\d+[×*x]?(?:DN)?\d*/i);
+                  var schM = detailSpec.match(/SCH\d+\w*(\/SCH\d+\w*)?/i);
+                  var rfM = detailSpec.match(/\b(RF|FF|RTJ|RJ|BW|SW|SCRD)\b/i);
+                  if (clM) specParts.push(clM[0]);
+                  if (dnM) specParts.push(dnM[0]);
+                  if (schM) specParts.push(schM[0]);
+                  if (rfM) specParts.push(rfM[0]);
+                  if (specParts.length > 0) detailSpec = specParts.join(' ');
+                }
+              }
+              var detailMat = '';
+              var matM1 = mdContent.match(/Product\s*serial\s*number[:\s]*([^\n]+)/gi);
+              if (matM1) {
+                for (var mi = 0; mi < matM1.length; mi++) {
+                  var val = matM1[mi].replace(/Product\s*serial\s*number[:\s]*/i, '').trim();
+                  if (val && !/^NB\/|^GB\/|^ASTM|^ASME|标准/.test(val)) { detailMat = val; break; }
+                }
+              }
+              if (!detailMat) {
+                var matM2 = mdContent.match(/Name\s*of\s*Mat[:\s]*([^\n]+)/i);
+                if (matM2) detailMat = matM2[1].trim();
+              }
+              if (!detailMat) {
+                var matM3 = mdContent.match(/材料名称[：:\s]*([^\n]+)/);
+                if (matM3) detailMat = matM3[1].trim();
+              }
+              // 编号：按记录顺序从allCertNos分配，再回退其他格式
+              var detailCert = '';
+              if (detailIdx < allCertNos.length) {
+                detailCert = allCertNos[detailIdx];
+              }
+              if (!detailCert) {
+                var certM2 = mdContent.match(/Production\s*order\s*number[:\s]*([^\n]+)/i);
+                if (certM2) detailCert = certM2[1].trim();
+              }
+              if (!detailCert) {
+                var certM3 = mdContent.match(/生产单编号[：:\s]*([^\n]+)/);
+                if (certM3) detailCert = certM3[1].trim();
+              }
+              if (!detailCert || detailCert.length < 5) { detailCert = certNo; }
+              // 厂家：优先当前section，再全局mdContent，再curCo
+              var detailCo = curCo;
+              var coMatch = detectCompany(text);
+              if (coMatch) detailCo = coMatch;
+              if (!detailCo) {
+                var globalCo = detectCompany(mdContent);
+                if (globalCo) detailCo = globalCo;
+              }
+              if (detailName) {
+                allRecords.push({
+                  '制造厂家': detailCo, '产品名称': detailName,
+                  '规格型号': detailSpec, '材质': detailMat,
+                  '数量': detailQty, '证书出厂编号': detailCert,
+                  '物资分类': classifyProduct(detailName, detailCo),
+                  '单位': classifyProduct(detailName, detailCo) === '法兰' ? '片' : '件',
+                  '_source': '质保书-DetailList'
+                });
+                v6Parsed = true;
+                detailIdx++;
+              }
+            }
+          }
+          if (v6Parsed) break;
+        }
+      }
+
+      // 1. 阀门解析器
+      var valveResult = parseValve(tbl8, certNo);
+      if (valveResult) {
+        // 从section文本提取厂家（优先"造商"模式）
+        var tblCoV = detectCompany(text);
+        if (!tblCoV) {
+          var tblTextV = tbl8.map(function(r) { return r.join(' '); }).join(' ');
+          tblCoV = detectCompany(tblTextV);
+        }
+        valveResult['制造厂家'] = tblCoV || '';
+        allRecords.push(valveResult);
+        v6Parsed = true;
+        continue;
+      }
+      
+      // 2. 对焊法兰解析器
+      var flangeResult = parseWeldFlange(tbl8, certNo);
+      if (flangeResult) {
+        flangeResult['制造厂家'] = curCo;
+        allRecords.push(flangeResult);
+        v6Parsed = true;
+        continue;
+      }
+      
+      // 3. 管材解析器
+      var pipeResult = parsePipe(tbl8, certNo);
+      if (pipeResult) {
+        var tblTextP = tbl8.map(function(r) { return r.join(' '); }).join(' ');
+        var pipeCo = detectCompany(tblTextP);
+        if (!pipeCo) pipeCo = detectCompany(text);
+        if (!pipeCo) pipeCo = curCo;
+        pipeResult['制造厂家'] = pipeCo;
+        if (!pipeResult['证书出厂编号'] || pipeResult['证书出厂编号'].length < 5) {
+          var pipeCert = extractCertNo(text);
+          if (pipeCert) pipeResult['证书出厂编号'] = pipeCert;
+        }
+        allRecords.push(pipeResult);
+        v6Parsed = true;
+        continue;
+      }
+      
+      // 4. 紧固件解析器
+      var fastenerResult = parseFastener(tbl8, certNo);
+      if (fastenerResult) {
+        fastenerResult['制造厂家'] = curCo;
+        allRecords.push(fastenerResult);
+        v6Parsed = true;
+        continue;
+      }
+      
+      // 5. 垫片解析器
+      var gasketResult = parseGasket(tbl8, certNo);
+      if (gasketResult) {
+        gasketResult['制造厂家'] = curCo;
+        allRecords.push(gasketResult);
+        v6Parsed = true;
+        continue;
+      }
+      
+      // 6. 管件解析器
+      var fittingResult = parseFitting(tbl8, sectionCertNo);
+      if (fittingResult) {
+        // 从当前表格文本中检测厂家，找不到则空着
+        var tblCo = detectCompany(tbl8.map(function(r) { return r.join(' '); }).join(' '));
+        fittingResult['制造厂家'] = tblCo || '';
+        allRecords.push(fittingResult);
+        v6Parsed = true;
+        continue;
+      }
+    }
+    
+    // 如果V6.0解析器已处理，跳过原有解析器
+    if (v6Parsed) continue;
+
+    // 阀门 (金龙/屯溪): 列定位
+    for (var sti2 = 0; sti2 < secTables.length; sti2++) {
+      var tbl4 = secTables[sti2];
+      if (tbl4.length < 4) continue;
+      if (tbl4.some(function(r) { return r.some(function(c) { return /^阀门名称$|^阀门描述$/.test(c); }); })) continue;
+      var vsc = -1, vqc = -1;
+      for (var ri5 = 0; ri5 < Math.min(6, tbl4.length); ri5++) {
+        for (var j2 = 0; j2 < tbl4[ri5].length; j2++) {
+          if (/阀门规格|产品名称.*规格.*型号|ProductType/.test(tbl4[ri5][j2]) && vsc < 0) vsc = j2;
+          if (/数量.*台|^数量$/.test(tbl4[ri5][j2]) && vqc < 0) vqc = j2;
+        }
+      }
+      if (vsc < 0) continue;
+      for (var ri6 = 0; ri6 < Math.min(15, tbl4.length); ri6++) {
+        var rw4 = tbl4[ri6];
+        if (vsc >= rw4.length) continue;
+        var sc = rw4[vsc];
+        if (!sc) continue;
+        if (/序号|阀门规格|阀门描述|产品名称|ProductType|以下空白|试验|检验|保压|压力|密封|客户|合同|物料|适用|请购/.test(sc) || sc.length < 4) continue;
+        if (!/[\\/,]|DN\d|[""]|CL\d|SCH\d|BB|OSY|OS&Y|RF|BW|^\d/i.test(sc)) continue;
+        var vn = '阀门';
+        ['闸阀','球阀','蝶阀','截止阀','止回阀'].forEach(function(kw) { if (sc.indexOf(kw) >= 0) vn = kw; });
+        var vmat = '';
+        for (var ri7 = 0; ri7 < tbl4.length; ri7++) {
+          for (var j3 = 0; j3 < tbl4[ri7].length - 1; j3++) {
+            if (/^材质$|^体\/盖$|阀体\/炉号|阀体/.test(tbl4[ri7][j3])) {
+              vmat = tbl4[ri7][j3 + 1] || ''; break;
+            }
+          }
+          if (vmat) break;
+        }
+        // 材质去除炉号（如"A105/ADG" -> "A105"）
+        if (vmat && vmat.indexOf('/') >= 0) {
+          vmat = vmat.split('/')[0].trim();
+        }
+        // 从阀门描述中提取CL和DN作为规格型号
+        var finalSpec = sc;
+        var clM = sc.match(/CL(\d+)/i);
+        var dnM = sc.match(/DN(\d+)/i);
+        if (clM || dnM) {
+          finalSpec = '';
+          if (clM) finalSpec += 'CL' + clM[1];
+          if (dnM) finalSpec += (finalSpec ? ' ' : '') + 'DN' + dnM[1];
+        }
+        allRecords.push({
+          '制造厂家': curCo, '产品名称': vn, '规格型号': finalSpec,
+          '材质': vmat, '数量': vqc >= 0 && vqc < rw4.length ? rw4[vqc] : '',
+          '证书出厂编号': certNo, '物资分类': '阀门', '单位': '台',
+          '_source': '质保书-阀门'
+        });
+        break;
+      }
+    }
+
+    // 阀门 (亿阀)
+    for (var sti3 = 0; sti3 < secTables.length; sti3++) {
+      var tbl5 = secTables[sti3];
+      if (tbl5.length < 2) continue;
+      for (var ri8 = 0; ri8 < tbl5.length; ri8++) {
+        var rw5 = tbl5[ri8];
+        var vn2 = '', vs2 = '', vp = '', vq = '';
+        for (var j4 = 0; j4 < rw5.length - 1; j4++) {
+          var k2 = rw5[j4], v2 = rw5[j4 + 1];
+          if (k2 === '阀门名称') vn2 = v2;
+          if (k2 === '阀门描述') {
+            var ps = v2.split('\\'); vn2 = ps[0];
+            vs2 = ps.slice(1).join(' ').replace(/裸件|涂漆/g, '').trim();
+          }
+          if (k2 === '阀门规格') vs2 = v2;
+          if (k2 === '压力等级') vp = v2;
+          if (k2 === '数量') vq = v2;
+        }
+        if (!vn2) continue;
+        if (vp && vs2 && vs2.indexOf(vp) < 0) vs2 = vp + ' ' + vs2;
+        var vmat2 = '';
+        for (var ri9 = 0; ri9 < tbl5.length; ri9++) {
+          for (var j5 = 0; j5 < tbl5[ri9].length - 1; j5++) {
+            if (/体\/盖/.test(tbl5[ri9][j5]) && !vmat2) vmat2 = tbl5[ri9][j5 + 1] || '';
+          }
+          if (vmat2) break;
+        }
+        var vhn = '';
+        for (var sti4 = 0; sti4 < secTables.length; sti4++) {
+          var hi = findCol(secTables[sti4], ['^炉号$', '阀体']);
+          if (hi < 0) continue;
+          for (var ri10 = 1; ri10 < Math.min(secTables[sti4].length, 5); ri10++) {
+            if (hi + 1 < secTables[sti4][ri10].length && secTables[sti4][ri10][hi + 1] && !/炉号|阀体/.test(secTables[sti4][ri10][hi + 1]))
+            { vhn = secTables[sti4][ri10][hi + 1]; break; }
+          }
+          if (vhn) break;
+        }
+        allRecords.push({
+          '制造厂家': curCo, '产品名称': vn2, '规格型号': vs2,
+          '材质': vmat2, '炉号': vhn, '数量': vq,
+          '证书出厂编号': certNo, '物资分类': '阀门', '单位': '台',
+          '_source': '质保书-阀门亿'
+        });
+        break;
+      }
+    }
+
+    // 管件 (恒通合格证): KV
+    for (var sti5 = 0; sti5 < secTables.length; sti5++) {
+      var tbl6 = secTables[sti5];
+      if (tbl6.length < 3) continue;
+      if (!tbl6.some(function(r) { return r.indexOf('产品名称') >= 0; })) continue;
+      var kv = {};
+      for (var ri11 = 0; ri11 < tbl6.length; ri11++) {
+        for (var j6 = 0; j6 < tbl6[ri11].length - 1; j6++) {
+          var k3 = tbl6[ri11][j6], v3 = tbl6[ri11][j6 + 1];
+          if (k3 === '产品名称' && v3 && !kv['产品名称']) kv['产品名称'] = v3;
+          if (k3 === '规格型号' && v3 && !kv['规格型号']) kv['规格型号'] = v3;
+          if (k3 === '材质' && v3 && !kv['材质']) kv['材质'] = v3;
+          if (k3 === '炉号' && v3 && !kv['炉号']) kv['炉号'] = v3;
+          if (k3 === '批号' && v3 && !kv['批号']) kv['批号'] = v3;
+          if (k3 === '数量' && v3 && /^\d+$/.test(v3) && !kv['数量']) kv['数量'] = v3;
+        }
+      }
+      if (kv['产品名称'] && kv['产品名称'] !== '产品名称') {
+        allRecords.push({
+          '制造厂家': curCo, '产品名称': kv['产品名称'],
+          '规格型号': kv['规格型号'] || '', '材质': kv['材质'] || '',
+          '炉号': kv['炉号'] || '', '批号': kv['批号'] || '',
+          '数量': kv['数量'] || '', '证书出厂编号': certNo,
+          '物资分类': classifyProduct(kv['产品名称'], curCo),
+          '单位': '件', '_source': '质保书-管件'
+        });
+      }
+    }
+  }
+  _add('[C] 质保书段落: ' + allRecords.filter(function(x) { return x._source && x._source.indexOf('质保书') === 0; }).length + ' 条');
+
+  // ===== Phase D: 法兰证书 =====
+  // 仅在Phase C未成功解析任何记录时才触发，避免对焊法兰质保书产生噪音
+  var hasPhaseCRecords = allRecords.some(function(x) { return x._source && x._source.indexOf('质保书') === 0; });
+  if (!hasPhaseCRecords && /星达|武进/.test(company || '')) {
+    var ct = stripHtml(mdContent.substring(0, 5000));
+    var certNos = [], mats = [];
+    var cpat = /Certificate\s*No[：:.\s]*([A-Za-z0-9\-]{6,})/gi;
+    var m2;
+    while ((m2 = cpat.exec(ct)) !== null) { if (certNos.indexOf(m2[1]) < 0) certNos.push(m2[1]); }
+    var mpat = /Name\s*of\s*Mat[：:.\s]*([A-Za-z0-9#]+)/gi;
+    while ((m2 = mpat.exec(ct)) !== null) { if (mats.indexOf(m2[1]) < 0) mats.push(m2[1]); }
+    var heatSet = {};
+    for (var sti6 = 0; sti6 < allTables.length; sti6++) {
+      var tbl7 = allTables[sti6];
+      if (tbl7.length < 3) continue;
+      var hstr = tbl7.slice(0, 3).flat().join('|');
+      if (!/熔炼号|HEAT No/i.test(hstr) || !/化学成分|Chemical|C\b.*\bSi|Si\b.*\bMn/i.test(hstr)) continue;
+      var hc = findCol(tbl7, ['熔炼号', 'HEAT No'], 3);
+      if (hc < 0) continue;
+      for (var ri12 = 2; ri12 < Math.min(tbl7.length, 5); ri12++) {
+        if (hc < tbl7[ri12].length) {
+          var hv = tbl7[ri12][hc];
+          if (hv && /\d/.test(hv) && /[A-Za-z]/.test(hv) && hv.length >= 6 && hv.length <= 20) heatSet[hv] = true;
+        }
+      }
+    }
+    var hl = Object.keys(heatSet);
+    for (var i = 0; i < Math.max(certNos.length, hl.length); i++) {
+      var heat2 = i < hl.length ? hl[i] : '';
+      var cert2 = i < certNos.length ? certNos[i] : '';
+      var mat3 = i < mats.length ? mats[i] : (mats.length > 0 ? mats[0] : '');
+      if (!heat2 && !cert2) continue;
+      allRecords.push({
+        '制造厂家': company, '产品名称': '法兰',
+        '规格型号': '', '材质': mat3, '炉号': heat2,
+        '证书出厂编号': cert2, '物资分类': '法兰',
+        '单位': '片', '_source': '法兰证书'
+      });
+    }
+    _add('[D] 法兰证书: ' + allRecords.filter(function(x) { return x._source === '法兰证书'; }).length + ' 条');
+  }
+
+  // ===== Dedup =====
+  var seen = {};
+  var unique = [];
+  for (var ui = 0; ui < allRecords.length; ui++) {
+    var r = allRecords[ui];
+    if (!r['产品名称']) continue;
+    if (r['产品名称'].indexOf('序号') >= 0 || r['产品名称'] === '规格型号' || r['产品名称'] === '材质') continue;
+    var key = [r['制造厂家'] || '', r['产品名称'] || '', r['规格型号'] || '', r['炉号'] || '', r['批号'] || '', r['证书出厂编号'] || ''].join('|||');
+    if (!seen[key]) { seen[key] = true; delete r._source; unique.push(r); }
+  }
+  _add('去重: ' + allRecords.length + '→' + unique.length + ' 条');
+
+  // Fill defaults
+  unique.forEach(function(r) {
+    r['项目名称'] = r['项目名称'] || '';
+    r['证件自编号'] = r['证件自编号'] || '';
+    r['复验报告编号'] = r['复验报告编号'] || '/';
+    r['领用单位'] = r['领用单位'] || '';
+    r['领用量'] = r['领用量'] || '';
+    r['总量'] = r['总量'] || '';
+    if (!r['单位']) r['单位'] = inferUnit(r['物资分类']);
+  });
+
+  _add('');
+  _add('=== 解析完成: ' + unique.length + ' 条唯一记录 ===');
+  return { records: unique, log: _LOG };
+}
+
+// ===== FILE HANDLING =====
+function handleFile(event, fileType) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const ext = file.name.split('.').pop().toLowerCase();
+  if (fileType === 'md' && !['md', 'txt'].includes(ext)) {
+    showLog('错误：请选择 .md 或 .txt 文件', 'error');
+    return;
+  }
+  if (fileType === 'json' && ext !== 'json') {
+    showLog('错误：请选择 .json 文件', 'error');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const content = e.target.result;
+    currentFileName = file.name;
+    currentFileType = fileType;
+
+    showLog('正在解析...', '');
+    try {
+      var parsedRecords = [];
+      var logLines = [];
+
+      if (fileType === 'json') {
+        // JSON格式：直接解析JSON结构（保留页眉页脚信息）
+        var jsonData = JSON.parse(content);
+        var result = parseMinerUJson(jsonData);
+        parsedRecords = result.records;
+        logLines = result.log;
+      } else {
+        // MD格式：直接解析
+        var result = parseMinerUmd(content);
+        parsedRecords = result.records;
+        logLines = result.log;
+      }
+
+      // 累积导入：追加到现有数据
+      var beforeCount = data.length;
+      data = data.concat(parsedRecords);
+      saveData();
+
+      document.getElementById('fileName').textContent = currentFileName + ' (' + new Date().toLocaleTimeString() + ')';
+      document.getElementById('fileType').textContent = fileType === 'json' ? 'JSON' : 'MD';
+      document.getElementById('fileType').style.background = fileType === 'json' ? '#e8f5e9' : '#e8f0fe';
+      document.getElementById('uploadInfo').style.display = '';
+      showLog(logLines.join('\n') + '\n\n累计: ' + beforeCount + ' + ' + parsedRecords.length + ' = ' + data.length + ' 条', parsedRecords.length > 0 ? '' : 'warn');
+      refreshAll();
+    } catch(err) {
+      showLog('解析错误: ' + (err.message || err), 'error');
+      console.error('Parse error:', err);
+    }
+
+    event.target.value = '';
+  };
+  reader.onerror = function() {
+    showLog('错误：文件读取失败', 'error');
+    event.target.value = '';
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+// ===== V7.4: 直接解析MinerU JSON（对齐V7.0 parseMinerUmd完整流程，新增序号23/24/25解析器） =====
+function parseMinerUJson(jsonData) {
+  _LOG = [];
+  var allRecords = [];
+  var pages = jsonData.pdf_info || [];
+  _add('JSON解析: ' + pages.length + ' 页');
+
+  // ===== Step 1: 从JSON提取所有页面的文本和表格 =====
+  // 每页作为一个section，模拟splitSections
+  var pageSections = []; // [{text: string, tables: [行数组], certNo: string, co: string}]
+  var allText = ''; // 全局文本（用于Phase B/D）
+  var allTables = []; // 所有表格（用于Phase B/D）
+
+  for (var pi = 0; pi < pages.length; pi++) {
+    var page = pages[pi];
+    var blocks = page.preproc_blocks || [];
+    // 也从discarded_blocks中提取（页眉页脚）
+    var allBlocks = blocks.concat(page.discarded_blocks || []);
+    var pageTexts = [];
+    var pageTables = [];
+
+    for (var bi = 0; bi < allBlocks.length; bi++) {
+      var block = allBlocks[bi];
+      if (block.type === 'table' && block.blocks) {
+        block.blocks.forEach(function(sb) {
+          if (sb.lines) {
+            sb.lines.forEach(function(line) {
+              if (line.spans) {
+                line.spans.forEach(function(span) {
+                  if (span.type === 'table' && span.html) {
+                    var rows = parseTableHtml(span.html);
+                    if (rows.length > 0) { pageTables.push(rows); allTables.push(rows); }
+                  } else if (span.content && span.content.trim()) {
+                    // V7.4: 表格caption文本（如"扬州市泰克管道机械有限公司 装箱清单"）也纳入页面文本，用于厂家识别
+                    pageTexts.push(span.content.trim());
+                  }
+                });
+              }
+            });
+          }
+        });
+      } else if (block.lines) {
+        var text = '';
+        block.lines.forEach(function(line) {
+          if (line.spans) line.spans.forEach(function(s) { if (s.content) text += s.content + '\n'; });
+        });
+        if (text.trim()) pageTexts.push(text.trim());
+      }
+    }
+
+    var pageText = pageTexts.join('\n');
+    allText += pageText + '\n';
+
+    // 从该页提取厂家和编号
+    var tableText = '';
+    pageTables.forEach(function(t) { tableText += t.map(function(r) { return r.join(' '); }).join(' ') + ' '; });
+    var pageCo = detectCompany(pageText) || detectCompany(tableText) || '';
+    var pageCert = extractCertNo(pageText);
+    if (!pageCert || pageCert.length < 5) {
+      var cm = pageText.match(/(?:证书编号|Certificate\s*No|Report\s*No|质保书编号|质证书编号)[.：:\s]*([\w\-\/]{6,})/i);
+      if (cm) pageCert = cm[1].trim();
+    }
+    if (!pageCert || pageCert.length < 5) {
+      var cm2 = tableText.match(/(?:质保书编号|Certificate\s*No|Report\s*No|证书编号|质证书编号|证书号)\s*(?:Sheet\s*No[:\s]*)?[:\s]*([\w\-\/]{6,})/i);
+      if (cm2) pageCert = cm2[1].trim();
+    }
+    if (!pageCert || pageCert.length < 5) {
+      var cm3 = pageText.match(/(?:编号|No\.?)[:\s]*([\w\-]{6,})/i);
+      if (cm3) pageCert = cm3[1].trim();
+    }
+    // 过滤误匹配
+    if (pageCert && (/^(CERTIFICATE|Report|No|rmality|ndestructive|ed PT)/.test(pageCert) || pageCert.length > 20)) {
+      pageCert = '';
+    }
+
+    pageSections.push({ text: pageText, tables: pageTables, certNo: pageCert, co: pageCo });
+  }
+
+  // ===== Phase A: 一览表（跳过） =====
+  _add('[A] 一览表: 跳过（优先质保书提取）');
+
+  // ===== 全局厂家检测 =====
+  var company = detectCompany(allText.substring(0, 3000));
+  if (company && /中国石油化工|镇海炼化|客户名称/.test(company)) company = '';
+  if (!company && pageSections.length > 0) company = pageSections[0].co;
+  _add('厂家: ' + (company || '(未识别)'));
+
+  // ===== Phase B: 送货清单 =====
+  for (var ti2 = 0; ti2 < allTables.length; ti2++) {
+    var tbl2 = allTables[ti2];
+    if (tbl2.length < 3) continue;
+    var hasDesc = false, hasHeat = false;
+    for (var ri2 = 0; ri2 < Math.min(3, tbl2.length); ri2++) {
+      if (tbl2[ri2].some(function(h) { return /物料长描述/.test(h); })) hasDesc = true;
+      if (tbl2[ri2].some(function(h) { return /炉号/.test(h) && !/原材/.test(h); })) hasHeat = true;
+    }
+    if (!hasDesc || !hasHeat) continue;
+    var cd = findCol(tbl2, ['物料长描述']);
+    var ch = findCol(tbl2, ['炉号']);
+    var cb = findCol(tbl2, ['批号']);
+    var cq = findCol(tbl2, ['实到数量', '^数量$']);
+    var cu = findCol(tbl2, ['^单位$']);
+    if (cd < 0 || ch < 0) continue;
+    for (var ri3 = 1; ri3 < tbl2.length; ri3++) {
+      var rw2 = tbl2[ri3];
+      if (rw2.length <= Math.max(cd, ch)) continue;
+      var desc = rw2[cd] || '';
+      var heat = ch < rw2.length ? rw2[ch] : '';
+      if (!desc || !heat) continue;
+      var parts = desc.split('/');
+      var pn = parts[0] || desc;
+      var sp = parts.slice(1).map(function(p) { return p.replace(/裸件|涂漆|镀锌/g, ''); }).join('/').trim();
+      var rr2 = {
+        '产品名称': pn, '规格型号': sp,
+        '数量': cq >= 0 && cq < rw2.length ? rw2[cq] : '',
+        '单位': cu >= 0 && cu < rw2.length ? rw2[cu] : '件',
+        '炉号': heat,
+        '批号': cb >= 0 && cb < rw2.length ? rw2[cb] : '',
+        '制造厂家': company, '_source': '送货清单'
+      };
+      rr2['物资分类'] = classifyProduct(rr2['产品名称'], company);
+      allRecords.push(rr2);
+    }
+  }
+  _add('[B] 送货清单: ' + allRecords.filter(function(x) { return x._source === '送货清单'; }).length + ' 条');
+
+  // ===== Phase C: 质保书段落 =====
+  var curCo = company;
+  // 记录已解析的记录，避免同一质保书多页重复解析
+  var parsedPipeKeys = {};
+  var parsedFastenerKeys = {};
+  var parsedGasketKeys = {};
+  // 收集所有Certificate No，按出现顺序分配给DetailList记录
+  var allCertNos = [];
+  var certRe = /Certificate\s*No[:\s.]*([A-Z0-9][\w\-]+)/gi;
+  var certM;
+  while ((certM = certRe.exec(allText)) !== null) {
+    if (allCertNos.indexOf(certM[1].trim()) < 0) allCertNos.push(certM[1].trim());
+  }
+  var detailIdx = 0;
+
+  for (var si = 0; si < pageSections.length; si++) {
+    var sec = pageSections[si];
+    var text = sec.text;
+    var certNo = sec.certNo;
+    var secTables = sec.tables;
+    var co = sec.co;
+    if (co) curCo = co;
+
+    // sectionCertNo: 从section文本提取"证明书编号"后的数字
+    var sectionCertNo = certNo;
+    var proveCertM = text.match(/证明书编号[：:\s\n]*Certificate\s*No[.：:\s]*([\d]{6,})/i);
+    if (proveCertM) sectionCertNo = proveCertM[1];
+
+    // 弯头 (合肥实华)
+    for (var sti = 0; sti < secTables.length; sti++) {
+      var tbl3 = secTables[sti];
+      if (tbl3.length < 3) continue;
+      var r0 = (tbl3[0] || []).join('|');
+      if (!/用户名称.*Purchaser/.test(r0) || !/合同号/.test(r0)) continue;
+      var cp2 = findCol(tbl3, ['产品名称'], 5);
+      var cs2 = findCol(tbl3, ['规格型号'], 5);
+      var cmt2 = findCol(tbl3, ['材料牌号'], 5);
+      var cbat2 = findCol(tbl3, ['生产批号'], 5);
+      var cq3 = findCol(tbl3, ['数量.*Amount', '^数量$'], 5);
+      var dr = (tbl3[1] && tbl3[1].some(function(c) { return /产品名称/.test(c); })) ? tbl3[2] : tbl3[1];
+      if (!dr) continue;
+      var pn2 = cp2 >= 0 && cp2 < dr.length ? dr[cp2] : '';
+      var sp2 = cs2 >= 0 && cs2 < dr.length ? dr[cs2] : '';
+      var mat2 = cmt2 >= 0 && cmt2 < dr.length ? dr[cmt2] : '';
+      if (!pn2) continue;
+      var hn = '';
+      for (var ri4 = 4; ri4 < tbl3.length; ri4++) {
+        for (var j = 0; j < tbl3[ri4].length; j++) {
+          if (/熔炼值|Smelting/.test(tbl3[ri4][j])) {
+            var ohc = -1;
+            if (ri4 - 1 >= 0) ohc = findCol([tbl3[ri4 - 1]], ['原材炉号', 'Heat No'], 1);
+            if (ohc >= 0 && ohc < tbl3[ri4].length) { hn = tbl3[ri4][ohc]; }
+            else {
+              for (var k = 3; k < tbl3[ri4].length; k++) {
+                if (/^\d+[A-Za-z]/.test(tbl3[ri4][k]) && tbl3[ri4][k].length >= 6 && tbl3[ri4][k].length < 20)
+                { hn = tbl3[ri4][k]; break; }
+              }
+            }
+          }
+        }
+        if (hn) break;
+      }
+      var rr3 = {
+        '制造厂家': curCo, '产品名称': pn2, '规格型号': sp2 || '',
+        '材质': mat2, '炉号': hn,
+        '批号': cbat2 >= 0 && cbat2 < dr.length ? dr[cbat2] : '',
+        '数量': cq3 >= 0 && cq3 < dr.length ? dr[cq3] : '',
+        '证书出厂编号': sectionCertNo, '_source': '质保书-弯头'
+      };
+      rr3['物资分类'] = classifyProduct(pn2, curCo);
+      rr3['单位'] = '件';
+      allRecords.push(rr3);
+    }
+
+    // ===== V6.0: 按优先级尝试新解析器 =====
+    var v6Parsed = false;
+    for (var sti6 = 0; sti6 < secTables.length; sti6++) {
+      var tbl8 = secTables[sti6];
+      if (tbl8.length < 2) continue;
+      // 跳过一览表表格（含"材料质量证明文件一览表"或"证件自编号"列）
+      var tbl8Str = tbl8.slice(0, 3).map(function(r) { return r.join('|'); }).join('|');
+      if (/材料质量证明文件一览表|证件自编号/.test(tbl8Str)) continue;
+
+      // 0. 产品内容 Detailed List 格式
+      var detailListHdrRow = -1;
+      for (var dri = 0; dri < tbl8.length; dri++) {
+        var rowStr = tbl8[dri].join('|');
+        if (/产品内容.*(?:Detailed|Derailed).*List|(?:Detailed|Derailed).*List|^产品内容$/.test(rowStr)) {
+          detailListHdrRow = dri; break;
+        }
+      }
+      if (detailListHdrRow >= 0 && detailListHdrRow + 1 < tbl8.length) {
+        var hdrRow = tbl8[detailListHdrRow + 1];
+        if (hdrRow) {
+          var nameCol = -1, specCol = -1, qtyCol = -1, descCol = -1;
+          for (var hi = 0; hi < hdrRow.length; hi++) {
+            var h = hdrRow[hi] || '';
+            // V7.3: 支持"产品名称"（序号22格式），排除"物料编码"/"材料"等
+            if (/名称/.test(h) && !/编码|材料|批号/.test(h)) nameCol = hi;
+            if (/^规格$|规格/.test(h)) specCol = hi;
+            if (/数量/.test(h)) qtyCol = hi;
+            if (/描述.*Description|Description/.test(h)) descCol = hi;
+          }
+          if (nameCol < 0 && descCol >= 0) nameCol = descCol;
+
+          for (var dataRi = detailListHdrRow + 2; dataRi < tbl8.length; dataRi++) {
+            var dataRow = tbl8[dataRi];
+            if (!dataRow || dataRow.length < 2) continue;
+            var firstCell = (dataRow[0] || '').trim();
+            if (!firstCell || /^说明|^备注|^检验|^试验/.test(firstCell)) continue;
+            if (nameCol >= 0 && nameCol < dataRow.length) {
+              var detailName = dataRow[nameCol] || '';
+              var detailSpec = specCol >= 0 && specCol < dataRow.length ? dataRow[specCol] : '';
+              var detailQty = qtyCol >= 0 && qtyCol < dataRow.length ? dataRow[qtyCol] : '';
+              if (/^TS\d|^$/.test(detailName)) continue;
+              if (detailQty && detailQty.length > 10) continue;
+              if (detailName && detailName.indexOf('\\') >= 0) {
+                var parts2 = detailName.split('\\');
+                detailName = parts2[0].trim();
+                if (!detailSpec) detailSpec = parts2.slice(1).join(' ').trim();
+              }
+              // V7.3: 规格已含>=2个关键标记(CL/DN/SCH/RF)时保持原样（如WN350-150LB/RF SCH30）
+              if (detailSpec) {
+                var keyMarkCount = (detailSpec.match(/CL\d+|DN\d+|SCH\d+|\b(RF|FF|RTJ|RJ|BW|SW|SCRD)\b/ig) || []).length;
+                if (keyMarkCount >= 2) {
+                  // 保持原样
+                } else {
+                  var specParts = [];
+                  var clM = detailSpec.match(/CL\d+/i);
+                  var dnM = detailSpec.match(/DN\d+[×*x]?(?:DN)?\d*/i);
+                  var schM = detailSpec.match(/SCH\d+\w*(\/SCH\d+\w*)?/i);
+                  var rfM = detailSpec.match(/\b(RF|FF|RTJ|RJ|BW|SW|SCRD)\b/i);
+                  if (clM) specParts.push(clM[0]);
+                  if (dnM) specParts.push(dnM[0]);
+                  if (schM) specParts.push(schM[0]);
+                  if (rfM) specParts.push(rfM[0]);
+                  if (specParts.length > 0) detailSpec = specParts.join(' ');
+                }
+              }
+              var detailMat = '';
+              var matM1 = allText.match(/Product\s*serial\s*number[:\s]*([^\n]+)/gi);
+              if (matM1) {
+                for (var mi = 0; mi < matM1.length; mi++) {
+                  var val = matM1[mi].replace(/Product\s*serial\s*number[:\s]*/i, '').trim();
+                  if (val && !/^NB\/|^GB\/|^ASTM|^ASME|标准/.test(val)) { detailMat = val; break; }
+                }
+              }
+              if (!detailMat) {
+                var matM2 = allText.match(/Name\s*of\s*Mat[:\s]*([^\n]+)/i);
+                if (matM2) detailMat = matM2[1].trim();
+              }
+              if (!detailMat) {
+                var matM3 = allText.match(/材料名称[：:\s]*([^\n]+)/);
+                if (matM3) detailMat = matM3[1].trim();
+              }
+              var detailCert = '';
+              if (detailIdx < allCertNos.length) detailCert = allCertNos[detailIdx];
+              if (!detailCert) {
+                var certM2 = allText.match(/Production\s*order\s*number[:\s]*([^\n]+)/i);
+                if (certM2) detailCert = certM2[1].trim();
+              }
+              if (!detailCert) {
+                var certM3 = allText.match(/生产单编号[：:\s]*([^\n]+)/);
+                if (certM3) detailCert = certM3[1].trim();
+              }
+              if (!detailCert || detailCert.length < 5) detailCert = certNo;
+              var detailCo = curCo;
+              var coMatch = detectCompany(text);
+              if (coMatch) detailCo = coMatch;
+              if (!detailCo) detailCo = detectCompany(allText) || '';
+              if (detailName) {
+                allRecords.push({
+                  '制造厂家': detailCo, '产品名称': detailName,
+                  '规格型号': detailSpec, '材质': detailMat,
+                  '数量': detailQty, '证书出厂编号': detailCert,
+                  '物资分类': classifyProduct(detailName, detailCo),
+                  '单位': classifyProduct(detailName, detailCo) === '法兰' ? '片' : '件',
+                  '_source': '质保书-DetailList'
+                });
+                v6Parsed = true; detailIdx++;
+              }
+            }
+          }
+          if (v6Parsed) break;
+        }
+      }
+
+      // 1. 阀门解析器
+      var valveResult = parseValve(tbl8, certNo);
+      if (valveResult) {
+        var tblCoV = detectCompany(text);
+        if (!tblCoV) {
+          var tblTextV = tbl8.map(function(r) { return r.join(' '); }).join(' ');
+          tblCoV = detectCompany(tblTextV);
+        }
+        valveResult['制造厂家'] = tblCoV || '';
+        allRecords.push(valveResult);
+        v6Parsed = true; continue;
+      }
+
+      // 2. 对焊法兰解析器
+      var flangeResult = parseWeldFlange(tbl8, certNo);
+      if (flangeResult) {
+        flangeResult['制造厂家'] = curCo;
+        allRecords.push(flangeResult);
+        v6Parsed = true; continue;
+      }
+
+      // 2.5 V7.4: 青山钢管无缝管解析器（序号23，英文表头）
+      var qhResult = parsePipeQingshan(tbl8, sectionCertNo);
+      if (qhResult) {
+        var qhCo = detectCompany(tbl8.map(function(r) { return r.join(' '); }).join(' ')) || detectCompany(text) || curCo;
+        qhResult['制造厂家'] = qhCo;
+        if (!qhResult['证书出厂编号'] || qhResult['证书出厂编号'].length < 5) {
+          var qhCert = extractCertNo(text);
+          if (qhCert) qhResult['证书出厂编号'] = qhCert;
+        }
+        var qhKey = [qhResult['产品名称'], qhResult['材质'], qhResult['制造厂家']].join('|||');
+        if (!parsedPipeKeys[qhKey]) {
+          parsedPipeKeys[qhKey] = true;
+          allRecords.push(qhResult);
+        }
+        v6Parsed = true; continue;
+      }
+
+      // 2.6 V7.4: 方顿仪表卡套无缝管解析器（序号24）
+      var fdResult = parsePipeFangdun(tbl8, sectionCertNo);
+      if (fdResult) {
+        var fdCo = detectCompany(tbl8.map(function(r) { return r.join(' '); }).join(' ')) || detectCompany(text) || curCo;
+        fdResult['制造厂家'] = fdCo;
+        if (!fdResult['证书出厂编号'] || fdResult['证书出厂编号'].length < 5) {
+          var fdCert = extractCertNo(text);
+          if (fdCert) fdResult['证书出厂编号'] = fdCert;
+        }
+        // 炉号补充：从化学成分表提取"原材料炉号Heat No"
+        if (!fdResult['炉号']) {
+          for (var fdi = 0; fdi < secTables.length; fdi++) {
+            var hc2 = findCol(secTables[fdi], ['原材料炉号', 'Heat\\s*No'], 4);
+            if (hc2 >= 0) {
+              for (var fdr = 1; fdr < Math.min(secTables[fdi].length, 5); fdr++) {
+                var hv2 = secTables[fdi][fdr][hc2] || '';
+                // V7.4: 炉号以字母或数字开头均可（如 YX2505-1554 / 4T260606-18）
+                if (hv2 && /^[A-Za-z]+\d+[A-Za-z0-9\-]*$|^\d+[A-Za-z][A-Za-z0-9\-]*$/.test(hv2) && hv2.length >= 6 && hv2.length < 25 && !/Heat|No|元素|标准|Standard/i.test(hv2)) { fdResult['炉号'] = hv2; break; }
+              }
+            }
+            if (fdResult['炉号']) break;
+          }
+        }
+        var fdKey = [fdResult['产品名称'], fdResult['材质'], fdResult['制造厂家']].join('|||');
+        if (!parsedPipeKeys[fdKey]) {
+          parsedPipeKeys[fdKey] = true;
+          allRecords.push(fdResult);
+        }
+        v6Parsed = true; continue;
+      }
+
+      // 2.7 V7.4: 泰克装箱清单解析器（序号25）
+      var tkResult = parseBoxListTaike(tbl8, sectionCertNo);
+      if (tkResult) {
+        var tkCo = detectCompany(tbl8.map(function(r) { return r.join(' '); }).join(' ')) || detectCompany(text) || curCo;
+        if (tkResult._allRecords) {
+          var tkRecs = tkResult._allRecords;
+          var tkCert = tkResult['证书出厂编号'];
+          delete tkResult._allRecords;
+          for (var tki = 0; tki < tkRecs.length; tki++) {
+            var trr = tkRecs[tki];
+            allRecords.push({
+              '产品名称': trr.name, '证书出厂编号': tkCert,
+              '材质': trr.mat, '规格型号': trr.spec, '数量': trr.qty,
+              '制造厂家': tkCo, '单位': trr.unit || '件',
+              '物资分类': classifyProduct(trr.name, tkCo),
+              '炉号': trr.heat || '', '批号': trr.lot || '',
+              '_source': '质保书-装箱清单'
+            });
+          }
+        } else {
+          tkResult['制造厂家'] = tkCo;
+          allRecords.push(tkResult);
+        }
+        v6Parsed = true; continue;
+      }
+
+      // 3. 管材解析器
+      var pipeResult = parsePipe(tbl8, certNo);
+      if (pipeResult) {
+        // 厂家：优先从当前表格文本，再从当前section文本，不使用全局allText
+        var tblTextP = tbl8.map(function(r) { return r.join(' '); }).join(' ');
+        var pipeCo = detectCompany(tblTextP);
+        if (!pipeCo) pipeCo = detectCompany(text);
+        if (!pipeCo) pipeCo = curCo;
+        pipeResult['制造厂家'] = pipeCo;
+        // 编号：如果parsePipe未提取到，从section文本中补充
+        if (!pipeResult['证书出厂编号'] || pipeResult['证书出厂编号'].length < 5) {
+          var pipeCert = extractCertNo(text);
+          if (pipeCert) pipeResult['证书出厂编号'] = pipeCert;
+        }
+        // 去重：同一质保书多页不重复解析
+        var pipeKey = [pipeResult['产品名称'], pipeResult['材质'], pipeResult['制造厂家']].join('|||');
+        if (!parsedPipeKeys[pipeKey]) {
+          parsedPipeKeys[pipeKey] = true;
+          allRecords.push(pipeResult);
+        }
+        v6Parsed = true; continue;
+      }
+
+      // 4. 紧固件解析器
+      var fastenerResult = parseFastener(tbl8, certNo);
+      if (fastenerResult) {
+        fastenerResult['制造厂家'] = curCo;
+        // 编号：如果parseFastener未提取到，从section文本中补充
+        if (!fastenerResult['证书出厂编号'] || fastenerResult['证书出厂编号'].length < 5) {
+          var fCert = extractCertNo(text);
+          if (fCert) fastenerResult['证书出厂编号'] = fCert;
+        }
+        var fKey = [fastenerResult['产品名称'], fastenerResult['材质'], fastenerResult['制造厂家']].join('|||');
+        if (!parsedFastenerKeys[fKey]) {
+          parsedFastenerKeys[fKey] = true;
+          allRecords.push(fastenerResult);
+        }
+        v6Parsed = true; continue;
+      }
+
+      // 5. 垫片解析器
+      var gasketResult = parseGasket(tbl8, certNo);
+      if (gasketResult) {
+        gasketResult['制造厂家'] = curCo;
+        var gKey = [gasketResult['产品名称'], gasketResult['材质'], gasketResult['制造厂家']].join('|||');
+        if (!parsedGasketKeys[gKey]) {
+          parsedGasketKeys[gKey] = true;
+          allRecords.push(gasketResult);
+        }
+        v6Parsed = true; continue;
+      }
+
+      // 6. 管件解析器
+      var fittingResult = parseFitting(tbl8, sectionCertNo);
+      if (fittingResult) {
+        var tblCo = detectCompany(tbl8.map(function(r) { return r.join(' '); }).join(' '));
+        if (!tblCo) tblCo = detectCompany(text);
+        fittingResult['制造厂家'] = tblCo || '';
+        // 编号：如果parseFitting未提取到，从section文本中补充
+        if (!fittingResult['证书出厂编号'] || fittingResult['证书出厂编号'].length < 5) {
+          var fCert2 = extractCertNo(text);
+          if (fCert2) fittingResult['证书出厂编号'] = fCert2;
+        }
+        // 多行数据：为每条记录生成独立记录
+        if (fittingResult._allRecords) {
+          var allFitRecs = fittingResult._allRecords;
+          var fitCert = fittingResult['证书出厂编号'];
+          delete fittingResult._allRecords;
+          delete fittingResult._fittingCert;
+          for (var fi = 0; fi < allFitRecs.length; fi++) {
+            var fr = allFitRecs[fi];
+            allRecords.push({
+              '产品名称': fr.name, '证书出厂编号': fitCert,
+              '材质': fr.mat, '规格型号': fr.spec, '数量': fr.qty,
+              '制造厂家': tblCo || '', '单位': '件', '物资分类': '管件',
+              '_source': '质保书-管件'
+            });
+          }
+        } else {
+          allRecords.push(fittingResult);
+        }
+        v6Parsed = true; continue;
+      }
+    }
+
+    if (v6Parsed) continue;
+
+    // 6.5 文本行解析器（无表格匹配时从页面文本提取）
+    if (/缠绕垫|垫片/.test(text)) {
+      var gName = '', gMat = '', gSpec = '', gQty = '', gCert = '';
+      var gNameM = text.match(/(带内外环缠绕垫|缠绕垫[^\n]*)/);
+      if (gNameM) gName = gNameM[1].trim();
+      var gMatM = text.match(/材质[：:\s]*([^\n]+)/);
+      if (gMatM) gMat = gMatM[1].trim();
+      var gSpecM = text.match(/产品规格[：:\s]*([^\n]+)/);
+      if (gSpecM) gSpec = gSpecM[1].replace(/SIZE:.*/i, '').trim();
+      var gQtyM = text.match(/产品数量[：:\s]*(\d+)/);
+      if (gQtyM) gQty = gQtyM[1];
+      gCert = extractCertNo(text) || certNo;
+      var gCo = detectCompany(text) || curCo;
+      if (gName) {
+        allRecords.push({
+          '产品名称': gName, '证书出厂编号': gCert,
+          '材质': gMat, '规格型号': gSpec, '数量': gQty,
+          '制造厂家': gCo, '单位': '件', '物资分类': '垫片',
+          '_source': '质保书-垫片文本'
+        });
+        v6Parsed = true;
+      }
+    }
+    if (v6Parsed) continue;
+
+    // 阀门 (金龙/屯溪): 列定位
+    for (var sti2 = 0; sti2 < secTables.length; sti2++) {
+      var tbl4 = secTables[sti2];
+      if (tbl4.length < 4) continue;
+      if (tbl4.some(function(r) { return r.some(function(c) { return /^阀门名称$|^阀门描述$/.test(c); }); })) continue;
+      var vsc = -1, vqc = -1;
+      for (var ri5 = 0; ri5 < Math.min(6, tbl4.length); ri5++) {
+        for (var j2 = 0; j2 < tbl4[ri5].length; j2++) {
+          if (/阀门规格|产品名称.*规格.*型号|ProductType/.test(tbl4[ri5][j2]) && vsc < 0) vsc = j2;
+          if (/数量.*台|^数量$/.test(tbl4[ri5][j2]) && vqc < 0) vqc = j2;
+        }
+      }
+      if (vsc < 0) continue;
+      for (var ri6 = 0; ri6 < Math.min(15, tbl4.length); ri6++) {
+        var rw4 = tbl4[ri6];
+        if (vsc >= rw4.length) continue;
+        var sc = rw4[vsc];
+        if (!sc) continue;
+        if (/序号|阀门规格|阀门描述|产品名称|ProductType|以下空白|试验|检验|保压|压力|密封|客户|合同|物料|适用|请购/.test(sc) || sc.length < 4) continue;
+        if (!/[\\/,]|DN\d|[""]|CL\d|SCH\d|BB|OSY|OS&Y|RF|BW|^\d/i.test(sc)) continue;
+        var vn = '阀门';
+        ['闸阀','球阀','蝶阀','截止阀','止回阀'].forEach(function(kw) { if (sc.indexOf(kw) >= 0) vn = kw; });
+        var vmat = '';
+        for (var ri7 = 0; ri7 < tbl4.length; ri7++) {
+          for (var j3 = 0; j3 < tbl4[ri7].length - 1; j3++) {
+            if (/^材质$|^体\/盖$|阀体\/炉号|阀体/.test(tbl4[ri7][j3])) {
+              vmat = tbl4[ri7][j3 + 1] || ''; break;
+            }
+          }
+          if (vmat) break;
+        }
+        if (vmat && vmat.indexOf('/') >= 0) vmat = vmat.split('/')[0].trim();
+        var finalSpec = sc;
+        var clM2 = sc.match(/CL(\d+)/i);
+        var dnM2 = sc.match(/DN(\d+)/i);
+        if (clM2 || dnM2) {
+          finalSpec = '';
+          if (clM2) finalSpec += 'CL' + clM2[1];
+          if (dnM2) finalSpec += (finalSpec ? ' ' : '') + 'DN' + dnM2[1];
+        }
+        allRecords.push({
+          '制造厂家': curCo, '产品名称': vn, '规格型号': finalSpec,
+          '材质': vmat, '数量': vqc >= 0 && vqc < rw4.length ? rw4[vqc] : '',
+          '证书出厂编号': certNo, '物资分类': '阀门', '单位': '台',
+          '_source': '质保书-阀门'
+        });
+        break;
+      }
+    }
+
+    // 阀门 (亿阀)
+    for (var sti3 = 0; sti3 < secTables.length; sti3++) {
+      var tbl5 = secTables[sti3];
+      if (tbl5.length < 2) continue;
+      for (var ri8 = 0; ri8 < tbl5.length; ri8++) {
+        var rw5 = tbl5[ri8];
+        var vn2 = '', vs2 = '', vp = '', vq = '';
+        for (var j4 = 0; j4 < rw5.length - 1; j4++) {
+          var k2 = rw5[j4], v2 = rw5[j4 + 1];
+          if (k2 === '阀门名称') vn2 = v2;
+          if (k2 === '阀门描述') {
+            var ps = v2.split('\\'); vn2 = ps[0];
+            vs2 = ps.slice(1).join(' ').replace(/裸件|涂漆/g, '').trim();
+          }
+          if (k2 === '阀门规格') vs2 = v2;
+          if (k2 === '压力等级') vp = v2;
+          if (k2 === '数量') vq = v2;
+        }
+        if (!vn2) continue;
+        if (vp && vs2 && vs2.indexOf(vp) < 0) vs2 = vp + ' ' + vs2;
+        var vmat2 = '';
+        for (var ri9 = 0; ri9 < tbl5.length; ri9++) {
+          for (var j5 = 0; j5 < tbl5[ri9].length - 1; j5++) {
+            if (/体\/盖/.test(tbl5[ri9][j5]) && !vmat2) vmat2 = tbl5[ri9][j5 + 1] || '';
+          }
+          if (vmat2) break;
+        }
+        var vhn = '';
+        for (var sti4 = 0; sti4 < secTables.length; sti4++) {
+          var hi2 = findCol(secTables[sti4], ['^炉号$', '阀体']);
+          if (hi2 < 0) continue;
+          for (var ri10 = 1; ri10 < Math.min(secTables[sti4].length, 5); ri10++) {
+            if (hi2 + 1 < secTables[sti4][ri10].length && secTables[sti4][ri10][hi2 + 1] && !/炉号|阀体/.test(secTables[sti4][ri10][hi2 + 1]))
+            { vhn = secTables[sti4][ri10][hi2 + 1]; break; }
+          }
+          if (vhn) break;
+        }
+        allRecords.push({
+          '制造厂家': curCo, '产品名称': vn2, '规格型号': vs2,
+          '材质': vmat2, '炉号': vhn, '数量': vq,
+          '证书出厂编号': certNo, '物资分类': '阀门', '单位': '台',
+          '_source': '质保书-阀门亿'
+        });
+        break;
+      }
+    }
+
+    // 管件 (恒通合格证): KV
+    for (var sti5 = 0; sti5 < secTables.length; sti5++) {
+      var tbl6 = secTables[sti5];
+      if (tbl6.length < 3) continue;
+      if (!tbl6.some(function(r) { return r.indexOf('产品名称') >= 0; })) continue;
+      var kv = {};
+      for (var ri11 = 0; ri11 < tbl6.length; ri11++) {
+        for (var j6 = 0; j6 < tbl6[ri11].length - 1; j6++) {
+          var k3 = tbl6[ri11][j6], v3 = tbl6[ri11][j6 + 1];
+          if (k3 === '产品名称' && v3 && !kv['产品名称']) kv['产品名称'] = v3;
+          if (k3 === '规格型号' && v3 && !kv['规格型号']) kv['规格型号'] = v3;
+          if (k3 === '材质' && v3 && !kv['材质']) kv['材质'] = v3;
+          if (k3 === '炉号' && v3 && !kv['炉号']) kv['炉号'] = v3;
+          if (k3 === '批号' && v3 && !kv['批号']) kv['批号'] = v3;
+          if (k3 === '数量' && v3 && /^\d+$/.test(v3) && !kv['数量']) kv['数量'] = v3;
+        }
+      }
+      if (kv['产品名称'] && kv['产品名称'] !== '产品名称') {
+        allRecords.push({
+          '制造厂家': curCo, '产品名称': kv['产品名称'],
+          '规格型号': kv['规格型号'] || '', '材质': kv['材质'] || '',
+          '炉号': kv['炉号'] || '', '批号': kv['批号'] || '',
+          '数量': kv['数量'] || '', '证书出厂编号': certNo,
+          '物资分类': classifyProduct(kv['产品名称'], curCo),
+          '单位': '件', '_source': '质保书-管件'
+        });
+      }
+    }
+  }
+  _add('[C] 质保书段落: ' + allRecords.filter(function(x) { return x._source && x._source.indexOf('质保书') === 0; }).length + ' 条');
+
+  // ===== Phase D: 法兰证书 =====
+  // 仅在Phase C未成功解析任何记录时才触发，避免对焊法兰质保书产生噪音
+  var hasPhaseCRecords = allRecords.some(function(x) { return x._source && x._source.indexOf('质保书') === 0; });
+  if (!hasPhaseCRecords && /星达|武进/.test(company || '')) {
+    var ct = allText.substring(0, 5000);
+    var certNos = [], mats = [];
+    var cpat = /Certificate\s*No[：:.\s]*([A-Za-z0-9\-]{6,})/gi;
+    var m2;
+    while ((m2 = cpat.exec(ct)) !== null) { if (certNos.indexOf(m2[1]) < 0) certNos.push(m2[1]); }
+    var mpat = /Name\s*of\s*Mat[：:.\s]*([A-Za-z0-9#]+)/gi;
+    while ((m2 = mpat.exec(ct)) !== null) { if (mats.indexOf(m2[1]) < 0) mats.push(m2[1]); }
+    var heatSet = {};
+    for (var sti6 = 0; sti6 < allTables.length; sti6++) {
+      var tbl7 = allTables[sti6];
+      if (tbl7.length < 3) continue;
+      var hstr = tbl7.slice(0, 3).flat().join('|');
+      if (!/熔炼号|HEAT No/i.test(hstr) || !/化学成分|Chemical|C\b.*\bSi|Si\b.*\bMn/i.test(hstr)) continue;
+      var hc = findCol(tbl7, ['熔炼号', 'HEAT No'], 3);
+      if (hc < 0) continue;
+      for (var ri12 = 2; ri12 < Math.min(tbl7.length, 5); ri12++) {
+        if (hc < tbl7[ri12].length) {
+          var hv = tbl7[ri12][hc];
+          if (hv && /\d/.test(hv) && /[A-Za-z]/.test(hv) && hv.length >= 6 && hv.length <= 20) heatSet[hv] = true;
+        }
+      }
+    }
+    var hl = Object.keys(heatSet);
+    for (var i = 0; i < Math.max(certNos.length, hl.length); i++) {
+      var heat2 = i < hl.length ? hl[i] : '';
+      var cert2 = i < certNos.length ? certNos[i] : '';
+      var mat3 = i < mats.length ? mats[i] : (mats.length > 0 ? mats[0] : '');
+      if (!heat2 && !cert2) continue;
+      allRecords.push({
+        '制造厂家': company, '产品名称': '法兰',
+        '规格型号': '', '材质': mat3, '炉号': heat2,
+        '证书出厂编号': cert2, '物资分类': '法兰',
+        '单位': '片', '_source': '法兰证书'
+      });
+    }
+    _add('[D] 法兰证书: ' + allRecords.filter(function(x) { return x._source === '法兰证书'; }).length + ' 条');
+  }
+
+  // ===== Dedup =====
+  var seen = {};
+  var unique = [];
+  for (var ui = 0; ui < allRecords.length; ui++) {
+    var r = allRecords[ui];
+    if (!r['产品名称']) continue;
+    if (r['产品名称'].indexOf('序号') >= 0 || r['产品名称'] === '规格型号' || r['产品名称'] === '材质') continue;
+    var key = [r['制造厂家'] || '', r['产品名称'] || '', r['规格型号'] || '', r['炉号'] || '', r['批号'] || '', r['证书出厂编号'] || ''].join('|||');
+    if (!seen[key]) { seen[key] = true; delete r._source; unique.push(r); }
+  }
+  _add('去重: ' + allRecords.length + '→' + unique.length + ' 条');
+
+  // Fill defaults
+  unique.forEach(function(r) {
+    r['项目名称'] = r['项目名称'] || '';
+    r['证件自编号'] = r['证件自编号'] || '';
+    r['复验报告编号'] = r['复验报告编号'] || '/';
+    r['领用单位'] = r['领用单位'] || '';
+    r['领用量'] = r['领用量'] || '';
+    r['总量'] = r['总量'] || '';
+    if (!r['单位']) r['单位'] = inferUnit(r['物资分类']);
+  });
+
+  _add('');
+  _add('=== JSON解析完成: ' + unique.length + ' 条唯一记录 ===');
+  return { records: unique, log: _LOG };
+}
+
+// 解析表格HTML为行数组
+function parseTableHtml(html) {
+  // 支持DOMParser（浏览器）和JSDOM（测试环境）
+  var doc;
+  if (typeof DOMParser !== 'undefined') {
+    doc = new DOMParser().parseFromString('<html><body>' + html + '</body></html>', 'text/html');
+  } else {
+    doc = new JSDOM('<html><body>' + html + '</body></html>').window.document;
+  }
+  var table = doc.querySelector('table');
+  if (!table) return [];
+
+  var trList = table.querySelectorAll('tr');
+  var grid = [];
+  var maxCols = 0;
+
+  // 第一遍：计算每行列数（考虑colspan）
+  trList.forEach(function(tr) {
+    var colCount = 0;
+    tr.querySelectorAll('td,th').forEach(function(c) {
+      var cs = parseInt(c.getAttribute('colspan')) || 1;
+      colCount += cs;
+    });
+    if (colCount > maxCols) maxCols = colCount;
+  });
+
+  // 初始化网格
+  var rowCount = trList.length;
+  for (var r = 0; r < rowCount; r++) {
+    grid[r] = [];
+    for (var c = 0; c < maxCols; c++) {
+      grid[r][c] = '';
+    }
+  }
+
+  // 第二遍：填充网格（处理rowspan/colspan）
+  for (var ri = 0; ri < rowCount; ri++) {
+    var tr = trList[ri];
+    var cells = tr.querySelectorAll('td,th');
+    var colIdx = 0;
+    for (var ci = 0; ci < cells.length; ci++) {
+      var cell = cells[ci];
+      // 找到下一个空位
+      while (colIdx < maxCols && grid[ri][colIdx] !== '') colIdx++;
+      if (colIdx >= maxCols) break;
+
+      var rs = parseInt(cell.getAttribute('rowspan')) || 1;
+      var cs = parseInt(cell.getAttribute('colspan')) || 1;
+      var val = cell.textContent.trim();
+
+      for (var dr = 0; dr < rs; dr++) {
+        for (var dc = 0; dc < cs; dc++) {
+          var tr2 = ri + dr;
+          var tc = colIdx + dc;
+          if (tr2 < rowCount && tc < maxCols) {
+            grid[tr2][tc] = val;
+          }
+        }
+      }
+      colIdx += cs;
+    }
+  }
+
+  // 移除全空行
+  var result = [];
+  for (var r = 0; r < grid.length; r++) {
+    var hasContent = false;
+    for (var c = 0; c < grid[r].length; c++) {
+      if (grid[r][c] !== '') { hasContent = true; break; }
+    }
+    if (hasContent) result.push(grid[r]);
+  }
+  return result;
+}
+
+// DetailList解析器（JSON专用，支持页文本搜索）
+function parseDetailListJson(table, pageText, certNo, defaultCo) {
+  var records = [];
+  var detailListHdrRow = -1;
+  for (var dri = 0; dri < table.length; dri++) {
+    var rowStr = table[dri].join('|');
+    if (/产品内容.*(?:Detailed|Derailed).*List|(?:Detailed|Derailed).*List|^产品内容$/.test(rowStr)) {
+      detailListHdrRow = dri;
+      break;
+    }
+  }
+  if (detailListHdrRow < 0 || detailListHdrRow + 1 >= table.length) return records;
+
+  var hdrRow = table[detailListHdrRow + 1];
+  if (!hdrRow) return records;
+
+  var nameCol = -1, specCol = -1, qtyCol = -1, descCol = -1;
+  for (var hi = 0; hi < hdrRow.length; hi++) {
+    var h = hdrRow[hi] || '';
+    // V7.3: 支持"产品名称"（序号22格式），排除"物料编码"/"材料"等
+    if (/名称/.test(h) && !/编码|材料|批号/.test(h)) nameCol = hi;
+    if (/^规格$|规格/.test(h)) specCol = hi;
+    if (/数量/.test(h)) qtyCol = hi;
+    if (/描述.*Description|Description/.test(h)) descCol = hi;
+  }
+  if (nameCol < 0 && descCol >= 0) nameCol = descCol;
+  if (nameCol < 0) return records;
+
+  // 遍历数据行
+  for (var ri = detailListHdrRow + 2; ri < table.length; ri++) {
+    var dataRow = table[ri];
+    if (!dataRow || dataRow.length < 2) continue;
+    var firstCell = (dataRow[0] || '').trim();
+    if (!firstCell || /^说明|^备注|^检验|^试验/.test(firstCell)) continue;
+    if (nameCol >= dataRow.length) continue;
+
+    var name = dataRow[nameCol] || '';
+    if (!name || /^TS\d/.test(name)) continue;
+    var qty = qtyCol >= 0 && qtyCol < dataRow.length ? dataRow[qtyCol] : '';
+    if (qty && qty.length > 10) continue;
+
+    var spec = specCol >= 0 && specCol < dataRow.length ? dataRow[specCol] : '';
+    if (name.indexOf('\\') >= 0) {
+      var parts = name.split('\\');
+      name = parts[0].trim();
+      if (!spec) spec = parts.slice(1).join(' ').trim();
+    }
+    // V7.3: 规格已含>=2个关键标记(CL/DN/SCH/RF)时保持原样（如WN350-150LB/RF SCH30）
+    if (spec) {
+      var keyMarkCount = (spec.match(/CL\d+|DN\d+|SCH\d+|\b(RF|FF|RTJ|RJ|BW|SW|SCRD)\b/ig) || []).length;
+      if (keyMarkCount < 2) {
+        var sp = [];
+        var cl = spec.match(/CL\d+/i); if (cl) sp.push(cl[0]);
+        var dn = spec.match(/DN\d+[×*x]?(?:DN)?\d*/i); if (dn) sp.push(dn[0]);
+        var sch = spec.match(/SCH\d+\w*(\/SCH\d+\w*)?/i); if (sch) sp.push(sch[0]);
+        var rf = spec.match(/\b(RF|FF|RTJ|RJ|BW|SW|SCRD)\b/i); if (rf) sp.push(rf[0]);
+        if (sp.length > 0) spec = sp.join(' ');
+      }
+    }
+
+    // 材质：从页文本中提取
+    var mat = '';
+    var matM1 = pageText.match(/Product\s*serial\s*number[:\s]*([^\n]+)/gi);
+    if (matM1) {
+      for (var mi = 0; mi < matM1.length; mi++) {
+        var val = matM1[mi].replace(/Product\s*serial\s*number[:\s]*/i, '').trim();
+        if (val && !/^NB\/|^GB\/|^ASTM|^ASME|标准/.test(val)) { mat = val; break; }
+      }
+    }
+    if (!mat) {
+      var matM2 = pageText.match(/Name\s*of\s*Mat[:\s]*([^\n]+)/i);
+      if (matM2) mat = matM2[1].trim();
+    }
+    if (!mat) {
+      var matM3 = pageText.match(/材料名称[：:\s]*([^\n]+)/);
+      if (matM3) mat = matM3[1].trim();
+    }
+
+    // 编号：按顺序分配
+    var cert = certNo || '';
+
+    if (name) {
+      records.push({
+        '制造厂家': defaultCo || '', '产品名称': name,
+        '规格型号': spec, '材质': mat,
+        '数量': qty, '证书出厂编号': cert,
+        '物资分类': classifyProduct(name, defaultCo),
+        '单位': classifyProduct(name, defaultCo) === '法兰' ? '片' : '件',
+        '_source': 'JSON-DetailList'
+      });
+    }
+  }
+  return records;
+}
+
+// JSON转MD（保留用于兼容）
+function convertJSONtoMD(jsonData) {
+  var mdParts = [];
+  var pages = jsonData.pdf_info || [];
+  pages.forEach(function(page) {
+    var blocks = page.preproc_blocks || [];
+    blocks.forEach(function(block) {
+      // 提取文本行
+      if (block.lines && block.type !== 'table') {
+        var text = '';
+        block.lines.forEach(function(line) {
+          if (line.spans) line.spans.forEach(function(span) { if (span.content) text += span.content + '\n'; });
+        });
+        if (text.trim()) mdParts.push(text.trim());
+      }
+      // 提取表格HTML
+      if (block.type === 'table' && block.blocks) {
+        block.blocks.forEach(function(sb) {
+          if (sb.lines) {
+            sb.lines.forEach(function(line) {
+              if (line.spans) {
+                line.spans.forEach(function(span) {
+                  if (span.type === 'table' && span.html) {
+                    mdParts.push(span.html);
+                  }
+                });
+              }
+            });
+          }
+        });
+      }
+    });
+  });
+  return mdParts.join('\n\n');
+}
+
+function clearData() {
+  data = [];
+  saveData();
+  currentFileName = '';
+  currentFileType = '';
+  document.getElementById('uploadInfo').style.display = 'none';
+  document.getElementById('parseLog').className = 'parse-log';
+  document.getElementById('fileInputMD').value = '';
+  if (document.getElementById('fileInputJSON')) document.getElementById('fileInputJSON').value = '';
+  refreshAll();
+  showLog('数据已清空', '');
+}
+
+function showLog(msg, cls) {
+  const el = document.getElementById('parseLog');
+  el.textContent = msg;
+  el.className = 'parse-log show ' + (cls || '');
+}
+
+function reloadDefault() {
+  data = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  saveData();
+  currentFileName = '';
+  currentFileType = '';
+  document.getElementById('uploadInfo').style.display = 'none';
+  document.getElementById('parseLog').className = 'parse-log';
+  document.getElementById('fileInputMD').value = '';
+  if (document.getElementById('fileInputJSON')) document.getElementById('fileInputJSON').value = '';
+  refreshAll();
+}
+
+// Drag & drop for MD zone
+(function() {
+  const zoneMD = document.getElementById('uploadZoneMD');
+  zoneMD.addEventListener('dragover', function(e) { e.preventDefault(); zoneMD.classList.add('dragover'); });
+  zoneMD.addEventListener('dragleave', function() { zoneMD.classList.remove('dragover'); });
+  zoneMD.addEventListener('drop', function(e) {
+    e.preventDefault();
+    zoneMD.classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      document.getElementById('fileInputMD').files = e.dataTransfer.files;
+      handleFile({ target: { files: [file] } }, 'md');
+    }
+  });
+})();
+
+// Drag & drop for JSON zone
+(function() {
+  const zoneJSON = document.getElementById('uploadZoneJSON');
+  zoneJSON.addEventListener('dragover', function(e) { e.preventDefault(); zoneJSON.classList.add('dragover'); });
+  zoneJSON.addEventListener('dragleave', function() { zoneJSON.classList.remove('dragover'); });
+  zoneJSON.addEventListener('drop', function(e) {
+    e.preventDefault();
+    zoneJSON.classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      document.getElementById('fileInputJSON').files = e.dataTransfer.files;
+      handleFile({ target: { files: [file] } }, 'json');
+    }
+  });
+})();
+
+// ===== UI RENDERING =====
+function refreshAll() {
+  renderImportStats();
+  updateProgress();
+  filterData();
+  renderYilanTable('', '');
+}
+
+function renderImportStats() {
+  const stats = {};
+  data.forEach(r => {
+    const cat = r['物资分类'] || '其他';
+    stats[cat] = (stats[cat] || 0) + 1;
+  });
+  const container = document.getElementById('importStats');
+  container.innerHTML = '';
+
+  const catOrder = ['管件','管材','法兰','紧固件','垫片','阀门','支吊架','型材','防腐保温','其他'];
+  catOrder.forEach(cat => {
+    if (!stats[cat]) return;
+    const card = document.createElement('div');
+    card.className = 'stat-card';
+    card.dataset.cat = cat;
+    card.innerHTML = `<div class="count">${stats[cat]}</div><div class="label">${cat}</div>`;
+    card.onclick = () => { document.getElementById('catFilter').value = cat; filterData(); };
+    container.appendChild(card);
+  });
+
+  const filter = document.getElementById('catFilter');
+  const modalFilter = document.getElementById('certCatFilter');
+  filter.innerHTML = '<option value="">全部分类</option>';
+  modalFilter.innerHTML = '<option value="">全部分类</option>';
+  catOrder.forEach(cat => {
+    if (!stats[cat]) return;
+    filter.innerHTML += `<option value="${cat}">${cat} (${stats[cat]})</option>`;
+    modalFilter.innerHTML += `<option value="${cat}">${cat}</option>`;
+  });
+}
+
+function updateProgress() {
+  const filled = data.filter(r => r['证件自编号'] && r['证件自编号'].trim()).length;
+  const total = data.length;
+  const pct = total > 0 ? Math.round(filled / total * 100) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `自编号进度: ${filled}/${total}`;
+}
+
+function filterData() {
+  const cat = document.getElementById('catFilter').value;
+  const search = document.getElementById('searchBox').value.toLowerCase();
+  document.querySelectorAll('.stat-card').forEach(c => { c.classList.toggle('active', c.dataset.cat === cat); });
+  renderTable(cat, search);
+  renderYilanTable(cat, search);
+}
+
+function renderTable(catFilter, searchText) {
+  const view = document.getElementById('baseView');
+  if (data.length === 0) {
+    view.innerHTML = '<div class="no-data"><div class="big-icon">📭</div><div>暂无数据，请上传 MinerU MD 文件</div></div>';
+    return;
+  }
+  const headers = ['操作','序号','物资分类','产品名称','规格型号','材质','数量','单位','炉号','批号','制造厂家','证书出厂编号','证件自编号','复验报告编号'];
+
+  let filtered = data;
+  if (catFilter) filtered = filtered.filter(r => r['物资分类'] === catFilter);
+  if (searchText) filtered = filtered.filter(r => {
+    const s = searchText;
+    return (r['产品名称']||'').toLowerCase().includes(s) ||
+           (r['规格型号']||'').toLowerCase().includes(s) ||
+           (r['炉号']||'').toLowerCase().includes(s) ||
+           (r['批号']||'').toLowerCase().includes(s) ||
+           (r['证书出厂编号']||'').toLowerCase().includes(s) ||
+           (r['制造厂家']||'').toLowerCase().includes(s);
+  });
+
+  let html = `<table><thead><tr>`;
+  headers.forEach(h => html += `<th>${h}</th>`);
+  html += `</tr></thead><tbody>`;
+
+  if (filtered.length === 0) {
+    html += `<tr><td colspan="${headers.length}" style="text-align:center;padding:20px;color:var(--muted)">无匹配记录</td></tr>`;
+  } else {
+    filtered.forEach(r => {
+      const realIdx = data.indexOf(r);
+      const cat = r['物资分类'] || '其他';
+      html += `<tr>`;
+      html += `<td class="center"><button class="del-btn" onclick="deleteRow(${realIdx})" title="删除此行">🗑️</button></td>`;
+      html += `<td class="center">${realIdx + 1}</td>`;
+      html += `<td class="center"><span class="cat-badge cat-${cat}">${cat}</span></td>`;
+      html += `<td><input class="editable ${r['产品名称']?'filled':''}" value="${r['产品名称']||''}" onchange="updateField(${realIdx},'产品名称',this.value)"></td>`;
+      html += `<td><input class="editable ${r['规格型号']?'filled':''}" value="${r['规格型号']||''}" onchange="updateField(${realIdx},'规格型号',this.value)"></td>`;
+      html += `<td class="center"><input class="editable ${r['材质']?'filled':''}" value="${r['材质']||''}" onchange="updateField(${realIdx},'材质',this.value)"></td>`;
+      html += `<td class="center"><input class="editable ${r['数量']?'filled':''}" value="${r['数量']||''}" onchange="updateField(${realIdx},'数量',this.value)" style="width:70px"></td>`;
+      html += `<td class="center"><input class="editable ${r['单位']?'filled':''}" value="${r['单位']||''}" onchange="updateField(${realIdx},'单位',this.value)" style="width:50px"></td>`;
+      html += `<td><input class="editable ${r['炉号']?'filled':''}" value="${r['炉号']||''}" onchange="updateField(${realIdx},'炉号',this.value)"></td>`;
+      html += `<td><input class="editable ${r['批号']?'filled':''}" value="${r['批号']||''}" onchange="updateField(${realIdx},'批号',this.value)"></td>`;
+      html += `<td style="font-size:12px"><input class="editable ${r['制造厂家']?'filled':''}" value="${r['制造厂家']||''}" onchange="updateField(${realIdx},'制造厂家',this.value)"></td>`;
+      html += `<td><input class="editable ${r['证书出厂编号']?'filled':''}" value="${r['证书出厂编号']||''}" onchange="updateField(${realIdx},'证书出厂编号',this.value)" title="证书出厂编号（必填项，来自质保书合格证，可手动修改）"></td>`;
+      html += `<td><input class="editable ${r['证件自编号']?'filled':''}" value="${r['证件自编号']||''}" onchange="updateField(${realIdx},'证件自编号',this.value)" placeholder="待填写"></td>`;
+      html += `<td><input class="editable ${r['复验报告编号']&&r['复验报告编号']!=='/'?'filled':''}" value="${r['复验报告编号']||'/'}" onchange="updateField(${realIdx},'复验报告编号',this.value)"></td>`;
+      html += `</tr>`;
+    });
+  }
+
+  html += `</tbody></table>`;
+  html += `<div style="padding:8px;color:var(--muted);font-size:12px;">显示 ${filtered.length} / ${data.length} 条记录</div>`;
+  view.innerHTML = html;
+}
+
+function renderYilanTable(catFilter, searchText) {
+  const view = document.getElementById('yilanView');
+  if (data.length === 0) {
+    view.innerHTML = '';
+    return;
+  }
+  const headers = ['序号','材料名称','证件自编号','证书出厂编号','材质','规格型号','制造厂家','单位','总量','复验报告编号','领用单位/领用量'];
+
+  let filtered = data;
+  if (catFilter) filtered = filtered.filter(r => r['物资分类'] === catFilter);
+  if (searchText) filtered = filtered.filter(r => {
+    const s = searchText;
+    return (r['产品名称']||'').toLowerCase().includes(s) ||
+           (r['规格型号']||'').toLowerCase().includes(s) ||
+           (r['证书出厂编号']||'').toLowerCase().includes(s);
+  });
+
+  let html = `<div style="padding:8px 0;font-size:14px;font-weight:600;color:var(--primary)">SH/T 3503—J132 材料质量证明文件一览表</div>`;
+  html += `<div style="font-size:13px;margin-bottom:8px;">工程名称：运行三部连续重整装置四合一加热炉余热回收技术改造</div>`;
+  html += `<table><thead><tr>`;
+  headers.forEach(h => html += `<th>${h}</th>`);
+  html += `</tr></thead><tbody>`;
+
+  filtered.forEach(r => {
+    const realIdx = data.indexOf(r);
+    html += `<tr>`;
+    html += `<td class="center">${realIdx + 1}</td>`;
+    html += `<td>${r['产品名称']||''}</td>`;
+    html += `<td><input class="editable ${r['证件自编号']?'filled':''}" value="${r['证件自编号']||''}" onchange="updateField(${realIdx},'证件自编号',this.value)" placeholder="待填写" style="width:80px"></td>`;
+    html += `<td>${r['证书出厂编号']||''}</td>`;
+    html += `<td class="center">${r['材质']||''}</td>`;
+    html += `<td>${r['规格型号']||''}</td>`;
+    html += `<td style="font-size:12px">${r['制造厂家']||''}</td>`;
+    html += `<td class="center">${r['单位']||''}</td>`;
+    html += `<td class="center">${r['数量']||''}</td>`;
+    html += `<td><input class="editable" value="${r['复验报告编号']||'/'}" onchange="updateField(${realIdx},'复验报告编号',this.value)" style="width:60px"></td>`;
+    html += `<td style="font-size:12px">${r['领用单位']||''}/${r['领用量']||''}</td>`;
+    html += `</tr>`;
+  });
+
+  html += `</tbody></table>`;
+  view.innerHTML = html;
+}
+
+let currentView = 'base';
+
+function switchView(view) {
+  currentView = view;
+  document.getElementById('baseView').style.display = view === 'base' ? '' : 'none';
+  document.getElementById('yilanView').style.display = view === 'yilan' ? '' : 'none';
+  document.getElementById('dataView').style.display = view === 'data' ? '' : 'none';
+  document.getElementById('btnBase').classList.toggle('active', view === 'base');
+  document.getElementById('btnYilan').classList.toggle('active', view === 'yilan');
+  document.getElementById('btnData').classList.toggle('active', view === 'data');
+  if (view === 'data') {
+    document.getElementById('dataViewContent').textContent = JSON.stringify(data, null, 2);
+  }
+  filterData();
+}
+
+function updateField(idx, field, value) {
+  data[idx][field] = value;
+  saveData();
+  // 更新filled样式（V7.5: 支持所有可编辑字段）
+  var input = event && event.target;
+  if (input && input.classList) {
+    input.classList.toggle('filled', value.trim() !== '');
+  }
+}
+
+// V7.5: 删除单行记录（导入多读/错误时使用）
+function deleteRow(idx) {
+  if (idx < 0 || idx >= data.length) return;
+  if (!confirm('确定删除第 ' + (idx + 1) + ' 行？\n产品名称: ' + (data[idx]['产品名称'] || '') + '\n删除后不可恢复，点击"确定"继续。')) return;
+  data.splice(idx, 1);
+  saveData();
+  refreshAll();
+  showLog('已删除 1 行，剩余 ' + data.length + ' 条记录');
+}
+
+function batchGenCertId() {
+  document.getElementById('modal').style.display = '';
+  document.getElementById('modalOverlay').style.display = '';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+  document.getElementById('modalOverlay').style.display = 'none';
+}
+
+function doBatchGen() {
+  const prefix = document.getElementById('certPrefix').value;
+  const start = parseInt(document.getElementById('certStart').value) || 1;
+  const digits = parseInt(document.getElementById('certDigits').value) || 3;
+  const catFilter = document.getElementById('certCatFilter').value;
+
+  let seq = start;
+  let count = 0;
+  data.forEach(r => {
+    if (catFilter && r['物资分类'] !== catFilter) return;
+    if (r['证件自编号'] && r['证件自编号'].trim()) return;
+    r['证件自编号'] = prefix + String(seq).padStart(digits, '0');
+    seq++;
+    count++;
+  });
+
+  saveData();
+  refreshAll();
+  closeModal();
+  alert(`已生成 ${count} 个自编号 (${prefix}${String(start).padStart(digits,'0')} ~ ${prefix}${String(seq-1).padStart(digits,'0')})`);
+}
+
+// ===== EXPORT =====
+function exportCSV(type) {
+  if (data.length === 0) { alert('无数据可导出'); return; }
+
+  const BOM = '\uFEFF';
+  let csv = '';
+
+  if (type === 'base') {
+    const headers = ['序号','项目名称','物资分类','产品名称','规格型号','材质','数量','单位','炉号','批号','制造厂家','证书出厂编号','证件自编号','复验报告编号'];
+    csv += headers.join(',') + '\n';
+    data.forEach((r, i) => {
+      csv += [i+1, r['项目名称']||'', r['物资分类']||'', r['产品名称']||'', r['规格型号']||'', r['材质']||'',
+              r['数量']||'', r['单位']||'', r['炉号']||'', r['批号']||'', r['制造厂家']||'', r['证书出厂编号']||'',
+              r['证件自编号']||'', r['复验报告编号']||''].map(v => `"${v}"`).join(',') + '\n';
+    });
+  } else {
+    const headers = ['序号','材料名称','证件自编号','证书出厂编号','材质','规格型号','制造厂家','单位','总量','复验报告编号','领用单位/领用量'];
+    csv += 'SH/T 3503—J132 材料质量证明文件一览表\n';
+    csv += '工程名称：运行三部连续重整装置四合一加热炉余热回收技术改造\n\n';
+    csv += headers.join(',') + '\n';
+    data.forEach((r, i) => {
+      csv += [i+1, r['产品名称']||'', r['证件自编号']||'', r['证书出厂编号']||'', r['材质']||'',
+              r['规格型号']||'', r['制造厂家']||'', r['单位']||'', r['数量']||'',
+              r['复验报告编号']||'', (r['领用单位']||'')+'/'+(r['领用量']||'')].map(v => `"${v}"`).join(',') + '\n';
+    });
+  }
+
+  const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = type === 'base' ? '材料录入底表V1.csv' : '材料质量证明文件一览表V1.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function exportJSON() {
+  if (data.length === 0) { alert('无数据可导出'); return; }
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'extracted_data_v5.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ===== INIT =====
+loadData();
+if (data.length > 0) {
+  document.getElementById('uploadInfo').style.display = 'none';
+}
+refreshAll();
+
+// ===== V7.4: 使用规则 =====
+function showRules() {
+  var overlay = document.getElementById('rulesOverlay');
+  var modal = document.getElementById('rulesModal');
+  overlay.style.display = 'block';
+  modal.style.display = 'block';
+}
+function closeRules() {
+  document.getElementById('rulesOverlay').style.display = 'none';
+  document.getElementById('rulesModal').style.display = 'none';
+}
+</script>
+
+<!-- 使用规则模态框 -->
+<div class="modal-overlay" id="rulesOverlay" onclick="closeRules()" style="display:none;"></div>
+<div class="modal" id="rulesModal" style="display:none;max-width:700px;max-height:80vh;overflow-y:auto;">
+  <h3 style="margin-bottom:12px;">📋 V7.5 版本使用规则</h3>
+  <div style="font-size:13px;line-height:1.8;">
+    <h4 style="margin:12px 0 6px;color:var(--primary);">一、阀门</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"阀门名称/产品名称/物料描述"中的阀门类型（闸阀/球阀/蝶阀/截止阀/止回阀）</li>
+      <li><b>证书出厂编号</b>：读取"证书编号/Certificate No/Report No"后面的编号</li>
+      <li><b>材质</b>：读取"体/盖/阀体/阀盖"对应的材质数据（如A216 WCB、A105），去除炉号</li>
+      <li><b>规格型号</b>：读取压力等级(CL)+直径(DN)，如"CL150 DN50"</li>
+      <li><b>数量</b>：读取"数量/Qty"字段</li>
+      <li><b>单位</b>：台</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">二、对焊法兰</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"名称/产品名称/描述"中的"对焊法兰/承插焊法兰"（V7.3新增"产品名称"表头支持，V7.4继续支持）</li>
+      <li><b>证书出厂编号</b>：读取"证书编号/Certificate No/生产单编号"后面的编号</li>
+      <li><b>材质</b>：读取"材料名称/Name of Mat"后面的材质（如A105、16Mn）</li>
+      <li><b>规格型号</b>：读取"规格"后面的值；法兰规格（如WN350-150LB/RF SCH30）保持原样，组合规格（如CL150 DN150 SCH40 RF）自动规整</li>
+      <li><b>数量</b>：读取"数量/Quantity"字段</li>
+      <li><b>单位</b>：片</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">三、管材</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"产品名称/Description"（输送流体用无缝钢管/输送管/流体输送管）</li>
+      <li><b>证书出厂编号</b>：读取"质保书编号/Sheet No/Certificate No"后面的编号</li>
+      <li><b>材质</b>：读取"钢级/牌号/标准"中的材质数字（如20），去除标准号</li>
+      <li><b>规格型号</b>：读取"规格/Size/Dimension"（如φ26.7*3.91）</li>
+      <li><b>数量</b>：读取"总重量/重量/Weight"字段</li>
+      <li><b>单位</b>：吨或KG（从数据中自动识别）</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">四、紧固件</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"产品名称"（全螺纹螺栓/螺母）</li>
+      <li><b>证书出厂编号</b>：读取"N0/编号"后面的编号</li>
+      <li><b>材质</b>：读取"材质"字段（如35CrMoA/30CrMoA）</li>
+      <li><b>规格型号</b>：读取"规格"（如M24×135）</li>
+      <li><b>数量</b>：读取"数量"字段</li>
+      <li><b>单位</b>：套</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">五、垫片</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"产品名称"（带内外环缠绕垫等）</li>
+      <li><b>证书出厂编号</b>：读取"订单号"后面的编号</li>
+      <li><b>材质</b>：读取"材质"字段（如316L）</li>
+      <li><b>规格型号</b>：读取"产品规格"（如AT D DN500 300LB）</li>
+      <li><b>数量</b>：读取"产品数量"字段</li>
+      <li><b>单位</b>：件</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">六、管件</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"名称/产品名称/物料描述"（弯头/三通/大小头/异径管/管帽/管箍/支管座）</li>
+      <li><b>证书出厂编号</b>：读取"证明书编号/质量证明书编号/证书编号/Certificate No/Report No"</li>
+      <li><b>材质</b>：读取"材质/材料牌号"字段</li>
+      <li><b>规格型号</b>：读取"规格/规格尺寸/规格型号"（如DN600 SCH10S）</li>
+      <li><b>数量</b>：读取"数量/Quantity"字段</li>
+      <li><b>单位</b>：件</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">七、支吊架（V7.4新增，独立分类）</h4>
+    <ul style="margin-left:20px;">
+      <li><b>产品名称</b>：读取"规格型号"（可变碟簧吊架/支吊架/弹簧支架，\\ 分隔取前段）</li>
+      <li><b>证书出厂编号</b>：装箱清单类无证书编号，可手工补ERP订单号/物料编码</li>
+      <li><b>规格型号</b>：读取"规格型号"\\ 分隔后段（如BDC20E 1568N 1815N 15↑ GB/T 28707 组合件）</li>
+      <li><b>数量/单位</b>：读取"数量"+"单位"（套）</li>
+    </ul>
+
+    <h4 style="margin:12px 0 6px;color:var(--primary);">通用规则</h4>
+    <ul style="margin-left:20px;">
+      <li>同一PDF含多条记录时，按页面分别提取，缺失字段用同PDF其他页补充</li>
+      <li>制造厂家优先从当前表格/section文本中提取，找不到则空着</li>
+      <li>排除客户名称：中国石油化工、镇海炼化、中海石油等甲方单位不作为制造厂家</li>
+      <li><b>V7.4新增</b>：青山钢管英文表头无缝管（序号23）、方顿仪表卡套无缝管（序号24）、泰克装箱清单（序号25）</li>
+      <li><b>V7.5新增</b>：明细表格所有字段（产品名称/规格型号/材质/数量/单位/炉号/批号/制造厂家/证书出厂编号/自编号）均可直接修改；行首 🗑️ 可删除整行</li>
+      <li>支持MD和JSON两种导入格式，JSON含页眉页脚信息，精度更高</li>
+      <li>可多次导入不同质保书，数据自动累积；点击"清空数据"重置</li>
+    </ul>
+  </div>
+  <div style="text-align:right;margin-top:16px;">
+    <button onclick="closeRules()" style="padding:6px 16px;cursor:pointer;border:1px solid #ccc;border-radius:4px;background:var(--primary);color:#fff;">关闭</button>
+  </div>
+</div>
+</body>
+</html>
