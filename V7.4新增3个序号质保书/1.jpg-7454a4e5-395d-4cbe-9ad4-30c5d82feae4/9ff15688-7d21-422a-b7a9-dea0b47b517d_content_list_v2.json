@@ -1,0 +1,366 @@
+[
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "HENGTONG"
+                    }
+                ]
+            },
+            "bbox": [
+                73,
+                111,
+                214,
+                138
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "产品质量证明书"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                282,
+                123,
+                484,
+                173
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "JL/ZJ-25"
+                    }
+                ]
+            },
+            "bbox": [
+                11,
+                180,
+                65,
+                204
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "物料编码：4709040088544236"
+                    }
+                ]
+            },
+            "bbox": [
+                434,
+                208,
+                614,
+                234
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/570ba4be37a5c8fe99fdc0aeed75b46f15d8253e845bac4c3a5626bef0394e1a.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "收货单位：中国石油化工股份有限公司安庆分公司"
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td colspan=\"2\">产品名称</td><td colspan=\"5\">有缝弯头90°</td><td colspan=\"3\">材质</td><td colspan=\"5\">Q245R GB713</td></tr><tr><td colspan=\"2\">规格型号</td><td colspan=\"5\">DN1000×12 R=1.5D</td><td colspan=\"3\">数量</td><td colspan=\"5\">3</td></tr><tr><td colspan=\"15\">原材料</td></tr><tr><td>牌号</td><td colspan=\"2\">Q245R</td><td>规格</td><td colspan=\"2\">14*2500*12000</td><td colspan=\"2\">标准</td><td colspan=\"3\">GB/T713-2014</td><td colspan=\"4\">材料来源</td></tr><tr><td>炉号</td><td colspan=\"2\">231669400</td><td>批号</td><td colspan=\"2\">23S-043902</td><td colspan=\"2\">供货状态</td><td colspan=\"3\">热轧</td><td colspan=\"4\">山东钢铁集团日照有限公司</td></tr><tr><td colspan=\"15\">化学成分(%)</td></tr><tr><td>项目类别</td><td colspan=\"2\">C</td><td>Si</td><td>Mn</td><td>S</td><td colspan=\"2\">P</td><td>Cr</td><td>Ni</td><td>Cu</td><td>Ti</td><td>Mo</td><td colspan=\"2\">V</td></tr><tr><td>原始单值</td><td colspan=\"2\">0.18</td><td>0.18</td><td>0.67</td><td>0.002</td><td colspan=\"2\">0.019</td><td>0.020</td><td>0.010</td><td>0.010</td><td>0.003</td><td>0</td><td colspan=\"2\">0.005</td></tr><tr><td>厂复检值</td><td colspan=\"2\">0.19</td><td>0.17</td><td>0.69</td><td>0.003</td><td colspan=\"2\">0.018</td><td>0.021</td><td>0.011</td><td>0.012</td><td>0.003</td><td>0.001</td><td colspan=\"2\">0.004</td></tr><tr><td colspan=\"15\">力学性能</td></tr><tr><td>项目类别</td><td colspan=\"3\">屈服点ReL(Mpa)</td><td colspan=\"3\">抗拉强度Rm(Mpa)</td><td colspan=\"3\">延伸率A(%)</td><td colspan=\"5\">冲击功0°C A k v(J)</td></tr><tr><td>原始单值</td><td colspan=\"3\">315</td><td colspan=\"3\">452</td><td colspan=\"3\">30.5</td><td>209</td><td colspan=\"2\">213</td><td colspan=\"2\">194</td></tr><tr><td>厂复检值</td><td colspan=\"3\">320</td><td colspan=\"3\">460</td><td colspan=\"3\">31</td><td>207</td><td colspan=\"2\">215</td><td colspan=\"2\">196</td></tr><tr><td colspan=\"15\">管件质量</td></tr><tr><td>力学性能</td><td colspan=\"2\">交货状态</td><td colspan=\"2\">硬度HBW</td><td colspan=\"2\">外观尺寸</td><td colspan=\"2\">RT</td><td colspan=\"2\">UT</td><td colspan=\"2\">MT</td><td colspan=\"2\">PT</td></tr><tr><td>合格</td><td colspan=\"2\">正火</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">/</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                6,
+                234,
+                673,
+                984
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "产品质量合格证"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                707,
+                120,
+                914,
+                168
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "证书编号:20260625292"
+                    }
+                ]
+            },
+            "bbox": [
+                711,
+                204,
+                852,
+                230
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "产品经检验符合 SH/T3408 标准规定及图样和合同要求，准予出厂。(无损检测按 NB/T47013-2015 标准检验合格)"
+                    }
+                ]
+            },
+            "bbox": [
+                692,
+                265,
+                951,
+                352
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "检验员：赵舰军"
+                    }
+                ]
+            },
+            "bbox": [
+                723,
+                371,
+                857,
+                417
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "质保师：李艳庆"
+                    }
+                ]
+            },
+            "bbox": [
+                724,
+                430,
+                866,
+                478
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "出厂日期：2026.06.25"
+                    }
+                ]
+            },
+            "bbox": [
+                726,
+                503,
+                865,
+                531
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "河北恒通管件集团有限公司"
+                    }
+                ]
+            },
+            "bbox": [
+                727,
+                626,
+                904,
+                652
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "电话：0317-6330651"
+                    }
+                ]
+            },
+            "bbox": [
+                729,
+                687,
+                872,
+                716
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/52f83a923314f179cb6514a9123c7d749790ad291f3c5684d9b3dd75d671272f.jpg"
+                },
+                "content": "",
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "sub_type": "seal",
+            "bbox": [
+                728,
+                550,
+                906,
+                776
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "电传：0317-6330775"
+                    }
+                ]
+            },
+            "bbox": [
+                731,
+                748,
+                860,
+                776
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "邮编：061303"
+                    }
+                ]
+            },
+            "bbox": [
+                729,
+                809,
+                819,
+                837
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "录制：李宁"
+                    }
+                ]
+            },
+            "bbox": [
+                730,
+                945,
+                806,
+                975
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": []
+            },
+            "bbox": [
+                99,
+                16,
+                176,
+                94
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "河北恒通管件集团有限公司"
+                    }
+                ]
+            },
+            "bbox": [
+                218,
+                32,
+                564,
+                84
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "TS"
+                    }
+                ]
+            },
+            "bbox": [
+                720,
+                36,
+                766,
+                99
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "特种设备生产许可证\nTS2713453-2030"
+                    }
+                ]
+            },
+            "bbox": [
+                783,
+                42,
+                885,
+                82
+            ]
+        }
+    ]
+]

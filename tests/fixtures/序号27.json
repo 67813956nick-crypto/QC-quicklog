@@ -1,0 +1,450 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        785,
+                        236,
+                        1347,
+                        279
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                785,
+                                236,
+                                1347,
+                                279
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        785,
+                                        236,
+                                        1347,
+                                        279
+                                    ],
+                                    "type": "text",
+                                    "content": "上海美科阀门有限公司产品合格证"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        1623,
+                        281,
+                        1838,
+                        306
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                1623,
+                                281,
+                                1838,
+                                306
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        1623,
+                                        281,
+                                        1838,
+                                        306
+                                    ],
+                                    "type": "text",
+                                    "content": "编号 No: 261394-PC03"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        136,
+                        303,
+                        1994,
+                        1438
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                136,
+                                303,
+                                1994,
+                                1438
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        303,
+                                        1994,
+                                        1438
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                136,
+                                                303,
+                                                1994,
+                                                1438
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"3\">客户名称 Customer Name</td><td colspan=\"8\">中国石油化工股份有限公司安庆分公司</td><td colspan=\"3\">合同号 Contract Number</td><td colspan=\"4\">2302523830</td></tr><tr><td colspan=\"3\">项目名称 Project Name</td><td colspan=\"8\">20260421</td><td colspan=\"3\">阀门生产号 Production No.</td><td colspan=\"4\">MEC-261394</td></tr><tr><td rowspan=\"2\">序号No</td><td rowspan=\"2\">阀门型号Valve Model</td><td rowspan=\"2\">物料编码MaterialCode</td><td rowspan=\"2\">工单号No.</td><td rowspan=\"2\">数量Qty</td><td colspan=\"6\">材质 Material</td><td rowspan=\"2\">适用温度Temperature</td><td rowspan=\"2\">末端形式End</td><td rowspan=\"2\">传动方式Operation</td><td colspan=\"4\">标准 Standard</td></tr><tr><td>壳体Shell</td><td>板/球/瓣WedgeBall/Disc</td><td>阀座Seat</td><td>阀杆/销轴Stem/pin</td><td>填料Packing</td><td>垫片Gasket</td><td>结构长度Face to face</td><td>检验Test</td><td>连接Connection</td><td>制造Manufacture</td></tr><tr><td>7</td><td>闸阀,Z41H-25DN200 PN25</td><td>4603020086049756</td><td>618800030697</td><td>17</td><td>WCB</td><td>WCB+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12234</td></tr><tr><td>8</td><td>闸阀,Z41H-25DN150 PN25</td><td>4603020086049754</td><td>618800030697</td><td>9</td><td>WCB</td><td>WCB+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12234</td></tr><tr><td>9</td><td>闸阀,Z41H-25DN100 PN25</td><td>4603020086049753</td><td>618800030697</td><td>2</td><td>WCB</td><td>WCB+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12234</td></tr><tr><td>12</td><td>截止阀,J41H-25DN200 PN25</td><td>4603040080565015</td><td>618800030697</td><td>2</td><td>WCB</td><td>A105N+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12235</td></tr><tr><td>13</td><td>截止阀,J41H-25DN150 PN25</td><td>4603040080565008</td><td>618800030697</td><td>1</td><td>WCB</td><td>A105N+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12235</td></tr><tr><td>14</td><td>截止阀,J41H-25DN100 PN25</td><td>4603040082122866</td><td>618800030697</td><td>2</td><td>WCB</td><td>A105N+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>FM</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12235</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">结论Results</td><td colspan=\"16\">本批产品制造及检验符合TSG 31-2025《工业管道安全技术规程》、相关技术标准、设计图样和订货合同的技术要求,尺寸、外观检验合格,准予出厂,特此证明。This batch of products complies with the manufacturing and inspection requirements of TSG 31-2025, the &quot;Technical Regulations for Industrial Pipeline Safety&quot; relevant technical standards design drawings and the technical requirements of the ordering contract. The size and appearance inspection are qualified and allowed to leave the factory. This is to certify.</td></tr></table>",
+                                            "image_path": "71600aeecaab85a1021fa79f7a59f4e30341f59ee2c888afa2d201a4c076d518.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        165,
+                        1439,
+                        634,
+                        1528
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                165,
+                                1439,
+                                634,
+                                1528
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        165,
+                                        1439,
+                                        634,
+                                        1528
+                                    ],
+                                    "type": "text",
+                                    "content": "检验员 Inspector（签章）孙羊羊"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        679,
+                        1429,
+                        1220,
+                        1505
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                679,
+                                1429,
+                                1220,
+                                1505
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        679,
+                                        1429,
+                                        1220,
+                                        1505
+                                    ],
+                                    "type": "text",
+                                    "content": "质保工程师 QA Engineer（签字）康世屏"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        1272,
+                        1413,
+                        1934,
+                        1458
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                1272,
+                                1413,
+                                1934,
+                                1458
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        1272,
+                                        1413,
+                                        1934,
+                                        1458
+                                    ],
+                                    "type": "text",
+                                    "content": "质保部 Quality department (章): 日期 Date: 2026-06-15"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                2073,
+                1555
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        785,
+                        236,
+                        1347,
+                        279
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                785,
+                                236,
+                                1347,
+                                279
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        785,
+                                        236,
+                                        1347,
+                                        279
+                                    ],
+                                    "type": "text",
+                                    "content": "上海美科阀门有限公司产品合格证"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        1623,
+                        281,
+                        1838,
+                        306
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                1623,
+                                281,
+                                1838,
+                                306
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        1623,
+                                        281,
+                                        1838,
+                                        306
+                                    ],
+                                    "type": "text",
+                                    "content": "编号 No: 261394-PC03"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        136,
+                        303,
+                        1994,
+                        1438
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                136,
+                                303,
+                                1994,
+                                1438
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        303,
+                                        1994,
+                                        1438
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                136,
+                                                303,
+                                                1994,
+                                                1438
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"3\">客户名称 Customer Name</td><td colspan=\"8\">中国石油化工股份有限公司安庆分公司</td><td colspan=\"3\">合同号 Contract Number</td><td colspan=\"4\">2302523830</td></tr><tr><td colspan=\"3\">项目名称 Project Name</td><td colspan=\"8\">20260421</td><td colspan=\"3\">阀门生产号 Production No.</td><td colspan=\"4\">MEC-261394</td></tr><tr><td rowspan=\"2\">序号No</td><td rowspan=\"2\">阀门型号Valve Model</td><td rowspan=\"2\">物料编码MaterialCode</td><td rowspan=\"2\">工单号No.</td><td rowspan=\"2\">数量Qty</td><td colspan=\"6\">材质 Material</td><td rowspan=\"2\">适用温度Temperature</td><td rowspan=\"2\">末端形式End</td><td rowspan=\"2\">传动方式Operation</td><td colspan=\"4\">标准 Standard</td></tr><tr><td>壳体Shell</td><td>板/球/瓣WedgeBall/Disc</td><td>阀座Seat</td><td>阀杆/销轴Stem/pin</td><td>填料Packing</td><td>垫片Gasket</td><td>结构长度Face to face</td><td>检验Test</td><td>连接Connection</td><td>制造Manufacture</td></tr><tr><td>7</td><td>闸阀,Z41H-25DN200 PN25</td><td>4603020086049756</td><td>618800030697</td><td>17</td><td>WCB</td><td>WCB+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12234</td></tr><tr><td>8</td><td>闸阀,Z41H-25DN150 PN25</td><td>4603020086049754</td><td>618800030697</td><td>9</td><td>WCB</td><td>WCB+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12234</td></tr><tr><td>9</td><td>闸阀,Z41H-25DN100 PN25</td><td>4603020086049753</td><td>618800030697</td><td>2</td><td>WCB</td><td>WCB+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12234</td></tr><tr><td>12</td><td>截止阀,J41H-25DN200 PN25</td><td>4603040080565015</td><td>618800030697</td><td>2</td><td>WCB</td><td>A105N+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12235</td></tr><tr><td>13</td><td>截止阀,J41H-25DN150 PN25</td><td>4603040080565008</td><td>618800030697</td><td>1</td><td>WCB</td><td>A105N+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>RF</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12235</td></tr><tr><td>14</td><td>截止阀,J41H-25DN100 PN25</td><td>4603040082122866</td><td>618800030697</td><td>2</td><td>WCB</td><td>A105N+13Cr</td><td>A105N+13Cr</td><td>F6aCL.2</td><td>柔性石墨</td><td>304+石墨缠绕垫</td><td>≤425°C</td><td>FM</td><td>手轮</td><td>GB/T12221</td><td>GB/T26480</td><td>HG/T20592</td><td>GB/T12235</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">结论Results</td><td colspan=\"16\">本批产品制造及检验符合TSG 31-2025《工业管道安全技术规程》、相关技术标准、设计图样和订货合同的技术要求,尺寸、外观检验合格,准予出厂,特此证明。This batch of products complies with the manufacturing and inspection requirements of TSG 31-2025, the &quot;Technical Regulations for Industrial Pipeline Safety&quot; relevant technical standards design drawings and the technical requirements of the ordering contract. The size and appearance inspection are qualified and allowed to leave the factory. This is to certify.</td></tr></table>",
+                                            "image_path": "71600aeecaab85a1021fa79f7a59f4e30341f59ee2c888afa2d201a4c076d518.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        165,
+                        1439,
+                        634,
+                        1528
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                165,
+                                1439,
+                                634,
+                                1528
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        165,
+                                        1439,
+                                        634,
+                                        1528
+                                    ],
+                                    "type": "text",
+                                    "content": "检验员 Inspector（签章）孙羊羊"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        679,
+                        1429,
+                        1220,
+                        1505
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                679,
+                                1429,
+                                1220,
+                                1505
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        679,
+                                        1429,
+                                        1220,
+                                        1505
+                                    ],
+                                    "type": "text",
+                                    "content": "质保工程师 QA Engineer（签字）康世屏"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        1272,
+                        1413,
+                        1934,
+                        1458
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                1272,
+                                1413,
+                                1934,
+                                1458
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        1272,
+                                        1413,
+                                        1934,
+                                        1458
+                                    ],
+                                    "type": "text",
+                                    "content": "质保部 Quality department (章): 日期 Date: 2026-06-15"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}

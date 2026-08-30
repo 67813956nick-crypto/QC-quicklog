@@ -1,0 +1,423 @@
+[
+    [
+        {
+            "type": "image",
+            "bbox": [
+                0.791,
+                0.174,
+                0.859,
+                0.247
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.944,
+                0.15,
+                0.998,
+                0.48
+            ],
+            "angle": 0,
+            "content": "安庆分公司\n河北恒通管件集团有限",
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.754,
+                0.15,
+                0.781,
+                0.282
+            ],
+            "angle": 0,
+            "content": "HENGTONG"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.7,
+                0.093,
+                0.723,
+                0.148
+            ],
+            "angle": 0,
+            "content": "JL/ZJ-25",
+            "merge_prev": false
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.8,
+                0.285,
+                0.848,
+                0.601
+            ],
+            "angle": 0,
+            "content": "河北恒通管件集团有限公司"
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.723,
+                0.344,
+                0.772,
+                0.529
+            ],
+            "angle": 0,
+            "content": "产品质量证明书"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.046,
+                0.091,
+                0.7,
+                0.702
+            ],
+            "angle": 90,
+            "content": "<table><tr><td colspan=\"2\">产品名称</td><td colspan=\"5\">有缝弯头90°</td><td colspan=\"3\">材质</td><td colspan=\"5\">Q245R GB713</td></tr><tr><td colspan=\"2\">规格型号</td><td colspan=\"5\">DN1000×12 R=1.5D</td><td colspan=\"3\">数量</td><td colspan=\"5\">3</td></tr><tr><td colspan=\"15\">原材料</td></tr><tr><td>牌号</td><td colspan=\"2\">Q245R</td><td>规格</td><td colspan=\"2\">14*2500*12000</td><td colspan=\"2\">标准</td><td colspan=\"3\">GB/T713-2014</td><td colspan=\"4\">材料来源</td></tr><tr><td>炉号</td><td colspan=\"2\">231669400</td><td>批号</td><td colspan=\"2\">23S-043902</td><td colspan=\"2\">供货状态</td><td colspan=\"3\">热轧</td><td colspan=\"4\">山东钢铁集团日照有限公司</td></tr><tr><td colspan=\"15\">化学成分(%)</td></tr><tr><td>项目类别</td><td colspan=\"2\">C</td><td>Si</td><td>Mn</td><td>S</td><td colspan=\"2\">P</td><td>Cr</td><td>Ni</td><td>Cu</td><td>Ti</td><td>Mo</td><td colspan=\"2\">V</td></tr><tr><td>原始单值</td><td colspan=\"2\">0.18</td><td>0.18</td><td>0.67</td><td>0.002</td><td colspan=\"2\">0.019</td><td>0.020</td><td>0.010</td><td>0.010</td><td>0.003</td><td>0</td><td colspan=\"2\">0.005</td></tr><tr><td>厂复检值</td><td colspan=\"2\">0.19</td><td>0.17</td><td>0.69</td><td>0.003</td><td colspan=\"2\">0.018</td><td>0.021</td><td>0.011</td><td>0.012</td><td>0.003</td><td>0.001</td><td colspan=\"2\">0.004</td></tr><tr><td colspan=\"15\">力学性能</td></tr><tr><td>项目类别</td><td colspan=\"3\">屈服点ReL(Mpa)</td><td colspan=\"3\">抗拉强度Rm(Mpa)</td><td colspan=\"3\">延伸率A(%)</td><td colspan=\"5\">冲击功0°C A k v(J)</td></tr><tr><td>原始单值</td><td colspan=\"3\">315</td><td colspan=\"3\">452</td><td colspan=\"3\">30.5</td><td>209</td><td colspan=\"2\">213</td><td colspan=\"2\">194</td></tr><tr><td>厂复检值</td><td colspan=\"3\">320</td><td colspan=\"3\">460</td><td colspan=\"3\">31</td><td>207</td><td colspan=\"2\">215</td><td colspan=\"2\">196</td></tr><tr><td colspan=\"15\">管件质量</td></tr><tr><td>力学性能</td><td colspan=\"2\">交货状态</td><td colspan=\"2\">硬度HBW</td><td colspan=\"2\">外观尺寸</td><td colspan=\"2\">RT</td><td colspan=\"2\">UT</td><td colspan=\"2\">MT</td><td colspan=\"2\">PT</td></tr><tr><td>合格</td><td colspan=\"2\">正火</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">/</td></tr></table>"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.801,
+                0.799,
+                0.84,
+                0.897
+            ],
+            "angle": 0,
+            "content": "特种设备生产许可证\nTS2713453-2030",
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.728,
+                0.731,
+                0.774,
+                0.924
+            ],
+            "angle": 0,
+            "content": "产品质量合格证"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.678,
+                0.735,
+                0.704,
+                0.867
+            ],
+            "angle": 0,
+            "content": "证书编号:20260625292",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.574,
+                0.718,
+                0.653,
+                0.956
+            ],
+            "angle": 0,
+            "content": "产品经检验符合 SH/T3408 标准\n规定及图样和合同要求，准予出厂。（无损\n检测按 NB/T47013-2015 标准检验合格）",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.52,
+                0.747,
+                0.564,
+                0.873
+            ],
+            "angle": 0,
+            "content": "检验员：赵舰军",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.469,
+                0.747,
+                0.514,
+                0.88
+            ],
+            "angle": 0,
+            "content": "质保师：鲁艳张",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.426,
+                0.749,
+                0.453,
+                0.879
+            ],
+            "angle": 0,
+            "content": "出厂日期：2026.06.25",
+            "merge_prev": false
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.222,
+                0.75,
+                0.41,
+                0.916
+            ],
+            "angle": 0,
+            "content": null,
+            "sub_type": "seal"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.222,
+                0.753,
+                0.247,
+                0.876
+            ],
+            "angle": 0,
+            "content": "电传：0317-6330775",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.169,
+                0.751,
+                0.197,
+                0.837
+            ],
+            "angle": 0,
+            "content": "邮编：061303",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.054,
+                0.752,
+                0.084,
+                0.824
+            ],
+            "angle": 0,
+            "content": "录制：李宁",
+            "merge_prev": false
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.959,
+                0.157,
+                0.978,
+                0.195
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.979,
+                0.165,
+                1,
+                0.233
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.936,
+                0.377,
+                1,
+                0.381
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.754,
+                0.151,
+                0.781,
+                0.282
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.699,
+                0.092,
+                0.723,
+                0.149
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.724,
+                0.343,
+                0.769,
+                0.529
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.819,
+                0.802,
+                0.834,
+                0.894
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.804,
+                0.807,
+                0.818,
+                0.883
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.729,
+                0.732,
+                0.77,
+                0.923
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.679,
+                0.737,
+                0.7,
+                0.864
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.603,
+                0.721,
+                0.623,
+                0.955
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.579,
+                0.722,
+                0.598,
+                0.94
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.628,
+                0.758,
+                0.648,
+                0.939
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.517,
+                0.743,
+                0.566,
+                0.875
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.469,
+                0.745,
+                0.514,
+                0.881
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.426,
+                0.749,
+                0.451,
+                0.879
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.222,
+                0.753,
+                0.248,
+                0.876
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.168,
+                0.751,
+                0.197,
+                0.837
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.054,
+                0.752,
+                0.084,
+                0.825
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]

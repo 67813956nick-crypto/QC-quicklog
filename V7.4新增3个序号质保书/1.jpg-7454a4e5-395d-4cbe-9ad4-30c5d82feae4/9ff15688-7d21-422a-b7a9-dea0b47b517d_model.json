@@ -1,0 +1,447 @@
+[
+    [
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.013,
+                0.209,
+                0.312,
+                0.235
+            ],
+            "angle": 0,
+            "content": "收货单位：中国石油化工股份有限公司安庆分公司"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.1,
+                0.017,
+                0.177,
+                0.095
+            ],
+            "angle": 0,
+            "content": ""
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.219,
+                0.033,
+                0.565,
+                0.085
+            ],
+            "angle": 0,
+            "content": "河北恒通管件集团有限公司"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.721,
+                0.037,
+                0.767,
+                0.1
+            ],
+            "angle": 0,
+            "content": "TS"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.784,
+                0.043,
+                0.886,
+                0.083
+            ],
+            "angle": 0,
+            "content": "特种设备生产许可证\nTS2713453-2030"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.074,
+                0.112,
+                0.215,
+                0.139
+            ],
+            "angle": 0,
+            "content": "HENGTONG",
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.283,
+                0.124,
+                0.485,
+                0.174
+            ],
+            "angle": 0,
+            "content": "产品质量证明书"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.012,
+                0.181,
+                0.066,
+                0.205
+            ],
+            "angle": 0,
+            "content": "JL/ZJ-25",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.435,
+                0.209,
+                0.615,
+                0.235
+            ],
+            "angle": 0,
+            "content": "物料编码：4709040088544236",
+            "merge_prev": false
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.007,
+                0.235,
+                0.674,
+                0.985
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"2\">产品名称</td><td colspan=\"5\">有缝弯头90°</td><td colspan=\"3\">材质</td><td colspan=\"5\">Q245R GB713</td></tr><tr><td colspan=\"2\">规格型号</td><td colspan=\"5\">DN1000×12 R=1.5D</td><td colspan=\"3\">数量</td><td colspan=\"5\">3</td></tr><tr><td colspan=\"15\">原材料</td></tr><tr><td>牌号</td><td colspan=\"2\">Q245R</td><td>规格</td><td colspan=\"2\">14*2500*12000</td><td colspan=\"2\">标准</td><td colspan=\"3\">GB/T713-2014</td><td colspan=\"4\">材料来源</td></tr><tr><td>炉号</td><td colspan=\"2\">231669400</td><td>批号</td><td colspan=\"2\">23S-043902</td><td colspan=\"2\">供货状态</td><td colspan=\"3\">热轧</td><td colspan=\"4\">山东钢铁集团日照有限公司</td></tr><tr><td colspan=\"15\">化学成分(%)</td></tr><tr><td>项目类别</td><td colspan=\"2\">C</td><td>Si</td><td>Mn</td><td>S</td><td colspan=\"2\">P</td><td>Cr</td><td>Ni</td><td>Cu</td><td>Ti</td><td>Mo</td><td colspan=\"2\">V</td></tr><tr><td>原始单值</td><td colspan=\"2\">0.18</td><td>0.18</td><td>0.67</td><td>0.002</td><td colspan=\"2\">0.019</td><td>0.020</td><td>0.010</td><td>0.010</td><td>0.003</td><td>0</td><td colspan=\"2\">0.005</td></tr><tr><td>厂复检值</td><td colspan=\"2\">0.19</td><td>0.17</td><td>0.69</td><td>0.003</td><td colspan=\"2\">0.018</td><td>0.021</td><td>0.011</td><td>0.012</td><td>0.003</td><td>0.001</td><td colspan=\"2\">0.004</td></tr><tr><td colspan=\"15\">力学性能</td></tr><tr><td>项目类别</td><td colspan=\"3\">屈服点ReL(Mpa)</td><td colspan=\"3\">抗拉强度Rm(Mpa)</td><td colspan=\"3\">延伸率A(%)</td><td colspan=\"5\">冲击功0°C A k v(J)</td></tr><tr><td>原始单值</td><td colspan=\"3\">315</td><td colspan=\"3\">452</td><td colspan=\"3\">30.5</td><td>209</td><td colspan=\"2\">213</td><td colspan=\"2\">194</td></tr><tr><td>厂复检值</td><td colspan=\"3\">320</td><td colspan=\"3\">460</td><td colspan=\"3\">31</td><td>207</td><td colspan=\"2\">215</td><td colspan=\"2\">196</td></tr><tr><td colspan=\"15\">管件质量</td></tr><tr><td>力学性能</td><td colspan=\"2\">交货状态</td><td colspan=\"2\">硬度HBW</td><td colspan=\"2\">外观尺寸</td><td colspan=\"2\">RT</td><td colspan=\"2\">UT</td><td colspan=\"2\">MT</td><td colspan=\"2\">PT</td></tr><tr><td>合格</td><td colspan=\"2\">正火</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">合格</td><td colspan=\"2\">/</td></tr></table>"
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.708,
+                0.121,
+                0.915,
+                0.169
+            ],
+            "angle": 0,
+            "content": "产品质量合格证"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.712,
+                0.205,
+                0.853,
+                0.231
+            ],
+            "angle": 0,
+            "content": "证书编号:20260625292",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.693,
+                0.266,
+                0.952,
+                0.353
+            ],
+            "angle": 0,
+            "content": "产品经检验符合 SH/T3408 标准规定及图样和合同要求，准予出厂。(无损检测按 NB/T47013-2015 标准检验合格)",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.724,
+                0.372,
+                0.858,
+                0.418
+            ],
+            "angle": 0,
+            "content": "检验员：赵舰军",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.725,
+                0.431,
+                0.867,
+                0.479
+            ],
+            "angle": 0,
+            "content": "质保师：李艳庆",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.727,
+                0.504,
+                0.866,
+                0.532
+            ],
+            "angle": 0,
+            "content": "出厂日期：2026.06.25",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.728,
+                0.627,
+                0.905,
+                0.653
+            ],
+            "angle": 0,
+            "content": "河北恒通管件集团有限公司",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.73,
+                0.688,
+                0.873,
+                0.717
+            ],
+            "angle": 0,
+            "content": "电话：0317-6330651",
+            "merge_prev": false
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.729,
+                0.551,
+                0.907,
+                0.777
+            ],
+            "angle": 0,
+            "content": null,
+            "sub_type": "seal"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.732,
+                0.749,
+                0.861,
+                0.777
+            ],
+            "angle": 0,
+            "content": "电传：0317-6330775",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.73,
+                0.81,
+                0.82,
+                0.838
+            ],
+            "angle": 0,
+            "content": "邮编：061303",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.731,
+                0.946,
+                0.807,
+                0.976
+            ],
+            "angle": 0,
+            "content": "录制：李宁",
+            "merge_prev": false
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.074,
+                0.113,
+                0.214,
+                0.138
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.281,
+                0.12,
+                0.487,
+                0.178
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.011,
+                0.182,
+                0.067,
+                0.206
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.434,
+                0.209,
+                0.615,
+                0.234
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.706,
+                0.119,
+                0.916,
+                0.171
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.712,
+                0.206,
+                0.853,
+                0.231
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.738,
+                0.271,
+                0.932,
+                0.289
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.697,
+                0.301,
+                0.95,
+                0.318
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.697,
+                0.329,
+                0.935,
+                0.348
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.719,
+                0.367,
+                0.86,
+                0.421
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.72,
+                0.428,
+                0.869,
+                0.483
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.727,
+                0.505,
+                0.866,
+                0.532
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.728,
+                0.627,
+                0.904,
+                0.652
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.729,
+                0.686,
+                0.874,
+                0.72
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.731,
+                0.747,
+                0.861,
+                0.779
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.729,
+                0.809,
+                0.82,
+                0.839
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.729,
+                0.943,
+                0.809,
+                0.978
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]

@@ -1,0 +1,1336 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        24,
+                        35,
+                        74,
+                        46
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                35,
+                                74,
+                                46
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        35,
+                                        74,
+                                        46
+                                    ],
+                                    "type": "text",
+                                    "content": "生产单编号:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        211,
+                        31,
+                        404,
+                        46
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                211,
+                                31,
+                                404,
+                                46
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        211,
+                                        31,
+                                        404,
+                                        46
+                                    ],
+                                    "type": "text",
+                                    "content": "常州市常武欣摄石化配件有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        24,
+                        48,
+                        156,
+                        58
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                48,
+                                156,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        48,
+                                        156,
+                                        58
+                                    ],
+                                    "type": "text",
+                                    "content": "Production order number: 26-02-786"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        24,
+                        59,
+                        60,
+                        69
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                59,
+                                60,
+                                69
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        59,
+                                        60,
+                                        69
+                                    ],
+                                    "type": "text",
+                                    "content": "材料名称："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        71,
+                        160,
+                        81
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                71,
+                                160,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        71,
+                                        160,
+                                        81
+                                    ],
+                                    "type": "text",
+                                    "content": "Product serial number: A105"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        166,
+                        48,
+                        424,
+                        58
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                166,
+                                48,
+                                424,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        166,
+                                        48,
+                                        424,
+                                        58
+                                    ],
+                                    "type": "text",
+                                    "content": "CHANGZHOU CHANGWU XINSHE PETRO CHEMICAL SPARE PARTS CO.,LTD"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        24,
+                        94,
+                        57,
+                        103
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                94,
+                                57,
+                                103
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        94,
+                                        57,
+                                        103
+                                    ],
+                                    "type": "text",
+                                    "content": "评定标准"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        24,
+                        106,
+                        172,
+                        115
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                106,
+                                172,
+                                115
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        106,
+                                        172,
+                                        115
+                                    ],
+                                    "type": "text",
+                                    "content": "Product serial number: ASME SA105/SA105M-2025"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        248,
+                        68,
+                        329,
+                        81
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                248,
+                                68,
+                                329,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        248,
+                                        68,
+                                        329,
+                                        81
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明书"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        238,
+                        92,
+                        346,
+                        103
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                238,
+                                92,
+                                346,
+                                103
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        238,
+                                        92,
+                                        346,
+                                        103
+                                    ],
+                                    "type": "text",
+                                    "content": "QUALITY CERTIFICAT"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        270,
+                        105,
+                        315,
+                        113
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                270,
+                                105,
+                                315,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        270,
+                                        105,
+                                        315,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "TS"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        258,
+                        116,
+                        328,
+                        126
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                258,
+                                116,
+                                328,
+                                126
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        258,
+                                        116,
+                                        328,
+                                        126
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2732062-2026"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        438,
+                        48,
+                        473,
+                        58
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                438,
+                                48,
+                                473,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        438,
+                                        48,
+                                        473,
+                                        58
+                                    ],
+                                    "type": "text",
+                                    "content": "客户名称："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        443,
+                        59,
+                        625,
+                        70
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                443,
+                                59,
+                                625,
+                                70
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        443,
+                                        59,
+                                        625,
+                                        70
+                                    ],
+                                    "type": "text",
+                                    "content": "Purchaser: 中国石油化工股份有限公司安庆分公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        443,
+                        71,
+                        472,
+                        81
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                443,
+                                71,
+                                472,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        443,
+                                        71,
+                                        472,
+                                        81
+                                    ],
+                                    "type": "text",
+                                    "content": "订单号："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        444,
+                        83,
+                        625,
+                        93
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                83,
+                                625,
+                                93
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        83,
+                                        625,
+                                        93
+                                    ],
+                                    "type": "text",
+                                    "content": "Order No."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        444,
+                        94,
+                        479,
+                        104
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                94,
+                                479,
+                                104
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        94,
+                                        479,
+                                        104
+                                    ],
+                                    "type": "text",
+                                    "content": "报告日期："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        444,
+                        105,
+                        625,
+                        115
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                105,
+                                625,
+                                115
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        105,
+                                        625,
+                                        115
+                                    ],
+                                    "type": "text",
+                                    "content": "Date of report: 2026.07.05"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        21,
+                        125,
+                        644,
+                        428
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                21,
+                                125,
+                                644,
+                                428
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        21,
+                                        125,
+                                        644,
+                                        428
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                21,
+                                                125,
+                                                644,
+                                                428
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">熔炼号Heal No.</td><td colspan=\"3\">25-211823</td><td colspan=\"3\">锻件批号Forging batches.</td><td colspan=\"2\">260307-01</td><td>热处理状态Heat treatment</td><td colspan=\"2\">正火</td><td colspan=\"3\">锻造比Forging Rate</td><td colspan=\"2\">≥3.5</td><td colspan=\"2\">级别Class</td><td>II</td></tr><tr><td colspan=\"21\">化学成份 CHEMICAL COMPOSITION %</td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\">C</td><td colspan=\"2\">SI</td><td colspan=\"2\">Mn</td><td colspan=\"2\">S</td><td>P</td><td>Cr</td><td colspan=\"2\">NI</td><td colspan=\"2\">Mo</td><td colspan=\"2\">Cu</td><td colspan=\"2\">V</td><td>CE</td></tr><tr><td colspan=\"2\">标准值 S.D</td><td colspan=\"2\">≤0.35</td><td colspan=\"2\">0.10~0.35</td><td colspan=\"2\">0.60~1.05</td><td colspan=\"2\">≤0.040</td><td>≤0.035</td><td>≤0.30</td><td colspan=\"2\">≤0.40</td><td colspan=\"2\">≤0.12</td><td colspan=\"2\">≤0.40</td><td colspan=\"2\">≤0.08</td><td>≤0.42</td></tr><tr><td colspan=\"2\">分析值 P.A</td><td colspan=\"2\">0.21</td><td colspan=\"2\">0.23</td><td colspan=\"2\">0.92</td><td colspan=\"2\">0.004</td><td>0.016</td><td>0.08</td><td colspan=\"2\">0.02</td><td colspan=\"2\">0.00</td><td colspan=\"2\">0.02</td><td colspan=\"2\">0.00</td><td>-</td></tr><tr><td rowspan=\"2\" colspan=\"2\">试样取样位置Test piece Position</td><td colspan=\"3\">UT检测标准Test standard</td><td colspan=\"3\">NB/T47013.3-2023</td><td colspan=\"3\">UT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.3-2023I级</td><td colspan=\"2\">UT检测结果Detectionresults</td><td colspan=\"2\">合格</td><td colspan=\"3\">品间腐蚀试验Intergranular corrosion test</td><td>/</td></tr><tr><td colspan=\"3\">PT检测标准Test standard</td><td colspan=\"3\">NB/T47013.5-2015</td><td colspan=\"3\">PT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.5-2015I级</td><td colspan=\"2\">PT检测结果Detection results</td><td colspan=\"2\">/</td><td colspan=\"3\">金相metallographic</td><td>/</td></tr><tr><td colspan=\"2\">切向Tangential</td><td colspan=\"3\">MT检测标准Test standard</td><td colspan=\"3\">NB/T47013.4-2015</td><td colspan=\"3\">MT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.4-2015I级</td><td colspan=\"2\">MT检测结果Detection results</td><td colspan=\"2\">合格</td><td colspan=\"3\">镀锌Galvanization</td><td>/</td></tr><tr><td colspan=\"21\">试验或检验数据 Test Conclusion</td></tr><tr><td colspan=\"11\">拉伸试验 Tensile test</td><td colspan=\"7\">冲击试验 Impact Test</td><td rowspan=\"2\" colspan=\"2\">硬度值Hardness(HBW)</td><td rowspan=\"2\">外观及尺寸Visunl&amp;Dim.Inspection</td></tr><tr><td colspan=\"2\">试样规格Size of Sample</td><td colspan=\"2\">试验温度Temp</td><td></td><td colspan=\"2\">拉伸强度Rm (Mpa)</td><td colspan=\"2\">屈服强度Rp0.2 (Mpa)</td><td>延伸率A%</td><td>断面收缩率Z (%)</td><td>试验温度Temp</td><td colspan=\"2\">试样规格Size of Sample</td><td colspan=\"2\">缺口形式Type of Notch</td><td colspan=\"2\">冲击功Kv2 (J)</td></tr><tr><td>D(mm)</td><td>L(mm)</td><td rowspan=\"2\" colspan=\"2\">室温 R.T</td><td colspan=\"2\">标准值 S.D</td><td colspan=\"2\">≥485</td><td colspan=\"2\">≥250</td><td>≥22</td><td>≥30</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">≤187</td><td rowspan=\"2\">合格</td></tr><tr><td>12.5</td><td>50</td><td colspan=\"2\">试验值 P.A</td><td colspan=\"2\">543</td><td colspan=\"2\">338</td><td>34</td><td>78</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">152/156/157</td></tr><tr><td colspan=\"19\">产品内容 Detailed List</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">序号</td><td colspan=\"2\">产品名称</td><td colspan=\"2\">标准</td><td colspan=\"4\">规格</td><td>数量</td><td colspan=\"2\">工单/网络号</td><td colspan=\"2\">物料编码</td><td colspan=\"4\"></td><td colspan=\"2\">备注</td></tr><tr><td colspan=\"2\">51</td><td colspan=\"2\">对焊法兰</td><td colspan=\"2\">ASME B16.5</td><td colspan=\"4\">WN20-600LB/RF SCH80</td><td>2</td><td colspan=\"2\">8302517425</td><td colspan=\"2\">4701020082677914</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"19\">检验结论:按 ASME SA105/SA105M-2025 锻件验收合格。Inspection conclusion: According to ASME SA105/SA105M-2025 forging&#x27;s accepta</td><td colspan=\"2\"></td></tr><tr><td colspan=\"19\">该批锻件经质量检验,符合《ASME锅炉及压力容器规范》、设计图样和行业标准的要求。Through quality inspection, this batch of forgings meet the requirements of ASME Boiler and pressure vessel code, design drawings and indus</td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">检验员 Inspector: 吴维新</td><td colspan=\"7\">质量保证工程师 Q.C Manager:</td><td colspan=\"5\">制造单位签章 Supp</td><td colspan=\"2\"></td></tr></table>",
+                                            "image_path": "fb50de3681a9e2a0da8069fc6cd1fff7846c89c69430437ce17e65eb9d328609.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 18
+                        }
+                    ],
+                    "index": 18
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                662,
+                460
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        24,
+                        35,
+                        74,
+                        46
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                35,
+                                74,
+                                46
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        35,
+                                        74,
+                                        46
+                                    ],
+                                    "type": "text",
+                                    "content": "生产单编号:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        211,
+                        31,
+                        404,
+                        46
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                211,
+                                31,
+                                404,
+                                46
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        211,
+                                        31,
+                                        404,
+                                        46
+                                    ],
+                                    "type": "text",
+                                    "content": "常州市常武欣摄石化配件有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        24,
+                        48,
+                        156,
+                        58
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                48,
+                                156,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        48,
+                                        156,
+                                        58
+                                    ],
+                                    "type": "text",
+                                    "content": "Production order number: 26-02-786"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        24,
+                        59,
+                        60,
+                        69
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                59,
+                                60,
+                                69
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        59,
+                                        60,
+                                        69
+                                    ],
+                                    "type": "text",
+                                    "content": "材料名称："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        71,
+                        160,
+                        81
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                71,
+                                160,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        71,
+                                        160,
+                                        81
+                                    ],
+                                    "type": "text",
+                                    "content": "Product serial number: A105"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        166,
+                        48,
+                        424,
+                        58
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                166,
+                                48,
+                                424,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        166,
+                                        48,
+                                        424,
+                                        58
+                                    ],
+                                    "type": "text",
+                                    "content": "CHANGZHOU CHANGWU XINSHE PETRO CHEMICAL SPARE PARTS CO.,LTD"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        24,
+                        94,
+                        57,
+                        103
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                94,
+                                57,
+                                103
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        94,
+                                        57,
+                                        103
+                                    ],
+                                    "type": "text",
+                                    "content": "评定标准"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        24,
+                        106,
+                        172,
+                        115
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                106,
+                                172,
+                                115
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        106,
+                                        172,
+                                        115
+                                    ],
+                                    "type": "text",
+                                    "content": "Product serial number: ASME SA105/SA105M-2025"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        248,
+                        68,
+                        329,
+                        81
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                248,
+                                68,
+                                329,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        248,
+                                        68,
+                                        329,
+                                        81
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明书"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        238,
+                        92,
+                        346,
+                        103
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                238,
+                                92,
+                                346,
+                                103
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        238,
+                                        92,
+                                        346,
+                                        103
+                                    ],
+                                    "type": "text",
+                                    "content": "QUALITY CERTIFICAT"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        270,
+                        105,
+                        315,
+                        113
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                270,
+                                105,
+                                315,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        270,
+                                        105,
+                                        315,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "TS"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        258,
+                        116,
+                        328,
+                        126
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                258,
+                                116,
+                                328,
+                                126
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        258,
+                                        116,
+                                        328,
+                                        126
+                                    ],
+                                    "type": "text",
+                                    "content": "TS2732062-2026"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        438,
+                        48,
+                        473,
+                        58
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                438,
+                                48,
+                                473,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        438,
+                                        48,
+                                        473,
+                                        58
+                                    ],
+                                    "type": "text",
+                                    "content": "客户名称："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        443,
+                        59,
+                        625,
+                        70
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                443,
+                                59,
+                                625,
+                                70
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        443,
+                                        59,
+                                        625,
+                                        70
+                                    ],
+                                    "type": "text",
+                                    "content": "Purchaser: 中国石油化工股份有限公司安庆分公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        443,
+                        71,
+                        472,
+                        81
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                443,
+                                71,
+                                472,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        443,
+                                        71,
+                                        472,
+                                        81
+                                    ],
+                                    "type": "text",
+                                    "content": "订单号："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        444,
+                        83,
+                        625,
+                        93
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                83,
+                                625,
+                                93
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        83,
+                                        625,
+                                        93
+                                    ],
+                                    "type": "text",
+                                    "content": "Order No."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        444,
+                        94,
+                        479,
+                        104
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                94,
+                                479,
+                                104
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        94,
+                                        479,
+                                        104
+                                    ],
+                                    "type": "text",
+                                    "content": "报告日期："
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        444,
+                        105,
+                        625,
+                        115
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                444,
+                                105,
+                                625,
+                                115
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        105,
+                                        625,
+                                        115
+                                    ],
+                                    "type": "text",
+                                    "content": "Date of report: 2026.07.05"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        21,
+                        125,
+                        644,
+                        428
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                21,
+                                125,
+                                644,
+                                428
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        21,
+                                        125,
+                                        644,
+                                        428
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                21,
+                                                125,
+                                                644,
+                                                428
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">熔炼号Heal No.</td><td colspan=\"3\">25-211823</td><td colspan=\"3\">锻件批号Forging batches.</td><td colspan=\"2\">260307-01</td><td>热处理状态Heat treatment</td><td colspan=\"2\">正火</td><td colspan=\"3\">锻造比Forging Rate</td><td colspan=\"2\">≥3.5</td><td colspan=\"2\">级别Class</td><td>II</td></tr><tr><td colspan=\"21\">化学成份 CHEMICAL COMPOSITION %</td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\">C</td><td colspan=\"2\">SI</td><td colspan=\"2\">Mn</td><td colspan=\"2\">S</td><td>P</td><td>Cr</td><td colspan=\"2\">NI</td><td colspan=\"2\">Mo</td><td colspan=\"2\">Cu</td><td colspan=\"2\">V</td><td>CE</td></tr><tr><td colspan=\"2\">标准值 S.D</td><td colspan=\"2\">≤0.35</td><td colspan=\"2\">0.10~0.35</td><td colspan=\"2\">0.60~1.05</td><td colspan=\"2\">≤0.040</td><td>≤0.035</td><td>≤0.30</td><td colspan=\"2\">≤0.40</td><td colspan=\"2\">≤0.12</td><td colspan=\"2\">≤0.40</td><td colspan=\"2\">≤0.08</td><td>≤0.42</td></tr><tr><td colspan=\"2\">分析值 P.A</td><td colspan=\"2\">0.21</td><td colspan=\"2\">0.23</td><td colspan=\"2\">0.92</td><td colspan=\"2\">0.004</td><td>0.016</td><td>0.08</td><td colspan=\"2\">0.02</td><td colspan=\"2\">0.00</td><td colspan=\"2\">0.02</td><td colspan=\"2\">0.00</td><td>-</td></tr><tr><td rowspan=\"2\" colspan=\"2\">试样取样位置Test piece Position</td><td colspan=\"3\">UT检测标准Test standard</td><td colspan=\"3\">NB/T47013.3-2023</td><td colspan=\"3\">UT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.3-2023I级</td><td colspan=\"2\">UT检测结果Detectionresults</td><td colspan=\"2\">合格</td><td colspan=\"3\">品间腐蚀试验Intergranular corrosion test</td><td>/</td></tr><tr><td colspan=\"3\">PT检测标准Test standard</td><td colspan=\"3\">NB/T47013.5-2015</td><td colspan=\"3\">PT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.5-2015I级</td><td colspan=\"2\">PT检测结果Detection results</td><td colspan=\"2\">/</td><td colspan=\"3\">金相metallographic</td><td>/</td></tr><tr><td colspan=\"2\">切向Tangential</td><td colspan=\"3\">MT检测标准Test standard</td><td colspan=\"3\">NB/T47013.4-2015</td><td colspan=\"3\">MT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.4-2015I级</td><td colspan=\"2\">MT检测结果Detection results</td><td colspan=\"2\">合格</td><td colspan=\"3\">镀锌Galvanization</td><td>/</td></tr><tr><td colspan=\"21\">试验或检验数据 Test Conclusion</td></tr><tr><td colspan=\"11\">拉伸试验 Tensile test</td><td colspan=\"7\">冲击试验 Impact Test</td><td rowspan=\"2\" colspan=\"2\">硬度值Hardness(HBW)</td><td rowspan=\"2\">外观及尺寸Visunl&amp;Dim.Inspection</td></tr><tr><td colspan=\"2\">试样规格Size of Sample</td><td colspan=\"2\">试验温度Temp</td><td></td><td colspan=\"2\">拉伸强度Rm (Mpa)</td><td colspan=\"2\">屈服强度Rp0.2 (Mpa)</td><td>延伸率A%</td><td>断面收缩率Z (%)</td><td>试验温度Temp</td><td colspan=\"2\">试样规格Size of Sample</td><td colspan=\"2\">缺口形式Type of Notch</td><td colspan=\"2\">冲击功Kv2 (J)</td></tr><tr><td>D(mm)</td><td>L(mm)</td><td rowspan=\"2\" colspan=\"2\">室温 R.T</td><td colspan=\"2\">标准值 S.D</td><td colspan=\"2\">≥485</td><td colspan=\"2\">≥250</td><td>≥22</td><td>≥30</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">≤187</td><td rowspan=\"2\">合格</td></tr><tr><td>12.5</td><td>50</td><td colspan=\"2\">试验值 P.A</td><td colspan=\"2\">543</td><td colspan=\"2\">338</td><td>34</td><td>78</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">152/156/157</td></tr><tr><td colspan=\"19\">产品内容 Detailed List</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">序号</td><td colspan=\"2\">产品名称</td><td colspan=\"2\">标准</td><td colspan=\"4\">规格</td><td>数量</td><td colspan=\"2\">工单/网络号</td><td colspan=\"2\">物料编码</td><td colspan=\"4\"></td><td colspan=\"2\">备注</td></tr><tr><td colspan=\"2\">51</td><td colspan=\"2\">对焊法兰</td><td colspan=\"2\">ASME B16.5</td><td colspan=\"4\">WN20-600LB/RF SCH80</td><td>2</td><td colspan=\"2\">8302517425</td><td colspan=\"2\">4701020082677914</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"19\">检验结论:按 ASME SA105/SA105M-2025 锻件验收合格。Inspection conclusion: According to ASME SA105/SA105M-2025 forging&#x27;s accepta</td><td colspan=\"2\"></td></tr><tr><td colspan=\"19\">该批锻件经质量检验,符合《ASME锅炉及压力容器规范》、设计图样和行业标准的要求。Through quality inspection, this batch of forgings meet the requirements of ASME Boiler and pressure vessel code, design drawings and indus</td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">检验员 Inspector: 吴维新</td><td colspan=\"7\">质量保证工程师 Q.C Manager:</td><td colspan=\"5\">制造单位签章 Supp</td><td colspan=\"2\"></td></tr></table>",
+                                            "image_path": "fb50de3681a9e2a0da8069fc6cd1fff7846c89c69430437ce17e65eb9d328609.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 18
+                        }
+                    ],
+                    "index": 18
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}

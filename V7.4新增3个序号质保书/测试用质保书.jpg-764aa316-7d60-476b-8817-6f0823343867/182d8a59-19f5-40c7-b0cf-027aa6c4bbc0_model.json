@@ -1,0 +1,450 @@
+[
+    [
+        {
+            "type": "text",
+            "bbox": [
+                0.037,
+                0.077,
+                0.112,
+                0.1
+            ],
+            "angle": 0,
+            "content": "生产单编号:",
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.319,
+                0.069,
+                0.611,
+                0.102
+            ],
+            "angle": 0,
+            "content": "常州市常武欣摄石化配件有限公司"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.037,
+                0.105,
+                0.237,
+                0.127
+            ],
+            "angle": 0,
+            "content": "Production order number: 26-02-786",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.037,
+                0.13,
+                0.092,
+                0.152
+            ],
+            "angle": 0,
+            "content": "材料名称：",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.039,
+                0.156,
+                0.242,
+                0.177
+            ],
+            "angle": 0,
+            "content": "Product serial number: A105",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.251,
+                0.105,
+                0.641,
+                0.128
+            ],
+            "angle": 0,
+            "content": "CHANGZHOU CHANGWU XINSHE PETRO CHEMICAL SPARE PARTS CO.,LTD",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.037,
+                0.205,
+                0.087,
+                0.225
+            ],
+            "angle": 0,
+            "content": "评定标准",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.037,
+                0.231,
+                0.261,
+                0.251
+            ],
+            "angle": 0,
+            "content": "Product serial number: ASME SA105/SA105M-2025",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.375,
+                0.148,
+                0.497,
+                0.177
+            ],
+            "angle": 0,
+            "content": "质量证明书",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.361,
+                0.202,
+                0.523,
+                0.225
+            ],
+            "angle": 0,
+            "content": "QUALITY CERTIFICAT",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.408,
+                0.229,
+                0.477,
+                0.247
+            ],
+            "angle": 0,
+            "content": "TS",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.391,
+                0.253,
+                0.496,
+                0.274
+            ],
+            "angle": 0,
+            "content": "TS2732062-2026",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.663,
+                0.105,
+                0.716,
+                0.127
+            ],
+            "angle": 0,
+            "content": "客户名称：",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.67,
+                0.13,
+                0.945,
+                0.154
+            ],
+            "angle": 0,
+            "content": "Purchaser: 中国石油化工股份有限公司安庆分公司",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.67,
+                0.155,
+                0.714,
+                0.177
+            ],
+            "angle": 0,
+            "content": "订单号：",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.672,
+                0.182,
+                0.945,
+                0.204
+            ],
+            "angle": 0,
+            "content": "Order No.",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.671,
+                0.205,
+                0.725,
+                0.227
+            ],
+            "angle": 0,
+            "content": "报告日期：",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.672,
+                0.23,
+                0.945,
+                0.252
+            ],
+            "angle": 0,
+            "content": "Date of report: 2026.07.05",
+            "merge_prev": false
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.033,
+                0.273,
+                0.974,
+                0.931
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"2\">熔炼号Heal No.</td><td colspan=\"3\">25-211823</td><td colspan=\"3\">锻件批号Forging batches.</td><td colspan=\"2\">260307-01</td><td>热处理状态Heat treatment</td><td colspan=\"2\">正火</td><td colspan=\"3\">锻造比Forging Rate</td><td colspan=\"2\">≥3.5</td><td colspan=\"2\">级别Class</td><td>II</td></tr><tr><td colspan=\"21\">化学成份 CHEMICAL COMPOSITION %</td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\">C</td><td colspan=\"2\">SI</td><td colspan=\"2\">Mn</td><td colspan=\"2\">S</td><td>P</td><td>Cr</td><td colspan=\"2\">NI</td><td colspan=\"2\">Mo</td><td colspan=\"2\">Cu</td><td colspan=\"2\">V</td><td>CE</td></tr><tr><td colspan=\"2\">标准值 S.D</td><td colspan=\"2\">≤0.35</td><td colspan=\"2\">0.10~0.35</td><td colspan=\"2\">0.60~1.05</td><td colspan=\"2\">≤0.040</td><td>≤0.035</td><td>≤0.30</td><td colspan=\"2\">≤0.40</td><td colspan=\"2\">≤0.12</td><td colspan=\"2\">≤0.40</td><td colspan=\"2\">≤0.08</td><td>≤0.42</td></tr><tr><td colspan=\"2\">分析值 P.A</td><td colspan=\"2\">0.21</td><td colspan=\"2\">0.23</td><td colspan=\"2\">0.92</td><td colspan=\"2\">0.004</td><td>0.016</td><td>0.08</td><td colspan=\"2\">0.02</td><td colspan=\"2\">0.00</td><td colspan=\"2\">0.02</td><td colspan=\"2\">0.00</td><td>-</td></tr><tr><td rowspan=\"2\" colspan=\"2\">试样取样位置Test piece Position</td><td colspan=\"3\">UT检测标准Test standard</td><td colspan=\"3\">NB/T47013.3-2023</td><td colspan=\"3\">UT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.3-2023I级</td><td colspan=\"2\">UT检测结果Detectionresults</td><td colspan=\"2\">合格</td><td colspan=\"3\">品间腐蚀试验Intergranular corrosion test</td><td>/</td></tr><tr><td colspan=\"3\">PT检测标准Test standard</td><td colspan=\"3\">NB/T47013.5-2015</td><td colspan=\"3\">PT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.5-2015I级</td><td colspan=\"2\">PT检测结果Detection results</td><td colspan=\"2\">/</td><td colspan=\"3\">金相metallographic</td><td>/</td></tr><tr><td colspan=\"2\">切向Tangential</td><td colspan=\"3\">MT检测标准Test standard</td><td colspan=\"3\">NB/T47013.4-2015</td><td colspan=\"3\">MT验收标准Acceptance standard</td><td colspan=\"2\">NB/T47013.4-2015I级</td><td colspan=\"2\">MT检测结果Detection results</td><td colspan=\"2\">合格</td><td colspan=\"3\">镀锌Galvanization</td><td>/</td></tr><tr><td colspan=\"21\">试验或检验数据 Test Conclusion</td></tr><tr><td colspan=\"11\">拉伸试验 Tensile test</td><td colspan=\"7\">冲击试验 Impact Test</td><td rowspan=\"2\" colspan=\"2\">硬度值Hardness(HBW)</td><td rowspan=\"2\">外观及尺寸Visunl&amp;Dim.Inspection</td></tr><tr><td colspan=\"2\">试样规格Size of Sample</td><td colspan=\"2\">试验温度Temp</td><td></td><td colspan=\"2\">拉伸强度Rm (Mpa)</td><td colspan=\"2\">屈服强度Rp0.2 (Mpa)</td><td>延伸率A%</td><td>断面收缩率Z (%)</td><td>试验温度Temp</td><td colspan=\"2\">试样规格Size of Sample</td><td colspan=\"2\">缺口形式Type of Notch</td><td colspan=\"2\">冲击功Kv2 (J)</td></tr><tr><td>D(mm)</td><td>L(mm)</td><td rowspan=\"2\" colspan=\"2\">室温 R.T</td><td colspan=\"2\">标准值 S.D</td><td colspan=\"2\">≥485</td><td colspan=\"2\">≥250</td><td>≥22</td><td>≥30</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">≤187</td><td rowspan=\"2\">合格</td></tr><tr><td>12.5</td><td>50</td><td colspan=\"2\">试验值 P.A</td><td colspan=\"2\">543</td><td colspan=\"2\">338</td><td>34</td><td>78</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">-</td><td colspan=\"2\">152/156/157</td></tr><tr><td colspan=\"19\">产品内容 Detailed List</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">序号</td><td colspan=\"2\">产品名称</td><td colspan=\"2\">标准</td><td colspan=\"4\">规格</td><td>数量</td><td colspan=\"2\">工单/网络号</td><td colspan=\"2\">物料编码</td><td colspan=\"4\"></td><td colspan=\"2\">备注</td></tr><tr><td colspan=\"2\">51</td><td colspan=\"2\">对焊法兰</td><td colspan=\"2\">ASME B16.5</td><td colspan=\"4\">WN20-600LB/RF SCH80</td><td>2</td><td colspan=\"2\">8302517425</td><td colspan=\"2\">4701020082677914</td><td colspan=\"4\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"19\">检验结论:按 ASME SA105/SA105M-2025 锻件验收合格。Inspection conclusion: According to ASME SA105/SA105M-2025 forging&#x27;s accepta</td><td colspan=\"2\"></td></tr><tr><td colspan=\"19\">该批锻件经质量检验,符合《ASME锅炉及压力容器规范》、设计图样和行业标准的要求。Through quality inspection, this batch of forgings meet the requirements of ASME Boiler and pressure vessel code, design drawings and indus</td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">检验员 Inspector: 吴维新</td><td colspan=\"7\">质量保证工程师 Q.C Manager:</td><td colspan=\"5\">制造单位签章 Supp</td><td colspan=\"2\"></td></tr></table>"
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.04,
+                0.08,
+                0.11,
+                0.1
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.323,
+                0.07,
+                0.607,
+                0.1
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.039,
+                0.107,
+                0.225,
+                0.124
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.037,
+                0.126,
+                0.091,
+                0.152
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.041,
+                0.158,
+                0.146,
+                0.174
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.181,
+                0.156,
+                0.21,
+                0.176
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.252,
+                0.107,
+                0.639,
+                0.13
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.039,
+                0.205,
+                0.087,
+                0.227
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.04,
+                0.233,
+                0.256,
+                0.248
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.376,
+                0.15,
+                0.497,
+                0.177
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.362,
+                0.207,
+                0.521,
+                0.23
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.409,
+                0.23,
+                0.475,
+                0.248
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.394,
+                0.258,
+                0.493,
+                0.273
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.663,
+                0.105,
+                0.714,
+                0.126
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.675,
+                0.132,
+                0.941,
+                0.15
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.671,
+                0.152,
+                0.713,
+                0.178
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.673,
+                0.183,
+                0.723,
+                0.201
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.672,
+                0.207,
+                0.722,
+                0.227
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.675,
+                0.234,
+                0.74,
+                0.25
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.795,
+                0.233,
+                0.853,
+                0.249
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]
