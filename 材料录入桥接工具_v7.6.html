@@ -3251,21 +3251,30 @@ function loadProjName() {
 }
 
 // ===== V7.6: 通用 Word(.doc) 下载（HTML-based，Word/WPS 直接打开打印） =====
-// 完全对齐模板页面设置：A4 横向、页边距、字体（宋体/楷体/黑体）、全边框、无底色
-function downloadWordDoc(filename, bodyHtml, pageCss) {
+// 页面方向必须用 Word 专有 mso-page-orientation 属性，且纸张用 pt 单位写宽高，
+// 否则 Word/WPS 打开会忽略横向设置（size:...landscape 简写不被识别）
+function downloadWordDoc(filename, bodyHtml, isLandscape, margins) {
+  // A4: 595.3pt(宽) x 841.9pt(高)；横向则宽高互换
+  var pw = isLandscape ? 841.9 : 595.3;
+  var ph = isLandscape ? 595.3 : 841.9;
+  var m = margins || (isLandscape ? '2.5cm 2cm 2cm 2cm' : '2.5cm 2cm 2cm 2.5cm');
+  var orient = isLandscape ? 'mso-page-orientation:landscape;' : '';
+  var pageCss = '@page WordSection1{size:' + pw + 'pt ' + ph + 'pt;' + orient + 'margin:' + m + ';mso-header-margin:0cm;mso-footer-margin:0cm;}';
   var wordHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">' +
     '<head><meta charset="utf-8"><title>' + filename + '</title>' +
-    '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->' +
+    '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom><w:DoNotOptimizeForBrowser/></w:WordDocument></xml><![endif]-->' +
     '<style>' +
-    (pageCss || '@page{size:29.7cm 21cm landscape;margin:2.5cm 2cm 2cm 2cm;}') +
+    pageCss +
+    'div.WordSection1{page:WordSection1;}' +
     'body{font-family:"宋体",SimSun,serif;font-size:10pt;margin:0;}' +
-    'table{border-collapse:collapse;width:100%;table-layout:fixed;}' +
-    'td,th{border:1px solid #000;padding:2px 3px;font-size:10pt;word-break:break-all;vertical-align:middle;background:none;}' +
+    'table{border-collapse:collapse;width:100%;mso-table-layout-override:fixed;}' +
+    'td,th{border:1px solid #000;padding:2px 4px;font-size:10pt;word-break:break-all;vertical-align:middle;background:none;mso-padding-alt:0;}' +
     'th{font-weight:normal;font-family:"宋体",SimSun,serif;text-align:center;}' +
+    'tr{mso-height-source:auto;}' +
     '.kai{font-family:"楷体",KaiTi,serif;font-size:10.5pt;}' +
     '.hei{font-family:"黑体",SimHei,sans-serif;}' +
     '.bt{font-size:16pt;font-weight:bold;text-align:center;}' +
-    '</style></head><body>' + bodyHtml + '</body></html>';
+    '</style></head><body><div class="WordSection1">' + bodyHtml + '</div></body></html>';
   var blob = new Blob(['\ufeff' + wordHtml], { type: 'application/msword' });
   var url = URL.createObjectURL(blob);
   var a = document.createElement('a');
@@ -3291,7 +3300,6 @@ function exportYilanDoc() {
   // 模板续页列宽（cm），14列：证书出厂编号/复验报告编号各占2列合并
   var COLS = [1.11, 1.87, 2.4, 0.72, 1.91, 1.68, 2.95, 3.45, 1.25, 1.25, 0.21, 2.54, 2.0, 1.54];
   var ROWS_PER_PAGE = 22;
-  var pageCss = '@page{size:29.7cm 21cm landscape;margin:2.5cm 2cm 2cm 2cm;}';
 
   function colgroup() {
     var s = '<colgroup>';
@@ -3343,7 +3351,8 @@ function exportYilanDoc() {
     if (p > 0) bodyHtml += WORD_PAGE_BREAK;
     bodyHtml += buildPage(data.slice(p * ROWS_PER_PAGE, (p + 1) * ROWS_PER_PAGE), p * ROWS_PER_PAGE, p > 0);
   }
-  downloadWordDoc('材料质量证明文件一览表.doc', bodyHtml, pageCss);
+  // 一览表模板：A4横向，页边距 上2.5 下2 左2 右2
+  downloadWordDoc('材料质量证明文件一览表.doc', bodyHtml, true, '2.5cm 2cm 2cm 2cm');
 }
 
 function escHtml(s) {
@@ -3362,7 +3371,6 @@ function exportWeituoDoc() {
   // 模板 23 列实际列宽（cm）
   var COLS = [0.96,1.39,1.06,1.05,1.38,0.41,0.35,1.78,0.26,1.28,2.37,0.4,1.94,0.46,1.86,0.22,1.13,0.58,0.23,1.92,0.4,1.35,3.42];
   var ROWS_PER_PAGE = 9;                        // 模板一页 9 行数据
-  var pageCss = '@page{size:29.7cm 21cm landscape;margin:2.5cm 2cm 2cm 2.5cm;}'; // 上2.5 下2 左2.5 右2
   var STH = 'style="text-align:center"';        // 表头单元格
 
   function colgroup() {
@@ -3404,19 +3412,22 @@ function exportWeituoDoc() {
       '<th>数量</th>' +
       '<th>工单/网络号</th>' +
       '</tr>';
-    // 数据行：检件编号/热处理状态/制造验收标准 留空手填
+    // 数据行：检件编号/热处理状态/制造验收标准空值按模板示例填"/"占位
     records.forEach(function(r, i) {
-      var heatBatch = (r['炉号'] && String(r['炉号']).trim()) || (r['批号'] && String(r['批号']).trim()) || '';
+      var heatBatch = (r['炉号'] && String(r['炉号']).trim()) || (r['批号'] && String(r['批号']).trim()) || '/';
+      var jbh = '/'; // 检件编号手填占位
+      var heat = '/'; // 热处理状态手填占位
+      var acc = '/'; // 制造/验收标准手填占位
       html += '<tr>' +
         '<td style="text-align:center">' + (startIdx + i + 1) + '</td>' +
-        '<td colspan="2"></td>' +
+        '<td colspan="2" style="text-align:center">' + jbh + '</td>' +
         '<td colspan="4">' + escHtml(r['产品名称']) + '</td>' +
         '<td colspan="3">' + escHtml(r['证书出厂编号']) + '</td>' +
-        '<td>' + escHtml(heatBatch) + '</td>' +
+        '<td style="text-align:center">' + escHtml(heatBatch) + '</td>' +
         '<td colspan="2">' + escHtml(r['规格型号']) + '</td>' +
         '<td colspan="2">' + escHtml(r['材质']) + '</td>' +
-        '<td colspan="3"></td>' +
-        '<td colspan="3"></td>' +
+        '<td colspan="3" style="text-align:center">' + heat + '</td>' +
+        '<td colspan="3" style="text-align:center">' + acc + '</td>' +
         '<td style="text-align:center">' + escHtml(r['数量']) + '</td>' +
         '<td>' + escHtml(r['工单号'] || '') + '</td>' +
         '</tr>';
@@ -3444,7 +3455,8 @@ function exportWeituoDoc() {
     bodyHtml += buildPage(data.slice(p * ROWS_PER_PAGE, (p + 1) * ROWS_PER_PAGE), p * ROWS_PER_PAGE, p > 0);
     if (p === pageCount - 1) bodyHtml += buildFooter();
   }
-  downloadWordDoc('材料及配件检测委托单.doc', bodyHtml, pageCss);
+  // 委托单模板：A4横向，页边距 上2.5 下2 左2.5 右2
+  downloadWordDoc('材料及配件检测委托单.doc', bodyHtml, true, '2.5cm 2cm 2cm 2.5cm');
 }
 
 // ===== INIT =====
