@@ -3227,7 +3227,20 @@ function exportCSV(type) {
 const PROJ_NAME_KEY = 'cert-quick-entry-proj-name';
 function getProjName() {
   var input = document.getElementById('projNameInput');
-  return (input && input.value.trim()) || '运行三部连续重整装置四合一加热炉余热回收技术改造';
+  return (input && input.value.trim()) || '';   // V7.6: 默认空白，不再预填测试用工程名
+}
+// V7.6: 导出前校验工程名称，为空则弹窗让用户输入（取消或仍为空则中止导出）
+function requireProjName() {
+  var v = getProjName();
+  if (v) return v;
+  v = window.prompt('请输入工程名称（一览表/委托单导出时使用）：', '');
+  if (v === null) return null;
+  v = String(v).trim();
+  if (!v) { alert('工程名称不能为空，导出已取消。'); return null; }
+  var input = document.getElementById('projNameInput');
+  if (input) input.value = v;
+  saveProjName(v);
+  return v;
 }
 function saveProjName(v) {
   localStorage.setItem(PROJ_NAME_KEY, v || '');
@@ -3238,19 +3251,20 @@ function loadProjName() {
 }
 
 // ===== V7.6: 通用 Word(.doc) 下载（HTML-based，Word/WPS 直接打开打印） =====
-function downloadWordDoc(filename, bodyHtml) {
+// 完全对齐模板页面设置：A4 横向、页边距、字体（宋体/楷体/黑体）、全边框、无底色
+function downloadWordDoc(filename, bodyHtml, pageCss) {
   var wordHtml = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">' +
     '<head><meta charset="utf-8"><title>' + filename + '</title>' +
     '<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->' +
     '<style>' +
-    '@page{size:A4 portrait;margin:1.5cm 1.5cm;}' +
-    'body{font-family:"宋体",SimSun,serif;font-size:10.5pt;}' +
-    'table{border-collapse:collapse;width:100%;}' +
-    'td,th{border:1px solid #000;padding:3px 4px;font-size:9pt;word-break:break-all;}' +
-    'th{font-weight:bold;text-align:center;background:#f2f2f2;}' +
-    '.title{font-size:15pt;font-weight:bold;text-align:center;font-family:"黑体",SimHei;}' +
-    '.sub{font-size:10.5pt;}' +
-    '.pagenum{font-size:9pt;color:#666;text-align:right;}' +
+    (pageCss || '@page{size:29.7cm 21cm landscape;margin:2.5cm 2cm 2cm 2cm;}') +
+    'body{font-family:"宋体",SimSun,serif;font-size:10pt;margin:0;}' +
+    'table{border-collapse:collapse;width:100%;table-layout:fixed;}' +
+    'td,th{border:1px solid #000;padding:2px 3px;font-size:10pt;word-break:break-all;vertical-align:middle;background:none;}' +
+    'th{font-weight:normal;font-family:"宋体",SimSun,serif;text-align:center;}' +
+    '.kai{font-family:"楷体",KaiTi,serif;font-size:10.5pt;}' +
+    '.hei{font-family:"黑体",SimHei,sans-serif;}' +
+    '.bt{font-size:16pt;font-weight:bold;text-align:center;}' +
     '</style></head><body>' + bodyHtml + '</body></html>';
   var blob = new Blob(['\ufeff' + wordHtml], { type: 'application/msword' });
   var url = URL.createObjectURL(blob);
@@ -3264,37 +3278,62 @@ function downloadWordDoc(filename, bodyHtml) {
 // V7.6: Word 分页符
 var WORD_PAGE_BREAK = '<br clear=all style="mso-special-character:line-break;page-break-before:always">';
 
-// ===== V7.6: 一览表 Word 导出（版面对齐 templates/材料质量证明文件一览表V1.docx，超页自动（续）） =====
+// ===== V7.6: 一览表 Word 导出 =====
+// 完全对齐 templates/材料质量证明文件一览表V1.docx：
+//   A4 横向 29.7×21cm / 页边距 上2.5 下2 左2 右2 / 全边框无底色
+//   标题行 = SH/T 3503—J132（黑体，5列）+ 材料质量证明文件一览表（16pt加粗，7列）+ 工程名称（4列）
+//   表头宋体 / 数据楷体10.5pt / 超页标题带（续）
 function exportYilanDoc() {
   if (data.length === 0) { alert('无数据可导出'); return; }
-  var projName = getProjName();
-  var headers = ['序号','材料名称','证件自编号','证书出厂编号','材质','规格型号','制造厂家','单位','总量','复验报告编号','领用单位/领用量'];
-  var ROWS_PER_PAGE = 18; // A4 纵向每页数据行数
+  var projName = requireProjName();
+  if (!projName) return;
+
+  // 模板续页列宽（cm），14列：证书出厂编号/复验报告编号各占2列合并
+  var COLS = [1.11, 1.87, 2.4, 0.72, 1.91, 1.68, 2.95, 3.45, 1.25, 1.25, 0.21, 2.54, 2.0, 1.54];
+  var ROWS_PER_PAGE = 22;
+  var pageCss = '@page{size:29.7cm 21cm landscape;margin:2.5cm 2cm 2cm 2cm;}';
+
+  function colgroup() {
+    var s = '<colgroup>';
+    COLS.forEach(function(w) { s += '<col style="width:' + w + 'cm">'; });
+    return s + '</colgroup>';
+  }
 
   function buildPage(records, startIdx, isContinued) {
-    var html = '<div class="title">SH/T 3503—J132 材料质量证明文件一览表' + (isContinued ? '（续）' : '') + '</div>';
-    html += '<div class="sub">工程名称：' + escHtml(projName) + '</div>';
-    html += '<table><thead><tr>';
-    headers.forEach(function(h) { html += '<th>' + h + '</th>'; });
-    html += '</tr></thead><tbody>';
+    var title = '材料质量证明文件一览表' + (isContinued ? '（续）' : '');
+    var html = '<table>' + colgroup();
+    // 标题行：5列标准号 + 7列标题 + 4列工程名称（合并共14列）
+    html += '<tr>' +
+      '<td colspan="4" class="hei" style="border-right:none;">SH/T 3503—J132</td>' +
+      '<td colspan="7" class="bt" style="border-left:none;border-right:none;">' + title + '</td>' +
+      '<td colspan="3" style="border-left:none;font-size:10pt;">工程名称：' + escHtml(projName) + '</td>' +
+      '</tr>';
+    // 表头行（宋体，居中）
+    html += '<tr>' +
+      '<th rowspan="1">序号</th><th>材料名称</th><th>证件自编号</th>' +
+      '<th colspan="2">证书出厂编号</th><th>材质</th><th>规格型号</th><th>制造厂家</th>' +
+      '<th>单位</th><th>总量</th><th colspan="2">复验报告编号</th><th>领用单位</th><th>领用量</th>' +
+      '</tr>';
+    // 数据行（楷体 10.5pt）
     records.forEach(function(r, i) {
       var zbh = (r['证件自编号'] && String(r['证件自编号']).trim()) || '/';
-      var ly = ((r['领用单位'] || '') + '/' + (r['领用量'] || '')).replace(/^\/+$/, '/');
-      html += '<tr>' +
+      var fy = r['复验报告编号'] || '/';
+      html += '<tr class="kai">' +
         '<td style="text-align:center">' + (startIdx + i + 1) + '</td>' +
         '<td>' + escHtml(r['产品名称']) + '</td>' +
         '<td style="text-align:center">' + escHtml(zbh) + '</td>' +
-        '<td>' + escHtml(r['证书出厂编号']) + '</td>' +
+        '<td colspan="2">' + escHtml(r['证书出厂编号']) + '</td>' +
         '<td style="text-align:center">' + escHtml(r['材质']) + '</td>' +
         '<td>' + escHtml(r['规格型号']) + '</td>' +
         '<td>' + escHtml(r['制造厂家']) + '</td>' +
         '<td style="text-align:center">' + escHtml(r['单位']) + '</td>' +
         '<td style="text-align:center">' + escHtml(r['数量']) + '</td>' +
-        '<td style="text-align:center">' + escHtml(r['复验报告编号'] || '/') + '</td>' +
-        '<td style="text-align:center">' + escHtml(ly) + '</td>' +
+        '<td colspan="2" style="text-align:center">' + escHtml(fy) + '</td>' +
+        '<td style="text-align:center">' + escHtml(r['领用单位'] || '') + '</td>' +
+        '<td style="text-align:center">' + escHtml(r['领用量'] || '') + '</td>' +
         '</tr>';
     });
-    html += '</tbody></table>';
+    html += '</table>';
     return html;
   }
 
@@ -3302,11 +3341,9 @@ function exportYilanDoc() {
   var pageCount = Math.ceil(data.length / ROWS_PER_PAGE);
   for (var p = 0; p < pageCount; p++) {
     if (p > 0) bodyHtml += WORD_PAGE_BREAK;
-    var chunk = data.slice(p * ROWS_PER_PAGE, (p + 1) * ROWS_PER_PAGE);
-    bodyHtml += buildPage(chunk, p * ROWS_PER_PAGE, p > 0);
+    bodyHtml += buildPage(data.slice(p * ROWS_PER_PAGE, (p + 1) * ROWS_PER_PAGE), p * ROWS_PER_PAGE, p > 0);
   }
-  bodyHtml += '<div class="pagenum">共 ' + data.length + ' 条 · 第 ' + pageCount + ' 页</div>';
-  downloadWordDoc('材料质量证明文件一览表.doc', bodyHtml);
+  downloadWordDoc('材料质量证明文件一览表.doc', bodyHtml, pageCss);
 }
 
 function escHtml(s) {
@@ -3319,43 +3356,67 @@ function escHtml(s) {
 //          检件编号/热处理状态/制造/验收标准=留空手填；委托单位/人/日期等=留空手填
 function exportWeituoDoc() {
   if (data.length === 0) { alert('无数据可导出'); return; }
-  var projName = getProjName();
-  var headers = ['序号','检件编号','检件名称','质量证明文件编号','炉/批号','检件规格','检件材质','热处理状态','制造/验收标准','数量','工单/网络号'];
-  var ROWS_PER_PAGE = 9; // 模板一页 9 行数据
+  var projName = requireProjName();
+  if (!projName) return;
+
+  // 模板 23 列实际列宽（cm）
+  var COLS = [0.96,1.39,1.06,1.05,1.38,0.41,0.35,1.78,0.26,1.28,2.37,0.4,1.94,0.46,1.86,0.22,1.13,0.58,0.23,1.92,0.4,1.35,3.42];
+  var ROWS_PER_PAGE = 9;                        // 模板一页 9 行数据
+  var pageCss = '@page{size:29.7cm 21cm landscape;margin:2.5cm 2cm 2cm 2.5cm;}'; // 上2.5 下2 左2.5 右2
+  var STH = 'style="text-align:center"';        // 表头单元格
+
+  function colgroup() {
+    var s = '<colgroup>';
+    COLS.forEach(function(w) { s += '<col style="width:' + w + 'cm">'; });
+    return s + '</colgroup>';
+  }
 
   function buildPage(records, startIdx, isContinued) {
-    var html = '<table>' +
-      // 行0：标准号 | 标题 | 工程名称
-      '<tr>' +
-      '<td style="border:none;width:16%;font-size:9pt;">SH/T 3543—G128</td>' +
-      '<td colspan="5" class="title" style="border:none;">材料及配件检测委托单' + (isContinued ? '（续）' : '') + '</td>' +
-      '<td colspan="5" style="border:none;font-size:9pt;">工程名称：' + escHtml(projName) + '<br>单位工程名称：</td>' +
-      '</tr>' +
-      // 行1：检测方法 | 检测标准 | 检测比例 | 合格要求
-      '<tr>' +
-      '<td style="text-align:center;width:16%;">检测方法</td><td style="border-left:none;border-right:none;"></td>' +
-      '<td style="border-left:none;border-right:none;"></td>' +
-      '<td style="text-align:center;">检测标准</td><td style="border-left:none;border-right:none;"></td>' +
-      '<td style="text-align:center;">检测比例</td><td style="border-left:none;border-right:none;"></td>' +
-      '<td style="text-align:center;">合格要求</td><td colspan="3">各元素成分满足制造验收标准</td>' +
+    var html = '<table>' + colgroup();
+    // 行0：标准号(5列,黑体) + 标题(12列,宋体16pt加粗) + 工程名称/单位工程名称(6列)
+    html += '<tr>' +
+      '<td colspan="5" class="hei" style="border-right:none;">SH/T 3543—G128</td>' +
+      '<td colspan="12" class="bt" style="border-left:none;border-right:none;">材料及配件检测委托单' + (isContinued ? '（续）' : '') + '</td>' +
+      '<td colspan="6" style="border-left:none;">工程名称：' + escHtml(projName) + '<br><br>单位工程名称：</td>' +
       '</tr>';
-    // 行2：表头
-    html += '<tr>';
-    headers.forEach(function(h) { html += '<th>' + h + '</th>'; });
-    html += '</tr>';
-    // 数据行：检件编号/热处理状态/制造/验收标准留空手填
+    // 行1：检测方法(2) 空(4) 检测标准(3) 空(3) 检测比例(2) 空(5) 合格要求(2) 各元素成分满足制造验收标准(2)
+    html += '<tr>' +
+      '<td colspan="2" ' + STH + '>检测方法</td>' +
+      '<td colspan="4"></td>' +
+      '<td colspan="3" ' + STH + '>检测标准</td>' +
+      '<td colspan="3"></td>' +
+      '<td colspan="2" ' + STH + '>检测比例</td>' +
+      '<td colspan="5"></td>' +
+      '<td colspan="2" ' + STH + '>合格要求</td>' +
+      '<td colspan="2" ' + STH + '>各元素成分满足制造验收标准</td>' +
+      '</tr>';
+    // 行2：表头（宋体10pt）
+    html += '<tr>' +
+      '<th>序号</th>' +
+      '<th colspan="2">检件编号</th>' +
+      '<th colspan="4">检件名称</th>' +
+      '<th colspan="3">质量证明文件编号</th>' +
+      '<th>炉/批号</th>' +
+      '<th colspan="2">检件规格</th>' +
+      '<th colspan="2">检件材质</th>' +
+      '<th colspan="3">热处理状态</th>' +
+      '<th colspan="3">制造/验收标准</th>' +
+      '<th>数量</th>' +
+      '<th>工单/网络号</th>' +
+      '</tr>';
+    // 数据行：检件编号/热处理状态/制造验收标准 留空手填
     records.forEach(function(r, i) {
       var heatBatch = (r['炉号'] && String(r['炉号']).trim()) || (r['批号'] && String(r['批号']).trim()) || '';
       html += '<tr>' +
         '<td style="text-align:center">' + (startIdx + i + 1) + '</td>' +
-        '<td></td>' + // 检件编号（手填）
-        '<td>' + escHtml(r['产品名称']) + '</td>' +
-        '<td>' + escHtml(r['证书出厂编号']) + '</td>' +
+        '<td colspan="2"></td>' +
+        '<td colspan="4">' + escHtml(r['产品名称']) + '</td>' +
+        '<td colspan="3">' + escHtml(r['证书出厂编号']) + '</td>' +
         '<td>' + escHtml(heatBatch) + '</td>' +
-        '<td>' + escHtml(r['规格型号']) + '</td>' +
-        '<td>' + escHtml(r['材质']) + '</td>' +
-        '<td></td>' + // 热处理状态（手填）
-        '<td></td>' + // 制造/验收标准（手填）
+        '<td colspan="2">' + escHtml(r['规格型号']) + '</td>' +
+        '<td colspan="2">' + escHtml(r['材质']) + '</td>' +
+        '<td colspan="3"></td>' +
+        '<td colspan="3"></td>' +
         '<td style="text-align:center">' + escHtml(r['数量']) + '</td>' +
         '<td>' + escHtml(r['工单号'] || '') + '</td>' +
         '</tr>';
@@ -3364,14 +3425,15 @@ function exportWeituoDoc() {
     return html;
   }
 
+  // 尾行：委托单位/委托人/日期/检测单位/接收人/日期（留空手填）
   function buildFooter() {
-    return '<table style="margin-top:6px;"><tr>' +
-      '<td style="border:none;width:22%;">委托单位：</td>' +
-      '<td style="border:none;width:22%;">委托人：</td>' +
-      '<td style="border:none;width:16%;">日期：</td>' +
-      '<td style="border:none;width:16%;">检测单位：</td>' +
-      '<td style="border:none;width:12%;">接收人：</td>' +
-      '<td style="border:none;">日期：</td>' +
+    return '<table>' + colgroup() + '<tr>' +
+      '<td colspan="4">委托单位：</td>' +
+      '<td colspan="4">委托人：</td>' +
+      '<td colspan="4">日期：</td>' +
+      '<td colspan="4">检测单位：</td>' +
+      '<td colspan="4">接收人：</td>' +
+      '<td colspan="3">日期：</td>' +
       '</tr></table>';
   }
 
@@ -3379,12 +3441,10 @@ function exportWeituoDoc() {
   var pageCount = Math.ceil(data.length / ROWS_PER_PAGE);
   for (var p = 0; p < pageCount; p++) {
     if (p > 0) bodyHtml += WORD_PAGE_BREAK;
-    var chunk = data.slice(p * ROWS_PER_PAGE, (p + 1) * ROWS_PER_PAGE);
-    bodyHtml += buildPage(chunk, p * ROWS_PER_PAGE, p > 0);
-    if (p === pageCount - 1) bodyHtml += buildFooter(); // 委托单位签章行只在最后一页
+    bodyHtml += buildPage(data.slice(p * ROWS_PER_PAGE, (p + 1) * ROWS_PER_PAGE), p * ROWS_PER_PAGE, p > 0);
+    if (p === pageCount - 1) bodyHtml += buildFooter();
   }
-  bodyHtml += '<div class="pagenum">共 ' + data.length + ' 条 · 第 ' + pageCount + ' 页</div>';
-  downloadWordDoc('材料及配件检测委托单.doc', bodyHtml);
+  downloadWordDoc('材料及配件检测委托单.doc', bodyHtml, pageCss);
 }
 
 // ===== INIT =====
