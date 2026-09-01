@@ -349,15 +349,18 @@ function extractCertNo(text) {
   return '';
 }
 
-function classifyProduct(name, company) {
+function classifyProduct(name) {
   if (!name) return '管件';
+  // V7.7: 管件识别词放在管材之前，避免"无缝"误把弯头/三通/管帽等判为"管材"
+  // 管材按用户定义 = 钢管类别（不含弯头/三通/大小头等配件成品）
   if (/阀门|球阀|闸阀|蝶阀|截止阀|止回阀/.test(name)) return '阀门';
-  if (/法兰|FLANGE/.test(name) || /法兰/.test(company)) return '法兰';
+  if (/法兰|FLANGE/.test(name)) return '法兰';
   if (/螺栓|螺柱|螺母|紧固件/.test(name)) return '紧固件';
-  if (/钢管|无缝|焊管|流体输送/.test(name) || /钢管/.test(company)) return '管材';
+  if (/弯头|三通|异径管|管箍|管帽|大小头|管座|封头|短节|管堵|弯头90°|弯头45°/.test(name)) return '管件';
+  if (/钢管|焊管|流体输送/.test(name)) return '管材';
   if (/缠绕垫|垫片/.test(name)) return '垫片';
   // V7.4: 支吊架独立分类（吊架/支吊架/碟簧吊架），不属于管件
-  if (/吊架|支吊架|碟簧|弹簧支架|管道支架/.test(name) || /吊架/.test(company)) return '支吊架';
+  if (/吊架|支吊架|碟簧|弹簧支架|管道支架/.test(name)) return '支吊架';
   return '管件';
 }
 
@@ -1184,10 +1187,10 @@ function kvLookup(table, keyPattern, maxRow) {
   return '';
 }
 
-// ===== V7.6: 恒通产品质量证明书解析器（序号26格式：JL/ZJ-25 KV表格） =====
+// ===== V7.6: 恒通产品质量证明书解析器（序号26格式：JL/ZJ-25 KV表格）） =====
 function parseHengtongCert(table, certNo) {
-  var rowStr = table.slice(0, 5).map(function(r) { return r.join('|'); }).join('|');
-  // 检测条件：含"产品名称"+"原材料"+"供货状态"（区别于其他恒通合格证格式）
+  // V7.7: 检测拼接全表，避免"供货状态"在 row5 时被漏掉（序号29 page1）
+  var rowStr = table.map(function(r) { return r.join('|'); }).join('|');
   if (!/产品名称/.test(rowStr) || !/原材料/.test(rowStr) || !/供货状态/.test(rowStr)) return null;
   var name = kvLookup(table, '^产品名称$', 3);
   var mat = kvLookup(table, '^材质$', 3);
