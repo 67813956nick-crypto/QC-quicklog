@@ -1,0 +1,986 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        10,
+                        112,
+                        324,
+                        163
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                10,
+                                112,
+                                324,
+                                163
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        10,
+                                        112,
+                                        324,
+                                        163
+                                    ],
+                                    "type": "text",
+                                    "content": "特种设备制造许可证编号 TS No: TS2732M03-2026"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        13,
+                        149,
+                        281,
+                        204
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                13,
+                                149,
+                                281,
+                                204
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        13,
+                                        149,
+                                        281,
+                                        204
+                                    ],
+                                    "type": "text",
+                                    "content": "HET Wuxi Huaertai Machinery Manufacture Co., Ltd.\n无锡市华尔泰机械制造有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        10,
+                        204,
+                        262,
+                        243
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                10,
+                                204,
+                                262,
+                                243
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        10,
+                                        204,
+                                        262,
+                                        243
+                                    ],
+                                    "type": "text",
+                                    "content": "客户Client:中石化宁波镇海炼化有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        10,
+                        230,
+                        246,
+                        266
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                10,
+                                230,
+                                246,
+                                266
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        10,
+                                        230,
+                                        246,
+                                        266
+                                    ],
+                                    "type": "text",
+                                    "content": "客户Client.中石103 项目名称Project: 镇海基地二期1140"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        11,
+                        256,
+                        193,
+                        289
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                11,
+                                256,
+                                193,
+                                289
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        11,
+                                        256,
+                                        193,
+                                        289
+                                    ],
+                                    "type": "text",
+                                    "content": "合同号PO NO.:2302132970"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        611,
+                        68,
+                        791,
+                        103
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                611,
+                                68,
+                                791,
+                                103
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        611,
+                                        68,
+                                        791,
+                                        103
+                                    ],
+                                    "type": "text",
+                                    "content": "EN 10204:2004 (type 3.1)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        354,
+                        105,
+                        748,
+                        193
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                354,
+                                105,
+                                748,
+                                193
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        354,
+                                        105,
+                                        748,
+                                        193
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明书\nInspection Report for Quality"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        354,
+                        236,
+                        714,
+                        282
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                354,
+                                236,
+                                714,
+                                282
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        354,
+                                        236,
+                                        714,
+                                        282
+                                    ],
+                                    "type": "text",
+                                    "content": "证明书Certificate No.: HET2024-4945# (1) -IC-6"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        11,
+                        271,
+                        820,
+                        1250
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                11,
+                                271,
+                                820,
+                                1250
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        11,
+                                        271,
+                                        820,
+                                        1250
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                11,
+                                                271,
+                                                820,
+                                                1250
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"7\">产品描述 Product Description</td></tr><tr><td>序号No.</td><td>名称Name</td><td>材料编码Material Coding</td><td>规格Spec.</td><td>牌号Steel Grade</td><td>单位Unit</td><td>数量Q&#x27;ty</td></tr><tr><td>6</td><td>承插焊法兰</td><td>4701100081968223</td><td>CL150 DN15 SCH80 RF</td><td>A105</td><td>件</td><td>18</td></tr><tr><td rowspan=\"2\">原材料Raw Material</td><td>牌号Steel Grade</td><td>熔炼号Heat No.</td><td>锻件级别Forging Grade</td><td>锻造比Forging Rate</td><td>热处理炉号Heat Treatment No.</td><td>交货状态Delivery Condition</td></tr><tr><td>A105</td><td>S12311560QX</td><td>II</td><td>≥3</td><td>RP2406072</td><td>正火(N)</td></tr><tr><td colspan=\"7\">化学成分(%) Chemical composition</td></tr><tr><td></td><td>C</td><td>Si</td><td>Mn</td><td>S</td><td>P</td><td>Cr</td></tr><tr><td>标准值S.D</td><td>≤0.25</td><td>0.10-0.35</td><td>0.60-1.05</td><td>≤0.020</td><td>≤0.030</td><td>≤0.30</td></tr><tr><td>熔炼分析H.A</td><td>0.19</td><td>0.27</td><td>0.94</td><td>0.0013</td><td>0.013</td><td>0.05</td></tr><tr><td>成品分析P.A</td><td>0.20</td><td>0.24</td><td>0.94</td><td>0.006</td><td>0.015</td><td>0.08</td></tr><tr><td></td><td>Ni</td><td>Cu</td><td>Mo</td><td>Nb</td><td>V</td><td></td></tr><tr><td>标准值S.D</td><td>≤0.40</td><td>≤0.40</td><td>≤0.12</td><td>/</td><td>≤0.08</td><td></td></tr><tr><td>熔炼分析H.A</td><td>0.02</td><td>0.02</td><td>0.01</td><td>0.0001</td><td>0.001</td><td></td></tr><tr><td>成品分析P.A</td><td>0.02</td><td>0.02</td><td>0.01</td><td>0.002</td><td>0.001</td><td></td></tr><tr><td colspan=\"7\">机械性能 Mechanical property</td></tr><tr><td colspan=\"2\">取样尺寸Size of sample</td><td>项目Project</td><td>抗拉强度T.S.Rm(MPa)</td><td>屈服强度Y.S.Rp0.2(MPa)</td><td>断后延伸率E.L.A(%)</td><td>断面收缩率R.AZ(%)</td></tr><tr><td>D(mm)直径</td><td>G(mm)标距</td><td>标准值S.D</td><td>≥485</td><td>≥250</td><td>≥22</td><td>≥30</td></tr><tr><td>12.5±0.25</td><td>50</td><td>检测值T.D</td><td>493</td><td>313</td><td>37</td><td>71</td></tr><tr><td rowspan=\"2\">取样尺寸Size (mm)</td><td rowspan=\"2\">项目Project</td><td rowspan=\"2\">试验温度Temp.(°C)</td><td rowspan=\"2\">冲击功KV8(J)</td><td rowspan=\"2\">硬度HBW</td><td>晶间腐蚀</td><td>非金属夹杂物</td></tr><tr><td colspan=\"2\">Intergranular Corrosion</td></tr><tr><td rowspan=\"2\">10*10*55</td><td>标准值S.D</td><td>0</td><td>≥27</td><td>≤187</td><td rowspan=\"2\">/</td><td rowspan=\"2\">/</td></tr><tr><td>检测值T.D</td><td>0</td><td>158,166,169</td><td>151,153,153</td></tr><tr><td colspan=\"7\">制造要求Manufacture Requirement</td></tr><tr><td>无损检测NDT</td><td>超声波检测UT</td><td>磁粉检测MT</td><td>渗透检测PT</td><td>射线RT</td><td colspan=\"2\">检测结论Inspection Conclusion</td></tr><tr><td>标准S.D</td><td>NB/T47013.3-2023</td><td>NB/T47013.4-2015</td><td>/</td><td>/</td><td colspan=\"2\">按技术要求检验合格。</td></tr><tr><td>外观检查Visual Inspection</td><td>合格GOOD</td><td>尺寸检查Dim. Inspection</td><td>合格GOOD</td><td colspan=\"2\">产品标准Standard</td><td>SH/T 3406</td></tr><tr><td colspan=\"7\">经检验本产品质量符合标准及图样和合同规定要求,准予出厂。Upon inspection,the quality of the product is up to the standard and the drawings and the requirements of the contract,it is approved to leave the factory.</td></tr></table>",
+                                            "image_path": "fa1a4194dc70e8349a6fdcca6ebac491f64c2d1bbc2207010c5f45990142ada4.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        48,
+                        1258,
+                        308,
+                        1292
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                1258,
+                                308,
+                                1292
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        1258,
+                                        308,
+                                        1292
+                                    ],
+                                    "type": "text",
+                                    "content": "质量检验员Quality Examiner: 唐炜"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        49,
+                        1295,
+                        306,
+                        1334
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                1295,
+                                306,
+                                1334
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        1295,
+                                        306,
+                                        1334
+                                    ],
+                                    "type": "text",
+                                    "content": "质保工程师Quality Engineer 赵小民"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        336,
+                        1276,
+                        410,
+                        1347
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                336,
+                                1276,
+                                410,
+                                1347
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        336,
+                                        1276,
+                                        410,
+                                        1347
+                                    ],
+                                    "type": "text",
+                                    "content": "印唐鉴炜"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        526,
+                        1166,
+                        868,
+                        1382
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                526,
+                                1166,
+                                868,
+                                1382
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        526,
+                                        1166,
+                                        868,
+                                        1382
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                526,
+                                                1166,
+                                                868,
+                                                1382
+                                            ],
+                                            "type": "image",
+                                            "image_path": "282a494a82dadb4e3b7812903de92def5e5e3dbceb92dce0f285de534b53c26b.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "seal"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        858,
+                        9,
+                        909,
+                        242
+                    ],
+                    "type": "aside_text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                858,
+                                9,
+                                909,
+                                242
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        858,
+                                        9,
+                                        909,
+                                        242
+                                    ],
+                                    "type": "text",
+                                    "content": "260803-109"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8
+                }
+            ],
+            "page_size": [
+                916,
+                1394
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        10,
+                        112,
+                        324,
+                        163
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                10,
+                                112,
+                                324,
+                                163
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        10,
+                                        112,
+                                        324,
+                                        163
+                                    ],
+                                    "type": "text",
+                                    "content": "特种设备制造许可证编号 TS No: TS2732M03-2026"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        13,
+                        149,
+                        281,
+                        204
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                13,
+                                149,
+                                281,
+                                204
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        13,
+                                        149,
+                                        281,
+                                        204
+                                    ],
+                                    "type": "text",
+                                    "content": "HET Wuxi Huaertai Machinery Manufacture Co., Ltd.\n无锡市华尔泰机械制造有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        10,
+                        204,
+                        262,
+                        243
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                10,
+                                204,
+                                262,
+                                243
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        10,
+                                        204,
+                                        262,
+                                        243
+                                    ],
+                                    "type": "text",
+                                    "content": "客户Client:中石化宁波镇海炼化有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        10,
+                        230,
+                        246,
+                        266
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                10,
+                                230,
+                                246,
+                                266
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        10,
+                                        230,
+                                        246,
+                                        266
+                                    ],
+                                    "type": "text",
+                                    "content": "客户Client.中石103 项目名称Project: 镇海基地二期1140"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        11,
+                        256,
+                        193,
+                        289
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                11,
+                                256,
+                                193,
+                                289
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        11,
+                                        256,
+                                        193,
+                                        289
+                                    ],
+                                    "type": "text",
+                                    "content": "合同号PO NO.:2302132970"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        611,
+                        68,
+                        791,
+                        103
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                611,
+                                68,
+                                791,
+                                103
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        611,
+                                        68,
+                                        791,
+                                        103
+                                    ],
+                                    "type": "text",
+                                    "content": "EN 10204:2004 (type 3.1)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        354,
+                        105,
+                        748,
+                        193
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                354,
+                                105,
+                                748,
+                                193
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        354,
+                                        105,
+                                        748,
+                                        193
+                                    ],
+                                    "type": "text",
+                                    "content": "质量证明书\nInspection Report for Quality"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        354,
+                        236,
+                        714,
+                        282
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                354,
+                                236,
+                                714,
+                                282
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        354,
+                                        236,
+                                        714,
+                                        282
+                                    ],
+                                    "type": "text",
+                                    "content": "证明书Certificate No.: HET2024-4945# (1) -IC-6"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        11,
+                        271,
+                        820,
+                        1250
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                11,
+                                271,
+                                820,
+                                1250
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        11,
+                                        271,
+                                        820,
+                                        1250
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                11,
+                                                271,
+                                                820,
+                                                1250
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"7\">产品描述 Product Description</td></tr><tr><td>序号No.</td><td>名称Name</td><td>材料编码Material Coding</td><td>规格Spec.</td><td>牌号Steel Grade</td><td>单位Unit</td><td>数量Q&#x27;ty</td></tr><tr><td>6</td><td>承插焊法兰</td><td>4701100081968223</td><td>CL150 DN15 SCH80 RF</td><td>A105</td><td>件</td><td>18</td></tr><tr><td rowspan=\"2\">原材料Raw Material</td><td>牌号Steel Grade</td><td>熔炼号Heat No.</td><td>锻件级别Forging Grade</td><td>锻造比Forging Rate</td><td>热处理炉号Heat Treatment No.</td><td>交货状态Delivery Condition</td></tr><tr><td>A105</td><td>S12311560QX</td><td>II</td><td>≥3</td><td>RP2406072</td><td>正火(N)</td></tr><tr><td colspan=\"7\">化学成分(%) Chemical composition</td></tr><tr><td></td><td>C</td><td>Si</td><td>Mn</td><td>S</td><td>P</td><td>Cr</td></tr><tr><td>标准值S.D</td><td>≤0.25</td><td>0.10-0.35</td><td>0.60-1.05</td><td>≤0.020</td><td>≤0.030</td><td>≤0.30</td></tr><tr><td>熔炼分析H.A</td><td>0.19</td><td>0.27</td><td>0.94</td><td>0.0013</td><td>0.013</td><td>0.05</td></tr><tr><td>成品分析P.A</td><td>0.20</td><td>0.24</td><td>0.94</td><td>0.006</td><td>0.015</td><td>0.08</td></tr><tr><td></td><td>Ni</td><td>Cu</td><td>Mo</td><td>Nb</td><td>V</td><td></td></tr><tr><td>标准值S.D</td><td>≤0.40</td><td>≤0.40</td><td>≤0.12</td><td>/</td><td>≤0.08</td><td></td></tr><tr><td>熔炼分析H.A</td><td>0.02</td><td>0.02</td><td>0.01</td><td>0.0001</td><td>0.001</td><td></td></tr><tr><td>成品分析P.A</td><td>0.02</td><td>0.02</td><td>0.01</td><td>0.002</td><td>0.001</td><td></td></tr><tr><td colspan=\"7\">机械性能 Mechanical property</td></tr><tr><td colspan=\"2\">取样尺寸Size of sample</td><td>项目Project</td><td>抗拉强度T.S.Rm(MPa)</td><td>屈服强度Y.S.Rp0.2(MPa)</td><td>断后延伸率E.L.A(%)</td><td>断面收缩率R.AZ(%)</td></tr><tr><td>D(mm)直径</td><td>G(mm)标距</td><td>标准值S.D</td><td>≥485</td><td>≥250</td><td>≥22</td><td>≥30</td></tr><tr><td>12.5±0.25</td><td>50</td><td>检测值T.D</td><td>493</td><td>313</td><td>37</td><td>71</td></tr><tr><td rowspan=\"2\">取样尺寸Size (mm)</td><td rowspan=\"2\">项目Project</td><td rowspan=\"2\">试验温度Temp.(°C)</td><td rowspan=\"2\">冲击功KV8(J)</td><td rowspan=\"2\">硬度HBW</td><td>晶间腐蚀</td><td>非金属夹杂物</td></tr><tr><td colspan=\"2\">Intergranular Corrosion</td></tr><tr><td rowspan=\"2\">10*10*55</td><td>标准值S.D</td><td>0</td><td>≥27</td><td>≤187</td><td rowspan=\"2\">/</td><td rowspan=\"2\">/</td></tr><tr><td>检测值T.D</td><td>0</td><td>158,166,169</td><td>151,153,153</td></tr><tr><td colspan=\"7\">制造要求Manufacture Requirement</td></tr><tr><td>无损检测NDT</td><td>超声波检测UT</td><td>磁粉检测MT</td><td>渗透检测PT</td><td>射线RT</td><td colspan=\"2\">检测结论Inspection Conclusion</td></tr><tr><td>标准S.D</td><td>NB/T47013.3-2023</td><td>NB/T47013.4-2015</td><td>/</td><td>/</td><td colspan=\"2\">按技术要求检验合格。</td></tr><tr><td>外观检查Visual Inspection</td><td>合格GOOD</td><td>尺寸检查Dim. Inspection</td><td>合格GOOD</td><td colspan=\"2\">产品标准Standard</td><td>SH/T 3406</td></tr><tr><td colspan=\"7\">经检验本产品质量符合标准及图样和合同规定要求,准予出厂。Upon inspection,the quality of the product is up to the standard and the drawings and the requirements of the contract,it is approved to leave the factory.</td></tr></table>",
+                                            "image_path": "fa1a4194dc70e8349a6fdcca6ebac491f64c2d1bbc2207010c5f45990142ada4.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        48,
+                        1258,
+                        308,
+                        1292
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                1258,
+                                308,
+                                1292
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        1258,
+                                        308,
+                                        1292
+                                    ],
+                                    "type": "text",
+                                    "content": "质量检验员Quality Examiner: 唐炜"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        49,
+                        1295,
+                        306,
+                        1334
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                1295,
+                                306,
+                                1334
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        1295,
+                                        306,
+                                        1334
+                                    ],
+                                    "type": "text",
+                                    "content": "质保工程师Quality Engineer 赵小民"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        336,
+                        1276,
+                        410,
+                        1347
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                336,
+                                1276,
+                                410,
+                                1347
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        336,
+                                        1276,
+                                        410,
+                                        1347
+                                    ],
+                                    "type": "text",
+                                    "content": "印唐鉴炜"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        526,
+                        1166,
+                        868,
+                        1382
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                526,
+                                1166,
+                                868,
+                                1382
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        526,
+                                        1166,
+                                        868,
+                                        1382
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                526,
+                                                1166,
+                                                868,
+                                                1382
+                                            ],
+                                            "type": "image",
+                                            "image_path": "282a494a82dadb4e3b7812903de92def5e5e3dbceb92dce0f285de534b53c26b.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "index": 13,
+                    "sub_type": "seal"
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}
