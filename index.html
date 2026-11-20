@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>材料质量证明文件快速录入 V7.9</title>
+<title>材料质量证明文件快速录入 V7.10</title>
 <style>
 :root { --primary: #1a73e8; --success: #34a853; --warning: #fbbc04; --danger: #ea4335; --bg: #f8f9fa; --card: #fff; --border: #dee2e6; --text: #202124; --muted: #5f6368; }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -99,29 +99,43 @@ input[readonly] { background: #f1f3f4; color: var(--muted); }
 <body>
 
 <div class="header">
-  <h1>📋 材料质量证明文件快速录入 <span class="version">V7.9</span></h1>
+  <h1>📋 材料质量证明文件快速录入 <span class="version">V7.10</span></h1>
   <div style="display:flex;align-items:center;gap:12px;">
-    <button onclick="showRules()" style="font-size:12px;padding:4px 12px;cursor:pointer;border:1px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;">📋 V7.9使用规则</button>
+    <button onclick="showRules()" style="font-size:12px;padding:4px 12px;cursor:pointer;border:1px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;">📋 V7.10使用规则</button>
   </div>
 </div>
 
-<!-- ====== 导入质保书文件 (MD + JSON) ====== -->
+<!-- ====== 导入质保书文件 (JSON + 扫描件直传) V7.10 ====== -->
 <div class="upload-panel">
   <h2>📤 导入质保书文件</h2>
   <div style="display:flex;gap:12px;flex-wrap:wrap;">
-    <!-- MD入口 -->
-    <div class="upload-zone" id="uploadZoneMD" onclick="document.getElementById('fileInputMD').click()" style="flex:1;min-width:200px;">
-      <div class="icon">📄</div>
-      <div>点击选择或拖拽 <strong>MD 文件</strong>（可多选）</div>
-      <div class="hint">MinerU 导出的 .md 文件（含 HTML 表格）</div>
-      <input type="file" id="fileInputMD" accept=".md,.txt" multiple onchange="handleFile(event, 'md')">
-    </div>
     <!-- JSON入口 -->
     <div class="upload-zone" id="uploadZoneJSON" onclick="document.getElementById('fileInputJSON').click()" style="flex:1;min-width:200px;">
       <div class="icon">📋</div>
       <div>点击选择或拖拽 <strong>JSON 文件</strong>（可多选）</div>
       <div class="hint">MinerU 导出的 .json 文件（含页眉页脚，精度更高），支持一次导入多个</div>
       <input type="file" id="fileInputJSON" accept=".json" multiple onchange="handleFile(event, 'json')">
+    </div>
+    <!-- V7.10: 扫描件直传入口（MinerU API 自动解析） -->
+    <div class="upload-zone" id="uploadZoneScan" onclick="document.getElementById('fileInputScan').click()" style="flex:1;min-width:200px;">
+      <div class="icon">📷</div>
+      <div>点击选择或拖拽 <strong>PDF / 图片扫描件</strong>（可多选）</div>
+      <div class="hint">自动调用 MinerU 解析后直接入表，无需手动导出 JSON。单文件≤200MB/200页，一次≤50个</div>
+      <input type="file" id="fileInputScan" accept=".pdf,.png,.jpg,.jpeg,.jp2,.webp,.gif,.bmp" multiple onchange="handleScanFiles(event.target.files); event.target.value='';">
+    </div>
+  </div>
+  <!-- V7.10: 扫描件解析进度面板 -->
+  <div id="scanPanel" style="display:none;margin-top:10px;border:1px solid var(--border);border-radius:8px;padding:10px 14px;background:#fff;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;">
+      <strong style="font-size:13px;color:var(--primary);">⛏️ MinerU 解析进度</strong>
+      <span id="scanTotalPct" style="font-size:13px;font-weight:700;color:var(--primary);">0%</span>
+      <span id="scanQuota" style="font-size:12px;color:var(--muted);margin-left:auto;"></span>
+      <button id="scanCancelBtn" onclick="cancelScanBatch()" style="font-size:12px;padding:2px 10px;cursor:pointer;border:1px solid #ea4335;border-radius:4px;background:#fff;color:#ea4335;">取消</button>
+    </div>
+    <div class="progress-bar" style="height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;margin-bottom:8px;"><div id="scanTotalFill" style="height:100%;width:0%;background:var(--primary);transition:width 0.4s;border-radius:4px;"></div></div>
+    <div id="scanFileList" style="font-size:12px;"></div>
+    <div style="font-size:11px;color:var(--muted);margin-top:6px;line-height:1.6;">
+      额度说明：MinerU 每账号每天 <b>1000 页</b>高优先级解析额度（超出后仍可解析，仅排队优先级降低）；单文件上限 200MB / 200 页，单批最多 50 个文件。官方无剩余量查询接口，此处「今日已用」为本机统计（含页数估算），准确用量以 MinerU 控制台为准。
     </div>
   </div>
   <div class="upload-info" id="uploadInfo" style="display:none">
@@ -167,7 +181,7 @@ input[readonly] { background: #f1f3f4; color: var(--muted); }
 </div>
 
 <div class="footer">
-  材料质量证明文件快速录入 V7.9 | SH/T 3503—J132 | 自动解析 → 手动补填 → 导出CSV
+  材料质量证明文件快速录入 V7.10 | SH/T 3503—J132 | 自动解析 → 手动补填 → 导出CSV
 </div>
 
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
@@ -3427,7 +3441,6 @@ function clearData() {
   currentFileType = '';
   document.getElementById('uploadInfo').style.display = 'none';
   document.getElementById('parseLog').className = 'parse-log';
-  document.getElementById('fileInputMD').value = '';
   if (document.getElementById('fileInputJSON')) document.getElementById('fileInputJSON').value = '';
   refreshAll();
   showLog('数据已清空', '');
@@ -3446,23 +3459,379 @@ function reloadDefault() {
   currentFileType = '';
   document.getElementById('uploadInfo').style.display = 'none';
   document.getElementById('parseLog').className = 'parse-log';
-  document.getElementById('fileInputMD').value = '';
   if (document.getElementById('fileInputJSON')) document.getElementById('fileInputJSON').value = '';
   refreshAll();
 }
 
-// Drag & drop for MD zone
+// ===== V7.10: 扫描件直传 MinerU API（上传→轮询→下载zip→取layout.json→喂parseMinerUJson） =====
+// 部署形态：宝塔 nginx 反代（Token 存服务器，前端零密钥）。见 docs/部署指南.md
+//   /mineru-api/ → https://mineru.net/api/   （nginx 注入 Authorization: Bearer <token>）
+//   /mineru-oss/ → https://mineru.oss-cn-shanghai.aliyuncs.com/ （PUT 上传预签名链接）
+//   /mineru-cdn/ → https://cdn-mineru.openxlab.org.cn/ （GET 结果 zip）
+// 本地 file:// 双击打开时此功能不可用（无同源反代），JSON 导入不受影响。
+var MINERU_API_BASE = 'mineru-api';   // 相对路径：仅同源部署时可用
+var MINERU_MAX_FILE_MB = 200, MINERU_MAX_PAGES = 200, MINERU_MAX_BATCH = 50;
+var MINERU_DAILY_PRIORITY_PAGES = 1000;
+var SCAN_QUOTA_KEY = 'qc-mineru-quota-v1';
+var _scanBatch = null;   // {cancelled, files:[{name,size,state,pct,extracted,total,records,err}], batchId}
+
+function scanQuotaLoad() {
+  try {
+    var q = JSON.parse(localStorage.getItem(SCAN_QUOTA_KEY) || '{}');
+    var today = new Date().toISOString().slice(0, 10);
+    if (q.date !== today) return { date: today, pages: 0 };
+    return q;
+  } catch (e) { return { date: new Date().toISOString().slice(0, 10), pages: 0 }; }
+}
+function scanQuotaAdd(pages) {
+  var q = scanQuotaLoad();
+  q.pages += pages;
+  localStorage.setItem(SCAN_QUOTA_KEY, JSON.stringify(q));
+  scanQuotaRender();
+}
+function scanQuotaRender() {
+  var el = document.getElementById('scanQuota');
+  if (!el) return;
+  var q = scanQuotaLoad();
+  var over = q.pages >= MINERU_DAILY_PRIORITY_PAGES;
+  el.innerHTML = '今日已用（本机统计）: <b style="color:' + (over ? '#ea4335' : 'var(--success)') + '">' + q.pages + '</b> / ' + MINERU_DAILY_PRIORITY_PAGES + ' 页高优先级额度' + (over ? '（已超，排队优先级降低）' : '');
+}
+
+function scanApiAvailable() {
+  // file:// 或跨域打开时反代不可达
+  return location.protocol === 'http:' || location.protocol === 'https:';
+}
+
+function handleScanFiles(fileList) {
+  var files = Array.from(fileList || []);
+  if (files.length === 0) return;
+  if (!scanApiAvailable()) {
+    showLog('扫描件直传仅在网页版（http/https 部署）可用：本地双击打开无 MinerU 反代。请改用 JSON 导入，或访问网页版。', 'error');
+    return;
+  }
+  if (_scanBatch && !_scanBatch.done) {
+    showLog('上一批扫描件仍在解析中，请等待完成或先取消。', 'warn');
+    return;
+  }
+  var okExts = ['pdf', 'png', 'jpg', 'jpeg', 'jp2', 'webp', 'gif', 'bmp'];
+  var valid = [], skipped = [];
+  files.forEach(function(f) {
+    var ext = f.name.split('.').pop().toLowerCase();
+    if (okExts.indexOf(ext) < 0) { skipped.push(f.name + '（格式不支持）'); return; }
+    if (f.size > MINERU_MAX_FILE_MB * 1024 * 1024) { skipped.push(f.name + '（超' + MINERU_MAX_FILE_MB + 'MB）'); return; }
+    valid.push(f);
+  });
+  if (valid.length > MINERU_MAX_BATCH) {
+    skipped.push('超出单批' + MINERU_MAX_BATCH + '个上限，仅取前' + MINERU_MAX_BATCH + '个');
+    valid = valid.slice(0, MINERU_MAX_BATCH);
+  }
+  if (skipped.length) showLog('跳过：' + skipped.join('；'), 'warn');
+  if (valid.length === 0) return;
+
+  _scanBatch = {
+    cancelled: false, done: false, batchId: '',
+    files: valid.map(function(f) {
+      return { file: f, name: f.name, size: f.size, state: 'uploading', pct: 0, extracted: 0, total: 0, records: null, err: '' };
+    })
+  };
+  document.getElementById('scanPanel').style.display = '';
+  document.getElementById('scanCancelBtn').style.display = '';
+  scanQuotaRender();
+  scanRender();
+  scanRunBatch(_scanBatch);
+}
+
+function cancelScanBatch() {
+  if (!_scanBatch || _scanBatch.done) return;
+  _scanBatch.cancelled = true;
+  scanRender();
+  showLog('已取消本批解析（已提交到 MinerU 的任务仍会计入账号额度）。', 'warn');
+}
+
+// 阶段权重：上传 0-20%，排队/解析 20-85%（按页数），下载解压 85-95%，入表解析 95-100%
+function scanFilePct(f) {
+  if (f.state === 'failed') return f.pct;
+  if (f.state === 'done') return 100;
+  if (f.state === 'uploading') return Math.round(f.pct * 0.2);
+  if (f.state === 'waiting-file' || f.state === 'pending') return 20;
+  if (f.state === 'running') {
+    var p = f.total > 0 ? f.extracted / f.total : 0;
+    return 20 + Math.round(p * 65);
+  }
+  if (f.state === 'converting') return 85;
+  if (f.state === 'downloading') return 85 + Math.round(f.pct * 0.1);
+  if (f.state === 'parsing') return 97;
+  return f.pct || 0;
+}
+function scanStateLabel(f) {
+  var m = { 'uploading': '⬆️ 上传中', 'waiting-file': '⏳ 等待提交', 'pending': '⏳ 排队中', 'running': '⛏️ 解析中', 'converting': '🔄 格式转换', 'downloading': '⬇️ 下载结果', 'parsing': '📋 入表解析', 'done': '✅ 完成', 'failed': '❌ 失败', 'cancelled': '🚫 已取消' };
+  var s = m[f.state] || f.state;
+  if (f.state === 'running' && f.total > 0) s += ' ' + f.extracted + '/' + f.total + '页';
+  if (f.state === 'done' && f.records != null) s += ' ' + f.records + '条';
+  if (f.state === 'failed' && f.err) s += '：' + f.err;
+  return s;
+}
+function scanRender() {
+  if (!_scanBatch) return;
+  var list = document.getElementById('scanFileList');
+  var total = 0;
+  list.innerHTML = _scanBatch.files.map(function(f) {
+    var pct = scanFilePct(f);
+    total += pct;
+    var color = f.state === 'failed' ? '#ea4335' : (f.state === 'done' ? 'var(--success)' : 'var(--primary)');
+    return '<div style="display:flex;align-items:center;gap:8px;padding:3px 0;">' +
+      '<span style="flex:0 0 220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + escA(f.name) + '">' + escA(f.name) + '</span>' +
+      '<div style="flex:1;height:6px;background:#e0e0e0;border-radius:3px;overflow:hidden;"><div style="height:100%;width:' + pct + '%;background:' + color + ';transition:width 0.4s;"></div></div>' +
+      '<span style="flex:0 0 44px;text-align:right;font-weight:600;">' + pct + '%</span>' +
+      '<span style="flex:0 0 200px;color:var(--muted);">' + escA(scanStateLabel(f)) + '</span></div>';
+  }).join('');
+  var avg = Math.round(total / _scanBatch.files.length);
+  document.getElementById('scanTotalPct').textContent = avg + '%';
+  document.getElementById('scanTotalFill').style.width = avg + '%';
+}
+
+function scanRunBatch(batch) {
+  // 1. 申请批量上传链接（is_ocr=true 对齐现有 fixtures 的 OCR 输出；pipeline 模型对齐 hybrid 后端产出格式）
+  fetch(MINERU_API_BASE + '/v4/file-urls/batch', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      files: batch.files.map(function(f, i) { return { name: f.name, is_ocr: true, data_id: 'qc-' + Date.now() + '-' + i }; }),
+      model_version: 'pipeline',
+      language: 'ch',
+      enable_table: true,
+      enable_formula: false
+    })
+  }).then(function(r) { return r.json(); }).then(function(res) {
+    if (batch.cancelled) return;
+    if (res.code !== 0) throw new Error('申请上传链接失败: ' + (res.msg || res.msgCode || JSON.stringify(res)));
+    batch.batchId = res.data.batch_id;
+    var urls = res.data.file_urls;
+    // 2. 并发 PUT 上传（预签名 URL 改写到同源反代路径；不带 Content-Type）
+    var uploads = batch.files.map(function(f, i) {
+      return scanUploadFile(f, urls[i], batch);
+    });
+    return Promise.all(uploads).then(function() {
+      if (batch.cancelled) return;
+      // 3. 轮询批量结果
+      return scanPollBatch(batch);
+    });
+  }).catch(function(err) {
+    if (batch.cancelled) { batch.done = true; scanRender(); return; }
+    batch.files.forEach(function(f) { if (f.state !== 'done') { f.state = 'failed'; f.err = err.message || String(err); } });
+    batch.done = true;
+    scanRender();
+    document.getElementById('scanCancelBtn').style.display = 'none';
+    showLog('扫描件解析失败：' + (err.message || err) + '\n若提示鉴权/网络错误，请检查宝塔反代配置（docs/部署指南.md）。', 'error');
+  });
+}
+
+function scanUploadFile(f, url, batch) {
+  return new Promise(function(resolve, reject) {
+    // 预签名 URL: https://mineru.oss-cn-shanghai.aliyuncs.com/api-upload/xxx?签名 → /mineru-oss/api-upload/xxx?签名
+    var proxied = url.replace(/^https?:\/\/mineru\.oss-cn-shanghai\.aliyuncs\.com\//, 'mineru-oss/');
+    if (proxied === url) { reject(new Error('上传链接域名非预期(' + url.slice(0, 60) + '...)，请更新反代规则')); return; }
+    var xhr = new XMLHttpRequest();
+    xhr.open('PUT', proxied);
+    xhr.upload.onprogress = function(e) {
+      if (e.lengthComputable) { f.pct = Math.round(e.loaded / e.total * 100); scanRender(); }
+    };
+    xhr.onload = function() {
+      if (batch.cancelled) { f.state = 'cancelled'; resolve(); return; }
+      if (xhr.status >= 200 && xhr.status < 300) { f.state = 'waiting-file'; f.pct = 100; scanRender(); resolve(); }
+      else reject(new Error(f.name + ' 上传失败 HTTP ' + xhr.status));
+    };
+    xhr.onerror = function() { reject(new Error(f.name + ' 上传网络错误（检查 /mineru-oss/ 反代）')); };
+    xhr.send(f.file);
+  });
+}
+
+function scanPollBatch(batch) {
+  return new Promise(function(resolve, reject) {
+    var started = Date.now();
+    var TIMEOUT = 30 * 60 * 1000;   // 30分钟兜底
+    function poll() {
+      if (batch.cancelled) { batch.done = true; scanRender(); resolve(); return; }
+      if (Date.now() - started > TIMEOUT) { reject(new Error('解析超时（30分钟），请到 MinerU 控制台查看任务状态')); return; }
+      fetch(MINERU_API_BASE + '/v4/extract-results/batch/' + batch.batchId)
+        .then(function(r) { return r.json(); })
+        .then(function(res) {
+          if (res.code !== 0) throw new Error('查询进度失败: ' + (res.msg || res.msgCode));
+          var results = (res.data && res.data.extract_result) || [];
+          var allDone = true;
+          batch.files.forEach(function(f) {
+            if (f.state === 'done' || f.state === 'failed' || f.state === 'cancelled') return;
+            var r = null;
+            for (var i = 0; i < results.length; i++) {
+              if (results[i].file_name === f.name || (results[i].data_id && f.name.indexOf(results[i].file_name) >= 0)) { r = results[i]; break; }
+            }
+            if (!r) { allDone = false; return; }
+            f.state = r.state;
+            if (r.state === 'running' && r.extract_progress) {
+              f.extracted = r.extract_progress.extracted_pages || 0;
+              f.total = r.extract_progress.total_pages || 0;
+            }
+            if (r.state === 'done') { f.zipUrl = r.full_zip_url; f.total = f.total || (r.extract_progress && r.extract_progress.total_pages) || 0; }
+            if (r.state === 'failed') { f.err = r.err_msg || '解析失败'; }
+            if (r.state !== 'done' && r.state !== 'failed') allDone = false;
+          });
+          scanRender();
+          if (!allDone) { setTimeout(poll, 3000); return; }
+          // 全部到终态 → 逐个下载 zip 解析入表
+          scanFetchResults(batch).then(resolve).catch(reject);
+        })
+        .catch(function(err) {
+          // 单次查询失败不中断，重试；连续网络错误由超时兜底
+          setTimeout(poll, 5000);
+        });
+    }
+    poll();
+  });
+}
+
+function scanFetchResults(batch) {
+  var chain = Promise.resolve();
+  var okResults = [];
+  batch.files.forEach(function(f) {
+    chain = chain.then(function() {
+      if (batch.cancelled) { if (f.state !== 'done') f.state = 'cancelled'; return; }
+      if (f.state === 'failed') return;
+      f.state = 'downloading'; f.pct = 0; scanRender();
+      var proxied = (f.zipUrl || '').replace(/^https?:\/\/cdn-mineru\.openxlab\.org\.cn\//, 'mineru-cdn/');
+      if (!proxied || proxied === f.zipUrl) { f.state = 'failed'; f.err = '结果链接域名非预期，请更新反代规则'; scanRender(); return; }
+      return scanDownloadZip(proxied, function(p) { f.pct = p; scanRender(); })
+        .then(function(buf) {
+          f.state = 'parsing'; scanRender();
+          return unzipFindLayout(buf);
+        })
+        .then(function(layoutJson) {
+          var result = parseMinerUJson(layoutJson);
+          f.records = result.records.length;
+          f.state = 'done';
+          // 页数：优先 API 报的 total_pages，兜底 layout 页数
+          var pages = f.total || (layoutJson.pdf_info || []).length || 1;
+          scanQuotaAdd(pages);
+          if (result.records.length > 0) okResults.push({ name: f.name, records: result.records, log: result.log });
+          scanRender();
+        })
+        .catch(function(err) {
+          f.state = 'failed'; f.err = err.message || String(err);
+          scanRender();
+        });
+    });
+  });
+  return chain.then(function() {
+    batch.done = true;
+    document.getElementById('scanCancelBtn').style.display = 'none';
+    scanRender();
+    // 入表：与 handleFile.finishBatch 相同的累积逻辑
+    var totalNew = okResults.reduce(function(s, r) { return s + r.records.length; }, 0);
+    var beforeCount = data.length;
+    okResults.forEach(function(r) { data = data.concat(r.records); });
+    if (okResults.length > 0) {
+      currentFileName = okResults.map(function(r) { return r.name; }).join(', ');
+      currentFileType = 'json';
+      document.getElementById('fileName').textContent = '[扫描件' + okResults.length + '个] ' + currentFileName + ' (' + new Date().toLocaleTimeString() + ')';
+      document.getElementById('fileType').textContent = '扫描件→JSON';
+      document.getElementById('fileType').style.background = '#e8f5e9';
+      document.getElementById('uploadInfo').style.display = '';
+    }
+    var logParts = batch.files.map(function(f) {
+      if (f.state === 'done') return '✅ ' + f.name + '：' + f.records + ' 条';
+      if (f.state === 'cancelled') return '🚫 ' + f.name + '：已取消';
+      return '❌ ' + f.name + '：' + (f.err || '未知错误');
+    });
+    logParts.push('\n累计: ' + beforeCount + ' + ' + totalNew + ' = ' + data.length + ' 条');
+    showLog(logParts.join('\n'), totalNew > 0 ? '' : 'warn');
+    if (totalNew > 0) saveData();
+    refreshAll();
+  });
+}
+
+function scanDownloadZip(url, onPct) {
+  return new Promise(function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType = 'arraybuffer';
+    xhr.onprogress = function(e) { if (e.lengthComputable) onPct(Math.round(e.loaded / e.total * 100)); };
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 300) resolve(xhr.response);
+      else reject(new Error('下载结果失败 HTTP ' + xhr.status));
+    };
+    xhr.onerror = function() { reject(new Error('下载结果网络错误（检查 /mineru-cdn/ 反代）')); };
+    xhr.send();
+  });
+}
+
+// ===== 最小 ZIP 解压器（store/deflate；deflate 用浏览器原生 DecompressionStream） =====
+// 只取 *_middle.json / layout.json（= pdf_info 格式，与现有 JSON 导入完全同源）
+function unzipFindLayout(buf) {
+  var dv = new DataView(buf);
+  var u8 = new Uint8Array(buf);
+  // 1. 找 EOCD（末尾 22 字节起，向前扫注释区）
+  var eocd = -1;
+  for (var i = u8.length - 22; i >= Math.max(0, u8.length - 22 - 65536); i--) {
+    if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; }
+  }
+  if (eocd < 0) return Promise.reject(new Error('zip 格式错误：找不到目录结尾'));
+  var count = dv.getUint16(eocd + 10, true);
+  var cdOff = dv.getUint32(eocd + 16, true);
+  // 2. 遍历中央目录，找 layout/middle json
+  var entries = [];
+  var p = cdOff;
+  for (var n = 0; n < count; n++) {
+    if (dv.getUint32(p, true) !== 0x02014b50) break;
+    var method = dv.getUint16(p + 10, true);
+    var csize = dv.getUint32(p + 20, true);
+    var nameLen = dv.getUint16(p + 28, true);
+    var extraLen = dv.getUint16(p + 30, true);
+    var commentLen = dv.getUint16(p + 32, true);
+    var lho = dv.getUint32(p + 42, true);
+    var name = new TextDecoder('utf-8').decode(u8.subarray(p + 46, p + 46 + nameLen));
+    entries.push({ name: name, method: method, csize: csize, lho: lho });
+    p += 46 + nameLen + extraLen + commentLen;
+  }
+  // 优先级：*_middle.json > layout.json > *_layout.json
+  var target = null;
+  var mid = entries.filter(function(e) { return /_middle\.json$/i.test(e.name); });
+  var lay = entries.filter(function(e) { return /(^|\/)layout\.json$/i.test(e.name) || /_layout\.json$/i.test(e.name); });
+  if (mid.length) target = mid[0];
+  else if (lay.length) target = lay[0];
+  if (!target) return Promise.reject(new Error('zip 中未找到 middle/layout.json，实际文件: ' + entries.map(function(e) { return e.name; }).slice(0, 8).join(', ')));
+  // 3. 读本地头拿数据偏移
+  var lh = target.lho;
+  if (dv.getUint32(lh, true) !== 0x04034b50) return Promise.reject(new Error('zip 本地头损坏'));
+  var lNameLen = dv.getUint16(lh + 26, true);
+  var lExtraLen = dv.getUint16(lh + 28, true);
+  var dataStart = lh + 30 + lNameLen + lExtraLen;
+  var comp = u8.subarray(dataStart, dataStart + target.csize);
+  var rawPromise;
+  if (target.method === 0) rawPromise = Promise.resolve(comp);
+  else if (target.method === 8) {
+    if (typeof DecompressionStream === 'undefined') return Promise.reject(new Error('当前浏览器不支持 DecompressionStream，请用 Chrome/Edge 90+'));
+    var ds = new DecompressionStream('deflate-raw');
+    var stream = new Blob([comp]).stream().pipeThrough(ds);
+    rawPromise = new Response(stream).arrayBuffer().then(function(b) { return new Uint8Array(b); });
+  } else return Promise.reject(new Error('zip 压缩方式不支持: ' + target.method));
+  return rawPromise.then(function(raw) {
+    var text = new TextDecoder('utf-8').decode(raw);
+    var j = JSON.parse(text);
+    if (!j.pdf_info) throw new Error('layout.json 缺少 pdf_info 字段（可能模型版本不符，请用 pipeline）');
+    return j;
+  });
+}
+
+// Drag & drop for 扫描件直传 zone (V7.10)
 (function() {
-  const zoneMD = document.getElementById('uploadZoneMD');
-  zoneMD.addEventListener('dragover', function(e) { e.preventDefault(); zoneMD.classList.add('dragover'); });
-  zoneMD.addEventListener('dragleave', function() { zoneMD.classList.remove('dragover'); });
-  zoneMD.addEventListener('drop', function(e) {
+  const zoneScan = document.getElementById('uploadZoneScan');
+  if (!zoneScan) return;
+  zoneScan.addEventListener('dragover', function(e) { e.preventDefault(); zoneScan.classList.add('dragover'); });
+  zoneScan.addEventListener('dragleave', function() { zoneScan.classList.remove('dragover'); });
+  zoneScan.addEventListener('drop', function(e) {
     e.preventDefault();
-    zoneMD.classList.remove('dragover');
-    const file = e.dataTransfer.files[0];
-    if (file) {
-      document.getElementById('fileInputMD').files = e.dataTransfer.files;
-      handleFile({ target: { files: [file] } }, 'md');
+    zoneScan.classList.remove('dragover');
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      handleScanFiles(e.dataTransfer.files);
     }
   });
 })();
@@ -4023,7 +4392,7 @@ function closeRules() {
 <!-- 使用规则模态框 -->
 <div class="modal-overlay" id="rulesOverlay" onclick="closeRules()" style="display:none;"></div>
 <div class="modal" id="rulesModal" style="display:none;max-width:700px;max-height:80vh;overflow-y:auto;">
-  <h3 style="margin-bottom:12px;">📋 V7.9 版本使用规则</h3>
+  <h3 style="margin-bottom:12px;">📋 V7.10 版本使用规则</h3>
   <div style="font-size:13px;line-height:1.8;">
     <h4 style="margin:12px 0 6px;color:var(--primary);">一、阀门</h4>
     <ul style="margin-left:20px;">
@@ -4102,7 +4471,8 @@ function closeRules() {
       <li>排除客户/业主单位名称（如"客户名称/Customer"标签后的甲方公司）不作为制造厂家</li>
       <li><b>V7.4新增</b>：青山钢管英文表头无缝管（序号23）、方顿仪表卡套无缝管（序号24）、泰克装箱清单（序号25）</li>
       <li><b>V7.5新增</b>：明细表格所有字段（产品名称/规格型号/材质/数量/单位/炉号/批号/制造厂家/证书出厂编号/自编号）均可直接修改；行首 🗑️ 可删除整行</li>
-      <li>支持MD和JSON两种导入格式，JSON含页眉页脚信息，精度更高</li>
+      <li>支持 JSON 导入（含页眉页脚信息，精度更高）；<b>V7.10 新增</b>：PDF/图片扫描件直传——自动调用 MinerU API 解析后直接入表，全程显示百分比进度（上传→排队→逐页解析→下载→入表），无需再手动"MinerU 导出 JSON 再导入"</li>
+      <li><b>V7.10 扫描件直传限制</b>：单文件≤200MB/200页，单批≤50个；每账号每天 1000 页高优先级额度（超出仍可解析、排队变慢）；该功能仅网页版可用（需服务器反代 MinerU API），本地双击打开请用 JSON 导入</li>
       <li>可多次导入不同质保书，数据自动累积；点击"清空数据"重置</li>
     </ul>
   </div>
@@ -4114,7 +4484,8 @@ function closeRules() {
 <!-- 网页版部署用：浏览器一致性提示（纯HTML，不影响解析逻辑） -->
 <footer style="margin-top:24px;padding:10px 24px;background:#eef2f7;color:#5f6368;font-size:12px;text-align:center;border-top:1px solid #dee2e6;">
   本工具为纯前端网页应用，在 <strong>Chrome / Edge / Firefox / Safari</strong> 等现代浏览器中表现完全一致，无需安装插件。
-  所有数据仅在本机浏览器内处理，<strong>不会上传到任何服务器</strong>。推荐使用 Chrome 或 Edge 打开。
+  JSON 导入与导出均在本机浏览器内完成，<strong>不经过本站服务器</strong>。推荐使用 Chrome 或 Edge 打开。<br>
+  <span style="color:#e65100;">例外（V7.10）：使用「扫描件直传」时，所选文件会上传至 MinerU 官方解析服务（mineru.net）进行 OCR 解析，请知悉。</span>
 </footer>
 </body>
 </html>

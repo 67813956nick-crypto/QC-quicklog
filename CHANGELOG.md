@@ -153,6 +153,28 @@
 
 ---
 
+## V7.10（2026-11-20）
+
+### 扫描件直传 MinerU API（提效：省掉"MinerU 手动导出 JSON 再导入"中间步骤）
+- **导入区改版**：左侧 MD 入口移除（`parseMinerUmd` 代码保留可回滚），改为 JSON 导入；右侧新增「PDF/图片扫描件直传」卡片（pdf/png/jpg/jpeg/jp2/webp/gif/bmp，可多选可拖拽）
+- **全自动链路**：申请批量上传链接（`/v4/file-urls/batch`，`is_ocr=true` + `pipeline` 模型对齐现有 fixtures 格式）→ XHR PUT 上传（带上传进度）→ 3 秒轮询批量结果（`/v4/extract-results/batch/{id}`）→ 下载结果 zip → **浏览器内解压**取 `*_middle.json`（= pdf_info 格式，与手动导出完全同源）→ 喂既有 `parseMinerUJson` 规则解析器 → 自动累积入表
+- **百分比进度**：每文件独立进度条 + 批次总进度，阶段权重：上传 0-20% → 排队 20% → 逐页解析 20-85%（API 返回 `extracted_pages/total_pages` 真实页数）→ 格式转换 85% → 下载解压 85-95% → 入表 95-100%；支持取消（已提交任务仍计额度）；30 分钟超时兜底
+- **零依赖 ZIP 解压**：手写中央目录解析（store + deflate），deflate 用浏览器原生 `DecompressionStream('deflate-raw')`（Chrome/Edge 90+），不引入任何外部库，保持单 HTML 文件
+- **额度说明**：单文件 ≤200MB/200 页、单批 ≤50 个前置校验；每账号每天 1000 页高优先级额度（超出仍可解析、排队优先级降低，官方原文）；官方无剩余量查询接口 → 页面显示「今日已用（本机统计）X/1000 页」，localStorage 按日累计
+- **部署形态**：MinerU API 与结果 CDN 均拒绝浏览器 CORS（实测 OPTIONS 403）→ 宝塔 nginx 三段反代（`/mineru-api/`、`/mineru-oss/`、`/mineru-cdn/`），**Token 只存服务器 nginx 配置**，前端零密钥；本地 file:// 打开时直传不可用（明确提示），JSON 导入不受影响
+- **数据安全声明更新**：页脚注明"扫描件直传会上传 MinerU 官方服务"例外；JSON 导入/导出仍全本机
+- 新增 `deploy/mineru-proxy.conf`（占位符版，真实 Token 版只放服务器不入库）；部署指南新增「四点五」节
+
+### 文件名升版
+- 主应用 `材料录入桥接工具_v7.9.html` → `_v7.10.html`（上一提交已先把滞后的 v7.7 文件名对齐到 v7.9）；测试脚本/README/部署指南引用同步
+
+### 测试结果
+- **49 通过 / 9 偏差（与基线完全一致）/ 0 缺失 / 0 错误 / 总计 58**——解析器零改动，回归零破坏
+- ZIP 解压器端到端验证：手工构造 deflate/store 两种 zip 装入 fixtures 序号52/53/1 → 解压 → parseMinerUJson → 8条/2条/1条全对
+- ⚠️ 待真实 Token 验证：用户提供的 Access Key/Secret Key 实测 401（A0202），Bearer Token 实测 401（A0211 token expired）——**真实 API 端到端（上传→轮询→下载）尚未跑通**，需用户到 mineru.net API 管理页重新创建有效 Token 后在网页版实测
+
+---
+
 ## V7.6（2026-08-30）
 
 ### 新增序号（2个）
