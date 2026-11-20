@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>材料质量证明文件快速录入 V7.8</title>
+<title>材料质量证明文件快速录入 V7.9</title>
 <style>
 :root { --primary: #1a73e8; --success: #34a853; --warning: #fbbc04; --danger: #ea4335; --bg: #f8f9fa; --card: #fff; --border: #dee2e6; --text: #202124; --muted: #5f6368; }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -99,9 +99,9 @@ input[readonly] { background: #f1f3f4; color: var(--muted); }
 <body>
 
 <div class="header">
-  <h1>📋 材料质量证明文件快速录入 <span class="version">V7.8</span></h1>
+  <h1>📋 材料质量证明文件快速录入 <span class="version">V7.9</span></h1>
   <div style="display:flex;align-items:center;gap:12px;">
-    <button onclick="showRules()" style="font-size:12px;padding:4px 12px;cursor:pointer;border:1px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;">📋 V7.7使用规则</button>
+    <button onclick="showRules()" style="font-size:12px;padding:4px 12px;cursor:pointer;border:1px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;">📋 V7.9使用规则</button>
   </div>
 </div>
 
@@ -167,7 +167,7 @@ input[readonly] { background: #f1f3f4; color: var(--muted); }
 </div>
 
 <div class="footer">
-  材料质量证明文件快速录入 V7.7 | SH/T 3503—J132 | 自动解析 → 手动补填 → 导出CSV
+  材料质量证明文件快速录入 V7.9 | SH/T 3503—J132 | 自动解析 → 手动补填 → 导出CSV
 </div>
 
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
@@ -299,7 +299,9 @@ function detectCompany(text) {
     // V7.8序号32新增（3.json 12页质保书）
     [/唐山正丰|正丰钢铁/, '唐山正丰钢铁有限公司'],
     [/金洲管道/, '浙江金洲管道科技股份有限公司'],
-    [/武汉钢铁|Wuhan\s*Iron/i, '武汉钢铁有限公司']
+    [/武汉钢铁|Wuhan\s*Iron/i, '武汉钢铁有限公司'],
+    // V7.9 LRR1: 润扬管件质保书（标题"润扬管件质量证明书 RUNYANG FITTING..."；注意收货单位宁波中金石化是甲方，靠映射优先命中避免兜底误取）
+    [/润扬管件|RUNYANG/i, '江苏润扬管件有限责任公司']
   ];
   for (var i = 0; i < pats.length; i++) {
     if (pats[i][0].test(text)) return pats[i][1];
@@ -338,6 +340,8 @@ function extractCertNo(text) {
     /质保书编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
     // V7.8序号32: 金洲"证明书号:DZ202410053362"、宝旭"质保书号 MILLSHEETNO. : 240815H00361"
     /证明书号[:：\s]*([A-Za-z0-9\-]{6,25})/,
+    // V7.9 LRR1: 润扬"证明书编号(CERTIFICATIE No.): 20260713-3"（编号与冒号间带括号注释，且CERTIFICATIE为原文拼写）
+    /证明书编号\s*(?:\([^)]{0,40}\))?\s*[:：]\s*([A-Za-z0-9\-]{6,25})/,
     /质保书号\s*(?:MILL\s*SHEET\s*NO\.?)?\s*[:：]?\s*([A-Za-z0-9\-]{6,25})/i,
     /证书号[:：\s]*([A-Za-z0-9\-]{6,25})/,
     /质证书编号[:：\s]*([A-Za-z0-9\-]{6,25})/,
@@ -1196,7 +1200,40 @@ function parseFitting(table, certNo) {
     if (nameCol >= 0) { hdrRow = ri; break; }
   }
   if (nameCol < 0) return null;
-  
+
+  // V7.9 LRR1(润扬): 表头无"规格"列时，"物料描述Material description"即规格+材质混合列
+  var hdrCells = table[hdrRow] || [];
+  if (specCol < 0) {
+    for (var ci6 = 0; ci6 < hdrCells.length; ci6++) {
+      var hc = (hdrCells[ci6] || '').replace(/\s+/g, '');
+      if (/物料描述|Materialdescription/i.test(hc) && ci6 !== nameCol) { specCol = ci6; break; }
+    }
+  }
+  // V7.9 LRR1(润扬): 产品批号 / 型式试验报告编号列
+  var batchCol = -1, reportCol = -1;
+  for (var ci7 = 0; ci7 < hdrCells.length; ci7++) {
+    var hc2 = (hdrCells[ci7] || '').replace(/\s+/g, '');
+    if (batchCol < 0 && /产品批号|ProductionBatch/i.test(hc2)) batchCol = ci7;
+    if (reportCol < 0 && /型式试验报告编号|Typetestreport/i.test(hc2)) reportCol = ci7;
+  }
+  // V7.9 LRR1(润扬): 同一张表下半区有化学成份表，"炉号 Heat No."按序号映射回产品行
+  var heatMap = {};
+  for (var ri7 = 0; ri7 < table.length; ri7++) {
+    if (/炉号|Heat\s*No/i.test(table[ri7].join('|'))) {
+      for (var ri8 = ri7 + 1; ri8 < table.length; ri8++) {
+        var hRow2 = table[ri8] || [];
+        var seqC = (hRow2[0] || '').trim();
+        var heatC = hRow2.length > 1 ? (hRow2[1] || '').trim() : '';
+        if (/^\d+$/.test(seqC) && heatC && /^[\d][\dA-Za-z\-]*$/.test(heatC)) {
+          heatMap[seqC] = heatC;
+        } else if (!/^\d+$/.test(seqC) && seqC && /表面质量|尺寸检验|备注|结论|经检验/.test(seqC)) {
+          break;
+        }
+      }
+      break;
+    }
+  }
+
   // 从表头行下面的数据行读取（也检查表头行本身的数据值）
   // 支持多行数据（序号21格式：多个管件在同一表格中）
   var fittingRecords = [];
@@ -1219,7 +1256,22 @@ function parseFitting(table, certNo) {
       if (specCol >= 0 && specCol < dataRow.length) fs = (dataRow[specCol] || '').trim();
       var qtyVal = qtyCol >= 0 && qtyCol < dataRow.length ? (dataRow[qtyCol] || '').trim() : '';
       fq = qtyVal.replace(/[^\d]/g, '');
-      fittingRecords.push({ name: fn, spec: fs, mat: fm, qty: fq });
+      // V7.9 LRR1(润扬): 物料描述列混有标准号——规格去掉 GB/Txxxx-xx / SH/Txxxx；材质从标准号带出（GB/T9948-20 → 20#，2位尾数是牌号非年份，4位年份不误取）
+      if (/GB\/T|SH\/T/i.test(fs)) {
+        if (!fm) {
+          var matM = fs.match(/GB\/T\s*\d+\s*-\s*(\d{2})(?!\d)/i);
+          if (matM) fm = matM[1] + '#';
+        }
+        fs = fs.replace(/GB\/?T?\s*\d+\s*-?\s*\d+/ig, '').replace(/SH\/?T?\s*\d+/ig, '').replace(/\s{2,}/g, ' ').trim();
+      }
+      if (!fm) {
+        var matM2 = fs.match(/(A\d{3}|LF2|WCB|LCB|WC6|16Mn|20#|L245|Cr5Mo)/i);
+        if (matM2) fm = matM2[1].toUpperCase();
+      }
+      var seqV = (dataRow[0] || '').trim();
+      var batchV = batchCol >= 0 && batchCol < dataRow.length ? (dataRow[batchCol] || '').trim() : '';
+      var reportV = reportCol >= 0 && reportCol < dataRow.length ? (dataRow[reportCol] || '').trim() : '';
+      fittingRecords.push({ name: fn, spec: fs, mat: fm, qty: fq, heat: heatMap[seqV] || '', batch: batchV, report: reportV });
     }
   }
   var fittingName = '', fittingMat = '', fittingSpec = '', fittingQty = '';
@@ -1322,6 +1374,65 @@ function parseFitting(table, certNo) {
     result._fittingCert = fittingCert;
   }
   return result;
+}
+
+// ===== V7.9: 锻件法兰合格证解析器（LRR2格式：上部KV区"生产编号/材料牌号/材料炉罐号" + 下部产品清单"序号/规格/压力条件/技术条件/数量"） =====
+function parseForgedFlangeKV(table, certNo) {
+  // 检测条件：KV 区同时含 生产编号 与 材料牌号（全表 kvLookup 定位，不依赖固定行号）
+  var prodNo = kvLookup(table, '生产编号', table.length);
+  var matGrade = kvLookup(table, '材料牌号', table.length);
+  if (!prodNo || !matGrade) return null;
+  // 找产品清单表头行：含 序号+规格+数量（无"名称Name"列——有名称列的法兰清单由 parseWeldFlange 处理）
+  var hdrRow = -1, specCol = -1, qtyCol = -1, presCol = -1, techCol = -1;
+  for (var ri = 0; ri < table.length; ri++) {
+    var rowStrH = table[ri].join('|');
+    if (/序号/.test(rowStrH) && /规格/.test(rowStrH) && /数量/.test(rowStrH) && !/名称|Name/.test(rowStrH)) {
+      var hdr = table[ri];
+      for (var ci = 0; ci < hdr.length; ci++) {
+        var h = (hdr[ci] || '').trim();
+        if (specCol < 0 && /^规格/.test(h)) specCol = ci;
+        if (presCol < 0 && /压力条件/.test(h)) presCol = ci;
+        // 技术条件取首个命中列（colspan 展开后表头/数据行同列对齐，数据行同列的重复单元格值相同）
+        if (techCol < 0 && /技术条件/.test(h)) techCol = ci;
+        if (qtyCol < 0 && /^数量/.test(h)) qtyCol = ci;
+      }
+      if (specCol >= 0 && qtyCol >= 0) { hdrRow = ri; break; }
+    }
+  }
+  if (hdrRow < 0) return null;
+  var heat = kvLookup(table, '材料炉罐号', table.length) || kvLookup(table, '炉罐号', table.length) || '';
+  var results = [];
+  for (var di = hdrRow + 1; di < table.length; di++) {
+    var drow = table[di];
+    if (!drow || drow.length < 2) continue;
+    var firstCell = (drow[0] || '').trim();
+    if (!/^\d+$/.test(firstCell)) {
+      if (/检验|备注|结论|说明/.test(firstCell)) break;
+      continue;
+    }
+    var spec = specCol >= 0 && specCol < drow.length ? (drow[specCol] || '').trim() : '';
+    var pres = presCol >= 0 && presCol < drow.length ? (drow[presCol] || '').trim() : '';
+    // 技术条件直接取该列值（如 "WN RF CL150 DN80 S-40"）；缺失时用 规格+压力等级 组合
+    var tech = techCol >= 0 && techCol < drow.length ? (drow[techCol] || '').trim() : '';
+    if (tech === '技术条件') tech = '';
+    if (!tech && spec) tech = pres ? spec + ' ' + pres : spec;
+    // 名称判断：WN RF = 对焊法兰（ WN=对焊(weld neck)，检验结论 SH/T3406 亦为对焊法兰标准）
+    var qty = qtyCol >= 0 && qtyCol < drow.length ? (drow[qtyCol] || '').trim() : '';
+    if (!tech && !qty) continue;
+    results.push({
+      '产品名称': /WN|对焊法兰/i.test(tech + ' ' + spec) ? '对焊法兰' : '法兰',
+      '证书出厂编号': certNo || prodNo,
+      '材质': matGrade,
+      '规格型号': tech || spec,
+      '数量': qty,
+      '炉号': heat,
+      '单位': '片',
+      '物资分类': '法兰',
+      '_source': '质保书-锻件法兰'
+    });
+  }
+  if (results.length === 0) return null;
+  return results.length === 1 ? results[0] : results;
 }
 
 // ===== V7.4: 青山钢管无缝管解析器（序号23格式：英文表头 CONTRACT NO/PRODUCTION LOT NO/HEAT NO/SIZE/WEIGHT） =====
@@ -2594,6 +2705,26 @@ function parseMinerUJson(jsonData) {
         v6Parsed = true; continue;
       }
 
+      // 2.05 V7.9 LRR2: 锻件法兰合格证（KV区"生产编号/材料牌号" + 产品清单"序号/规格/技术条件/数量"，可能返回多条）
+      var ffkArr = parseForgedFlangeKV(tbl8, sectionCertNo);
+      if (ffkArr) {
+        var ffArr = Array.isArray(ffkArr) ? ffkArr : [ffkArr];
+        var ffCo = detectCompany(text);
+        if (!ffCo) {
+          var tblTextFf = tbl8.map(function(r) { return r.join(' '); }).join(' ');
+          ffCo = detectCompany(tblTextFf);
+        }
+        ffArr.forEach(function (ff) {
+          // 厂家回退加甲方标签保护（LRR2 页面无厂家名，留空手工补填；有收货单位等标签时禁止继承 curCo）
+          if (!ff['制造厂家'] || ff['制造厂家'] === curCo) {
+            if (!ffCo && !/客户名称|收货单位|Purchaser|Customer|Sold\s*To|订货单位|业主单位|项目名称|采购单位|委托单位/i.test(text)) ff['制造厂家'] = curCo || '';
+            else ff['制造厂家'] = ffCo || '';
+          }
+          allRecords.push(ff);
+        });
+        v6Parsed = true; continue;
+      }
+
       // 2.1 V7.8序号32: 金洲镀锌钢管多行清单解析器（可能返回多条）
       var jzArr = parsePipeJinzhou(tbl8, sectionCertNo);
       if (jzArr) {
@@ -2841,6 +2972,8 @@ function parseMinerUJson(jsonData) {
               '产品名称': fr.name, '证书出厂编号': fitCert,
               '材质': fr.mat, '规格型号': fr.spec, '数量': fr.qty,
               '制造厂家': tblCo || '', '单位': '件', '物资分类': '管件',
+              '炉号': fr.heat || '', '批号': fr.batch || '',
+              '复验报告编号': fr.report || '',
               '_source': '质保书-管件'
             });
           }
@@ -3405,6 +3538,13 @@ function filterData() {
   renderYilanTable(cat, search);
 }
 
+// V7.9: HTML 属性转义——规格型号含英寸符号 "（如 2"*S-80 LR BW），直接拼进 value="..." 会截断属性导致显示不完整
+function escA(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function renderTable(catFilter, searchText) {
   const view = document.getElementById('baseView');
   if (data.length === 0) {
@@ -3439,17 +3579,17 @@ function renderTable(catFilter, searchText) {
       html += `<td class="center"><button class="del-btn" onclick="deleteRow(${realIdx})" title="删除此行">🗑️</button></td>`;
       html += `<td class="center">${realIdx + 1}</td>`;
       html += `<td class="center"><span class="cat-badge cat-${cat}">${cat}</span></td>`;
-      html += `<td><input class="editable ${r['产品名称']?'filled':''}" value="${r['产品名称']||''}" onchange="updateField(${realIdx},'产品名称',this.value)"></td>`;
-      html += `<td><input class="editable ${r['规格型号']?'filled':''}" value="${r['规格型号']||''}" onchange="updateField(${realIdx},'规格型号',this.value)"></td>`;
-      html += `<td class="center"><input class="editable ${r['材质']?'filled':''}" value="${r['材质']||''}" onchange="updateField(${realIdx},'材质',this.value)"></td>`;
-      html += `<td class="center"><input class="editable ${r['数量']?'filled':''}" value="${r['数量']||''}" onchange="updateField(${realIdx},'数量',this.value)" style="width:70px"></td>`;
-      html += `<td class="center"><input class="editable ${r['单位']?'filled':''}" value="${r['单位']||''}" onchange="updateField(${realIdx},'单位',this.value)" style="width:50px"></td>`;
-      html += `<td><input class="editable ${r['炉号']?'filled':''}" value="${r['炉号']||''}" onchange="updateField(${realIdx},'炉号',this.value)"></td>`;
-      html += `<td><input class="editable ${r['批号']?'filled':''}" value="${r['批号']||''}" onchange="updateField(${realIdx},'批号',this.value)"></td>`;
-      html += `<td style="font-size:12px"><input class="editable ${r['制造厂家']?'filled':''}" value="${r['制造厂家']||''}" onchange="updateField(${realIdx},'制造厂家',this.value)"></td>`;
-      html += `<td><input class="editable ${r['证书出厂编号']?'filled':''}" value="${r['证书出厂编号']||''}" onchange="updateField(${realIdx},'证书出厂编号',this.value)" title="证书出厂编号（必填项，来自质保书合格证，可手动修改）"></td>`;
-      html += `<td><input class="editable ${r['证件自编号']?'filled':''}" value="${r['证件自编号']||''}" onchange="updateField(${realIdx},'证件自编号',this.value)" placeholder="待填写"></td>`;
-      html += `<td><input class="editable ${r['复验报告编号']&&r['复验报告编号']!=='/'?'filled':''}" value="${r['复验报告编号']||'/'}" onchange="updateField(${realIdx},'复验报告编号',this.value)"></td>`;
+      html += `<td><input class="editable ${r['产品名称']?'filled':''}" value="${escA(r['产品名称']||'')}" onchange="updateField(${realIdx},'产品名称',this.value)"></td>`;
+      html += `<td><input class="editable ${r['规格型号']?'filled':''}" value="${escA(r['规格型号']||'')}" onchange="updateField(${realIdx},'规格型号',this.value)" title="${escA(r['规格型号']||'')}"></td>`;
+      html += `<td class="center"><input class="editable ${r['材质']?'filled':''}" value="${escA(r['材质']||'')}" onchange="updateField(${realIdx},'材质',this.value)"></td>`;
+      html += `<td class="center"><input class="editable ${r['数量']?'filled':''}" value="${escA(r['数量']||'')}" onchange="updateField(${realIdx},'数量',this.value)" style="width:70px"></td>`;
+      html += `<td class="center"><input class="editable ${r['单位']?'filled':''}" value="${escA(r['单位']||'')}" onchange="updateField(${realIdx},'单位',this.value)" style="width:50px"></td>`;
+      html += `<td><input class="editable ${r['炉号']?'filled':''}" value="${escA(r['炉号']||'')}" onchange="updateField(${realIdx},'炉号',this.value)"></td>`;
+      html += `<td><input class="editable ${r['批号']?'filled':''}" value="${escA(r['批号']||'')}" onchange="updateField(${realIdx},'批号',this.value)"></td>`;
+      html += `<td style="font-size:12px"><input class="editable ${r['制造厂家']?'filled':''}" value="${escA(r['制造厂家']||'')}" onchange="updateField(${realIdx},'制造厂家',this.value)"></td>`;
+      html += `<td><input class="editable ${r['证书出厂编号']?'filled':''}" value="${escA(r['证书出厂编号']||'')}" onchange="updateField(${realIdx},'证书出厂编号',this.value)" title="证书出厂编号（必填项，来自质保书合格证，可手动修改）"></td>`;
+      html += `<td><input class="editable ${r['证件自编号']?'filled':''}" value="${escA(r['证件自编号']||'')}" onchange="updateField(${realIdx},'证件自编号',this.value)" placeholder="待填写"></td>`;
+      html += `<td><input class="editable ${r['复验报告编号']&&r['复验报告编号']!=='/'?'filled':''}" value="${escA(r['复验报告编号']||'/')}" onchange="updateField(${realIdx},'复验报告编号',this.value)"></td>`;
       html += `</tr>`;
     });
   }
@@ -3487,14 +3627,14 @@ function renderYilanTable(catFilter, searchText) {
     html += `<tr>`;
     html += `<td class="center">${realIdx + 1}</td>`;
     html += `<td>${r['产品名称']||''}</td>`;
-    html += `<td><input class="editable ${r['证件自编号']?'filled':''}" value="${r['证件自编号']||''}" onchange="updateField(${realIdx},'证件自编号',this.value)" placeholder="待填写" style="width:80px"></td>`;
+    html += `<td><input class="editable ${r['证件自编号']?'filled':''}" value="${escA(r['证件自编号']||'')}" onchange="updateField(${realIdx},'证件自编号',this.value)" placeholder="待填写" style="width:80px"></td>`;
     html += `<td>${r['证书出厂编号']||''}</td>`;
     html += `<td class="center">${r['材质']||''}</td>`;
     html += `<td>${r['规格型号']||''}</td>`;
     html += `<td style="font-size:12px">${r['制造厂家']||''}</td>`;
     html += `<td class="center">${r['单位']||''}</td>`;
     html += `<td class="center">${r['数量']||''}</td>`;
-    html += `<td><input class="editable" value="${r['复验报告编号']||'/'}" onchange="updateField(${realIdx},'复验报告编号',this.value)" style="width:60px"></td>`;
+    html += `<td><input class="editable" value="${escA(r['复验报告编号']||'/')}" onchange="updateField(${realIdx},'复验报告编号',this.value)" style="width:60px"></td>`;
     html += `<td style="font-size:12px">${r['领用单位']||''}/${r['领用量']||''}</td>`;
     html += `</tr>`;
   });
@@ -3883,7 +4023,7 @@ function closeRules() {
 <!-- 使用规则模态框 -->
 <div class="modal-overlay" id="rulesOverlay" onclick="closeRules()" style="display:none;"></div>
 <div class="modal" id="rulesModal" style="display:none;max-width:700px;max-height:80vh;overflow-y:auto;">
-  <h3 style="margin-bottom:12px;">📋 V7.8 版本使用规则</h3>
+  <h3 style="margin-bottom:12px;">📋 V7.9 版本使用规则</h3>
   <div style="font-size:13px;line-height:1.8;">
     <h4 style="margin:12px 0 6px;color:var(--primary);">一、阀门</h4>
     <ul style="margin-left:20px;">
@@ -3903,6 +4043,7 @@ function closeRules() {
       <li><b>规格型号</b>：读取"规格"后面的值；法兰规格（如WN350-150LB/RF SCH30）保持原样，组合规格（如CL150 DN150 SCH40 RF）自动规整</li>
       <li><b>数量</b>：读取"数量/Quantity"字段</li>
       <li><b>单位</b>：片</li>
+      <li><b>V7.9 新增</b>：锻件法兰合格证格式（KV区"生产编号/材料牌号/材料炉罐号"+产品清单"序号/规格/压力条件/技术条件/数量"）——证书出厂编号读"生产编号"，材质读"材料牌号"（如A105），炉号读"材料炉罐号"，规格读"技术条件"整串（如 WN RF CL150 DN80 S-40）</li>
     </ul>
 
     <h4 style="margin:12px 0 6px;color:var(--primary);">三、管材</h4>
@@ -3943,6 +4084,7 @@ function closeRules() {
       <li><b>规格型号</b>：读取"规格/规格尺寸/规格型号"（如DN600 SCH10S）</li>
       <li><b>数量</b>：读取"数量/Quantity"字段</li>
       <li><b>单位</b>：件</li>
+          <li><b>V7.9 新增</b>：同一厂家多个管件合订清单（表头"名称Name+物料描述Material description+数量Quantity"）逐行解析——规格取物料描述并去除 GB/T、SH/T 标准号，材质从标准尾数带出（GB/T9948-20→20#），炉号按化学成份表序号对应，批号取"产品批号"，复验报告编号取"型式试验报告编号"</li>
     </ul>
 
     <h4 style="margin:12px 0 6px;color:var(--primary);">七、支吊架（V7.4新增，独立分类）</h4>

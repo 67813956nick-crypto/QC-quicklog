@@ -1,0 +1,1030 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        462,
+                        233,
+                        578,
+                        349
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                462,
+                                233,
+                                578,
+                                349
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        462,
+                                        233,
+                                        578,
+                                        349
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                462,
+                                                233,
+                                                578,
+                                                349
+                                            ],
+                                            "type": "image",
+                                            "image_path": "713cf2141b8e7f99be4dee79e3e51d34dc36bc6e0854f44f49fc371d72c67210.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "seal"
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        133,
+                        15,
+                        546,
+                        818
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                133,
+                                15,
+                                546,
+                                818
+                            ],
+                            "type": "table_body",
+                            "angle": 270,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        133,
+                                        15,
+                                        546,
+                                        818
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                133,
+                                                15,
+                                                546,
+                                                818
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td rowspan=\"2\">序号 No.</td><td rowspan=\"2\">名称Name</td><td rowspan=\"2\" colspan=\"6\">物料描述Material description</td><td rowspan=\"2\">数量Quantity</td><td rowspan=\"2\" colspan=\"3\">型式试验报告编号Type test report No.</td><td rowspan=\"2\">出厂编号Factory No.</td><td rowspan=\"2\" colspan=\"2\">产品批号Production Batch</td><td colspan=\"2\">热处理 H.T</td><td></td></tr><tr><td>工艺Technice</td><td>结论Conclusion</td><td></td></tr><tr><td>7</td><td>无缝弯头\\90°</td><td colspan=\"6\">2&quot;*S-80 LR BW GB/T9948-20 SH/T3408</td><td>5</td><td colspan=\"3\">TSX71002420230044</td><td>JSRY1774</td><td colspan=\"2\">RY-A25211-227</td><td>正火</td><td>合格</td><td></td></tr><tr><td>8</td><td>无缝弯头\\90°</td><td colspan=\"6\">3&quot;*S-40 LR BW GB/T9948-20 SH/T3408</td><td>5</td><td colspan=\"3\">TSX71002420230044</td><td>JSRY1775</td><td colspan=\"2\">RY-A25211-228</td><td>正火</td><td>合格</td><td></td></tr><tr><td>9</td><td>无缝弯头\\90°</td><td colspan=\"6\">2&quot;*S-40 LR BW GB/T9948-20 SH/T3408</td><td>20</td><td colspan=\"3\">TSX71002420230044</td><td>JSRY1776</td><td colspan=\"2\">RY-A25211-229</td><td>正火</td><td>合格</td><td></td></tr><tr><td>10</td><td>无缝等径三通</td><td colspan=\"6\">2&quot;*S-40 GB/T9948-20 SH/T3408</td><td>2</td><td colspan=\"3\">TSX71002420230045</td><td>JSRY1777</td><td colspan=\"2\">RY-A25211-230</td><td>正火</td><td>合格</td><td></td></tr><tr><td>11</td><td>无缝异径三通</td><td colspan=\"6\">3&quot;*S-40/1.5&quot;*S-80 BW GB/T9948-20 SH/T3408</td><td>2</td><td colspan=\"3\">TSX71002420230045</td><td>JSRY1778</td><td colspan=\"2\">RY-A25211-231</td><td>正火</td><td>合格</td><td></td></tr><tr><td>12</td><td>无缝异径三通</td><td colspan=\"6\">2&quot;*S-40/1.5&quot;*S-80 BW GB/T9948-20 SH/T3408</td><td>1</td><td colspan=\"3\">TSX71002420230045</td><td>JSRY1779</td><td colspan=\"2\">RY-A25211-232</td><td>正火</td><td>合格</td><td></td></tr><tr><td>13</td><td>无缝同心大小头</td><td colspan=\"6\">2&quot;*S-40/1&quot;*S-80 BW GB/T9948-20 SH/T3408</td><td>1</td><td colspan=\"3\">TSX72101001920242329</td><td>JSRY1780</td><td colspan=\"2\">RY-A25211-233</td><td>正火</td><td>合格</td><td></td></tr><tr><td>14</td><td>无缝偏心大小头</td><td colspan=\"6\">3&quot;*S-40/2&quot;*S-40 BW GB/T9948-20 SH/T3408</td><td>1</td><td colspan=\"3\">TSX72101001920242329</td><td>JSRY1781</td><td colspan=\"2\">RY-A25211-234</td><td>正火</td><td>合格</td><td></td></tr><tr><td colspan=\"11\">化学成份(Chemical Composition)%</td><td>屈服强度<eq>R_{p0.2}</eq></td><td rowspan=\"2\">抗拉强度Rm</td><td rowspan=\"2\">伸长率A</td><td rowspan=\"2\" colspan=\"2\">硬度 Hardness</td><td rowspan=\"2\">探伤NDT</td><td></td></tr><tr><td rowspan=\"2\">序号 No.</td><td rowspan=\"2\">炉号 Heat No.</td><td rowspan=\"2\">C</td><td rowspan=\"2\">Si</td><td rowspan=\"2\">Mn</td><td rowspan=\"2\">P</td><td rowspan=\"2\">S</td><td rowspan=\"2\">Cr</td><td rowspan=\"2\">Ni</td><td rowspan=\"2\">Mo</td><td rowspan=\"2\">V</td><td rowspan=\"2\">Cu</td><td></td></tr><tr><td colspan=\"2\">Mpa</td><td>%</td><td>HBW</td><td>方式Method</td><td>结论Conclusion</td></tr><tr><td>7</td><td>20-12455968</td><td>0.19</td><td>0.25</td><td>0.53</td><td>0.011</td><td>0.003</td><td>0.02</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.02</td><td>296</td><td>478</td><td>32</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>8</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>9</td><td>20-12455968</td><td>0.19</td><td>0.25</td><td>0.53</td><td>0.011</td><td>0.003</td><td>0.02</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.02</td><td>296</td><td>478</td><td>32</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>10</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>11</td><td>20-12064014</td><td>0.19</td><td>0.25</td><td>0.52</td><td>0.012</td><td>0.003</td><td>0.01</td><td>0.01</td><td>0.002</td><td>0.003</td><td>0.01</td><td>292</td><td>488</td><td>31</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>12</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>13</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>14</td><td>20-12064014</td><td>0.19</td><td>0.25</td><td>0.52</td><td>0.012</td><td>0.003</td><td>0.01</td><td>0.01</td><td>0.002</td><td>0.003</td><td>0.01</td><td>292</td><td>488</td><td>31</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td colspan=\"7\">表面质量(The surface quality)</td><td colspan=\"3\">合格</td><td colspan=\"5\">尺寸检验(Dimension Inspection)</td><td colspan=\"2\">合格</td><td></td></tr><tr><td colspan=\"5\">经检验,产品质量符合上述标准规定,准予出厂。The quality of products was inspected found in with the standard which were mention above.</td><td colspan=\"3\">检验员:Inspector</td><td colspan=\"3\">检验负责人:Inspection Director</td><td colspan=\"4\">质量检验部IDN:Stamp of DEA, INS.DEP</td><td colspan=\"2\">出厂日期:2026年07月13日Date of Production:</td><td></td></tr></table>",
+                                            "image_path": "856ca2fa43369dd1c25826bb35ab969a7e135821e3e5b31c40c0df7ac45bdc3f.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        123,
+                        132,
+                        135,
+                        225
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                123,
+                                132,
+                                135,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        132,
+                                        135,
+                                        225
+                                    ],
+                                    "type": "text",
+                                    "content": "Http://www.jsry.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        95,
+                        31,
+                        108,
+                        225
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                95,
+                                31,
+                                108,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        95,
+                                        31,
+                                        108,
+                                        225
+                                    ],
+                                    "type": "text",
+                                    "content": "TEL: 0514-88277385 FAX: 0514-88277385"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        109,
+                        116,
+                        121,
+                        226
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                109,
+                                116,
+                                121,
+                                226
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        116,
+                                        121,
+                                        226
+                                    ],
+                                    "type": "text",
+                                    "content": "E-mail: ry2002@jsry.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        80,
+                        20,
+                        94,
+                        226
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                80,
+                                20,
+                                94,
+                                226
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        80,
+                                        20,
+                                        94,
+                                        226
+                                    ],
+                                    "type": "text",
+                                    "content": "ADD: Bao Tai Road 10# Bao Ying Jiang Su China"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        65,
+                        104,
+                        79,
+                        225
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                104,
+                                79,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        104,
+                                        79,
+                                        225
+                                    ],
+                                    "type": "text",
+                                    "content": "地址：江苏宝应宝泰路10号"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        44,
+                        261,
+                        127,
+                        346
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                44,
+                                261,
+                                127,
+                                346
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        44,
+                                        261,
+                                        127,
+                                        346
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                44,
+                                                261,
+                                                127,
+                                                346
+                                            ],
+                                            "type": "image",
+                                            "image_path": "0d1229d157201d11966c9caa5e021df9466e6b6869d62e7c029a951f7802816c.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        116,
+                        364,
+                        129,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                116,
+                                364,
+                                129,
+                                552
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        116,
+                                        364,
+                                        129,
+                                        552
+                                    ],
+                                    "type": "text",
+                                    "content": "证明书编号(CERTIFICATIE No.): 20260713-3"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        87,
+                        357,
+                        114,
+                        554
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                87,
+                                357,
+                                114,
+                                554
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        357,
+                                        114,
+                                        554
+                                    ],
+                                    "type": "text",
+                                    "content": "INSPECTION CERTIFICATE\n许可证编号(LICENSE No.):TS2732J00-2027"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        60,
+                        357,
+                        103,
+                        735
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                60,
+                                357,
+                                103,
+                                735
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        357,
+                                        103,
+                                        735
+                                    ],
+                                    "type": "text",
+                                    "content": "润扬管件质量证明书 RUNYANG FITTING INSPECTION CERTIFICATE"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        108,
+                        581,
+                        123,
+                        787
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                108,
+                                581,
+                                123,
+                                787
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        581,
+                                        123,
+                                        787
+                                    ],
+                                    "type": "text",
+                                    "content": "收货单位（CUSTOMER）：宁波中金石化有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        59,
+                        741,
+                        100,
+                        791
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                59,
+                                741,
+                                100,
+                                791
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        59,
+                                        741,
+                                        100,
+                                        791
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                59,
+                                                741,
+                                                100,
+                                                791
+                                            ],
+                                            "type": "image",
+                                            "image_path": "1f5e7c6f482e0d102af581477a9c05136d79d7692d936b77be1b95a52b31c947.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12
+                        }
+                    ],
+                    "index": 12
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        30,
+                        176,
+                        41,
+                        220
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                176,
+                                41,
+                                220
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        176,
+                                        41,
+                                        220
+                                    ],
+                                    "type": "text",
+                                    "content": "心"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        462,
+                        233,
+                        578,
+                        349
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                462,
+                                233,
+                                578,
+                                349
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        462,
+                                        233,
+                                        578,
+                                        349
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                462,
+                                                233,
+                                                578,
+                                                349
+                                            ],
+                                            "type": "image",
+                                            "image_path": "713cf2141b8e7f99be4dee79e3e51d34dc36bc6e0854f44f49fc371d72c67210.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "seal"
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        133,
+                        15,
+                        546,
+                        818
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                133,
+                                15,
+                                546,
+                                818
+                            ],
+                            "type": "table_body",
+                            "angle": 270,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        133,
+                                        15,
+                                        546,
+                                        818
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                133,
+                                                15,
+                                                546,
+                                                818
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td rowspan=\"2\">序号 No.</td><td rowspan=\"2\">名称Name</td><td rowspan=\"2\" colspan=\"6\">物料描述Material description</td><td rowspan=\"2\">数量Quantity</td><td rowspan=\"2\" colspan=\"3\">型式试验报告编号Type test report No.</td><td rowspan=\"2\">出厂编号Factory No.</td><td rowspan=\"2\" colspan=\"2\">产品批号Production Batch</td><td colspan=\"2\">热处理 H.T</td><td></td></tr><tr><td>工艺Technice</td><td>结论Conclusion</td><td></td></tr><tr><td>7</td><td>无缝弯头\\90°</td><td colspan=\"6\">2&quot;*S-80 LR BW GB/T9948-20 SH/T3408</td><td>5</td><td colspan=\"3\">TSX71002420230044</td><td>JSRY1774</td><td colspan=\"2\">RY-A25211-227</td><td>正火</td><td>合格</td><td></td></tr><tr><td>8</td><td>无缝弯头\\90°</td><td colspan=\"6\">3&quot;*S-40 LR BW GB/T9948-20 SH/T3408</td><td>5</td><td colspan=\"3\">TSX71002420230044</td><td>JSRY1775</td><td colspan=\"2\">RY-A25211-228</td><td>正火</td><td>合格</td><td></td></tr><tr><td>9</td><td>无缝弯头\\90°</td><td colspan=\"6\">2&quot;*S-40 LR BW GB/T9948-20 SH/T3408</td><td>20</td><td colspan=\"3\">TSX71002420230044</td><td>JSRY1776</td><td colspan=\"2\">RY-A25211-229</td><td>正火</td><td>合格</td><td></td></tr><tr><td>10</td><td>无缝等径三通</td><td colspan=\"6\">2&quot;*S-40 GB/T9948-20 SH/T3408</td><td>2</td><td colspan=\"3\">TSX71002420230045</td><td>JSRY1777</td><td colspan=\"2\">RY-A25211-230</td><td>正火</td><td>合格</td><td></td></tr><tr><td>11</td><td>无缝异径三通</td><td colspan=\"6\">3&quot;*S-40/1.5&quot;*S-80 BW GB/T9948-20 SH/T3408</td><td>2</td><td colspan=\"3\">TSX71002420230045</td><td>JSRY1778</td><td colspan=\"2\">RY-A25211-231</td><td>正火</td><td>合格</td><td></td></tr><tr><td>12</td><td>无缝异径三通</td><td colspan=\"6\">2&quot;*S-40/1.5&quot;*S-80 BW GB/T9948-20 SH/T3408</td><td>1</td><td colspan=\"3\">TSX71002420230045</td><td>JSRY1779</td><td colspan=\"2\">RY-A25211-232</td><td>正火</td><td>合格</td><td></td></tr><tr><td>13</td><td>无缝同心大小头</td><td colspan=\"6\">2&quot;*S-40/1&quot;*S-80 BW GB/T9948-20 SH/T3408</td><td>1</td><td colspan=\"3\">TSX72101001920242329</td><td>JSRY1780</td><td colspan=\"2\">RY-A25211-233</td><td>正火</td><td>合格</td><td></td></tr><tr><td>14</td><td>无缝偏心大小头</td><td colspan=\"6\">3&quot;*S-40/2&quot;*S-40 BW GB/T9948-20 SH/T3408</td><td>1</td><td colspan=\"3\">TSX72101001920242329</td><td>JSRY1781</td><td colspan=\"2\">RY-A25211-234</td><td>正火</td><td>合格</td><td></td></tr><tr><td colspan=\"11\">化学成份(Chemical Composition)%</td><td>屈服强度<eq>R_{p0.2}</eq></td><td rowspan=\"2\">抗拉强度Rm</td><td rowspan=\"2\">伸长率A</td><td rowspan=\"2\" colspan=\"2\">硬度 Hardness</td><td rowspan=\"2\">探伤NDT</td><td></td></tr><tr><td rowspan=\"2\">序号 No.</td><td rowspan=\"2\">炉号 Heat No.</td><td rowspan=\"2\">C</td><td rowspan=\"2\">Si</td><td rowspan=\"2\">Mn</td><td rowspan=\"2\">P</td><td rowspan=\"2\">S</td><td rowspan=\"2\">Cr</td><td rowspan=\"2\">Ni</td><td rowspan=\"2\">Mo</td><td rowspan=\"2\">V</td><td rowspan=\"2\">Cu</td><td></td></tr><tr><td colspan=\"2\">Mpa</td><td>%</td><td>HBW</td><td>方式Method</td><td>结论Conclusion</td></tr><tr><td>7</td><td>20-12455968</td><td>0.19</td><td>0.25</td><td>0.53</td><td>0.011</td><td>0.003</td><td>0.02</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.02</td><td>296</td><td>478</td><td>32</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>8</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>9</td><td>20-12455968</td><td>0.19</td><td>0.25</td><td>0.53</td><td>0.011</td><td>0.003</td><td>0.02</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.02</td><td>296</td><td>478</td><td>32</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>10</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>11</td><td>20-12064014</td><td>0.19</td><td>0.25</td><td>0.52</td><td>0.012</td><td>0.003</td><td>0.01</td><td>0.01</td><td>0.002</td><td>0.003</td><td>0.01</td><td>292</td><td>488</td><td>31</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>12</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>13</td><td>202406</td><td>0.19</td><td>0.23</td><td>0.56</td><td>0.009</td><td>0.005</td><td>0.03</td><td>0.01</td><td>0.001</td><td>0.001</td><td>0.04</td><td>294</td><td>478</td><td>33</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td>14</td><td>20-12064014</td><td>0.19</td><td>0.25</td><td>0.52</td><td>0.012</td><td>0.003</td><td>0.01</td><td>0.01</td><td>0.002</td><td>0.003</td><td>0.01</td><td>292</td><td>488</td><td>31</td><td>合格</td><td>磁粉</td><td>合格</td></tr><tr><td colspan=\"7\">表面质量(The surface quality)</td><td colspan=\"3\">合格</td><td colspan=\"5\">尺寸检验(Dimension Inspection)</td><td colspan=\"2\">合格</td><td></td></tr><tr><td colspan=\"5\">经检验,产品质量符合上述标准规定,准予出厂。The quality of products was inspected found in with the standard which were mention above.</td><td colspan=\"3\">检验员:Inspector</td><td colspan=\"3\">检验负责人:Inspection Director</td><td colspan=\"4\">质量检验部IDN:Stamp of DEA, INS.DEP</td><td colspan=\"2\">出厂日期:2026年07月13日Date of Production:</td><td></td></tr></table>",
+                                            "image_path": "856ca2fa43369dd1c25826bb35ab969a7e135821e3e5b31c40c0df7ac45bdc3f.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        123,
+                        132,
+                        135,
+                        225
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                123,
+                                132,
+                                135,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        132,
+                                        135,
+                                        225
+                                    ],
+                                    "type": "text",
+                                    "content": "Http://www.jsry.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        95,
+                        31,
+                        108,
+                        225
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                95,
+                                31,
+                                108,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        95,
+                                        31,
+                                        108,
+                                        225
+                                    ],
+                                    "type": "text",
+                                    "content": "TEL: 0514-88277385 FAX: 0514-88277385"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        109,
+                        116,
+                        121,
+                        226
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                109,
+                                116,
+                                121,
+                                226
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        116,
+                                        121,
+                                        226
+                                    ],
+                                    "type": "text",
+                                    "content": "E-mail: ry2002@jsry.com"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        80,
+                        20,
+                        94,
+                        226
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                80,
+                                20,
+                                94,
+                                226
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        80,
+                                        20,
+                                        94,
+                                        226
+                                    ],
+                                    "type": "text",
+                                    "content": "ADD: Bao Tai Road 10# Bao Ying Jiang Su China"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        65,
+                        104,
+                        79,
+                        225
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                104,
+                                79,
+                                225
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        104,
+                                        79,
+                                        225
+                                    ],
+                                    "type": "text",
+                                    "content": "地址：江苏宝应宝泰路10号"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                116,
+                                364,
+                                129,
+                                552
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        116,
+                                        364,
+                                        129,
+                                        552
+                                    ],
+                                    "type": "text",
+                                    "content": "证明书编号(CERTIFICATIE No.): 20260713-3"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        44,
+                        261,
+                        127,
+                        346
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                44,
+                                261,
+                                127,
+                                346
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        44,
+                                        261,
+                                        127,
+                                        346
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                44,
+                                                261,
+                                                127,
+                                                346
+                                            ],
+                                            "type": "image",
+                                            "image_path": "0d1229d157201d11966c9caa5e021df9466e6b6869d62e7c029a951f7802816c.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        116,
+                        364,
+                        129,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [],
+                    "index": 8,
+                    "merge_prev": false,
+                    "lines_deleted": true
+                },
+                {
+                    "bbox": [
+                        87,
+                        357,
+                        114,
+                        554
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                87,
+                                357,
+                                114,
+                                554
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        357,
+                                        114,
+                                        554
+                                    ],
+                                    "type": "text",
+                                    "content": "INSPECTION CERTIFICATE\n许可证编号(LICENSE No.):TS2732J00-2027"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        60,
+                        357,
+                        103,
+                        735
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                60,
+                                357,
+                                103,
+                                735
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        357,
+                                        103,
+                                        735
+                                    ],
+                                    "type": "text",
+                                    "content": "润扬管件质量证明书 RUNYANG FITTING INSPECTION CERTIFICATE"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        108,
+                        581,
+                        123,
+                        787
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                108,
+                                581,
+                                123,
+                                787
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        581,
+                                        123,
+                                        787
+                                    ],
+                                    "type": "text",
+                                    "content": "收货单位（CUSTOMER）：宁波中金石化有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        59,
+                        741,
+                        100,
+                        791
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                59,
+                                741,
+                                100,
+                                791
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        59,
+                                        741,
+                                        100,
+                                        791
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                59,
+                                                741,
+                                                100,
+                                                791
+                                            ],
+                                            "type": "image",
+                                            "image_path": "1f5e7c6f482e0d102af581477a9c05136d79d7692d936b77be1b95a52b31c947.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12
+                        }
+                    ],
+                    "index": 12
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}

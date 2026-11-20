@@ -1,0 +1,496 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        490,
+                        254,
+                        516,
+                        309
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                490,
+                                254,
+                                516,
+                                309
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        490,
+                                        254,
+                                        516,
+                                        309
+                                    ],
+                                    "type": "text",
+                                    "content": "王家波"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        80,
+                        30,
+                        502,
+                        790
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                80,
+                                30,
+                                502,
+                                790
+                            ],
+                            "type": "table_body",
+                            "angle": 270,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        80,
+                                        30,
+                                        502,
+                                        790
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                80,
+                                                30,
+                                                502,
+                                                790
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">生产编号</td><td colspan=\"5\">22040902-51/52</td><td colspan=\"3\">材料牌号</td><td colspan=\"3\">A105</td></tr><tr><td colspan=\"2\">材料炉罐号</td><td colspan=\"5\">241175</td><td colspan=\"3\">锻造比</td><td colspan=\"3\">≥3</td></tr><tr><td colspan=\"2\">锻造温度</td><td colspan=\"5\">1250-800°C</td><td colspan=\"3\">热处理状态</td><td colspan=\"3\">正火</td></tr><tr><td rowspan=\"2\">锻件用钢化学成分</td><td>C</td><td>Mn</td><td>Si</td><td colspan=\"2\">S</td><td>P</td><td>Cr</td><td>Ni</td><td colspan=\"2\">Mo</td><td>Cu</td><td>V</td></tr><tr><td>0.17</td><td>0.81</td><td>0.22</td><td colspan=\"2\">0.002</td><td>0.013</td><td>0.04</td><td>0.03</td><td colspan=\"2\">0.02</td><td>0.02</td><td>0.01</td></tr><tr><td rowspan=\"3\">锻件力学分析</td><td rowspan=\"2\">Rm(Mpa)</td><td rowspan=\"2\" colspan=\"2\">ReL(Mpa)</td><td rowspan=\"2\">A(%)</td><td rowspan=\"2\">Z(%)</td><td colspan=\"6\">冲击试验</td><td rowspan=\"2\">硬度(HB)</td></tr><tr><td colspan=\"3\">试验温度(°C)</td><td colspan=\"3\">KV2(J)</td></tr><tr><td>520</td><td colspan=\"2\">305</td><td>38</td><td>70</td><td colspan=\"3\">/</td><td>/</td><td>/</td><td>/</td><td>145</td></tr><tr><td rowspan=\"4\">外观质量</td><td colspan=\"7\">标准规定</td><td colspan=\"3\">实测结果</td><td colspan=\"2\">检查结论</td></tr><tr><td colspan=\"7\">无肉眼可见的裂纹、夹层、折叠、夹渣</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td colspan=\"7\">修磨部位圆滑过渡,清除深度符合规定</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td colspan=\"7\">形状、尺寸和表面质量满足图样要求</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td>内部质量</td><td colspan=\"7\">无白点</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td>序号</td><td colspan=\"2\">规格</td><td colspan=\"2\">压力条件</td><td colspan=\"7\">技术条件</td><td>数量</td></tr><tr><td>1</td><td colspan=\"2\">DN80</td><td colspan=\"2\">CL150</td><td colspan=\"7\">WN RF CL150 DN80 S-40</td><td>1</td></tr><tr><td>2</td><td colspan=\"2\">DN50</td><td colspan=\"2\">CL150</td><td colspan=\"7\">WN RF CL150 DN50 S-40</td><td>1</td></tr><tr><td>3</td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"7\"></td><td></td></tr><tr><td colspan=\"2\">检验结论:</td><td colspan=\"11\">按SH/T3406-2022检验合格</td></tr><tr><td colspan=\"2\">备注</td><td colspan=\"11\"></td></tr></table>",
+                                            "image_path": "223894053bc8edb84202d7ba1be9f305c91538974bcee6fdd55a39964ef4b834.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                58,
+                                178,
+                                81,
+                                280
+                            ],
+                            "type": "table_caption",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        58,
+                                        178,
+                                        81,
+                                        280
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                58,
+                                                178,
+                                                81,
+                                                280
+                                            ],
+                                            "type": "text",
+                                            "content": "质量检验报告"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        38,
+                        448,
+                        83,
+                        538
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                38,
+                                448,
+                                83,
+                                538
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        38,
+                                        448,
+                                        83,
+                                        538
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                38,
+                                                448,
+                                                83,
+                                                538
+                                            ],
+                                            "type": "image",
+                                            "image_path": "744a0c31ebc69ed1ac457c380636b6a5ae932d868f8d4bee9e3a8b30e99512fd.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        444,
+                        653,
+                        535,
+                        788
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                444,
+                                653,
+                                535,
+                                788
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        653,
+                                        535,
+                                        788
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                444,
+                                                653,
+                                                535,
+                                                788
+                                            ],
+                                            "type": "image",
+                                            "image_path": "ffa5a2a730f3d25b90b0307db9ca8f5eaf6a97506fc1762cbde3486da25e37c5.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4,
+                    "sub_type": "seal"
+                },
+                {
+                    "bbox": [
+                        51,
+                        570,
+                        79,
+                        687
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                51,
+                                570,
+                                79,
+                                687
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        51,
+                                        570,
+                                        79,
+                                        687
+                                    ],
+                                    "type": "text",
+                                    "content": "产品合格证"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "level": 2
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        490,
+                        254,
+                        516,
+                        309
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                490,
+                                254,
+                                516,
+                                309
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        490,
+                                        254,
+                                        516,
+                                        309
+                                    ],
+                                    "type": "text",
+                                    "content": "王家波"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        80,
+                        30,
+                        502,
+                        790
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                80,
+                                30,
+                                502,
+                                790
+                            ],
+                            "type": "table_body",
+                            "angle": 270,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        80,
+                                        30,
+                                        502,
+                                        790
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                80,
+                                                30,
+                                                502,
+                                                790
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">生产编号</td><td colspan=\"5\">22040902-51/52</td><td colspan=\"3\">材料牌号</td><td colspan=\"3\">A105</td></tr><tr><td colspan=\"2\">材料炉罐号</td><td colspan=\"5\">241175</td><td colspan=\"3\">锻造比</td><td colspan=\"3\">≥3</td></tr><tr><td colspan=\"2\">锻造温度</td><td colspan=\"5\">1250-800°C</td><td colspan=\"3\">热处理状态</td><td colspan=\"3\">正火</td></tr><tr><td rowspan=\"2\">锻件用钢化学成分</td><td>C</td><td>Mn</td><td>Si</td><td colspan=\"2\">S</td><td>P</td><td>Cr</td><td>Ni</td><td colspan=\"2\">Mo</td><td>Cu</td><td>V</td></tr><tr><td>0.17</td><td>0.81</td><td>0.22</td><td colspan=\"2\">0.002</td><td>0.013</td><td>0.04</td><td>0.03</td><td colspan=\"2\">0.02</td><td>0.02</td><td>0.01</td></tr><tr><td rowspan=\"3\">锻件力学分析</td><td rowspan=\"2\">Rm(Mpa)</td><td rowspan=\"2\" colspan=\"2\">ReL(Mpa)</td><td rowspan=\"2\">A(%)</td><td rowspan=\"2\">Z(%)</td><td colspan=\"6\">冲击试验</td><td rowspan=\"2\">硬度(HB)</td></tr><tr><td colspan=\"3\">试验温度(°C)</td><td colspan=\"3\">KV2(J)</td></tr><tr><td>520</td><td colspan=\"2\">305</td><td>38</td><td>70</td><td colspan=\"3\">/</td><td>/</td><td>/</td><td>/</td><td>145</td></tr><tr><td rowspan=\"4\">外观质量</td><td colspan=\"7\">标准规定</td><td colspan=\"3\">实测结果</td><td colspan=\"2\">检查结论</td></tr><tr><td colspan=\"7\">无肉眼可见的裂纹、夹层、折叠、夹渣</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td colspan=\"7\">修磨部位圆滑过渡,清除深度符合规定</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td colspan=\"7\">形状、尺寸和表面质量满足图样要求</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td>内部质量</td><td colspan=\"7\">无白点</td><td colspan=\"3\">合格</td><td colspan=\"2\">合格</td></tr><tr><td>序号</td><td colspan=\"2\">规格</td><td colspan=\"2\">压力条件</td><td colspan=\"7\">技术条件</td><td>数量</td></tr><tr><td>1</td><td colspan=\"2\">DN80</td><td colspan=\"2\">CL150</td><td colspan=\"7\">WN RF CL150 DN80 S-40</td><td>1</td></tr><tr><td>2</td><td colspan=\"2\">DN50</td><td colspan=\"2\">CL150</td><td colspan=\"7\">WN RF CL150 DN50 S-40</td><td>1</td></tr><tr><td>3</td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"7\"></td><td></td></tr><tr><td colspan=\"2\">检验结论:</td><td colspan=\"11\">按SH/T3406-2022检验合格</td></tr><tr><td colspan=\"2\">备注</td><td colspan=\"11\"></td></tr></table>",
+                                            "image_path": "223894053bc8edb84202d7ba1be9f305c91538974bcee6fdd55a39964ef4b834.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                58,
+                                178,
+                                81,
+                                280
+                            ],
+                            "type": "table_caption",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        58,
+                                        178,
+                                        81,
+                                        280
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                58,
+                                                178,
+                                                81,
+                                                280
+                                            ],
+                                            "type": "text",
+                                            "content": "质量检验报告"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        38,
+                        448,
+                        83,
+                        538
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                38,
+                                448,
+                                83,
+                                538
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        38,
+                                        448,
+                                        83,
+                                        538
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                38,
+                                                448,
+                                                83,
+                                                538
+                                            ],
+                                            "type": "image",
+                                            "image_path": "744a0c31ebc69ed1ac457c380636b6a5ae932d868f8d4bee9e3a8b30e99512fd.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        444,
+                        653,
+                        535,
+                        788
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                444,
+                                653,
+                                535,
+                                788
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        444,
+                                        653,
+                                        535,
+                                        788
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                444,
+                                                653,
+                                                535,
+                                                788
+                                            ],
+                                            "type": "image",
+                                            "image_path": "ffa5a2a730f3d25b90b0307db9ca8f5eaf6a97506fc1762cbde3486da25e37c5.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4,
+                    "sub_type": "seal"
+                },
+                {
+                    "bbox": [
+                        51,
+                        570,
+                        79,
+                        687
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                51,
+                                570,
+                                79,
+                                687
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        51,
+                                        570,
+                                        79,
+                                        687
+                                    ],
+                                    "type": "text",
+                                    "content": "产品合格证"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "level": 2
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.4"
+}
