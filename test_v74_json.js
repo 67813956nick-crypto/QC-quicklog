@@ -122,7 +122,7 @@ const fileMapping = [
 ];
 
 // ===== 加载V7.4 HTML并提取函数 =====
-const htmlPath = path.join(__dirname, '材料录入桥接工具_v7.7.html');
+const htmlPath = path.join(__dirname, '材料录入桥接工具_v7.9.html');
 const htmlContent = fs.readFileSync(htmlPath, 'utf8');
 
 const dom = new JSDOM(htmlContent, {
