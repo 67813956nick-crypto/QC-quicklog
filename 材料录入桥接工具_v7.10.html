@@ -3469,7 +3469,7 @@ function reloadDefault() {
 //   /mineru-oss/ → https://mineru.oss-cn-shanghai.aliyuncs.com/ （PUT 上传预签名链接）
 //   /mineru-cdn/ → https://cdn-mineru.openxlab.org.cn/ （GET 结果 zip）
 // 本地 file:// 双击打开时此功能不可用（无同源反代），JSON 导入不受影响。
-var MINERU_API_BASE = 'mineru-api';   // 相对路径：仅同源部署时可用
+var MINERU_API_BASE = '/mineru-api';   // 绝对路径：根目录或任意子目录部署均可用
 var MINERU_MAX_FILE_MB = 200, MINERU_MAX_PAGES = 200, MINERU_MAX_BATCH = 50;
 var MINERU_DAILY_PRIORITY_PAGES = 1000;
 var SCAN_QUOTA_KEY = 'qc-mineru-quota-v1';
@@ -3629,7 +3629,7 @@ function scanRunBatch(batch) {
 function scanUploadFile(f, url, batch) {
   return new Promise(function(resolve, reject) {
     // 预签名 URL: https://mineru.oss-cn-shanghai.aliyuncs.com/api-upload/xxx?签名 → /mineru-oss/api-upload/xxx?签名
-    var proxied = url.replace(/^https?:\/\/mineru\.oss-cn-shanghai\.aliyuncs\.com\//, 'mineru-oss/');
+    var proxied = url.replace(/^https?:\/\/mineru\.oss-cn-shanghai\.aliyuncs\.com\//, '/mineru-oss/');
     if (proxied === url) { reject(new Error('上传链接域名非预期(' + url.slice(0, 60) + '...)，请更新反代规则')); return; }
     var xhr = new XMLHttpRequest();
     xhr.open('PUT', proxied);
@@ -3697,7 +3697,7 @@ function scanFetchResults(batch) {
       if (batch.cancelled) { if (f.state !== 'done') f.state = 'cancelled'; return; }
       if (f.state === 'failed') return;
       f.state = 'downloading'; f.pct = 0; scanRender();
-      var proxied = (f.zipUrl || '').replace(/^https?:\/\/cdn-mineru\.openxlab\.org\.cn\//, 'mineru-cdn/');
+      var proxied = (f.zipUrl || '').replace(/^https?:\/\/cdn-mineru\.openxlab\.org\.cn\//, '/mineru-cdn/');
       if (!proxied || proxied === f.zipUrl) { f.state = 'failed'; f.err = '结果链接域名非预期，请更新反代规则'; scanRender(); return; }
       return scanDownloadZip(proxied, function(p) { f.pct = p; scanRender(); })
         .then(function(buf) {

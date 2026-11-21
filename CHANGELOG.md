@@ -175,6 +175,40 @@
 
 ---
 
+## V7.10 收尾修订（2026-11-20，扫描件直传线上跑通）
+
+### 结论
+- 扫描件直传从「代码完成但端到端未跑通」到「线上全链路跑通」：本地上传 PDF/图片 → 调 API 申请上传链接 → PUT 上传 OSS → 轮询解析 → 下载 zip → 解压 JSON → 喂规则解析器入表 → 分段进度条，全程正常。
+- 解析器零改动，回归与 V7.10 基线一致（49 通过 / 9 偏差 / 0 缺失 / 0 错误 / 58）。
+
+### 坑点 1：相对路径在子目录部署时解析错误（`Unexpected token '<'`）
+- **现象**：`Unexpected token '<', "<html><he"... is not valid JSON`
+- **根因**：工具实际部署在 `/QC-list/` 子目录，而前端 `MINERU_API_BASE='mineru-api'`、OSS/CDN 改写 `'mineru-oss/'`/`'mineru-cdn/'` 都是**相对路径**（无前导 `/`）。页面在 `/QC-list/` 下时被解析成 `/QC-list/mineru-api/...`，不命中根 `/mineru-api/` 反代 → 404 HTML → `res.json()` 解析失败。
+- **诊断关键**：手动访问 `http://nickpang.cn/mineru-api/v4/...` 能返回 JSON（证明反代本身通），但看地址栏发现工具页在 `/QC-list/` 而非根目录 → 锁定为相对路径问题。
+- **修复**：三处改**绝对路径**（前导 `/`）：`/mineru-api`、`/mineru-oss/`、`/mineru-cdn/`，任意子目录部署都可用。
+
+### 坑点 2：浏览器自动带 Origin 头触发 MinerU CORS 拒绝（`Invalid CORS request`）
+- **现象**：`Unexpected token 'I', "Invalid CORS request" is not valid JSON`
+- **根因**：浏览器发请求时**自动附带 `Origin: http://nickpang.cn`**（POST/PUT 等非简单请求必带），MinerU 后端（Spring）看到该 Origin 不在白名单 → 403 `Invalid CORS request`；curl 不带 Origin 所以此前能通。`Origin` 是浏览器「禁止修改头」，JS 无法删除。
+- **诊断关键**：curl 对比——带 `-H "Origin: http://nickpang.cn"` → `403 Invalid CORS request`；不带 → `200 JSON`。
+- **修复**：nginx 三段 location 各加 `proxy_set_header Origin "";` 与 `proxy_set_header Referer "";`，转发前把浏览器来源头清空。
+
+### 顺带固化的其它部署坑
+- **图片后缀被宝塔正则拦截**：`.png/.jpg/.jpeg/.bmp` 命中宝塔默认 `location ~*` 图片正则被 404/405 → 三段 location 加 `^~` 前缀（已同步进 `deploy/mineru-proxy.conf`）。
+- **域名/IP 访问 404**：`server_name nickpang.cn;` 只匹配裸域名，`www.nickpang.cn` 与 IP 直连均 404。
+- **HTTPS 未开**：443 端口 `connection refused`，当前仅 HTTP（80）。
+
+### 文件同步
+- `deploy/mineru-proxy.conf` 更新为最终可用版：三段 location 均加 `^~` + `Origin`/`Referer` 清空。
+- 三个 HTML（主文件 `材料录入桥接工具_v7.10.html` + `deploy/index.html` + 根 `index.html`）同步「相对路径 → 绝对路径」。
+
+### Token 复核纠偏（2026-11-21）
+- 使用此前两枚相同 Token（ZPJE-001 / ZPJE-002）直连官方 `/api/v4/file-urls/batch`，同参数复测均返回 **HTTP 200 + `code:0`**；线上反代带浏览器 Origin 复测也返回 `code:0`，成功生成批次号与上传链接。
+- 因此撤回此前「Token 过期」「sk- 体系不兼容」「只读/未完成审批」三种归因：它们均不能解释相同 Token 后续成功。2026-11-20 的 A0211 上游触发条件无法由当前结果反推，不再臆测。
+- 本次诊断方法修正：鉴权问题必须用**相同 Token + 相同端点 + 相同参数**做跨时间对照；A0211 只作为当次鉴权失败信号，不能单独证明 Token 的永久状态。线上实际已证实的阻断点是**相对路径**与 **Origin/CORS**。
+
+---
+
 ## V7.6（2026-08-30）
 
 ### 新增序号（2个）
